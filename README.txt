@@ -1,3 +1,6 @@
+Find this on GitHub at:
+  https://github.com/BAD-AL/SWBF2_Xbox_mod_effort
+
 'xbox_ps2_Build_findings.txt' -- My thoughts as I was trying to understand the 
 	level of support the 'munge' process had for the Xbox version.
 

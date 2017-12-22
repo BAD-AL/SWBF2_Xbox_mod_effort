@@ -28,5 +28,32 @@ There is a reference to a tool called 'XLAST' in the 'data_ABC/Readme.txt' file 
 Seems to mean 'Xbox Live Authoring and Submission Tool'. Downloaded an installer that seems to contain it (Downloads\xb360modder4.zip).
 Not sure if it's necessary for getting content onto Xbox.
 
-In the 'addme.lua' file the following line: 'ReadDataFile("..\\..\\addon\\ABC\\data\\_LVL_PC\\core.lvl")'
-Certainly won't work, probably should be removed.
+In the 'addme.lua' file the following line: 'ReadDataFile("..\\..\\addon\\ABC\\data\\_LVL_PC\\core.lvl")' was changed to:
+	if(gPlatformStr == "PC") then
+		ReadDataFile("..\\..\\addon\\ABC\\data\\_LVL_PC\\core.lvl")
+	else if (gPlatformStr == "XBox") then
+		--Something?
+	end
+
+	
+	
+The Xbox version had an update to the game which was downloaded to "UPDATE: /E/TDATA/4c41001a/$u/".
+It consisted of the following files:
+	$u\contentmeta.xbx
+	$u\data
+	$u\default.xbe
+	$u\downloader.xbe
+	$u\manifest
+	$u\data\_lvl_xbox
+	$u\data\_lvl_xbox\common.lvl
+	$u\data\_lvl_xbox\core.lvl
+	$u\data\_lvl_xbox\ingame.lvl
+	$u\data\_lvl_xbox\shell.lvl
+I overwrote the corresponding files the game shipped with and it all seemed to run fine (default.xbe,downloader.xbe,common.lvl,core.lvl,ingame.lvl,shell.lvl)
+
+Modifying anything in the DLC folder seems to cause the game that data is corrupted and the files get blown away.
+
+They use luac 5.0.2, compile with option -s; when they 'munge' looks like they use add some header info and some zeros at the end.
+
+
+
