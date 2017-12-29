@@ -1,0 +1,4 @@
+﻿Project Goals:
+1. Easily Load SWBF2 XBOX maps into the game.
+2. Easily convert SWBF2 PC Maps to run on XBOX.
+3. Enable Higher resolution images to display for Xbox 360.

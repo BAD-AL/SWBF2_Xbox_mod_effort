@@ -55,5 +55,32 @@ Modifying anything in the DLC folder seems to cause the game that data is corrup
 
 They use luac 5.0.2, compile with option -s; when they 'munge' looks like they use add some header info and some zeros at the end.
 
+-- adding entries to the 
 
+local sp_n = 0
+local mp_n = 0
+sp_n = table.getn(sp_missionselect_listbox_contents)
+sp_missionselect_listbox_contents[sp_n+1] = { isModLevel = 1, mapluafile = "BCA%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,}
+mp_n = table.getn(mp_missionselect_listbox_contents)
+mp_missionselect_listbox_contents[mp_n+1] = sp_missionselect_listbox_contents[sp_n+1]
+
+-- see 'assets\Shell\scripts\missionlist.lua' for more info on the mission select lists
+local levels = { 
+  { mapluafile = "bes2%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,},
+  { mapluafile = "cor1%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,},
+  { mapluafile = "myg1%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,},
+  { mapluafile = "nab2%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,},
+  { mapluafile = "rhn1%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,},
+  { mapluafile = "rhn2%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,},
+  { mapluafile = "yav2%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1,},
+  -- new levels after here 
+  { mapluafile = "ABC%s_%s", era_g = 1, era_c = 1, mode_con_g = 1, mode_con_c  = 1, mode_ctf_g = 1, mode_ctf_c  = 1, mode_1flag_g = 1, mode_1flag_c  = 1, mode_eli_g = 1, isModLevel = 1, },
+ }
+ 
+ for i=1, table.getn( levels) do
+	sp_n = table.getn(sp_missionselect_listbox_contents)
+	mp_n = table.getn(mp_missionselect_listbox_contents)
+	sp_missionselect_listbox_contents[sp_n+1] = levels[i]
+	mp_missionselect_listbox_contents[mp_n+1] = levels[i]
+ end
 

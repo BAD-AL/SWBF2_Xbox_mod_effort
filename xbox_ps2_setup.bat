@@ -9,10 +9,6 @@ REM  line (munge_all.bat, ps2_munge.bat or xbox_munge.bat).
 REM  
 if NOT EXIST xbox_munge.bat (
 	echo @call munge.bat /platform xbox %* > xbox_munge.bat
-	echo cd ..\addme >> xbox_munge.bat
-	echo @call mungeAddme.bat >> xbox_munge.bat
-	echo cd ..\_BUILD >> xbox_munge.bat
-	REM More effort still needed to get the 'addme' to work for xbox.
 ) else (
     echo Sweet! 'xbox_munge.bat' already exists.
 )
