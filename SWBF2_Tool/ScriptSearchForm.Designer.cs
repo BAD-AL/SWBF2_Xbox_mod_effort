@@ -33,7 +33,6 @@
             this.mLVLFileTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.mAssetListBox = new System.Windows.Forms.ListBox();
-            this.mScriptTextBox = new SWBF2_Tool.SearchTextBox();
             this.mSearchButton = new System.Windows.Forms.Button();
             this.mSearchTypeComboBox = new System.Windows.Forms.ComboBox();
             this.mLuacCodeSizeButton = new System.Windows.Forms.Button();
@@ -41,12 +40,17 @@
             this.mExtractAssetButton = new System.Windows.Forms.Button();
             this.mStatusControl = new System.Windows.Forms.Label();
             this.mSaveScriptChangesButton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mScriptTextBox = new SWBF2_Tool.SearchTextBox();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mBrowseLVL
             // 
             this.mBrowseLVL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mBrowseLVL.Location = new System.Drawing.Point(632, 25);
+            this.mBrowseLVL.Location = new System.Drawing.Point(632, 45);
             this.mBrowseLVL.Name = "mBrowseLVL";
             this.mBrowseLVL.Size = new System.Drawing.Size(25, 23);
             this.mBrowseLVL.TabIndex = 13;
@@ -59,7 +63,7 @@
             this.mLVLFileTextBox.AllowDrop = true;
             this.mLVLFileTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.mLVLFileTextBox.Location = new System.Drawing.Point(12, 28);
+            this.mLVLFileTextBox.Location = new System.Drawing.Point(12, 48);
             this.mLVLFileTextBox.Name = "mLVLFileTextBox";
             this.mLVLFileTextBox.Size = new System.Drawing.Size(614, 20);
             this.mLVLFileTextBox.TabIndex = 12;
@@ -69,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 12);
+            this.label4.Location = new System.Drawing.Point(12, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 14;
@@ -80,30 +84,15 @@
             this.mAssetListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mAssetListBox.FormattingEnabled = true;
             this.mAssetListBox.ItemHeight = 16;
-            this.mAssetListBox.Location = new System.Drawing.Point(15, 84);
+            this.mAssetListBox.Location = new System.Drawing.Point(15, 104);
             this.mAssetListBox.Name = "mAssetListBox";
             this.mAssetListBox.Size = new System.Drawing.Size(200, 164);
             this.mAssetListBox.TabIndex = 15;
             this.mAssetListBox.SelectedIndexChanged += new System.EventHandler(this.mScriptListBox_SelectedIndexChanged);
             // 
-            // mScriptTextBox
-            // 
-            this.mScriptTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.mScriptTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mScriptTextBox.Location = new System.Drawing.Point(221, 63);
-            this.mScriptTextBox.Name = "mScriptTextBox";
-            this.mScriptTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.mScriptTextBox.SearchString = null;
-            this.mScriptTextBox.Size = new System.Drawing.Size(405, 367);
-            this.mScriptTextBox.StatusControl = null;
-            this.mScriptTextBox.TabIndex = 16;
-            this.mScriptTextBox.Text = "";
-            // 
             // mSearchButton
             // 
-            this.mSearchButton.Location = new System.Drawing.Point(15, 55);
+            this.mSearchButton.Location = new System.Drawing.Point(15, 75);
             this.mSearchButton.Name = "mSearchButton";
             this.mSearchButton.Size = new System.Drawing.Size(72, 23);
             this.mSearchButton.TabIndex = 18;
@@ -119,14 +108,14 @@
             "Lua",
             "textures (not impl)",
             "All Assets"});
-            this.mSearchTypeComboBox.Location = new System.Drawing.Point(94, 57);
+            this.mSearchTypeComboBox.Location = new System.Drawing.Point(94, 77);
             this.mSearchTypeComboBox.Name = "mSearchTypeComboBox";
             this.mSearchTypeComboBox.Size = new System.Drawing.Size(121, 21);
             this.mSearchTypeComboBox.TabIndex = 19;
             // 
             // mLuacCodeSizeButton
             // 
-            this.mLuacCodeSizeButton.Location = new System.Drawing.Point(15, 265);
+            this.mLuacCodeSizeButton.Location = new System.Drawing.Point(15, 285);
             this.mLuacCodeSizeButton.Name = "mLuacCodeSizeButton";
             this.mLuacCodeSizeButton.Size = new System.Drawing.Size(200, 23);
             this.mLuacCodeSizeButton.TabIndex = 20;
@@ -136,14 +125,14 @@
             // 
             // mLuacCodeSizeTextBox
             // 
-            this.mLuacCodeSizeTextBox.Location = new System.Drawing.Point(15, 294);
+            this.mLuacCodeSizeTextBox.Location = new System.Drawing.Point(15, 314);
             this.mLuacCodeSizeTextBox.Name = "mLuacCodeSizeTextBox";
             this.mLuacCodeSizeTextBox.Size = new System.Drawing.Size(200, 20);
             this.mLuacCodeSizeTextBox.TabIndex = 21;
             // 
             // mExtractAssetButton
             // 
-            this.mExtractAssetButton.Location = new System.Drawing.Point(15, 331);
+            this.mExtractAssetButton.Location = new System.Drawing.Point(15, 351);
             this.mExtractAssetButton.Name = "mExtractAssetButton";
             this.mExtractAssetButton.Size = new System.Drawing.Size(200, 23);
             this.mExtractAssetButton.TabIndex = 22;
@@ -155,14 +144,14 @@
             // 
             this.mStatusControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.mStatusControl.AutoSize = true;
-            this.mStatusControl.Location = new System.Drawing.Point(218, 433);
+            this.mStatusControl.Location = new System.Drawing.Point(218, 427);
             this.mStatusControl.Name = "mStatusControl";
             this.mStatusControl.Size = new System.Drawing.Size(0, 13);
             this.mStatusControl.TabIndex = 23;
             // 
             // mSaveScriptChangesButton
             // 
-            this.mSaveScriptChangesButton.Location = new System.Drawing.Point(15, 384);
+            this.mSaveScriptChangesButton.Location = new System.Drawing.Point(15, 404);
             this.mSaveScriptChangesButton.Name = "mSaveScriptChangesButton";
             this.mSaveScriptChangesButton.Size = new System.Drawing.Size(200, 23);
             this.mSaveScriptChangesButton.TabIndex = 24;
@@ -170,11 +159,51 @@
             this.mSaveScriptChangesButton.UseVisualStyleBackColor = true;
             this.mSaveScriptChangesButton.Click += new System.EventHandler(this.mSaveScriptChangesButton_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(669, 24);
+            this.menuStrip1.TabIndex = 25;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showHelpToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // showHelpToolStripMenuItem
+            // 
+            this.showHelpToolStripMenuItem.Name = "showHelpToolStripMenuItem";
+            this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.showHelpToolStripMenuItem.Text = "Show &Help";
+            this.showHelpToolStripMenuItem.Click += new System.EventHandler(this.showHelpToolStripMenuItem_Click);
+            // 
+            // mScriptTextBox
+            // 
+            this.mScriptTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mScriptTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mScriptTextBox.Location = new System.Drawing.Point(221, 83);
+            this.mScriptTextBox.Name = "mScriptTextBox";
+            this.mScriptTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.mScriptTextBox.SearchString = null;
+            this.mScriptTextBox.Size = new System.Drawing.Size(405, 341);
+            this.mScriptTextBox.StatusControl = null;
+            this.mScriptTextBox.TabIndex = 16;
+            this.mScriptTextBox.Text = "";
+            // 
             // ScriptSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 483);
+            this.ClientSize = new System.Drawing.Size(669, 441);
             this.Controls.Add(this.mSaveScriptChangesButton);
             this.Controls.Add(this.mStatusControl);
             this.Controls.Add(this.mExtractAssetButton);
@@ -187,9 +216,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.mBrowseLVL);
             this.Controls.Add(this.mLVLFileTextBox);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(685, 480);
             this.Name = "ScriptSearchForm";
             this.Text = "ScriptSearchForm";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +243,8 @@
         private System.Windows.Forms.Button mExtractAssetButton;
         private System.Windows.Forms.Label mStatusControl;
         private System.Windows.Forms.Button mSaveScriptChangesButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showHelpToolStripMenuItem;
     }
 }

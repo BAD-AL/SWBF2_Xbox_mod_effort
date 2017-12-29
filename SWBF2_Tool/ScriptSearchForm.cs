@@ -181,6 +181,15 @@ namespace SWBF2_Tool
                 item.SpliceInNewCode(mLVLFileTextBox.Text, mScriptTextBox.Text);
             }
         }
+
+        private void showHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImageViewer iv = new ImageViewer();
+            iv.DisplayImage = MainForm.GetImage("Help.png");
+            iv.Icon = SystemIcons.Question;
+            iv.Text = "Help";
+            iv.Show();
+        }
     }
 
     public class AssetListItem

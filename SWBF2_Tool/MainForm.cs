@@ -160,5 +160,31 @@ namespace SWBF2_Tool
             mFileLocationTextBox.Clear();
         }
 
+        static Form form = null;
+        /// <summary>
+        /// Get an image.
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        public static Image GetImage(string file)
+        {
+            Image ret = null;
+            try
+            {
+                if (form == null)
+                    form = new ImageViewer();
+                if (!file.StartsWith("SWBF2_Tool"))
+                    file = "SWBF2_Tool." + file;
+                System.IO.Stream s =
+                    form.GetType().Assembly.GetManifestResourceStream(file);
+                if (s != null)
+                    ret = Image.FromStream(s);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return ret;
+        }
     }
 }
