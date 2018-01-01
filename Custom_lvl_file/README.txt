@@ -8,6 +8,6 @@ The important files are:
 
 In game script you'll need to add code like:
 ReadDataFile("custom.lvl")
-ScriptCB_DoFile("custom2")    
+ScriptCB_DoFile("custom1")    
 FunctionCallDefinedInCustom2()  -- This line is not necessary, but possible if the function is defined in 'custom2.lua'
                                 -- You could just put the code you want to execute in the 'custom2.lua' file and it'll run.

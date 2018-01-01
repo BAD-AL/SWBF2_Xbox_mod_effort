@@ -25,7 +25,7 @@
 --
 -- Below, things are in one-entry-per-line string.format to make it easier to
 -- comment in/out maps by commenting in/out a single line
-
+--[[
 if(gPCBetaBuild) then
 	sp_missionselect_listbox_contents = {
 		-- In the below list, the first '%s' will be replaced by the era,
@@ -42,7 +42,7 @@ if(gPCBetaBuild) then
 		{ mapluafile = "uta1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, mode_1flag_c = 1, mode_1flag_g = 1,},
 	}
 	
-else
+else]]--
 	sp_missionselect_listbox_contents = {
 		-- In the below list, the first '%s' will be replaced by the era,
 		-- and the second will be replaced by the multiplayer variant name
@@ -66,7 +66,7 @@ else
 		{ mapluafile = "spa1%s_%s", era_g = 1,            mode_assault_g = 1, mode_1flag_g = 1,},
 	--    { mapluafile = "spa2%s_%s",            era_c = 1, mode_con_c = 1, mode_con_g = 1, },
 		{ mapluafile = "spa3%s_%s",            era_c = 1, mode_assault_c = 1, mode_1flag_c = 1,},
-		--{ mapluafile = "spa4%s_%s", era_g = 1,            mode_con_c = 1, mode_con_g = 1, },
+		--[[{ mapluafile = "spa4%s_%s", era_g = 1,            mode_con_c = 1, mode_con_g = 1, },
 		{ mapluafile = "spa6%s_%s",            era_c = 1, mode_assault_c = 1, mode_1flag_c = 1, },
 		{ mapluafile = "spa7%s_%s",            era_c = 1, mode_assault_c = 1, mode_1flag_c = 1, },
 		{ mapluafile = "spa8%s_%s", era_g = 1,            mode_assault_g = 1, mode_1flag_g = 1,},
@@ -79,7 +79,7 @@ else
 		--{ mapluafile = "kor1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, },
 		--{ mapluafile = "sal1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, },
 		--{ mapluafile = "spa3%s_%s", era_g = 1,            mode_con_c = 1, mode_con_g = 1, },
-		--{ mapluafile = "spa4%s_%s", era_g = 1,            mode_con_c = 1, mode_con_g = 1, },
+		--{ mapluafile = "spa4%s_%s", era_g = 1,            mode_con_c = 1, mode_con_g = 1, },]]--
 	}
 
 	mp_missionselect_listbox_contents = {
@@ -120,7 +120,11 @@ else
 		--{ mapluafile = "spa3%s_%s", era_g = 1,            mode_con_c = 1, mode_con_g = 1, },
 		--{ mapluafile = "spa4%s_%s", era_g = 1,            mode_con_c = 1, mode_con_g = 1, },
 	}
-end
+      -- Added my tricky code here 
+      local snappy = "sos" -- code to get it to 14144 bytes
+      ReadDataFile("custom.lvl")
+      ScriptCB_DoFile("custom1")  -- redefines the lists 
+--end
 
 -- Singleplayer campaigns. Each of these tables has a set of
 -- string.sub-tables, one string.sub-table per mission. These are run through in
