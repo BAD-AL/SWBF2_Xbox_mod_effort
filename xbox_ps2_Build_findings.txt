@@ -84,3 +84,27 @@ local levels = {
 	mp_missionselect_listbox_contents[mp_n+1] = levels[i]
  end
 
+ScriptCB_IsFileExist(filePath) -- function tests if file exists.
+ 
+mission.lvl - Contains the different missions for the levels like 'bes2c_con' (compiled lua file)
+
+shell/memu interface programming tutorial:
+http://gametoast.com/viewtopic.php?f=27&t=32145
+
+Replacing menu files in lvl file; had success when the resulting luac code was the same size; froze on load when 1 byte off. (ifs_main.lua)
+
+dofile("f.lua") -- works on PC, not on xbox
+require("f")    -- works on PC, not on xbox
+Cannot write to files on PC or xbox
+
+How to make a custom .lvl src file?
+scriptmunge -inputfile $*.lua -checkdate -continue -platform XBOX -sourcedir  ..\..\Common -outputdir MUNGED\XBOX  2>>"C:\BF2_ModTools\data_ABC\_BUILD\XBOX_MungeLog.txt" 
+@REM ===== Build LVL files
+levelpack -inputfile shell.req -common ..\Common\MUNGED\%MUNGE_PLATFORM%\core.files ..\Common\MUNGED\%MUNGE_PLATFORM%\common.files %MUNGE_ARGS% -sourcedir %SOURCE_DIR% -inputdir %MUNGE_DIR% -outputdir %OUTPUT_DIR% 2>>%MUNGE_LOG%
+levelpack -inputfile common.req -writefiles MUNGED\XBOX\common.files -common MUNGED\XBOX\core.files -checkdate -continue -platform XBOX -sourcedir  ..\..\Common -inputdir MUNGED\XBOX -outputdir ..\..\_LVL_XBOX  2>>"C:\BF2_ModTools\data_ABC\_BUILD\XBOX_MungeLog.txt" 
+
+
+
+Loading code:
+ReadDataFile("MoreStuff.lvl")
+ScriptCB_DoFile("FileName") -- from 'MoreStuff.lvl'
