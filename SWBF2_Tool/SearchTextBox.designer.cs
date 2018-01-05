@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             this.mContextMenu = new System.Windows.Forms.ContextMenu();
+            this.mClearMenuItem = new System.Windows.Forms.MenuItem();
             this.mCutMenuItem = new System.Windows.Forms.MenuItem();
             this.mCopyMenuItem = new System.Windows.Forms.MenuItem();
             this.mPasteMenuItem = new System.Windows.Forms.MenuItem();
@@ -41,27 +42,33 @@
             this.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
 
             // 
+            // mClearMenuItem 
+            // 
+            this.mClearMenuItem.Index = 0;
+            this.mClearMenuItem.Text = "Clear";
+            this.mClearMenuItem.Click += new System.EventHandler(this.ContextMenuItem_Click);
+            // 
             // mCutMenuItem
             // 
-            this.mCutMenuItem.Index = 0;
+            this.mCutMenuItem.Index = 1;
             this.mCutMenuItem.Text = "C&ut       (Ctrl+X)";
             this.mCutMenuItem.Click += new System.EventHandler(this.ContextMenuItem_Click);
             // 
             // mCopyMenuItem
             // 
-            this.mCopyMenuItem.Index = 1;
+            this.mCopyMenuItem.Index = 2;
             this.mCopyMenuItem.Text = "&Copy    (Ctrl+C)";
             this.mCopyMenuItem.Click += new System.EventHandler(this.ContextMenuItem_Click);
             // 
             // mPasteMenuItem
             // 
-            this.mPasteMenuItem.Index = 2;
+            this.mPasteMenuItem.Index = 3;
             this.mPasteMenuItem.Text = "&Paste   (Ctrl+V)";
             this.mPasteMenuItem.Click += new System.EventHandler(this.ContextMenuItem_Click);
             // 
             // mSelectAllMenuItem
             // 
-            this.mSelectAllMenuItem.Index = 3;
+            this.mSelectAllMenuItem.Index = 4;
             this.mSelectAllMenuItem.Text = "Select &All  (Ctrl+A)";
             this.mSelectAllMenuItem.Click += new System.EventHandler(this.ContextMenuItem_Click);
             // 
@@ -86,6 +93,7 @@
             // mContextMenu
             // 
             this.mContextMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+                this.mClearMenuItem,
                 this.mCutMenuItem,
                 this.mCopyMenuItem,
                 this.mPasteMenuItem,
@@ -99,6 +107,7 @@
         }
 
         private System.Windows.Forms.ContextMenu mContextMenu;
+        private System.Windows.Forms.MenuItem mClearMenuItem;
         private System.Windows.Forms.MenuItem mCutMenuItem;
         private System.Windows.Forms.MenuItem mCopyMenuItem;
         private System.Windows.Forms.MenuItem mPasteMenuItem;

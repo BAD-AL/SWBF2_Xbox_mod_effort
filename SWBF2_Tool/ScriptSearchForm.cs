@@ -25,6 +25,7 @@ namespace SWBF2_Tool
         {
             InitializeComponent();
             mSearchTypeComboBox.SelectedIndex = 0;
+            mExtractTypeComboBox.SelectedIndex = 0;
             mScriptTextBox.StatusControl = mStatusControl;
         }
 
@@ -47,41 +48,56 @@ namespace SWBF2_Tool
         private void PopulateListBox(string fileName)
         {
             mData  = File.ReadAllBytes(fileName);
-            List<long> locations = null;
+            byte[] searchBytes = NameBytes;
             switch (mSearchTypeComboBox.SelectedIndex)
             {
                 case 0: // scripts
-                    locations = BinSearch.GetLocationsOfGivenBytes(0L, ASCIIEncoding.ASCII.GetBytes("LuaP"), mData);
+                    searchBytes = ASCIIEncoding.ASCII.GetBytes("LuaP"); // Probably should be "src_" but difficulities were encountered.
                     break;
                 case 1: // images
+                    //searchBytes = ASCIIEncoding.ASCII.GetBytes("tex_"); // not working all that great; need to find out more about lvl file format.
                     break;
                 case 2: // all assets
-                    locations = BinSearch.GetLocationsOfGivenBytes(0L, NameBytes, mData);
+                    // Already set to NameBytes
                     break;
             }
-            if (locations.Count > 0)
+            List<AssetListItem> assetItems = GetItems(mData, searchBytes);
+            mAssetListBox.Items.Clear();
+            mAssetListBox.Items.AddRange(assetItems.ToArray());
+            mStatusControl.Text = "Items Found: " + mAssetListBox.Items.Count;
+        }
+
+        /// <summary>
+        /// Returns AssetList items matching the search criteria
+        /// </summary>
+        /// <param name="data">The file bytes; something like 'File.ReadAllBytes(fileName);'</param>
+        /// <param name="searchBytes">asset type; should be something like 'src_', 'tex_' or 'fx__'; but "LuaP" also works;
+        ///  I use  'ASCIIEncoding.ASCII.GetBytes("LuaP")' often.
+        ///  1-line usage:
+        ///    'GetItems(File.ReadAllBytes(fileName),ASCIIEncoding.ASCII.GetBytes("LuaP"));'
+        /// </param>
+        /// <returns></returns>
+        public static List<AssetListItem> GetItems(byte[] data, byte[] searchBytes)
+        {
+            List<long> locations = BinSearch.GetLocationsOfGivenBytes(0L, searchBytes, data);
+            List<AssetListItem> retVal = new List<AssetListItem>();
+            AssetListItem item = null;
+            foreach (long loc in locations)
             {
-                AssetListItem item = null;
-                AssetListItem prev = null;
-                mAssetListBox.Items.Clear();
-                foreach (long loc in locations)
+                item = new AssetListItem(loc, data);
+                if (BinSearch.GetLocationOfGivenBytes(loc, BodyBytes, data, 80L) > 0)
                 {
-                    item = new AssetListItem(loc, mData);
-                    if (BinSearch.GetLocationOfGivenBytes(loc, BodyBytes, mData, 80L) > 0)
-                    {
-                        mAssetListBox.Items.Add(item);
-                        prev = item;
-                    }
-                    else
-                    {
-                        // NEED TO FIND OUT WHAT SOME OF THESE ARE!!!
-                        System.Diagnostics.Debugger.Log(1, "INFO", "Not adding item:" + item.ToString());
-                        Console.Error.WriteLine("I don't know how to classify this item: "+ item.ToString());
-                        mAssetListBox.Items.Add(item);
-                    }
+                    retVal.Add(item);
                 }
-                mStatusControl.Text = "Items Found: "+ mAssetListBox.Items.Count;
+                else
+                {
+                    // NEED TO FIND OUT WHAT SOME OF THESE ARE!!!
+                    System.Diagnostics.Debugger.Log(1, "INFO", "Not adding item:" + item.ToString());
+                    Console.Error.WriteLine("I don't know how to classify this item: " + item.ToString());
+                    retVal.Add(item);
+                }
             }
+            return retVal;
         }
 
         private void textBox_DragOver(object sender, DragEventArgs e)
@@ -190,6 +206,159 @@ namespace SWBF2_Tool
             iv.Text = "Help";
             iv.Show();
         }
+
+        private void mListBoxSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void findInlvlFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LVLSearchForm form = new LVLSearchForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+            }
+            form.Dispose();
+        }
+
+        private string GetListtemsText()
+        {
+            StringBuilder b = new StringBuilder();
+            foreach (AssetListItem item in mAssetListBox.Items)
+            {
+                b.Append(item.ToString());
+                b.Append("\r\n");
+            }
+            return b.ToString();
+        }
+
+        private void displayListItemTextInTextboxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mScriptTextBox.Text = GetListtemsText();
+        }
+
+        private void replaceFunctionCallsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string callToReplace = StringInputDlg.GetString("Replace this", "Replace this call");
+            if (callToReplace != "")
+            {
+                string replacement = StringInputDlg.GetString("Replace With", "Replace with this:");
+                if (replacement != "")
+                {
+                    string fileName = StringInputDlg.GetString("Save as", "Save the result as");
+                    if (fileName != "")
+                    {
+                        if (callToReplace.Length == replacement.Length)
+                        {
+                            byte[] replacements = ASCIIEncoding.ASCII.GetBytes(replacement);
+                            List<long> locations = BinSearch.GetLocationsOfGivenBytes(0, ASCIIEncoding.ASCII.GetBytes(callToReplace), mData);
+                            byte[] copy = new byte[mData.Length];
+                            Array.Copy(mData, copy, mData.Length);
+                            int y = 0;
+                            foreach (long loc in locations)
+                            {
+                                y = 0;
+                                for (long i = loc; i < loc + replacements.Length; i++)
+                                {
+                                    copy[i] = replacements[y];
+                                    y++;
+                                }
+                            }
+                            File.WriteAllBytes(fileName, copy);
+                        }
+                        else
+                            MessageBox.Show("Error, They need to be the same length.");
+                    }
+                }
+            }
+        }
+
+        private void mExtractScriptsButton_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            string dirName = "Extracted";
+            if (!Directory.Exists(dirName))
+                Directory.CreateDirectory(dirName);
+            string fileName = "";
+            foreach(AssetListItem item in mAssetListBox.Items)
+            {
+                if (item.IsLuaCode)
+                {
+                    count++;
+                    if (mExtractTypeComboBox.SelectedIndex == 1) // munged
+                    {
+                        WriteMungedScript(item.GetName(), dirName + "\\" + item.GetName()+".script", StripDC(item.GetAssetData()));
+                    }
+                    else
+                    {
+                        fileName = dirName + "\\" + item.GetName() + ".luac";
+                        File.WriteAllBytes(fileName, StripDC(item.GetAssetData()));
+                    }
+                }
+            }
+            mStatusControl.Text = "Extracted " + count + " files to:" + Directory.GetCurrentDirectory() + "\\"+ dirName;
+        }
+
+        private static byte[] StripDC(byte[] data)
+        {
+            byte[] stripMe = ASCIIEncoding.ASCII.GetBytes("dc:");
+            List<long> locations = BinSearch.GetLocationsOfGivenBytes(0, stripMe, data);
+            if (locations.Count == 0)
+                return data;
+
+            List<byte> bl = new List<byte>(data);
+            for (int i = locations.Count - 1; i > -1; i--)
+            {
+                bl.RemoveRange((int)locations[i], 3);
+            }
+            return bl.ToArray();
+        }
+
+        public static void WriteMungedScript(string name, string fileName, byte[] data)
+        {
+            /* uscb format for luac code seems to be:
+             * 'uscb',(12*4+1)+data.Length + name.Length+padding,'src_',(length of rest of chunk), 
+             * 'NAME', (length of name +1), name (+null terminator), 'INFO',1 (4 bytes),1 (4 bytes),
+             * 'BODY', (body length +padding), data, padding
+             * Must have 1-4 bytes of padding.
+             */
+            int headerSize = name.Length + 1 + (4 * 9) + data.Length; // 9 fields, each of 4 bytes
+            int padding = 0;
+            int fileLengthNoPadding = 49 + name.Length + data.Length;
+            int needBytes = 4;
+            if (fileLengthNoPadding % needBytes != 0)
+                padding = needBytes - (fileLengthNoPadding % needBytes);
+            else
+                padding = 4;
+            headerSize += padding;
+            int srcSz = headerSize - 8;
+
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+
+            using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                BinaryWriter writer = new BinaryWriter(fs);
+                writer.Write(ASCIIEncoding.ASCII.GetBytes("ucfb"));
+                writer.Write(headerSize);
+                writer.Write(ASCIIEncoding.ASCII.GetBytes("scr_"));
+                writer.Write(srcSz);
+                writer.Write(ASCIIEncoding.ASCII.GetBytes("NAME"));
+                writer.Write(name.Length + 1);
+                writer.Write(ASCIIEncoding.ASCII.GetBytes(name));
+                writer.Write((byte)0); // null terminator
+                writer.Write(ASCIIEncoding.ASCII.GetBytes("INFO"));
+                writer.Write(1);
+                writer.Write(1);
+                writer.Write(ASCIIEncoding.ASCII.GetBytes("BODY"));
+                writer.Write((data.Length+1));
+                writer.Write(data);
+                for (int i = 0; i < padding; i++)
+                    writer.Write((byte)0);
+                writer.Close();
+                fs.Close();
+            }
+        }
     }
 
     public class AssetListItem
@@ -215,10 +384,18 @@ namespace SWBF2_Tool
             mToString = GetName();
         }
 
+        public string FileName { get; set; }
+
         private string mToString = "";
         public override string ToString()
         {
-            return mToString;
+            string retVal = mToString;
+
+            if (!String.IsNullOrEmpty(FileName))
+            {
+                retVal = string.Concat(FileName, ":", mToString);
+            }
+            return retVal;
         }
 
         public string GetDisplayData()
@@ -293,7 +470,7 @@ namespace SWBF2_Tool
             return name;
         }
 
-        private string GetName()
+        public string GetName()
         {
             return GetName(mLocation, mData);
         }
@@ -401,7 +578,7 @@ namespace SWBF2_Tool
                 string searchFor = fileName.EndsWith(".lua") ? fileName : fileName + ".lua";
                 foreach (string file in sAllLuaFiles)
                 {
-                    if (file.EndsWith(searchFor))
+                    if (file.EndsWith(searchFor, StringComparison.InvariantCultureIgnoreCase))
                     {
                         sourceFile = file;
                         break;
@@ -446,7 +623,7 @@ namespace SWBF2_Tool
                         bw.Close();
                     }
                 }
-                catch (Exception e)
+                catch (Exception )
                 {
                     MessageBox.Show("Error splicing in new code");
                 }

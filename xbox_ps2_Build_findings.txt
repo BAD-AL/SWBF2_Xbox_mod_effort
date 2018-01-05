@@ -84,6 +84,8 @@ local levels = {
 	mp_missionselect_listbox_contents[mp_n+1] = levels[i]
  end
 
+ShowMessageText("game.objectives.complete", 1)
+ 
 ScriptCB_IsFileExist(filePath) -- function tests if file exists.
  
 mission.lvl - Contains the different missions for the levels like 'bes2c_con' (compiled lua file)
@@ -104,7 +106,30 @@ levelpack -inputfile shell.req -common ..\Common\MUNGED\%MUNGE_PLATFORM%\core.fi
 levelpack -inputfile common.req -writefiles MUNGED\XBOX\common.files -common MUNGED\XBOX\core.files -checkdate -continue -platform XBOX -sourcedir  ..\..\Common -inputdir MUNGED\XBOX -outputdir ..\..\_LVL_XBOX  2>>"C:\BF2_ModTools\data_ABC\_BUILD\XBOX_MungeLog.txt" 
 
 
-
 Loading code:
 ReadDataFile("MoreStuff.lvl")
 ScriptCB_DoFile("FileName") -- from 'MoreStuff.lvl'
+
+Levels made to go into the DLC area will load assets from the DLC area with a call to 'ReadDataFile()' with an 
+argument starting with "dc:", telling the program to look in the download content area for the code.
+Replacing function 'ReadDataFile' in the following manner:
+if not OldReadDataFile then
+	OldReadDataFile = ReadDataFile
+
+	ReadDataFile = function(file, ...)
+		-- when the levels want to load from the DLC area, we instead load from the folders under _LVL_XBOX
+		if string.find(file, "dc:") == 1 then 
+			file = string.gsub(file, "dc:", "")
+		end
+		OldReadDataFile(file, unpack(arg))
+	end
+	ReadDataFiel = ReadDataFile
+end
+Has not been a success. It seems to work if run directly before the 'ReadDataFile()' call, but the global env
+somehow seems to get the original 'ReadDataFile()' function restored.
+In the source code when calling 'ReadDataFile()' loading from the download content area we'll need to have some conditional code like:
+if gPlatformStr == "PC" then
+    ReadDataFile("dc:ABC\\file.lvl")
+else
+    ReadDataFile("ABC\\file.lvl")
+end

@@ -33,6 +33,8 @@ namespace SWBF2_Tool
         {
             if (source == mCutMenuItem)
                 this.Cut();
+            else if (source == mClearMenuItem)
+                this.Text = "";
             else if (source == mCopyMenuItem)
                 this.Copy();
             else if (source == mPasteMenuItem)
