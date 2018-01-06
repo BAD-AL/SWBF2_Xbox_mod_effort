@@ -122,7 +122,7 @@
             this.mSearchTypeComboBox.FormattingEnabled = true;
             this.mSearchTypeComboBox.Items.AddRange(new object[] {
             "Lua",
-            "textures (not impl)",
+            "Textures",
             "All Assets"});
             this.mSearchTypeComboBox.Location = new System.Drawing.Point(82, 7);
             this.mSearchTypeComboBox.Name = "mSearchTypeComboBox";

@@ -52,13 +52,15 @@ namespace SWBF2_Tool
             switch (mSearchTypeComboBox.SelectedIndex)
             {
                 case 0: // scripts
-                    searchBytes = ASCIIEncoding.ASCII.GetBytes("LuaP"); // Probably should be "src_" but difficulities were encountered.
+                    //searchBytes = ASCIIEncoding.ASCII.GetBytes("LuaP"); // Probably should be "scr_" but difficulities were encountered.
+                    searchBytes = ASCIIEncoding.ASCII.GetBytes("scr_");
                     break;
-                case 1: // images
-                    //searchBytes = ASCIIEncoding.ASCII.GetBytes("tex_"); // not working all that great; need to find out more about lvl file format.
+                case 1: // textures
+                    searchBytes = ASCIIEncoding.ASCII.GetBytes("tex_"); // not working all that great; need to find out more about lvl file format.
                     break;
                 case 2: // all assets
                     // Already set to NameBytes
+                    // mcfg?,
                     break;
             }
             List<AssetListItem> assetItems = GetItems(mData, searchBytes);
@@ -92,7 +94,7 @@ namespace SWBF2_Tool
                 else
                 {
                     // NEED TO FIND OUT WHAT SOME OF THESE ARE!!!
-                    System.Diagnostics.Debugger.Log(1, "INFO", "Not adding item:" + item.ToString());
+                    // System.Diagnostics.Debugger.Log(1, "INFO", "Not adding item:" + item.ToString());
                     Console.Error.WriteLine("I don't know how to classify this item: " + item.ToString());
                     retVal.Add(item);
                 }
@@ -287,7 +289,7 @@ namespace SWBF2_Tool
                     count++;
                     if (mExtractTypeComboBox.SelectedIndex == 1) // munged
                     {
-                        WriteMungedScript(item.GetName(), dirName + "\\" + item.GetName()+".script", StripDC(item.GetAssetData()));
+                        WriteMungedScript(item.GetName(), dirName + "\\" + item.GetName()+".script", item.GetAssetData());
                     }
                     else
                     {
@@ -322,15 +324,12 @@ namespace SWBF2_Tool
              * 'BODY', (body length +padding), data, padding
              * Must have 1-4 bytes of padding.
              */
-            int headerSize = name.Length + 1 + (4 * 9) + data.Length; // 9 fields, each of 4 bytes
-            int padding = 0;
-            int fileLengthNoPadding = 49 + name.Length + data.Length;
-            int needBytes = 4;
-            if (fileLengthNoPadding % needBytes != 0)
-                padding = needBytes - (fileLengthNoPadding % needBytes);
-            else
-                padding = 4;
-            headerSize += padding;
+            int namePadding = 4 - (name.Length % 4);
+            int headerSize = name.Length + namePadding + (4 * 9) + data.Length; // 9 fields, each of 4 bytes
+            int fileLengthNoPadding = 48 + namePadding + name.Length + data.Length;
+            int endPadding = 4 - (fileLengthNoPadding % 4);
+            
+            headerSize += endPadding;
             int srcSz = headerSize - 8;
 
             if (File.Exists(fileName))
@@ -346,14 +345,15 @@ namespace SWBF2_Tool
                 writer.Write(ASCIIEncoding.ASCII.GetBytes("NAME"));
                 writer.Write(name.Length + 1);
                 writer.Write(ASCIIEncoding.ASCII.GetBytes(name));
-                writer.Write((byte)0); // null terminator
+                for (int i = 0; i < namePadding; i++)
+                    writer.Write((byte)0);
                 writer.Write(ASCIIEncoding.ASCII.GetBytes("INFO"));
                 writer.Write(1);
                 writer.Write(1);
                 writer.Write(ASCIIEncoding.ASCII.GetBytes("BODY"));
                 writer.Write((data.Length+1));
                 writer.Write(data);
-                for (int i = 0; i < padding; i++)
+                for (int i = 0; i < endPadding; i++)
                     writer.Write((byte)0);
                 writer.Close();
                 fs.Close();
@@ -370,17 +370,18 @@ namespace SWBF2_Tool
         public AssetListItem(long location, byte[] data)
         {
             mData = data;
-            if (data[location] == ScriptSearchForm.NameBytes[0] &&
-                data[location + 1] == ScriptSearchForm.NameBytes[1] &&
-                data[location + 2] == ScriptSearchForm.NameBytes[2] &&
-                data[location + 3] == ScriptSearchForm.NameBytes[3] &&
-                data[location + 4] == ScriptSearchForm.NameBytes[4] &&
-                data[location + 5] == ScriptSearchForm.NameBytes[5])
-            {
-                mLocation = location;
-            }
-            else
-                mLocation = BinSearch.GetLocationOfGivenBytesBackup(location, ScriptSearchForm.NameBytes, mData, 70);
+            mLocation = location;
+            //if (data[location] == ScriptSearchForm.NameBytes[0] &&
+            //    data[location + 1] == ScriptSearchForm.NameBytes[1] &&
+            //    data[location + 2] == ScriptSearchForm.NameBytes[2] &&
+            //    data[location + 3] == ScriptSearchForm.NameBytes[3] &&
+            //    data[location + 4] == ScriptSearchForm.NameBytes[4] &&
+            //    data[location + 5] == ScriptSearchForm.NameBytes[5])
+            //{
+            //    mLocation = location;
+            //}
+            //else
+            //    mLocation = BinSearch.GetLocationOfGivenBytesBackup(location, ScriptSearchForm.NameBytes, mData, 70);
             mToString = GetName();
         }
 
@@ -460,7 +461,7 @@ namespace SWBF2_Tool
         internal static string GetName(long loc, byte[] data)
         {
             string name = "";
-            loc += 2;// for the 2 zero bytes at thr front
+            //loc += 2;// for the 2 zero bytes at thr front
             int nameLen = data[(int)loc + 4] - 1; // -1 for null byte
             if (loc > 0)
             {
@@ -472,14 +473,19 @@ namespace SWBF2_Tool
 
         public string GetName()
         {
-            return GetName(mLocation, mData);
+            long loc = BinSearch.GetLocationOfGivenBytes(mLocation, ASCIIEncoding.ASCII.GetBytes("NAME"), mData, 80);
+            if (loc > -1)
+            {
+                return GetName(loc, mData);
+            }
+            return "";
         }
 
         public long BodyStart
         {
             get
             {
-                long loc = BinSearch.GetLocationOfGivenBytes(mLocation, ScriptSearchForm.BodyBytes, mData);
+                long loc = BinSearch.GetLocationOfGivenBytes(mLocation, ScriptSearchForm.BodyBytes, mData, 80);
                 return loc + 8;
             }
         }
