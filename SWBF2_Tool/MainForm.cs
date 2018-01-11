@@ -18,6 +18,8 @@ namespace SWBF2_Tool
             mTypeComboBox.SelectedIndex = 0;
         }
 
+        private string mMshPath = "";
+
         private void mMshFileNameTextBox_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
@@ -37,23 +39,17 @@ namespace SWBF2_Tool
         private string FindTgaFileNames(string fileName)
         {
             String retVal = "";
+            mMshPath = fileName.Substring(0, fileName.LastIndexOf('\\') +1);
+
             byte[] bytes = File.ReadAllBytes(fileName);
             byte[] search = Encoding.ASCII.GetBytes(".tga");
             List< long> locs = BinSearch.GetLocationsOfGivenBytes(0, search, bytes);
             for(int i=0; i < locs.Count; i++)
             {
-
-                retVal = retVal + GetStringFromData(bytes, locs[i]) + ".tga; ";
+                retVal = retVal + GetStringFromData(bytes, locs[i]) + ".tga";
+                if( i != locs.Count-1)
+                    retVal += "; ";
             }
-
-            /*if (loc > -1L)
-            {
-                long start = loc;
-                while (loc > 0 && bytes[start] != 0)
-                    start--;
-                start++;
-                retVal = ASCIIEncoding.ASCII.GetString(bytes, (int)start, (int)(loc - start)) + ".tga";
-            }*/
             return retVal;
         }
 
@@ -74,6 +70,7 @@ namespace SWBF2_Tool
                 e.Effect = DragDropEffects.Copy;
             else
                 e.Effect = DragDropEffects.None;
+            mStatusControl.Text = "";
         }
 
         private void mSearchButton_Click(object sender, EventArgs e)
@@ -148,11 +145,15 @@ namespace SWBF2_Tool
         {
             Control tb = sender as Control;
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            if (files != null && files.Length == 1 && tb != null)
+
+            if (tb == mMshFileNameTextBox)
             {
-                tb.Text = files[0];
-                
+                if (files != null && files.Length == 1 && tb != null)
+                {
+                    tb.Text = files[0];
+                }
             }
+            mStatusControl.Text = "File dropped";
         }
 
         private void mClearButton_Click(object sender, EventArgs e)
@@ -186,5 +187,67 @@ namespace SWBF2_Tool
             }
             return ret;
         }
+
+        private string[] GetTgaFileNames()
+        {
+            string[] files = null;
+            if( mMshPath.Length > 5 && mTgaFileNameTextBox.Text.Length > 6)
+                files = ((mMshPath + mTgaFileNameTextBox.Text).Replace("; ", ";" + mMshPath)).Split(new char[] { ';' });
+            return files;
+        }
+
+        private void mCopyFilesButton_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(mCopyToFolderTextBox.Text))
+            {
+                string[] files = GetTgaFileNames();
+                string targetDir = mCopyToFolderTextBox.Text;
+                if (!targetDir.EndsWith("\\"))
+                    targetDir += '\\';
+                if (files != null && files.Length > 0)
+                {
+                    mFileLocationTextBox.Text = "";
+                    // copy over .msh file first
+                    string destFile = "";
+                    int filesCopied = 0;
+                    string optionFile = "";
+                    destFile = targetDir + mMshFileNameTextBox.Text.Substring(mMshFileNameTextBox.Text.LastIndexOf('\\') + 1);
+                    if (!File.Exists(destFile))
+                    {
+                        File.Copy(mMshFileNameTextBox.Text, destFile);
+                        mFileLocationTextBox.AppendText("Copied " + destFile + "\n");
+                    }
+
+                    for (int i = 0; i < files.Length; i++)
+                    {
+                        destFile = targetDir + files[i].Substring(files[i].LastIndexOf('\\') + 1);
+                        if (!File.Exists(files[i]) && File.Exists(files[i].Replace("PC\\", "")))
+                            files[i] = files[i].Replace("PC\\", "");
+                        if (!File.Exists(files[i]))
+                            mFileLocationTextBox.AppendText("Could not locate file: "+ files[i].Substring(files[i].LastIndexOf('\\')+1) +"\n");
+                        else if (!File.Exists(destFile))
+                        {
+                            File.Copy(files[i], destFile);
+                            filesCopied++;
+                            mFileLocationTextBox.AppendText("Copied " + destFile + "\n");
+                            if (File.Exists(files[i] + ".option"))
+                            {
+                                File.Copy(files[i] + ".option", destFile + ".option");
+                                mFileLocationTextBox.AppendText("Copied "+destFile + ".option\n");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No files to copy");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Folder does not exist!", mCopyToFolderTextBox.Text);
+            }
+        }
+
     }
 }

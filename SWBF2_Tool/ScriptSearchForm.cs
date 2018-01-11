@@ -229,7 +229,7 @@ namespace SWBF2_Tool
             foreach (AssetListItem item in mAssetListBox.Items)
             {
                 b.Append(item.ToString());
-                b.Append("\r\n");
+                b.Append("\n");
             }
             return b.ToString();
         }
@@ -294,7 +294,7 @@ namespace SWBF2_Tool
                     else
                     {
                         fileName = dirName + "\\" + item.GetName() + ".luac";
-                        File.WriteAllBytes(fileName, StripDC(item.GetAssetData()));
+                        File.WriteAllBytes(fileName, item.GetAssetData());
                     }
                 }
             }
@@ -303,17 +303,22 @@ namespace SWBF2_Tool
 
         private static byte[] StripDC(byte[] data)
         {
+            byte b = 0;
             byte[] stripMe = ASCIIEncoding.ASCII.GetBytes("dc:");
             List<long> locations = BinSearch.GetLocationsOfGivenBytes(0, stripMe, data);
             if (locations.Count == 0)
                 return data;
 
-            List<byte> bl = new List<byte>(data);
+            List<byte> byteList = new List<byte>(data);
             for (int i = locations.Count - 1; i > -1; i--)
             {
-                bl.RemoveRange((int)locations[i], 3);
+                byteList.RemoveRange((int)locations[i], 3);
+                // now, fix up the length of the string.
+                b = byteList[(int)locations[i]-4];
+                b -= 3;
+                byteList[(int)locations[i]-4] = b;
             }
-            return bl.ToArray();
+            return byteList.ToArray();
         }
 
         public static void WriteMungedScript(string name, string fileName, byte[] data)
