@@ -29,6 +29,8 @@ namespace SWBF2_Tool
             mScriptTextBox.StatusControl = mStatusControl;
         }
 
+        public static bool ShowPcLuaCode = true;
+
         private void mBrowseLVL_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -52,13 +54,16 @@ namespace SWBF2_Tool
             switch (mSearchTypeComboBox.SelectedIndex)
             {
                 case 0: // scripts
-                    //searchBytes = ASCIIEncoding.ASCII.GetBytes("LuaP"); // Probably should be "scr_" but difficulities were encountered.
+                    //searchBytes = ASCIIEncoding.ASCII.GetBytes("LuaP"); 
                     searchBytes = ASCIIEncoding.ASCII.GetBytes("scr_");
                     break;
                 case 1: // textures
-                    searchBytes = ASCIIEncoding.ASCII.GetBytes("tex_"); // not working all that great; need to find out more about lvl file format.
+                    searchBytes = ASCIIEncoding.ASCII.GetBytes("tex_"); 
                     break;
-                case 2: // all assets
+                case 2: // _LVL_
+                    searchBytes = ASCIIEncoding.ASCII.GetBytes("lvl_");
+                    break;
+                case 3: // all assets
                     // Already set to NameBytes
                     // mcfg?,
                     break;
@@ -122,12 +127,20 @@ namespace SWBF2_Tool
 
         private void mScriptListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AssetListItem item = mAssetListBox.Items[mAssetListBox.SelectedIndex] as AssetListItem;
-            mScriptTextBox.Text = item.GetDisplayData();
-            if (item.IsLuaCode)
-                ShowCodeSize();
-            else
-                mLuacCodeSizeTextBox.Text = "";
+            UpdateLuaDetails();
+        }
+
+        private void UpdateLuaDetails()
+        {
+            if (mAssetListBox.SelectedIndex > -1)
+            {
+                AssetListItem item = mAssetListBox.Items[mAssetListBox.SelectedIndex] as AssetListItem;
+                mScriptTextBox.Text = item.GetDisplayData();
+                if (item.IsLuaCode)
+                    ShowCodeSize();
+                else
+                    mLuacCodeSizeTextBox.Text = "";
+            }
         }
 
         public static string RunCommand(string programName, string args, bool includeStdErr)
@@ -207,20 +220,6 @@ namespace SWBF2_Tool
             iv.Icon = SystemIcons.Question;
             iv.Text = "Help";
             iv.Show();
-        }
-
-        private void mListBoxSearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void findInlvlFilesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LVLSearchForm form = new LVLSearchForm();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-            }
-            form.Dispose();
         }
 
         private string GetListtemsText()
@@ -364,6 +363,13 @@ namespace SWBF2_Tool
                 fs.Close();
             }
         }
+
+        private void mPcLuaCodeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowPcLuaCode = mPcLuaCodeRadioButton.Checked;
+            mSaveScriptChangesButton.Enabled = mPcLuaCodeRadioButton.Checked;
+            UpdateLuaDetails();
+        }
     }
 
     public class AssetListItem
@@ -440,12 +446,21 @@ namespace SWBF2_Tool
 
         public byte[] GetAssetData()
         {
-            long loc = BinSearch.GetLocationOfGivenBytes(mLocation, ScriptSearchForm.BodyBytes, mData);
-            int bodyLen = GetLengthAtLocation(loc + 4);
-            long bodyStart = loc + 8;
-            long bodyEnd = loc + 8 + bodyLen;
+            byte[] assetData = null;
+            if (BinSearch.GetLocationOfGivenBytes(mLocation, ASCIIEncoding.ASCII.GetBytes("lvl_"), mData) == mLocation)
+            {
+                int bodyLen = GetLengthAtLocation(mLocation + 4);
+                assetData = BinSearch.GetArrayChunk(mData, mLocation, bodyLen + 8);
+            }
+            else
+            {
+                long loc = BinSearch.GetLocationOfGivenBytes(mLocation, ScriptSearchForm.BodyBytes, mData);
+                int bodyLen = GetLengthAtLocation(loc + 4);
+                long bodyStart = loc + 8;
+                long bodyEnd = loc + 8 + bodyLen;
 
-            byte[] assetData = BinSearch.GetArrayChunk(mData, bodyStart, bodyLen);
+                assetData = BinSearch.GetArrayChunk(mData, bodyStart, bodyLen);
+            }
             return assetData;
         }
 
@@ -520,12 +535,20 @@ namespace SWBF2_Tool
                 name, mLocation, bodyLen, loc + 8, loc + 8 + bodyLen);
             if (IsLuaCode)
             {
-                string sourceFileName = FindSourceFile(name);
-                string code = LookupPCcode(sourceFileName);
-                int sz = ScriptSearchForm.LuacCodeSize(sourceFileName);
-                if (bodyLen == sz)
-                    retVal += "\n-- ********* LUAC Code Size MATCH!!! ***********";
-                retVal = retVal + string.Format("\n-- {0}\n-- PC luac code size = {1}; PC code:\n{2}", sourceFileName, sz, code);
+                if (ScriptSearchForm.ShowPcLuaCode)
+                {
+                    string sourceFileName = FindSourceFile(name);
+                    string code = LookupPCcode(sourceFileName);
+                    int sz = ScriptSearchForm.LuacCodeSize(sourceFileName);
+                    if (bodyLen == sz)
+                        retVal += "\n-- ********* LUAC Code Size MATCH!!! ***********";
+                    retVal = retVal + string.Format("\n-- {0}\n-- PC luac code size = {1}; PC code:\n{2}", sourceFileName, sz, code);
+                }
+                else
+                {
+                    string code = DecompileLua(this.GetAssetData());
+                    retVal =  string.Format("\n-- {0}\n-- luac -l listing \n{1}", GetName(), code);
+                }
             }
             else
                 retVal = retVal + String.Format("\n-- 50 bytes, including the previous 30 bytes {0}", BinSearch.GetByteString(mLocation-30,mData,  50));
@@ -641,25 +664,12 @@ namespace SWBF2_Tool
             }
         }
 
-        /*
         private static string DecompileLua(byte[] luaCode)
         {
             string fileName = ".\\decompile.luac";
             File.WriteAllBytes(fileName, luaCode);
-            ProcessStartInfo processStartInfo = new ProcessStartInfo
-            {
-                //FileName = @".\luadec.exe",
-                FileName = @"java",
-                Arguments = "-jar unluac.jar " + fileName,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                UseShellExecute = false
-            };
-            var process = Process.Start(processStartInfo);
-            string output = process.StandardOutput.ReadToEnd();
-            string err = process.StandardError.ReadToEnd();
-            process.WaitForExit();
-            return output + "\r\n" + err;
-        }*/
+            string output = ScriptSearchForm.RunCommand(@"C:\BF2_ModTools\ToolsFL\bin\luac.exe", " -l " + fileName, true);
+            return output;
+        }
     }
 }

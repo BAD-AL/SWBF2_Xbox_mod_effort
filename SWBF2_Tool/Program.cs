@@ -15,8 +15,8 @@ namespace SWBF2_Tool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
-            //Application.Run(new ScriptSearchForm());
+            //Application.Run(new MainForm());
+            Application.Run(new ScriptSearchForm());
         }
     }
 }
