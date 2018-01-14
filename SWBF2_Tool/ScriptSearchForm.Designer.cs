@@ -44,18 +44,19 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.mOperationPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mLuacListingRadioButton = new System.Windows.Forms.RadioButton();
             this.mPcLuaCodeRadioButton = new System.Windows.Forms.RadioButton();
             this.mExtractTypeComboBox = new System.Windows.Forms.ComboBox();
             this.mExtractScriptsButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.mListBoxSearchTextBox = new System.Windows.Forms.TextBox();
             this.mScriptTextBox = new SWBF2_Tool.SearchTextBox();
+            this.mUseMethod2CheckBox = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.mOperationPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             this.mLVLFileTextBox.Name = "mLVLFileTextBox";
             this.mLVLFileTextBox.Size = new System.Drawing.Size(788, 20);
             this.mLVLFileTextBox.TabIndex = 12;
+            this.mLVLFileTextBox.TextChanged += new System.EventHandler(this.mLVLFileTextBox_TextChanged);
             this.mLVLFileTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox_DragDrop);
             this.mLVLFileTextBox.DragOver += new System.Windows.Forms.DragEventHandler(this.textBox_DragOver);
             // 
@@ -87,9 +89,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 14;
-            this.label4.Text = "In file:";
+            this.label4.Text = "LVL File:";
             // 
             // mAssetListBox
             // 
@@ -106,6 +108,7 @@
             // 
             // mSearchButton
             // 
+            this.mSearchButton.Enabled = false;
             this.mSearchButton.Location = new System.Drawing.Point(3, 5);
             this.mSearchButton.Name = "mSearchButton";
             this.mSearchButton.Size = new System.Drawing.Size(72, 23);
@@ -119,12 +122,12 @@
             this.mSearchTypeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.mSearchTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mSearchTypeComboBox.Enabled = false;
             this.mSearchTypeComboBox.FormattingEnabled = true;
             this.mSearchTypeComboBox.Items.AddRange(new object[] {
             "Lua",
             "Textures",
-            "_LVL_",
-            "All Assets"});
+            "_LVL_"});
             this.mSearchTypeComboBox.Location = new System.Drawing.Point(82, 7);
             this.mSearchTypeComboBox.Name = "mSearchTypeComboBox";
             this.mSearchTypeComboBox.Size = new System.Drawing.Size(183, 21);
@@ -134,9 +137,9 @@
             // 
             this.mLuacCodeSizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.mLuacCodeSizeButton.Location = new System.Drawing.Point(3, 284);
+            this.mLuacCodeSizeButton.Location = new System.Drawing.Point(0, 90);
             this.mLuacCodeSizeButton.Name = "mLuacCodeSizeButton";
-            this.mLuacCodeSizeButton.Size = new System.Drawing.Size(262, 23);
+            this.mLuacCodeSizeButton.Size = new System.Drawing.Size(249, 23);
             this.mLuacCodeSizeButton.TabIndex = 20;
             this.mLuacCodeSizeButton.Text = "Luac Code Size >";
             this.mLuacCodeSizeButton.UseVisualStyleBackColor = true;
@@ -146,18 +149,18 @@
             // 
             this.mLuacCodeSizeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.mLuacCodeSizeTextBox.Location = new System.Drawing.Point(3, 313);
+            this.mLuacCodeSizeTextBox.Location = new System.Drawing.Point(0, 119);
             this.mLuacCodeSizeTextBox.Name = "mLuacCodeSizeTextBox";
-            this.mLuacCodeSizeTextBox.Size = new System.Drawing.Size(262, 20);
+            this.mLuacCodeSizeTextBox.Size = new System.Drawing.Size(249, 20);
             this.mLuacCodeSizeTextBox.TabIndex = 21;
             // 
             // mExtractAssetButton
             // 
             this.mExtractAssetButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.mExtractAssetButton.Location = new System.Drawing.Point(3, 350);
+            this.mExtractAssetButton.Location = new System.Drawing.Point(0, 156);
             this.mExtractAssetButton.Name = "mExtractAssetButton";
-            this.mExtractAssetButton.Size = new System.Drawing.Size(262, 23);
+            this.mExtractAssetButton.Size = new System.Drawing.Size(249, 23);
             this.mExtractAssetButton.TabIndex = 22;
             this.mExtractAssetButton.Text = "Extract Asset To...";
             this.mExtractAssetButton.UseVisualStyleBackColor = true;
@@ -176,9 +179,9 @@
             // 
             this.mSaveScriptChangesButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.mSaveScriptChangesButton.Location = new System.Drawing.Point(3, 403);
+            this.mSaveScriptChangesButton.Location = new System.Drawing.Point(0, 209);
             this.mSaveScriptChangesButton.Name = "mSaveScriptChangesButton";
-            this.mSaveScriptChangesButton.Size = new System.Drawing.Size(262, 23);
+            this.mSaveScriptChangesButton.Size = new System.Drawing.Size(249, 23);
             this.mSaveScriptChangesButton.TabIndex = 24;
             this.mSaveScriptChangesButton.Text = "Save Script Changes";
             this.mSaveScriptChangesButton.UseVisualStyleBackColor = true;
@@ -205,7 +208,7 @@
             // showHelpToolStripMenuItem
             // 
             this.showHelpToolStripMenuItem.Name = "showHelpToolStripMenuItem";
-            this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.showHelpToolStripMenuItem.Text = "Show &Help";
             this.showHelpToolStripMenuItem.Click += new System.EventHandler(this.showHelpToolStripMenuItem_Click);
             // 
@@ -219,18 +222,11 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.mExtractTypeComboBox);
-            this.splitContainer1.Panel1.Controls.Add(this.mExtractScriptsButton);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.mListBoxSearchTextBox);
+            this.splitContainer1.Panel1.Controls.Add(this.mOperationPanel);
             this.splitContainer1.Panel1.Controls.Add(this.mSearchButton);
-            this.splitContainer1.Panel1.Controls.Add(this.mSaveScriptChangesButton);
             this.splitContainer1.Panel1.Controls.Add(this.mAssetListBox);
             this.splitContainer1.Panel1.Controls.Add(this.mSearchTypeComboBox);
-            this.splitContainer1.Panel1.Controls.Add(this.mExtractAssetButton);
-            this.splitContainer1.Panel1.Controls.Add(this.mLuacCodeSizeButton);
-            this.splitContainer1.Panel1.Controls.Add(this.mLuacCodeSizeTextBox);
+            this.splitContainer1.Panel1.Enabled = false;
             // 
             // splitContainer1.Panel2
             // 
@@ -239,13 +235,32 @@
             this.splitContainer1.SplitterDistance = 277;
             this.splitContainer1.TabIndex = 26;
             // 
+            // mOperationPanel
+            // 
+            this.mOperationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mOperationPanel.Controls.Add(this.groupBox1);
+            this.mOperationPanel.Controls.Add(this.mExtractTypeComboBox);
+            this.mOperationPanel.Controls.Add(this.mLuacCodeSizeTextBox);
+            this.mOperationPanel.Controls.Add(this.mExtractScriptsButton);
+            this.mOperationPanel.Controls.Add(this.mLuacCodeSizeButton);
+            this.mOperationPanel.Controls.Add(this.mExtractAssetButton);
+            this.mOperationPanel.Controls.Add(this.mSaveScriptChangesButton);
+            this.mOperationPanel.Enabled = false;
+            this.mOperationPanel.Location = new System.Drawing.Point(3, 204);
+            this.mOperationPanel.Name = "mOperationPanel";
+            this.mOperationPanel.Size = new System.Drawing.Size(262, 254);
+            this.mOperationPanel.TabIndex = 17;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.mLuacListingRadioButton);
             this.groupBox1.Controls.Add(this.mPcLuaCodeRadioButton);
-            this.groupBox1.Location = new System.Drawing.Point(6, 243);
+            this.groupBox1.Location = new System.Drawing.Point(3, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 35);
+            this.groupBox1.Size = new System.Drawing.Size(246, 35);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lua code listing style";
@@ -281,7 +296,7 @@
             this.mExtractTypeComboBox.Items.AddRange(new object[] {
             "Luac",
             "Munged (.script)"});
-            this.mExtractTypeComboBox.Location = new System.Drawing.Point(142, 376);
+            this.mExtractTypeComboBox.Location = new System.Drawing.Point(126, 182);
             this.mExtractTypeComboBox.Name = "mExtractTypeComboBox";
             this.mExtractTypeComboBox.Size = new System.Drawing.Size(121, 21);
             this.mExtractTypeComboBox.TabIndex = 28;
@@ -290,33 +305,13 @@
             // 
             this.mExtractScriptsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.mExtractScriptsButton.Location = new System.Drawing.Point(3, 374);
+            this.mExtractScriptsButton.Location = new System.Drawing.Point(0, 180);
             this.mExtractScriptsButton.Name = "mExtractScriptsButton";
-            this.mExtractScriptsButton.Size = new System.Drawing.Size(133, 23);
+            this.mExtractScriptsButton.Size = new System.Drawing.Size(120, 23);
             this.mExtractScriptsButton.TabIndex = 27;
             this.mExtractScriptsButton.Text = "Extract scripts";
             this.mExtractScriptsButton.UseVisualStyleBackColor = true;
             this.mExtractScriptsButton.Click += new System.EventHandler(this.mExtractScriptsButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 202);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Search";
-            this.label1.Visible = false;
-            // 
-            // mListBoxSearchTextBox
-            // 
-            this.mListBoxSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.mListBoxSearchTextBox.Location = new System.Drawing.Point(3, 218);
-            this.mListBoxSearchTextBox.Name = "mListBoxSearchTextBox";
-            this.mListBoxSearchTextBox.Size = new System.Drawing.Size(262, 20);
-            this.mListBoxSearchTextBox.TabIndex = 25;
-            this.mListBoxSearchTextBox.Visible = false;
             // 
             // mScriptTextBox
             // 
@@ -333,11 +328,23 @@
             this.mScriptTextBox.TabIndex = 16;
             this.mScriptTextBox.Text = "";
             // 
+            // mUseMethod2CheckBox
+            // 
+            this.mUseMethod2CheckBox.AutoSize = true;
+            this.mUseMethod2CheckBox.Location = new System.Drawing.Point(273, 27);
+            this.mUseMethod2CheckBox.Name = "mUseMethod2CheckBox";
+            this.mUseMethod2CheckBox.Size = new System.Drawing.Size(93, 17);
+            this.mUseMethod2CheckBox.TabIndex = 27;
+            this.mUseMethod2CheckBox.Text = "Use Method 2";
+            this.mUseMethod2CheckBox.UseVisualStyleBackColor = true;
+            this.mUseMethod2CheckBox.Visible = false;
+            // 
             // ScriptSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 553);
+            this.Controls.Add(this.mUseMethod2CheckBox);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.mStatusControl);
             this.Controls.Add(this.label4);
@@ -352,9 +359,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
+            this.mOperationPanel.ResumeLayout(false);
+            this.mOperationPanel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -380,12 +388,12 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showHelpToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox mListBoxSearchTextBox;
         private System.Windows.Forms.Button mExtractScriptsButton;
         private System.Windows.Forms.ComboBox mExtractTypeComboBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton mLuacListingRadioButton;
         private System.Windows.Forms.RadioButton mPcLuaCodeRadioButton;
+        private System.Windows.Forms.Panel mOperationPanel;
+        private System.Windows.Forms.CheckBox mUseMethod2CheckBox;
     }
 }

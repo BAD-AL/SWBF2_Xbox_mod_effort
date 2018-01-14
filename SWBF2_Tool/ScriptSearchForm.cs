@@ -49,6 +49,11 @@ namespace SWBF2_Tool
 
         private void PopulateListBox(string fileName)
         {
+            if (!File.Exists(fileName))
+            {
+                MessageBox.Show(this, "Ensure there is a valid .lvl file in the LVL Text box.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             mData  = File.ReadAllBytes(fileName);
             byte[] searchBytes = NameBytes;
             switch (mSearchTypeComboBox.SelectedIndex)
@@ -68,10 +73,11 @@ namespace SWBF2_Tool
                     // mcfg?,
                     break;
             }
-            List<AssetListItem> assetItems = GetItems(mData, searchBytes);
+            List<AssetListItem> assetItems = mUseMethod2CheckBox.Checked ? GetItems2(mData, searchBytes) : GetItems(mData, searchBytes);
             mAssetListBox.Items.Clear();
             mAssetListBox.Items.AddRange(assetItems.ToArray());
-            mStatusControl.Text = "Items Found: " + mAssetListBox.Items.Count;
+            mStatusControl.Text = fileName + ": Items Found> " + mAssetListBox.Items.Count;
+            mOperationPanel.Enabled = (mAssetListBox.Items.Count > 0);
         }
 
         /// <summary>
@@ -91,7 +97,7 @@ namespace SWBF2_Tool
             AssetListItem item = null;
             foreach (long loc in locations)
             {
-                item = new AssetListItem(loc, data);
+                item = new AssetListItem(loc, data, searchBytes);
                 if (BinSearch.GetLocationOfGivenBytes(loc, BodyBytes, data, 80L) > 0)
                 {
                     retVal.Add(item);
@@ -238,42 +244,6 @@ namespace SWBF2_Tool
             mScriptTextBox.Text = GetListtemsText();
         }
 
-        private void replaceFunctionCallsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string callToReplace = StringInputDlg.GetString("Replace this", "Replace this call");
-            if (callToReplace != "")
-            {
-                string replacement = StringInputDlg.GetString("Replace With", "Replace with this:");
-                if (replacement != "")
-                {
-                    string fileName = StringInputDlg.GetString("Save as", "Save the result as");
-                    if (fileName != "")
-                    {
-                        if (callToReplace.Length == replacement.Length)
-                        {
-                            byte[] replacements = ASCIIEncoding.ASCII.GetBytes(replacement);
-                            List<long> locations = BinSearch.GetLocationsOfGivenBytes(0, ASCIIEncoding.ASCII.GetBytes(callToReplace), mData);
-                            byte[] copy = new byte[mData.Length];
-                            Array.Copy(mData, copy, mData.Length);
-                            int y = 0;
-                            foreach (long loc in locations)
-                            {
-                                y = 0;
-                                for (long i = loc; i < loc + replacements.Length; i++)
-                                {
-                                    copy[i] = replacements[y];
-                                    y++;
-                                }
-                            }
-                            File.WriteAllBytes(fileName, copy);
-                        }
-                        else
-                            MessageBox.Show("Error, They need to be the same length.");
-                    }
-                }
-            }
-        }
-
         private void mExtractScriptsButton_Click(object sender, EventArgs e)
         {
             int count = 0;
@@ -370,29 +340,94 @@ namespace SWBF2_Tool
             mSaveScriptChangesButton.Enabled = mPcLuaCodeRadioButton.Checked;
             UpdateLuaDetails();
         }
+
+        private void mLVLFileTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (File.Exists(mLVLFileTextBox.Text))
+            {
+                splitContainer1.Panel1.Enabled = true;
+                PopulateListBox(mLVLFileTextBox.Text);
+            }
+            else
+                splitContainer1.Panel1.Enabled = false;
+        }
+
+        #region population method #2
+
+        private long NextItem(long location, byte[] data)
+        {
+            long retVal = -1;
+
+            if (location < 8) return 8;
+
+            if (location + (8 + 4) < data.Length)
+                retVal = location + 8 + GetLengthAtLocation(location + 4, data);
+
+            return retVal;
+        }
+
+        private long GetLastItemLoc(byte[] data)
+        {
+            long current = 0;
+            long last = 0;
+            while ((current = NextItem(current, data)) > -1L)
+                last = current;
+            return last;
+        }
+
+        private List<AssetListItem> GetItems2(byte[] data, byte[] searchBytes)
+        {
+            int chunks = 0;
+            List<AssetListItem> items = new List<AssetListItem>();
+            long current = 0;
+            while (current > -1)
+            {
+                current = NextItem(current, data);
+                if (current > 0 && IsCorrectType(current, data, searchBytes))
+                {
+                    items.Add(new AssetListItem(current, data, searchBytes));
+                }
+                chunks++;
+            }
+            return items;
+        }
+
+        private bool IsCorrectType(long current, byte[] data, byte[] searchBytes)
+        {
+            bool retVal = false;
+            long loc = BinSearch.GetLocationOfGivenBytes(current, searchBytes, data, 10);
+
+            if (loc == current)
+                retVal = true;
+
+            return retVal;
+        }
+        internal static int GetLengthAtLocation(long loc, byte[] data)
+        {
+            byte b0, b1, b2, b3;
+            b0 = data[loc];
+            b1 = data[loc + 1];
+            b2 = data[loc + 2];
+            b3 = data[loc + 3];
+
+            int retVal = b0 + (b1 << 8) + (b2 << 16) + (b3 << 24);
+            return retVal;
+        }
+        #endregion
+
     }
 
     public class AssetListItem
     {
-        //private string mType = "";
         long mLocation = -1L;
         private byte[] mData = null;
+        private string mType;
 
-        public AssetListItem(long location, byte[] data)
+        public AssetListItem(long location, byte[] data, byte[] type)
         {
             mData = data;
+            mType = new String(ASCIIEncoding.ASCII.GetChars(type));
             mLocation = location;
-            //if (data[location] == ScriptSearchForm.NameBytes[0] &&
-            //    data[location + 1] == ScriptSearchForm.NameBytes[1] &&
-            //    data[location + 2] == ScriptSearchForm.NameBytes[2] &&
-            //    data[location + 3] == ScriptSearchForm.NameBytes[3] &&
-            //    data[location + 4] == ScriptSearchForm.NameBytes[4] &&
-            //    data[location + 5] == ScriptSearchForm.NameBytes[5])
-            //{
-            //    mLocation = location;
-            //}
-            //else
-            //    mLocation = BinSearch.GetLocationOfGivenBytesBackup(location, ScriptSearchForm.NameBytes, mData, 70);
             mToString = GetName();
         }
 
@@ -426,23 +461,6 @@ namespace SWBF2_Tool
         }
 
         private static Regex sValidNamePattern = new Regex("^[ a-zA-Z0-9_@^\\-\\.]+$", RegexOptions.Compiled);
-
-
-        internal bool IsValidEntry( AssetListItem previous)
-        {
-            bool ret = true;
-            string name = AssetListItem.GetName(mLocation, mData);
-
-            long previousEnd = previous != null ? (previous.BodyStart + previous.BodyLength) : 0;
-            if (this.mLocation < previousEnd)
-                ret = false;
-            else if ((this.BodyStart + this.BodyLength) > mData.Length)
-                ret = false;
-            else if (!sValidNamePattern.IsMatch(name))
-                ret = false;
-
-            return ret;
-        }
 
         public byte[] GetAssetData()
         {
@@ -478,27 +496,43 @@ namespace SWBF2_Tool
             return ret;
         }
 
-        internal static string GetName(long loc, byte[] data)
-        {
-            string name = "";
-            //loc += 2;// for the 2 zero bytes at thr front
-            int nameLen = data[(int)loc + 4] - 1; // -1 for null byte
-            if (loc > 0)
-            {
-                // NAME + 4 bytes later = 8
-                name = Encoding.ASCII.GetString(data, (int)loc + 8, (int)nameLen);
-            }
-            return name;
-        }
-
-        public string GetName()
+        /*public string GetName()
         {
             long loc = BinSearch.GetLocationOfGivenBytes(mLocation, ASCIIEncoding.ASCII.GetBytes("NAME"), mData, 80);
+            if (loc > -1) return GetName(loc, mData);
+            return "";
+        }*/
+        /// <summary> Gets the name of the source file that was munged into this data. </summary>
+        public string GetName()
+        {
+            int headChunkLength = -1;
+            string name = "";
+            long loc1 = -1;
+            long loc = BinSearch.GetLocationOfGivenBytes(mLocation, ASCIIEncoding.ASCII.GetBytes("scr_"), mData, 40);
+            if (loc < 0)
+            {
+                loc1 = BinSearch.GetLocationOfGivenBytes(mLocation, ASCIIEncoding.ASCII.GetBytes("mcfg"), mData, 80);
+                if (loc1 > 0)
+                {
+                    headChunkLength = ScriptSearchForm.GetLengthAtLocation(loc1 + 4, mData);
+                    loc1 = BinSearch.GetLocationOfGivenBytes(loc1 + headChunkLength - 8, ASCIIEncoding.ASCII.GetBytes("scr_"), mData, 80);
+                }
+            }
+            else
+                loc1 = loc;
+
+            if (loc1 > 0)
+                loc = BinSearch.GetLocationOfGivenBytes(loc1, ASCIIEncoding.ASCII.GetBytes("NAME"), mData, 80);
             if (loc > -1)
             {
-                return GetName(loc, mData);
+                int nameLen = mData[(int)loc + 4] - 1; // -1 for null byte
+                if (loc > 0)
+                {
+                    // NAME + 4 bytes later = 8
+                    name = Encoding.ASCII.GetString(mData, (int)loc + 8, (int)nameLen);
+                }
             }
-            return "";
+            return name;
         }
 
         public long BodyStart
@@ -577,7 +611,7 @@ namespace SWBF2_Tool
             b2 = mData[loc + 2];
             b3 = mData[loc + 3];
 
-            int retVal = b0 + (b1 << 8) + (b2 << 16) + (b3 << 24); // kinda sure about b0 & b1; not sure about b2 & b3
+            int retVal = b0 + (b1 << 8) + (b2 << 16) + (b3 << 24);
             retVal--; // -1 because it works (for scripts anyway...)
             return retVal;
         }

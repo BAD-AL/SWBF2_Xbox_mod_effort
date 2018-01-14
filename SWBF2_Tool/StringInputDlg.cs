@@ -290,7 +290,11 @@ namespace SWBF2_Tool
 			{
 				//result = userInput.Text;
 				okButton_Click(sender, new System.EventArgs());
-			}
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                cancelButton_Click(sender, e);
+            }
 		}
 
 		private void okButton_Click(object sender, System.EventArgs e) 
