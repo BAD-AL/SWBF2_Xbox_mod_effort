@@ -1,0 +1,3 @@
+Mission Merge is a program that can merge missions from 'mission.lvl' files.
+Has a GUI and is usable from the Command line.
+Type 'MissionMerge.exe /?' at the command line for usage instructions.
