@@ -41,19 +41,6 @@
 	the other stuff goes in the respective folders at "StarWarsBattlefront2/Data/_LVL_XBOX/".
 ]]--
 
--- redefine 'ReadDataFile' to remove the 'dc:' portion and just have it rooted in the _LVL_XBOX directory.
-if not OldReadDataFile then
-	OldReadDataFile = ReadDataFile
-
-	function ReadDataFile(file, ...)
-		-- when the levels want to load from the DLC area, we instead load from the folders under _LVL_XBOX
-		if string.find(file, "dc:") == 1 then 
-			file = string.gsub(file, "dc:", "")
-		end
-		OldReadDataFile(file, unpack(arg))
-	end
-end
-
 --  Example:
 --   directory : "ABC"
 --   levelFile : "ABC.lvl"
@@ -76,16 +63,7 @@ function AddContent( directory, levelFile, gcw, cw, gcw_conquest, cw_conquest, g
 	local mp_sz = table.getn(mp_missionselect_listbox_contents)
 	sp_missionselect_listbox_contents[sp_sz+1] = item
 	mp_missionselect_listbox_contents[mp_sz+1] = item
-	--[[
-	-- load in the scripts for selection
-	local path = directory .. "\\" .. levelFile
-	if item.mode_con_g   then ReadDataFile(path, prefix .."g_con")   end
-	if item.mode_con_c   then ReadDataFile(path, prefix .."c_con")   end 
-	if item.mode_ctf_g   then ReadDataFile(path, prefix .."g_ctf")   end 
-	if item.mode_ctf_c   then ReadDataFile(path, prefix .."c_ctf")   end
-	if item.mode_1flag_g then ReadDataFile(path, prefix .."g_1flag") end 
-	if item.mode_1flag_c then ReadDataFile(path, prefix .."c_1flag") end
-	if item.mode_eli_g   then ReadDataFile(path, prefix .."g_eli")   end ]]--
+
 end
 
 function LoadOrigDLCLevels()
@@ -133,13 +111,20 @@ function LoadOrigDLCLevels()
 	mp_missionselect_listbox_contents = sp_missionselect_listbox_contents
 	--ReadDataFile("dlc_kas_core.lvl")  
 	--ReadDataFile("dlc_bes_core.lvl")  -- doesn't seem to be necessary, strings show up ok without this loaded
-	ReadDataFile("dlc_kas_mission.lvl")  -- Hero Assult mission for Kashyyyk defined in here
+	--ReadDataFile("dlc_kas_mission.lvl")  -- Hero Assult mission for Kashyyyk defined in here
 	--ReadDataFile("dlc_bes_mission.lvl")  -- Expansion pack missions defined in here
-	ReadDataFile("dlc_bes_mission.lvl", "bes2g_con","bes2c_con","bes2g_ctf","bes2c_ctf","bes2g_eli",
+	--[[ReadDataFile("dlc_bes_mission.lvl", "bes2g_con","bes2c_con","bes2g_ctf","bes2c_ctf","bes2g_eli",
 	                                    "cor1g_eli","myg1g_eli","nab2g_eli",
 										"rhn1g_con","rhn1c_con","rhn1c_1flag","rhn1g_1flag","rhn1g_hunt","rhn1g_eli",
 										"rhn2g_con","rhn2c_con","rhn2g_ctf","rhn2c_ctf","rhn2c_1flag","rhn2g_1flag","rhn2g_eli",
 										"yav2g_con","yav2c_con","yav2g_ctf","yav2c_ctf","yav2c_1flag","yav2g_1flag","yav2g_eli")
+	--]]									
+end
+
+function DbgMsg() 
+    local a = ""
+    if OldReadDataFile then  a = "game.objectives.complete"  end
+    ShowMessageText(a, 1)
 end
 
 LoadOrigDLCLevels()

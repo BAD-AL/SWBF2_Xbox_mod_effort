@@ -4,7 +4,9 @@ ucft
     REQN
     {
         "script"
-        "custom1"
+        "custom"
         "custom2"
+		"custom22"
+		"custom222"
     }
 }
