@@ -56,7 +56,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LuaCodeHelper.cs" />
+    <Content Include="LuaCodeHelper.cs" />
+    <Compile Include="LuaChunks.cs" />
+    <Compile Include="LuaCodeHelper2.cs" />
+    <Compile Include="LuaCodeHelper3.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

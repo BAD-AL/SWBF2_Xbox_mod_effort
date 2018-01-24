@@ -7,6 +7,8 @@ namespace SWBF2CodeHelper
 {
     public class LuaCodeHelper
     {
+        List<Object> mChunkList = new List<object>();
+
         StringBuilder mOutput = new StringBuilder();
         /* try to decompile listiongs like:
             main <(none):0> (19 instructions, 76 bytes at 00034878)
@@ -34,7 +36,7 @@ namespace SWBF2CodeHelper
         List<object> mCurrentStatement = null;
         List<string> mGlobalFunctionDeclarationList = null;
         Opcode mPrevOp = Opcode.NONE;
-        List<LuaTable> mCurrentTableList = new List<LuaTable>();
+        List<LuaTab> mCurrentTableList = new List<LuaTab>();
         Dictionary<Opcode, string> mMathOpTable = new Dictionary<Opcode, string>{ 
         {Opcode.MUL, " * "}, {Opcode.DIV, " / "}, {Opcode.ADD, " + "}, {Opcode.SUB, " - "}
         };
@@ -54,7 +56,7 @@ namespace SWBF2CodeHelper
         {
             string line = "";
             Opcode code = Opcode.NONE;
-            LuaTable currentTable = null;
+            LuaTab currentTable = null;
             for (int i = 0; i < lines.Length; i++)
             {
                 line = lines[i].Trim();
@@ -141,7 +143,7 @@ namespace SWBF2CodeHelper
                         AddToLastStatementChunk(":" + (Operation.GetName(line).Replace("\"", "")));
                         break;
                     case Opcode.NEWTABLE:
-                        LuaTable t = new LuaTable();
+                        LuaTab t = new LuaTab();
                         mCurrentTableList.Add(t);
                         mCurrentStatement.Add(t);
                         break;
@@ -234,6 +236,47 @@ namespace SWBF2CodeHelper
                 mOutput.Append("this assignment goes to the previous statement:" + name);
             }
             mOutput.Append("\n");
+        }
+    }
+
+    public class LuaTab
+    {
+        StringBuilder mEntries = new StringBuilder();
+
+        string mKeyTmp = null;
+        string mValTmp = null;
+
+        public void AddEntry(string key, string val)
+        {
+            mEntries.Append(key.Replace("\"", ""));
+            mEntries.Append("=");
+            mEntries.Append(val);
+            mEntries.Append(", ");
+        }
+
+        public void AddKey(string key)
+        {
+            mKeyTmp = key;
+            if (mKeyTmp != null && mValTmp != null)
+            {
+                AddEntry(mKeyTmp, mValTmp);
+                mKeyTmp = mValTmp = null;
+            }
+        }
+
+        public void AddValue(string val)
+        {
+            mValTmp = val;
+            if (mKeyTmp != null && mValTmp != null)
+            {
+                AddEntry(mKeyTmp, mValTmp);
+                mKeyTmp = mValTmp = null;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "{" + mEntries.ToString() + "}";
         }
     }
 }

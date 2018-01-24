@@ -18,7 +18,7 @@ namespace SWBF2CodeHelper
 
         private void mGoButton_Click(object sender, EventArgs e)
         {
-            LuaCodeHelper helper = new LuaCodeHelper();
+            LuaCodeHelper3 helper = new LuaCodeHelper3();
             mLuaTextBox.Text = helper.DecompileLuacListing(mLuacTextBox.Text);
         }
     }

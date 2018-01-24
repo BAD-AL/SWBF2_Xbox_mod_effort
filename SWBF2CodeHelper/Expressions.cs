@@ -19,7 +19,6 @@ namespace SWBF2CodeHelper
 
         private static string ProcessLines(string[] lines)
         {
-            string prevCode = "";
             string line = "";
             Opcode code = Opcode.NONE;
             for (int i = lines.Length - 1; i > -1; i--)
@@ -33,7 +32,7 @@ namespace SWBF2CodeHelper
                     case Opcode.DIV:
                     case Opcode.MUL:
                     case Opcode.POW:
-                    case Opcode.MOD:
+                    //case Opcode.MOD:
                     case Opcode.UNM:
                         break;
                 }
