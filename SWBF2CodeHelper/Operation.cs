@@ -240,8 +240,10 @@ namespace SWBF2CodeHelper
         BLOCK_STATEMENT,
         IF_STATEMENT,
         FUNCTION_CALL,
+        FUNCTION_DEF,
         TABLE,
         CONSTANT,
+        EXPRESSION,
         SIMPLE_ASSIGNMENT
     }
     

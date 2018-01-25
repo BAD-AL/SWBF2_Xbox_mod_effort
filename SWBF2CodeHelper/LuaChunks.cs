@@ -13,7 +13,7 @@ namespace SWBF2CodeHelper
         private int IndentSpaces = 0;
 
         private LuaType mType = LuaType.NONE;
-        public LuaType LuaType
+        public virtual LuaType LuaType
         {
             get
             {
@@ -84,12 +84,18 @@ namespace SWBF2CodeHelper
         public override string ToString()
         {
             if (LuaType == LuaType.CONSTANT)
-                return ConstantValue;
+            {
+                string retVal = ConstantValue;
+                if (retVal != null && retVal.Length > 0 && retVal[0] == '"')
+                {
+                    retVal = retVal.Replace("\\", "\\\\");
+                }
+                return retVal;
+            }
 
-            string retVal = "";
+            StringBuilder builder = new StringBuilder(); 
             if (this.LuaType == LuaType.FUNCTION_CALL)
             {
-                StringBuilder builder = new StringBuilder();
                 if (this.mAssignmentLvalue != null)
                     builder.Append(mAssignmentLvalue + " = ");
                 builder.Append(mGlobalName);
@@ -111,28 +117,27 @@ namespace SWBF2CodeHelper
                 }
                 if (mChildren.Count > 0) builder.Remove(builder.Length - 1, 1);
                 builder.Append(")");
-                if (ParentChunk.LuaType != LuaType.FUNCTION_CALL)
+                if (ParentChunk != null && ParentChunk.LuaType != LuaType.FUNCTION_CALL)
                     builder.Append("\n");
-                retVal = builder.ToString();
             }
             else if (this.LuaType == LuaType.SIMPLE_ASSIGNMENT)
             {
                 if (mChildren.Count > 0)
-                    retVal = string.Format("{0} = {1}\n", mAssignmentLvalue, mChildren[0]);
+                    builder.Append(string.Format("{0} = {1}\n", mAssignmentLvalue, mChildren[0]));
                 else if (ConstantValue != null)
-                    retVal = string.Format("{0} = {1}\n", mAssignmentLvalue, ConstantValue);
+                    builder.Append( string.Format("{0} = {1}\n", mAssignmentLvalue, ConstantValue));
                 else
                     throw new Exception("Error with simple assignment!!!");
             }
             else if (mChildren.Count > 0)
             {
                 foreach (LuaChunk child in mChildren)
-                    retVal += child.ToString();// +"\n";
+                    builder.Append(child.ToString());// +"\n";
             }
             else if (mGlobalName != null)
-                retVal = mGlobalName;
+                builder.Append( mGlobalName);
 
-            return retVal;
+            return builder.ToString();
         }
 
         // Take the last 2 children and the op, create an Expression
@@ -178,6 +183,15 @@ namespace SWBF2CodeHelper
                 mChildren.RemoveAt(index + 1);
             }
         }
+
+        public LuaChunk Clone()
+        {
+            LuaChunk retVal = this.MemberwiseClone() as LuaChunk;
+            if( retVal.mChildren.Count > 0 )
+                retVal.mChildren = new List<LuaChunk>();
+            retVal.ParentChunk = null;
+            return retVal;
+        }
     }
 
     public class LuaTable : LuaChunk
@@ -199,15 +213,17 @@ namespace SWBF2CodeHelper
             this.ListMode = listMode;
         }
 
+        public override LuaType LuaType { get { return LuaType.TABLE; } protected set { base.LuaType = value; } }
+
         public void AddEntry(string key, LuaChunk val)
         {
-            if (!ListMode)
+            //if (!ListMode)
             {
                 this.AddChunk(val);
                 mEntries.Add(key.Replace("\"", ""), val);
             }
-            else
-                throw new Exception("This table is in list mode!");
+            //else
+            //    throw new Exception("This table is in list mode!");
         }
 
         public void AddKey(string key)
@@ -289,6 +305,8 @@ namespace SWBF2CodeHelper
 
         public LuaChunk RValue { get; set; }
 
+        public override LuaType LuaType { get { return LuaType.EXPRESSION; } protected set { } }
+
         public override string ToString()
         {
             string op = "";
@@ -312,15 +330,48 @@ namespace SWBF2CodeHelper
 
     public class IfStatement : LuaChunk
     {
-        public LuaChunk Expression { get; set; }
-
-        public LuaChunk ThenChunk { get; set; }
-
-        public LuaChunk ElseChunk { get; set; }
-
-        public IfStatement()
+        private LuaChunk mExpression = null;
+        public LuaChunk Expression 
         {
-            LuaType = LuaType.IF_STATEMENT;
+            get { return mExpression; }
+            set
+            {
+                if (mExpression != null)
+                    mChildren.Remove(mExpression);
+                mExpression = value;
+                AddChunk(mExpression);
+            }
+        }
+
+        private LuaChunk mThenChunk = null;
+        public LuaChunk ThenChunk 
+        {
+            get { return mThenChunk; }
+            set
+            {
+                if (mThenChunk != null)
+                    mChildren.Remove(mThenChunk);
+                mThenChunk = value;
+                AddChunk(mThenChunk);
+            }
+        }
+
+        private LuaChunk mElseChunk = null;
+        public LuaChunk ElseChunk 
+        {
+            get { return mElseChunk; }
+            set
+            {
+                if (mElseChunk != null)
+                    mChildren.Remove(mElseChunk);
+                mElseChunk = value;
+                AddChunk(mElseChunk);
+            }
+        }
+
+        public override LuaType LuaType
+        {
+            get { return LuaType.IF_STATEMENT; } protected set { }
         }
 
         public override string ToString()
@@ -343,14 +394,28 @@ namespace SWBF2CodeHelper
     public class LuaFunction : LuaChunk
     {
         public int NumberOfPraams { get; set; }
-        public LuaChunk Body { get; set; }
+
+        private LuaChunk mBody = null;
+        public LuaChunk Body 
+        { 
+            get{ return mBody;}
+            set
+            {
+                if( mBody != null)
+                    mChildren.Remove(mBody);
+                mBody = value;
+                AddChunk(mBody);
+            }
+        }
 
         public string Name { get; set; }
+
+        public override LuaType LuaType { get { return LuaType.FUNCTION_DEF; } protected set { } }
 
         public override string ToString()
         {
             StringBuilder bu = new StringBuilder();
-            bu.Append("function ");
+            bu.Append("\nfunction ");
             bu.Append(Name);
             bu.Append("(");
             for (int i = 0; i < NumberOfPraams; i++)
@@ -360,7 +425,7 @@ namespace SWBF2CodeHelper
             if (NumberOfPraams > 0)
                 bu.Remove(bu.Length - 2, 2);
             bu.Append(")\n");
-            bu.Append(Body);
+            bu.Append(Body.ToString());
             bu.Append("end\n");
             return bu.ToString();
         }

@@ -21,5 +21,12 @@ namespace SWBF2CodeHelper
             LuaCodeHelper3 helper = new LuaCodeHelper3();
             mLuaTextBox.Text = helper.DecompileLuacListing(mLuacTextBox.Text);
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.LinkVisited = true;
+
+            System.Diagnostics.Process.Start(linkLabel1.Text);  
+        }
     }
 }
