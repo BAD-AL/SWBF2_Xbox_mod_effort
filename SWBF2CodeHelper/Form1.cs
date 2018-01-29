@@ -22,6 +22,36 @@ namespace SWBF2CodeHelper
         {
             LuaCodeHelper3 helper = new LuaCodeHelper3();
             mLuaTextBox.Text = helper.DecompileLuacListing(mLuacTextBox.Text);
+            ColorizeText();
+        }
+
+        /// <summary>
+        /// Just some simple stuff, don't go crazy
+        /// </summary>
+        private void ColorizeText()
+        {
+            CheckKeyword("function", Color.Blue, 0);
+            CheckKeyword("end", Color.Blue, 0);
+        }
+
+        private void CheckKeyword(string word, Color color, int startIndex)
+        {
+            if (mLuaTextBox.Text.Contains(word))
+            {
+                int index = -1;
+                int selectStart = mLuaTextBox.SelectionStart;
+
+                while ((index = mLuaTextBox.Text.IndexOf(word, (index + 1))) != -1)
+                {
+                    if (Char.IsWhiteSpace(mLuaTextBox.Text[index - 1]))
+                    {
+                        mLuaTextBox.Select((index + startIndex), word.Length);
+                        mLuaTextBox.SelectionColor = color;
+                        mLuaTextBox.Select(selectStart, 0);
+                        mLuaTextBox.SelectionColor = Color.Black;
+                    }
+                }
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

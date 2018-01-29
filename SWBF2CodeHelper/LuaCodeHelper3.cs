@@ -35,6 +35,7 @@ namespace SWBF2CodeHelper
             int j = 0; // looping var;
 
             int currentRegister = -1;
+            LuaFunction func = null;
             LuaChunk tmp = null;
             LuaChunk currentRegisterValue = null;
             LuaTable currentTable = null;
@@ -140,7 +141,6 @@ namespace SWBF2CodeHelper
                     case Opcode.SETGLOBAL:
                         // SETGLOBAL A Bx Gbl[Kst(Bx)] := R(A)
                         // Copies the value from register R(A) into the global variable whose name is given in constant number Bx.
-
                         currentRegisterValue.AddAssignmentLvalue(Operation.GetName(line));
                         if (currentRegisterValue.ParentChunk == null)
                             scopeChunk.AddChunk(currentRegisterValue);
@@ -265,7 +265,7 @@ namespace SWBF2CodeHelper
                         }
                         break;
                     case Opcode.FUNCTION_DEF:
-                        LuaFunction func = this.GetFunction(line);
+                        func = this.GetFunction(line);
                         GatherFunctionChunk(func, lines, i);
                         i = func.LastLine;
                         if (func.ParentChunk == null) // could be a table value
