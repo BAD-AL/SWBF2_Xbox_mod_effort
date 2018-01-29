@@ -10,8 +10,6 @@ namespace SWBF2CodeHelper
     {
         public int LastLine = -1; // hacky
 
-        private int IndentSpaces = 0;
-
         private LuaType mType = LuaType.NONE;
         public virtual LuaType LuaType
         {
@@ -32,7 +30,6 @@ namespace SWBF2CodeHelper
 
         public string GetTable { get; set; }
 
-        private String mGlobalName = null;
         protected List<LuaChunk> mChildren = new List<LuaChunk>();
 
         protected string mAssignmentLvalue = null;
@@ -41,7 +38,9 @@ namespace SWBF2CodeHelper
 
         public LuaChunk ParentChunk { get; private set; }
 
-        public string GlobalName { set { mGlobalName = value; } get { return mGlobalName; } }
+        public string GlobalName { get; set; }
+
+        public string LocalName { get; set; }
 
         internal void AddAssignmentLvalue(string name)
         {
@@ -53,39 +52,25 @@ namespace SWBF2CodeHelper
             mType = LuaType.FUNCTION_CALL;
         }
 
-        internal virtual void AddConstant(LuaChunk p)
-        {
-            mChildren.Add(p);
-        }
-
         internal void AddChunk(LuaChunk child)
         {
             if (child != null)
             {
                 if (child.ParentChunk != null)
                     child.ParentChunk.mChildren.Remove(child);
-
+                if (child == this)
+                    Program.ReportError(this.GlobalName, "Adding self as a child! Fix the code!!!");
                 child.ParentChunk = this;
                 mChildren.Add(child);
             }
         }
 
-        internal LuaChunk GetOlderSipling()
-        {
-            if (ParentChunk.mChildren.Count > 1)
-            {
-                for (int i = ParentChunk.mChildren.Count - 1; i > 1; i--)
-                    if (ParentChunk.mChildren[i] == this)
-                        return ParentChunk.mChildren[i - 1];
-            }
-            return null;
-        }
-
         public override string ToString()
         {
-            if (LuaType == LuaType.CONSTANT)
+            if (LuaType == LuaType.CONSTANT && LocalName == null)
             {
                 string retVal = ConstantValue;
+                
                 if (retVal != null && retVal.Length > 0 && retVal[0] == '"')
                 {
                     retVal = retVal.Replace("\\", "\\\\");
@@ -93,12 +78,12 @@ namespace SWBF2CodeHelper
                 return retVal;
             }
 
-            StringBuilder builder = new StringBuilder(); 
+            StringBuilder builder = new StringBuilder();
             if (this.LuaType == LuaType.FUNCTION_CALL)
             {
                 if (this.mAssignmentLvalue != null)
                     builder.Append(mAssignmentLvalue + " = ");
-                builder.Append(mGlobalName);
+                builder.Append(GlobalName);
                 if (this.Self != null)
                 {
                     builder.Append(":");
@@ -125,52 +110,26 @@ namespace SWBF2CodeHelper
                 if (mChildren.Count > 0)
                     builder.Append(string.Format("{0} = {1}\n", mAssignmentLvalue, mChildren[0]));
                 else if (ConstantValue != null)
-                    builder.Append( string.Format("{0} = {1}\n", mAssignmentLvalue, ConstantValue));
+                    builder.Append(string.Format("{0} = {1}\n", mAssignmentLvalue, ConstantValue));
+                else if (GlobalName != null)
+                    builder.Append(string.Format("{0} = {1}\n", mAssignmentLvalue, GlobalName));
                 else
-                    throw new Exception("Error with simple assignment!!!");
+                    Program.ReportError(this.mAssignmentLvalue, "Error with simple assignment!!!");
             }
             else if (mChildren.Count > 0)
             {
                 foreach (LuaChunk child in mChildren)
-                    builder.Append(child.ToString());// +"\n";
+                    if (child == this)
+                        Program.ReportError(this.GlobalName, "How did this get in here!! Child == self???");
+                    else
+                        builder.Append(child.ToString());// +"\n";
             }
-            else if (mGlobalName != null)
-                builder.Append( mGlobalName);
+            else if (GlobalName != null)
+                builder.Append(GlobalName);
+            else if (LocalName != null)
+                builder.Append(LocalName);
 
             return builder.ToString();
-        }
-
-        // Take the last 2 children and the op, create an Expression
-        internal LuaChunk ApplyExpression(Opcode code)
-        {
-            if (mChildren.Count > 1)
-            {
-                LuaExpression expr = new LuaExpression()
-                {
-                    Operation = code,
-                    LValue = mChildren[mChildren.Count - 1],
-                    RValue = mChildren[mChildren.Count - 2]
-                };
-                mChildren.RemoveRange(mChildren.Count - 2, 2);
-                AddChunk(expr);
-                return expr;
-            }
-            throw new Exception("the code is wrong! fix it!!!");
-        }
-
-        internal LuaChunk ApplyExpression(LuaExpression arg)
-        {
-            if (mChildren.Count > 0)
-            {
-                LuaExpression ex = mChildren[mChildren.Count - 1] as LuaExpression;
-                if (ex != null)
-                {
-                    arg.RValue = ex;
-                    ReplaceChunk(ex, arg);
-                    return ex;
-                }
-            }
-            throw new Exception("the code is wrong! fix it!!!");
         }
 
         internal void ReplaceChunk(LuaChunk child, LuaChunk replacement)
@@ -178,6 +137,8 @@ namespace SWBF2CodeHelper
             int index = mChildren.IndexOf(child);
             if (index > -1)
             {
+                if (replacement == this)
+                    Program.ReportError(this.GlobalName, "Cannot add self as a Child!!!");
                 replacement.ParentChunk = this;
                 mChildren.Insert(index, replacement);
                 mChildren.RemoveAt(index + 1);
@@ -186,10 +147,21 @@ namespace SWBF2CodeHelper
 
         public LuaChunk Clone()
         {
-            LuaChunk retVal = this.MemberwiseClone() as LuaChunk;
-            if( retVal.mChildren.Count > 0 )
-                retVal.mChildren = new List<LuaChunk>();
-            retVal.ParentChunk = null;
+            //LuaChunk retVal = this.MemberwiseClone() as LuaChunk;
+            //if( retVal.mChildren.Count > 0 )
+            //    retVal.mChildren = new List<LuaChunk>();
+            //retVal.ParentChunk = null;
+
+            LuaChunk retVal = new LuaChunk()
+            {
+                ConstantValue = this.ConstantValue,
+                GetTable = this.GetTable,
+                Self = this.Self,
+                GlobalName = this.GlobalName,
+                mType = this.mType,
+                LocalName = this.LocalName
+            };
+
             return retVal;
         }
     }
@@ -256,14 +228,10 @@ namespace SWBF2CodeHelper
             }
         }
 
-        public void SetList()
-        {
-            ListMode = true;
-        }
-
         public override string ToString()
         {
             StringBuilder bu = new StringBuilder();
+            
             if (this.mAssignmentLvalue != null)
                 bu.Append(mAssignmentLvalue + " = ");
             bu.Append("{ ");
@@ -312,7 +280,7 @@ namespace SWBF2CodeHelper
             string op = "";
             switch (Operation)
             {
-                case Opcode.EQ: op = "="; break;
+                case Opcode.EQ: op = "=="; break;
                 case Opcode.LT: op = "<"; break;
                 case Opcode.LE: op = "<="; break;
                 case Opcode.ADD: op = "+"; break;
@@ -324,6 +292,10 @@ namespace SWBF2CodeHelper
             }
             string assignVal = mAssignmentLvalue != null ? mAssignmentLvalue+" = " : "";
             string retVal = String.Format("{0}{1} {2} {3}", assignVal, LValue, op, RValue);
+            if (mAssignmentLvalue != null )
+                retVal += "\n";
+            if (assignVal == "" && LocalName != null)
+                return LocalName;
             return retVal;
         }
     }
@@ -393,7 +365,24 @@ namespace SWBF2CodeHelper
 
     public class LuaFunction : LuaChunk
     {
-        public int NumberOfPraams { get; set; }
+        public List<LuaChunk> UpValues = new List<LuaChunk>();
+
+        public string ClosureNumber { get; set;  }
+
+        private int mNumberOfPraams = 0;
+
+        public int NumberOfPraams
+        {
+            get { return mNumberOfPraams; } 
+            set
+            {
+                mNumberOfPraams = value;
+                if (mNumberOfPraams > 0)
+                {
+                    string n = GlobalName != null ? GlobalName : Name;
+                }
+            }
+        }
 
         private LuaChunk mBody = null;
         public LuaChunk Body 
@@ -415,9 +404,13 @@ namespace SWBF2CodeHelper
         public override string ToString()
         {
             StringBuilder bu = new StringBuilder();
-            bu.Append("\nfunction ");
-            bu.Append(Name);
-            bu.Append("(");
+            if (Name != null)
+                bu.Append(String.Format("function {0}(", Name.Replace("\"", "")));
+            else if (mAssignmentLvalue != null)
+                bu.Append(String.Format("{0} = function (", mAssignmentLvalue.Replace("\"", "")));
+            else
+                Program.ReportError("Function un-nammed", "ToString on a function; function has no name!!!");
+
             for (int i = 0; i < NumberOfPraams; i++)
             {
                 bu.Append(Name + "_param_" + i + ", ");
@@ -428,6 +421,32 @@ namespace SWBF2CodeHelper
             bu.Append(Body.ToString());
             bu.Append("end\n");
             return bu.ToString();
+        }
+    }
+
+    public class LuaReturn : LuaChunk
+    {
+        public LuaChunk ReturnValue { get; set; }
+
+        public override string ToString()
+        {
+            return String.Format("return {0}\n", ReturnValue.ToString());
+        }
+    }
+
+    public class LuaConcat : LuaChunk
+    {
+        public override string ToString()
+        {
+            StringBuilder builder = new StringBuilder();
+
+            foreach (LuaChunk child in mChildren)
+            {
+                builder.Append(child.ToString());
+                builder.Append(" .. ");
+            }
+            builder.Remove(builder.Length - 4, 4);
+            return builder.ToString();
         }
     }
 

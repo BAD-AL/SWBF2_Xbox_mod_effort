@@ -133,3 +133,18 @@ if gPlatformStr == "PC" then
 else
     ReadDataFile("ABC\\file.lvl")
 end
+
+Tasks left
+1. Lua decompiler (or coede recover tool)
+2. Strings solution
+3. For all the folders that say "PC", perhaps create XBOX and PS2 folders with the unmunge tool.
+4. Debugging HUD.
+
+Goals:
+1. Make it easy to load & play SWBF2 mods on modded XBOX & modded XBOX 360.
+   - Run code to manipulate the Mission select list to select mod level to play.
+   - Load code from mod levels to allow them to run.
+      -- Load and play the expansion pack levels (since you already know that they are playable on XBOX).
+	  -- Load and play a level created with the SWBF2 mod tools.
+	     --- Provide an enviornment with all the right tools are in place to create a mod that will run on XBOX.
+2. Create a process/tools that allows modded XBOX 360 to play SWBF2 mods at a higher resolution (because 360 has 8x more memory than XBOX).

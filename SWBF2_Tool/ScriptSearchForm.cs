@@ -146,6 +146,8 @@ namespace SWBF2_Tool
                     ShowCodeSize();
                 else
                     mLuacCodeSizeTextBox.Text = "";
+                mScriptTextBox.SelectionStart = 0;
+                mScriptTextBox.ScrollToCaret();
             }
         }
 
@@ -212,10 +214,17 @@ namespace SWBF2_Tool
 
         private void mSaveScriptChangesButton_Click(object sender, EventArgs e)
         {
+            string newFileName = null;
             AssetListItem item = mAssetListBox.SelectedItem as AssetListItem;
             if (item != null)
             {
-                item.SpliceInNewCode(mLVLFileTextBox.Text, mScriptTextBox.Text);
+                newFileName = item.SpliceInNewCode(mScriptTextBox.Text);
+            }
+            if (newFileName != null)
+            {
+                int index = mAssetListBox.SelectedIndex;
+                PopulateListBox(newFileName);
+                mAssetListBox.TopIndex = index;
             }
         }
 
@@ -575,7 +584,17 @@ namespace SWBF2_Tool
                     string code = LookupPCcode(sourceFileName);
                     int sz = ScriptSearchForm.LuacCodeSize(sourceFileName);
                     if (bodyLen == sz)
+                    {
                         retVal += "\n-- ********* LUAC Code Size MATCH!!! ***********";
+                        byte[] b = File.ReadAllBytes(".\\tmp.luac");
+                        byte[] c = this.GetAssetData();
+                        int i= 0;
+                        for (i = 0; i < c.Length; i++)
+                            if (b[i] != c[i])
+                                break;
+                        if( i == c.Length)
+                            retVal += "\n-- ********* Binary Equal !!! ***********";
+                    }
                     retVal = retVal + string.Format("\n-- {0}\n-- PC luac code size = {1}; PC code:\n{2}", sourceFileName, sz, code);
                 }
                 else
@@ -661,17 +680,17 @@ namespace SWBF2_Tool
         /// </summary>
         /// <param name="fileName">the base .lvl file to splice the code into</param>
         /// <param name="newCode"></param>
-        public void SpliceInNewCode(string fileName, string newCode)
+        /// <returns>The file the data was saved to; null on error</returns>
+        public string SpliceInNewCode(string newCode)
         {
             string tmpLuaFileName = ".\\_spliceTmp.lua";
-            byte[] fileData = File.ReadAllBytes(fileName);
             File.WriteAllText(tmpLuaFileName, newCode);
             
             string result = ScriptSearchForm.RunCommand(@"C:\BF2_ModTools\ToolsFL\bin\luac.exe", " -s -o tmp.luac " + tmpLuaFileName, true);
             if (result.Trim() != "")
             {
                 MessageBox.Show("Error compiling code", result);
-                return;
+                return null;
             }
             byte[] newLuacCode = File.ReadAllBytes("tmp.luac");
 
@@ -680,7 +699,6 @@ namespace SWBF2_Tool
             {
                 try
                 {
-                    
                     using (FileStream fs = File.OpenWrite(newLvlFile))
                     {
                         BinaryWriter bw = new BinaryWriter(fs);
@@ -689,6 +707,7 @@ namespace SWBF2_Tool
                         bw.BaseStream.Write(newLuacCode, 0, newLuacCode.Length);
                         bw.BaseStream.Write(mData, (int)this.BodyEnd, (int)(mData.Length - this.BodyEnd));
                         bw.Close();
+                        return newLvlFile;
                     }
                 }
                 catch (Exception )
@@ -696,13 +715,17 @@ namespace SWBF2_Tool
                     MessageBox.Show("Error splicing in new code");
                 }
             }
+            return null;
         }
 
         private static string DecompileLua(byte[] luaCode)
         {
             string fileName = ".\\decompile.luac";
             File.WriteAllBytes(fileName, luaCode);
-            string output = ScriptSearchForm.RunCommand(@"C:\BF2_ModTools\ToolsFL\bin\luac.exe", " -l " + fileName, true);
+            string luac = @"C:\BF2_ModTools\ToolsFL\bin\luac.exe";
+            if (!File.Exists(luac) && File.Exists("luac.exe"))
+                luac = "luac.exe";
+            string output = ScriptSearchForm.RunCommand(luac, " -l " + fileName, true);
             return output;
         }
     }

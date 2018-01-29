@@ -7,23 +7,26 @@ namespace SWBF2CodeHelper
 {
     public class LuaCodeHelper3
     {
-        private static Dictionary<string, string> sClosureMapping = new Dictionary<string, string>();
+        List<LuaFunction> Closures = new List<LuaFunction>();
+        static List<string> sLocalsAssigned = new List<string>();
 
         public string DecompileLuacListing(string luacListing)
         {
             string[] lines = luacListing.Replace("\r\n", "\n").Split("\n".ToCharArray());
-
-            sClosureMapping.Clear();
+            sLocalsAssigned.Clear();
             LuaChunk mainChunk = new LuaChunk();
-            ProcessLines(lines, mainChunk);
-            return mainChunk.ToString();
+            ProcessLines(lines, mainChunk, null);
+            string retVal = 
+            "-- Decompiled with SWBF2CodeHelper\n"+
+                mainChunk.ToString();
+            return retVal;
         }
 
-        private LuaChunk[] mRegisters       = new LuaChunk[250];
+        private LuaChunk[] mRegisters = new LuaChunk[250];
         private LuaChunk[] mLocalVarBackup  = new LuaChunk[250]; // the listing info does not give us enough to determine all the 
                                                                  // info about 'locals' that we need so we create a backup for local variables. 
 
-        private void ProcessLines(string[] lines, LuaChunk chunk)
+        private void ProcessLines(string[] lines, LuaChunk chunk, List<LuaChunk> upValues)
         {
             string line = "";
             Opcode code = Opcode.NONE;
@@ -53,236 +56,291 @@ namespace SWBF2CodeHelper
                 currentRegisterValue = currentRegister > -1 ? mRegisters[currentRegister] : null;
                 peek = i + 1 < lines.Length ? Operation.GetOpcode(lines[i + 1]) : Opcode.NONE;
                 //try {
-                    switch (code)
-                    {
-                        case Opcode.LOADBOOL:
-                            // LOADBOOL A B C               R(A) := (Bool)B; if (C) PC++
-                            // Loads a boolean value (true or false) into register R(A). 
-                            // true is usually encoded as an integer 1, false is always 0. If C is non-zero, 
-                            // then the next instruction is skipped (this is used when you have an assignment 
-                            // statement where the expression uses relational operators, e.g. M = K>5.)
-                            string bVal = (vmArgs[1] > 0).ToString().ToLower();
-                            newOne = new LuaChunk() { ConstantValue = bVal };
-                            mRegisters[currentRegister] = newOne;
-                            // 'C' part should be handled by compare & jump handling.
-                            break;
-                        case Opcode.GETGLOBAL:
-                            newOne = new LuaChunk();
-                            newOne.GlobalName = Operation.GetName(line);
-                            mRegisters[currentRegister] = newOne;
-                            break;
-                        case Opcode.MOVE:   // MOVE A  B R(A) := R(B)
-                            // Copies the value of register R(B) into register R(A). 
-                            // If R(B) holds a table, function or userdata, then the reference to that object 
-                            // is copied. MOVE is often used for moving values into place for the next operation.
-                            if (mRegisters[vmArgs[0]] != null && mRegisters[vmArgs[0]].LuaType == LuaType.CONSTANT)
-                                mRegisters[currentRegister] = mRegisters[vmArgs[0]].Clone();
-                            else
-                                mRegisters[currentRegister] = mRegisters[vmArgs[0]];
-                            if (mRegisters[currentRegister] == null)
-                                mRegisters[currentRegister] = GetLocalBackup(vmArgs[0]);
-                            break;
-                        case Opcode.LOADK:
-                            tmp = new LuaChunk() { ConstantValue = Operation.GetArgument(line) };
-                            mRegisters[currentRegister] = tmp;
-                            break;
-                        case Opcode.LOADNIL:  // LOADNIL A B R(A) := ... := R(B) := nil
-                            // Sets a range of registers from R(A) to R(B) to nil. 
-                            // If a single register is to be assigned to, then R(A) = R(B). 
-                            // When two or more consecutive locals need to be assigned nil values, 
-                            // only a single LOADNIL is needed
-                            tmp = new LuaChunk() { ConstantValue = "nil" };
-                            for (j = currentRegister; j < vmArgs[0]; j++)
-                                mRegisters[j] = tmp;
-                            break;
-                        case Opcode.CALL:
-                            // CALL A B C                R(A), ... ,R(A+C-2) := R(A)(R(A+1), ... ,R(A+B-1))
-                            // Performs a function call, with register R(A) holding the reference to the 
-                            // function object to be called. Parameters to the function are placed in the 
-                            // registers following R(A). If B is 1, the function has no parameters. 
-                            // If B is 2 or more, there are (B-1) parameters.  If C is 1, no return results are saved. 
-                            // If C is 2 or more, (C-1) return values are saved. If C is 0, then multiple return results are saved, 
-                            // depending on the called function.
+                switch (code)
+                {
+                    case Opcode.LOADBOOL:
+                        // LOADBOOL A B C               R(A) := (Bool)B; if (C) PC++
+                        // Loads a boolean value (true or false) into register R(A). 
+                        // true is usually encoded as an integer 1, false is always 0. If C is non-zero, 
+                        // then the next instruction is skipped (this is used when you have an assignment 
+                        // statement where the expression uses relational operators, e.g. M = K>5.)
+                        string bVal = (vmArgs[0] > 0).ToString().ToLower();
+                        newOne = new LuaChunk() { ConstantValue = bVal };
+                        mRegisters[currentRegister] = newOne;
+                        // 'C' part should be handled by compare & jump handling.
+                        break;
+                    case Opcode.GETGLOBAL:
+                        newOne = new LuaChunk();
+                        newOne.GlobalName = Operation.GetName(line);
+                        mRegisters[currentRegister] = newOne;
+                        break;
+                    case Opcode.MOVE:
+                        // MOVE A  B        R(A) := R(B)
+                        // Copies the value of register R(B) into register R(A). 
+                        // If R(B) holds a table, function or userdata, then the reference to that object 
+                        // is copied. MOVE is often used for moving values into place for the next operation.
+                        if (mRegisters[vmArgs[0]] != null && mRegisters[vmArgs[0]].LuaType == LuaType.CONSTANT)
+                            mRegisters[currentRegister] = mRegisters[vmArgs[0]].Clone();
+                        else
+                            mRegisters[currentRegister] = mRegisters[vmArgs[0]];
+                        if (mRegisters[currentRegister] == null)
+                            mRegisters[currentRegister] = GetLocalBackup(vmArgs[0]);
+                        break;
+                    case Opcode.LOADK:
+                        // LOADK A Bx               R(A) := Kst(Bx)
+                        // Loads constant number Bx into register R(A). Constants are usually
+                        // numbers or strings. Each function has its own constant list, or pool.
+                        tmp = new LuaChunk() { ConstantValue = Operation.GetArgument(line) };
+                        mRegisters[currentRegister] = tmp;
+                        break;
+                    case Opcode.LOADNIL:
+                        // LOADNIL A B            R(A) := ... := R(B) := nil
+                        // Sets a range of registers from R(A) to R(B) to nil. 
+                        // If a single register is to be assigned to, then R(A) = R(B). 
+                        // When two or more consecutive locals need to be assigned nil values, 
+                        // only a single LOADNIL is needed
+                        for (j = currentRegister; j <= vmArgs[0]; j++)
+                            mRegisters[j] = new LuaChunk() { ConstantValue = "nil" };
+                        break;
+                    case Opcode.CALL:
+                        // CALL A B C                R(A), ... ,R(A+C-2) := R(A)(R(A+1), ... ,R(A+B-1))
+                        // Performs a function call, with register R(A) holding the reference to the 
+                        // function object to be called. Parameters to the function are placed in the 
+                        // registers following R(A). If B is 1, the function has no parameters. 
+                        // If B is 2 or more, there are (B-1) parameters.  If C is 1, no return results are saved. 
+                        // If C is 2 or more, (C-1) return values are saved. If C is 0, then multiple return results are saved, 
+                        // depending on the called function.
 
-                            int numArgs = vmArgs[0] - 1;
-                            int reg = currentRegister;
-                            if (currentRegisterValue.Self != null) // For object-oriented programming using tables. Retrieves a function
-                            {                                      // reference from a table element and places it in register R(A), then a
-                                reg++;                             // reference to the table itself is placed in the next register, R(A+1).
-                                numArgs--;
-                            }
-                            for (j = 0; j < numArgs; j++)
+                        int numArgs = vmArgs[0] - 1;
+                        int reg = currentRegister;
+                        if (currentRegisterValue.Self != null) // For object-oriented programming using tables. Retrieves a function
+                        {                                      // reference from a table element and places it in register R(A), then a
+                            reg++;                             // reference to the table itself is placed in the next register, R(A+1).
+                            numArgs--;
+                        }
+                        for (j = 0; j < numArgs; j++)
+                        {
+                            currentRegisterValue.AddChunk(PluckRegister(reg + 1 + j));
+                        }
+                        // when 'B' argument == 0, that means multiple parameters; the function takes C-1 parameters
+                        if (vmArgs[0] == 0)
+                        {
+                            j = currentRegister + 1;
+                            while (mRegisters[j] != null) //need to check register before calling 'PluckRegister' because of locals backup.
                             {
-                                currentRegisterValue.AddChunk(PluckRegister(reg + 1 + j));
+                                currentRegisterValue.AddChunk(PluckRegister(j));
+                                j++;
                             }
-                            // when 'B' argument == 0, that means multiple parameters; the function takes C-1 parameters
-                            if (vmArgs[0] == 0)
-                            {
-                                j = currentRegister + 1;
-                                while (mRegisters[j] != null) //need to check register before calling 'PluckRegister' because of locals backup.
-                                {
-                                    currentRegisterValue.AddChunk(PluckRegister(j));
-                                    j++;
-                                }
-                            }
-                            currentRegisterValue.SetCall();
-                            if (currentRegisterValue.ParentChunk == null)
-                                scopeChunk.AddChunk(currentRegisterValue);
+                        }
+                        currentRegisterValue.SetCall();
+                        if (currentRegisterValue.ParentChunk == null)
+                            scopeChunk.AddChunk(currentRegisterValue);
 
-                            break;
-                        case Opcode.SETGLOBAL:
-                            currentRegisterValue.AddAssignmentLvalue(Operation.GetName(line));
-                            if (currentRegisterValue.ParentChunk == null)
-                                scopeChunk.AddChunk(currentRegisterValue);
-                            break;
-                        case Opcode.TEST:
-                            // TEST A B C                if (R(B) <=> C) then R(A) := R(B) else PC++
-                            // Used to implement and and or logical operators, or for testing a single
-                            // register in a conditional statement.
-                            // For TEST, register R(B) is coerced into a boolean and compared to
-                            // the boolean field C. If R(B) matches C, the next instruction is skipped,
-                            // otherwise R(B) is assigned to R(A) and the VM continues with the next
-                            // instruction. The and operator uses a C of 0 (false) while or uses a C value
-                            // of 1 (true).
+                        break;
+                    case Opcode.SETGLOBAL:
+                        // SETGLOBAL A Bx Gbl[Kst(Bx)] := R(A)
+                        // Copies the value from register R(A) into the global variable whose name is given in constant number Bx.
 
-                            break;
-                        case Opcode.LT: // Compares RK(B) and RK(C), which may be registers or constants. If the
-                        case Opcode.LE: // boolean result is not A, then skip the next instruction. Conversely, if the
-                        case Opcode.EQ: // boolean result equals A, continue with the next instruction.
-                            IfStatement if_stmt = new IfStatement();
+                        currentRegisterValue.AddAssignmentLvalue(Operation.GetName(line));
+                        if (currentRegisterValue.ParentChunk == null)
+                            scopeChunk.AddChunk(currentRegisterValue);
 
-                            if_stmt.Expression = new LuaExpression()
+                        break;
+                    // GETUPVAL - Still buggy. debug with 'bes2g_bf1'
+                    case Opcode.GETUPVAL:
+                        // GETUPVAL A B             R(A) := UpValue[B]
+                        // Copies the value in upvalue number B into register R(A). Each function may have its own upvalue list.
+                        // The opcode for GETUPVAL has a second purpose – it is also used in creating closures, always appearing 
+                        // after the CLOSURE instruction; see CLOSURE for more information.
+                        // upvalue is a local variable defined in a closure parent's scope
+                        mRegisters[currentRegister] = upValues[vmArgs[0]].Clone();
+                        break;
+                    case Opcode.LT: // Compares RK(B) and RK(C), which may be registers or constants. If the
+                    case Opcode.LE: // boolean result is not A, then skip the next instruction. Conversely, if the
+                    case Opcode.EQ: // boolean result equals A, continue with the next instruction.
+                        IfStatement if_stmt = new IfStatement();
+
+                        if_stmt.Expression = new LuaExpression()
+                        {
+                            Operation = code,
+                            LValue = GetExpressionArgument(line, 1),
+                            RValue = GetExpressionArgument(line, 2)
+                        };
+                        if_stmt.ThenChunk = GatherThenChunk(lines, i + 2, upValues);
+                        if_stmt.ElseChunk = GatherElseChunk(lines, i + 1, upValues);
+                        scopeChunk.AddChunk(if_stmt);
+                        i = if_stmt.ElseChunk.LastLine + 1; // is this always correct?
+                        break;
+                    case Opcode.ADD: // Binary operators (arithmetic operators with two inputs.) 
+                    case Opcode.SUB: // The result of the operation between RK(B) and RK(C) is placed into R(A). 
+                    case Opcode.MUL: // These instructions are in the classic 3-register style. RK(B) and RK(C) 
+                    case Opcode.DIV: // may be either registers or constants in the constant pool.
+                    case Opcode.POW: // R(A) := RK(B) + RK(C)
+                        List<string> mathArgs = Operation.GetArguments(line);
+                        if (mathArgs.Count == 2)
+                        {
+                            tmpExpr = new LuaExpression()
                             {
                                 Operation = code,
                                 LValue = GetExpressionArgument(line, 1),
                                 RValue = GetExpressionArgument(line, 2)
                             };
-                            if_stmt.ThenChunk = GatherThenChunk(lines, i + 2);
-                            if_stmt.ElseChunk = GatherElseChunk(lines, i + 1);
-                            scopeChunk.AddChunk(if_stmt);
-                            i = if_stmt.ElseChunk.LastLine + 1; // is this always correct?
-                            break;
-                        case Opcode.ADD: // Binary operators (arithmetic operators with two inputs.) 
-                        case Opcode.SUB: // The result of the operation between RK(B) and RK(C) is placed into R(A). 
-                        case Opcode.MUL: // These instructions are in the classic 3-register style. RK(B) and RK(C) 
-                        case Opcode.DIV: // may be either registers or constants in the constant pool.
-                        case Opcode.POW: // R(A) := RK(B) + RK(C)
-                            List<string> mathArgs = Operation.GetArguments(line);
-                            if (mathArgs.Count == 2)
+                            mRegisters[currentRegister] = tmpExpr;
+                        }
+                        else if (mathArgs.Count == 1)
+                        {
+                            LuaExpression newExpr = new LuaExpression() { Operation = code };
+                            newExpr.LValue = new LuaChunk() { ConstantValue = mathArgs[0] };
+                            newExpr.RValue = mRegisters[vmArgs[1]];
+                            mRegisters[currentRegister] = newExpr;
+                        }
+                        else // operate on registers
+                        {
+                            tmpExpr = new LuaExpression() { Operation = code };
+                            tmpExpr.LValue = mRegisters[vmArgs[0]];
+                            tmpExpr.RValue = mRegisters[vmArgs[1]];
+                            mRegisters[currentRegister] = tmpExpr;
+                        }
+                        break;
+                    case Opcode.CONCAT:
+                        // CONCAT A B C             R(A) := R(B).. ... ..R(C)
+                        // Performs concatenation of two or more strings. In a Lua source, this is equivalent to one or more concatenation 
+                        // operators (‘..’) between two or more expressions. The source registers must be consecutive, and C must always be 
+                        // greater than B. The result is placed in R(A).
+                        LuaConcat lc = new LuaConcat();
+                        for (j = vmArgs[0]; j <= vmArgs[1]; j++)
+                            lc.AddChunk(PluckRegister(j));
+                        mRegisters[currentRegister] = lc;
+                        break;
+                    case Opcode.SELF: // For object-oriented programming using tables. Retrieves a function reference from a 
+                        // table element and places it in register R(A), then a reference to the table itself 
+                        // is placed in the next register, R(A+1). This instruction saves some messy manipulation 
+                        // when setting up a method call
+                        currentRegisterValue.Self = Operation.GetArgument(line).Replace("\"", "");
+                        break;
+                    case Opcode.GETTABLE:
+                        tmp = currentRegisterValue != null ? currentRegisterValue : mLocalVarBackup[currentRegister];
+                        tmp.GetTable = Operation.GetArgument(line).Replace("\"", "");
+                        break;
+                    case Opcode.SETLIST: // 46	[-]	SETLIST  	0 7 ==> table in '0' gets the next 7 register values
+                        currentTable = currentRegisterValue as LuaTable;
+                        currentTable.ListMode = true;
+                        for (j = currentRegister + 1; j <= currentRegister + 1 + vmArgs[0]; j++) // this math correct???
+                        {
+                            currentTable.AddValue(PluckRegister(j));
+                        }
+                        break;
+                    case Opcode.NEWTABLE:
+                        //  6	[-]	NEWTABLE 	0 3 0   ;-- Creates a table (register 0) that will be used as a list to hold 3 items.
+                        //  7	[-]	NEWTABLE 	1 0 3   ;-- Creates a table (register 1) that will be used to hold 3 table entries.
+                        currentTable = new LuaTable(vmArgs[0] > 0); // 'vmArgs[0] > 0' will be true for lists
+                        mRegisters[currentRegister] = currentTable;
+                        break;
+                    case Opcode.SETTABLE:
+                        // SETTABLE A B C                        R(A)[RK(B)] := RK(C)
+                        // Copies the value from register R(C) or a constant into a table element. The
+                        // table is referenced by register R(A), while the index to the table is given by
+                        // RK(B), which may be the value of register R(B) or a constant.
+                        //
+                        // 	12	[-]	SETTABLE 	2 136 3	; "soldier"  ==> "soldier" is the key, content of register '3' is the value
+                        List<string> args = Operation.GetArguments(line);
+                        tmpTable = currentRegisterValue as LuaTable;
+                        if (currentRegisterValue != null && tmpTable == null)
+                        {
+                            tmpTable = new LuaTable(false)
                             {
-                                tmpExpr = new LuaExpression()
-                                {
-                                    Operation = code,
-                                    LValue = GetExpressionArgument(line, 1),
-                                    RValue = GetExpressionArgument(line, 2)
-                                };
-                                mRegisters[currentRegister] = tmpExpr;
-                            }
-                            else if (mathArgs.Count == 1)
-                            {
-                                LuaExpression newExpr = new LuaExpression() { Operation = code };
-                                newExpr.LValue = new LuaChunk() { ConstantValue = mathArgs[0] };
-                                newExpr.RValue = mRegisters[vmArgs[1]];
-                                mRegisters[currentRegister] = newExpr;
-                            }
-                            else // operate on registers
-                            {
-                                tmpExpr = new LuaExpression() { Operation = code };
-                                tmpExpr.LValue = mRegisters[vmArgs[0]];
-                                tmpExpr.RValue = mRegisters[vmArgs[1]];
-                                mRegisters[currentRegister] = tmpExpr;
-                            }
-                            break;
-                        case Opcode.JMP:  // line example  : 14	[-]	JMP      	0 4	; to 19
-                            if (" LE LT EQ ".IndexOf(prevOp.ToString()) > -1)
-                            {
-
-                            }
-                            break;
-                        case Opcode.SELF: // For object-oriented programming using tables. Retrieves a function reference from a 
-                            // table element and places it in register R(A), then a reference to the table itself 
-                            // is placed in the next register, R(A+1). This instruction saves some messy manipulation 
-                            // when setting up a method call
-                            currentRegisterValue.Self = Operation.GetArgument(line).Replace("\"", "");
-                            break;
-                        case Opcode.GETTABLE:
-                            currentRegisterValue.GetTable = Operation.GetArgument(line).Replace("\"", "");
-                            break;
-                        case Opcode.SETLIST: // 46	[-]	SETLIST  	0 7 ==> table in '0' gets the next 7 register values
-                            currentTable = currentRegisterValue as LuaTable;
-                            for (j = currentRegister + 1; j <= currentRegister + 1 + vmArgs[0]; j++) // this math correct???
-                            {
-                                currentTable.AddValue(PluckRegister(j));
-                            }
-                            break;
-                        case Opcode.NEWTABLE:
-                            //  6	[-]	NEWTABLE 	0 3 0   ;-- Creates a table (register 0) that will be used as a list to hold 3 items.
-                            //  7	[-]	NEWTABLE 	1 0 3   ;-- Creates a table (register 1) that will be used to hold 3 table entries.
-                            currentTable = new LuaTable(vmArgs[0] > 0); // 'vmArgs[0] > 0' will be true for lists
-                            mRegisters[currentRegister] = currentTable;
-                            break;
-                        case Opcode.SETTABLE:
-                            // SETTABLE A B C                        R(A)[RK(B)] := RK(C)
-                            // Copies the value from register R(C) or a constant into a table element. The
-                            // table is referenced by register R(A), while the index to the table is given by
-                            // RK(B), which may be the value of register R(B) or a constant.
-                            //
-                            // 	12	[-]	SETTABLE 	2 136 3	; "soldier"  ==> "soldier" is the key, content of register '3' is the value
-                            List<string> args = Operation.GetArguments(line);
-                            tmpTable = currentRegisterValue as LuaTable;
-                            if (currentRegisterValue != null && tmpTable == null)
-                            {
-                                tmpTable = new LuaTable(false)
-                                {
-                                    GetTable = currentRegisterValue.GetTable,
-                                    GlobalName = currentRegisterValue.GlobalName,
-                                    Self = currentRegisterValue.Self
-                                };
-                                if (currentRegisterValue.ParentChunk != null)
-                                    currentRegisterValue.ParentChunk.ReplaceChunk(currentRegisterValue, tmpTable);
-                                mRegisters[currentRegister] = tmpTable;
-                            }
-                            if (args.Count == 2)
-                                tmpTable.AddEntry(args[0], new LuaChunk() { ConstantValue = args[1] });
-                            else if (args.Count == 1)
-                            {
-                                tmpTable.AddEntry(args[0], PluckRegister(vmArgs[1]));
-                            }
-                            break;
-                        case Opcode.FUNCTION_DEF:
-                            LuaChunk func = GatherFunctionChunk(lines, i);
-                            i = func.LastLine;
+                                GetTable = currentRegisterValue.GetTable,
+                                GlobalName = currentRegisterValue.GlobalName,
+                                Self = currentRegisterValue.Self
+                            };
+                            if (currentRegisterValue.ParentChunk != null)
+                                currentRegisterValue.ParentChunk.ReplaceChunk(currentRegisterValue, tmpTable);
+                            mRegisters[currentRegister] = tmpTable;
+                        }
+                        if (args.Count == 2)
+                            tmpTable.AddEntry(args[0], new LuaChunk() { ConstantValue = args[1] });
+                        else if (args.Count == 1)
+                        {
+                            tmpTable.AddEntry(args[0], PluckRegister(vmArgs[1]));
+                        }
+                        break;
+                    case Opcode.FUNCTION_DEF:
+                        LuaFunction func = this.GetFunction(line);
+                        GatherFunctionChunk(func, lines, i);
+                        i = func.LastLine;
+                        if (func.ParentChunk == null) // could be a table value
                             scopeChunk.AddChunk(func);
-                            break;
-                        case Opcode.MAIN_DEF:
-                        case Opcode.PARAMS:
-                            break;
-                        case Opcode.CLOSURE:
-                            string closureNumber = Operation.GetClosureNumber(line);
-                            string functionName = Operation.GetName(lines[i + 1]);
-                            sClosureMapping.Add(closureNumber, functionName);
-                            i++;
-                            break;
-                        case Opcode.FORLOOP:
+                        else if (func.ParentChunk.LuaType == LuaType.TABLE)
+                        {
+                            func.AddAssignmentLvalue(func.ParentChunk.GlobalName + "." + func.Name);
+                            scopeChunk.AddChunk(func);
+                        }
 
-                            break;
-                        case Opcode.RETURN:
-                            break;
-                        default:
-                            Console.WriteLine(code + " NOT IMPLEMENTED ");
-                            break;
-                    }
-                    prevOp = code;
-                
-                //}catch (Exception ex)
-                //{
-                //    LuaChunk problemChild = new LuaChunk() { ConstantValue = line };
-                //    scopeChunk.AddChunk(problemChild);
-                //}
+                        break;
+                    case Opcode.MAIN_DEF:
+                    case Opcode.PARAMS:
+                        break;
+                    case Opcode.CLOSURE:
+                        LuaFunction func2 = new LuaFunction();
+                        mRegisters[currentRegister] = func2;
+                        func2.ClosureNumber = Operation.GetClosureNumber(line);
+                        i++;
+                        Opcode cCode = Opcode.NONE;
+                        while ((cCode = Operation.GetOpcode(lines[i])) == Opcode.MOVE || cCode ==  Opcode.GETUPVAL)
+                        {
+                            j = Operation.GetVMArgs(lines[i])[0]; // register to use for passing upvalue
+                            if (cCode == Opcode.MOVE)
+                            {
+                                tmp = mRegisters[j];
+                                if (tmp.LocalName == null)
+                                {
+                                    tmp.LocalName = "local_" + j;
+                                    tmp.AddAssignmentLvalue("local " + tmp.LocalName);
+                                    scopeChunk.AddChunk(tmp);
+                                }
+                            }
+                            else if (cCode == Opcode.GETUPVAL)
+                            {
+                                tmp = upValues[j];
+                            }
+                            func2.UpValues.Add(tmp.Clone());
+                            i++;
+                        }
+                        // current line should be 'SETGLOBAL' or 'SETTABLE'
+                        func2.Name = Operation.GetName(lines[i]);
+                        if (func2.Name != null) func2.Name = func2.Name.Replace("\"", "");
+                        Closures.Add(func2);
+                        if (cCode != Opcode.MOVE && cCode != Opcode.GETUPVAL)
+                            i--;
+                        break;
+
+                    case Opcode.RETURN:
+                        if (vmArgs[0] > 1)
+                        {
+                            LuaReturn retStmt = new LuaReturn() { ReturnValue = currentRegisterValue.Clone() };
+                            scopeChunk.AddChunk(retStmt);
+                        }
+                        break;
+                    case Opcode.NONE:
+                        break;
+                    case Opcode.TEST:
+                    // TEST A B C                if (R(B) <=> C) then R(A) := R(B) else PC++
+                    // Used to implement and and or logical operators, or for testing a single
+                    // register in a conditional statement.
+                    // For TEST, register R(B) is coerced into a boolean and compared to
+                    // the boolean field C. If R(B) matches C, the next instruction is skipped,
+                    // otherwise R(B) is assigned to R(A) and the VM continues with the next
+                    // instruction. The and operator uses a C of 0 (false) while or uses a C value
+                    // of 1 (true).
+                    default:
+                        Program.ReportError("", String.Format("OpCode {0} NOT IMPLEMENTED ", code));
+                        break;
+                }
+                prevOp = code;
             }
         }
 
-        private LuaChunk GetLocalBackup(int reg )
+        private LuaChunk GetLocalBackup(int reg)
         {
             LuaChunk retVal = null;
             LuaChunk chunk =  mLocalVarBackup[reg];
@@ -293,7 +351,8 @@ namespace SWBF2CodeHelper
                     ConstantValue = chunk.ConstantValue,
                     GetTable = chunk.GetTable,
                     Self = chunk.Self,
-                    GlobalName = chunk.GlobalName
+                    GlobalName = chunk.GlobalName,
+                    LocalName = chunk.LocalName
                 };
                 //retVal = chunk.Clone();
             }
@@ -314,7 +373,7 @@ namespace SWBF2CodeHelper
 
             List<int> vmArgs = Operation.GetVMArgs(line);
             List<string> args = Operation.GetArguments(line);
-            if (args[0] == "-") args.RemoveAt(0);
+            if (args.Count > 0 && args[0] == "-") args.RemoveAt(0);
             if (args.Count == 2)
                 return new LuaChunk() { ConstantValue = args[argNumber - 1] };
             else if( args.Count == 1 && argNumber == 1)
@@ -349,8 +408,12 @@ namespace SWBF2CodeHelper
 
             if(retVal != null )
                 mLocalVarBackup[registerNumber] = retVal;
-            
-            mRegisters[registerNumber] = null;
+
+            if (mRegisters[registerNumber] != null && 
+                mRegisters[registerNumber].LocalName == null) // don't remove known locals
+            {
+                mRegisters[registerNumber] = null;
+            }
 
             if (retVal == null)
                 retVal = GetLocalBackup(registerNumber);
@@ -359,28 +422,34 @@ namespace SWBF2CodeHelper
         }
 
 
-        private LuaChunk GatherFunctionChunk(string[] lines, int index)
+        private LuaChunk GatherFunctionChunk(LuaFunction functionChunk, string[] lines, int index)
         {
             List<string> dudes = new List<string>();
             int i = index + 1;
-            // process to next JMP
+            
             while (i < lines.Length && lines[i].Length > 3)
             {
                 dudes.Add(lines[i]);
                 i++;
             }
-            LuaFunction functionChunk = new LuaFunction();
-            functionChunk.Name = GetFunctionName(lines[index]); // should be info like: "function <(none):24> (598 instructions, 2392 bytes at 00245A90)"
+
             string num = Operation.GetNextToken(0, lines[index + 1]); // Should be line like like: "0 params, 2 stacks, 0 upvalues, 0 locals, 1 constant, 0 functions"
             functionChunk.NumberOfPraams = Int32.Parse(num);
 
             functionChunk.Body = new LuaChunk();
-            ProcessLines(dudes.ToArray(), functionChunk.Body);
+            // Parameters go at the bottom of the stack
+            LuaChunk argument = null;
+            for (int arg = 0; arg < functionChunk.NumberOfPraams; arg++)
+            {
+                argument = new LuaChunk() { LocalName = functionChunk.Name + "Param" + arg };
+                mRegisters[arg] = argument;
+            }
+            ProcessLines(dudes.ToArray(), functionChunk.Body, functionChunk.UpValues);
             functionChunk.LastLine = i - 1;
             return functionChunk;
         }
 
-        private string GetFunctionName(string line)
+        private LuaFunction GetFunction(string line)
         {
             if (line.IndexOf("function") > -1)
             {
@@ -388,14 +457,17 @@ namespace SWBF2CodeHelper
                 if (funcIdIndex > 20)
                 {
                     string functionId = line.Substring(funcIdIndex).Replace(")", "").Trim();
-                    if (sClosureMapping.ContainsKey(functionId))
-                        return sClosureMapping[functionId];
+                    for (int i = 0; i < Closures.Count; i++)
+                    {
+                        if (Closures[i].ClosureNumber == functionId)
+                            return Closures[i];
+                    }
                 }
             }
             return null;
         }
 
-        private LuaChunk GatherThenChunk(string[] lines, int index)
+        private LuaChunk GatherThenChunk(string[] lines, int index, List<LuaChunk> upValues)
         {
             List<string> dudes = new List<string>();
             int i = index;
@@ -406,12 +478,12 @@ namespace SWBF2CodeHelper
                 i++;
             }
             LuaChunk thenChunk = new LuaChunk();
-            ProcessLines(dudes.ToArray(), thenChunk);
+            ProcessLines(dudes.ToArray(), thenChunk, upValues);
             thenChunk.LastLine = i;
             return thenChunk;
         }
 
-        private LuaChunk GatherElseChunk(string[] lines, int index)
+        private LuaChunk GatherElseChunk(string[] lines, int index, List<LuaChunk> upValues)
         {
             int currentLineNumber = GetLineNumber(lines[index]);
             int startLineNumber = JumpToLineNumber(lines[index]);
@@ -425,7 +497,7 @@ namespace SWBF2CodeHelper
                 dudes.Add(lines[i]);
 
             LuaChunk elseChunk = new LuaChunk();
-            ProcessLines(dudes.ToArray(), elseChunk);
+            ProcessLines(dudes.ToArray(), elseChunk, upValues);
             elseChunk.LastLine = endLinesIndex;
             return elseChunk;
         }
