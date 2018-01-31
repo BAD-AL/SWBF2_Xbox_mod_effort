@@ -192,6 +192,8 @@ namespace SWBF2CodeHelper
     public enum Opcode
     {
         NONE,
+        AND,
+        OR,
         FUNCTION_DEF,
         MAIN_DEF,
         IGNORE,

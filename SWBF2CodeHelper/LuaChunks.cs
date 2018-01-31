@@ -65,6 +65,20 @@ namespace SWBF2CodeHelper
             }
         }
 
+        protected string GetIndenting()
+        {
+            int spaces = -1;
+            LuaChunk pops = ParentChunk;
+            while (pops != null)
+            {
+                spaces++;
+                pops = pops.ParentChunk;
+            }
+            spaces *= 2;
+            string retVal = new String(' ', spaces);
+            return retVal;
+        }
+
         public override string ToString()
         {
             if (LuaType == LuaType.CONSTANT && LocalName == null)
@@ -81,6 +95,8 @@ namespace SWBF2CodeHelper
             StringBuilder builder = new StringBuilder();
             if (this.LuaType == LuaType.FUNCTION_CALL)
             {
+                builder.Append(GetIndenting());
+
                 if (this.mAssignmentLvalue != null)
                     builder.Append(mAssignmentLvalue + " = ");
                 builder.Append(GlobalName);
@@ -97,7 +113,7 @@ namespace SWBF2CodeHelper
                 builder.Append("(");
                 foreach (LuaChunk arg in mChildren)
                 {
-                    builder.Append(arg);
+                    builder.Append(arg.ToString().Trim());
                     builder.Append(",");
                 }
                 if (mChildren.Count > 0) builder.Remove(builder.Length - 1, 1);
@@ -107,6 +123,7 @@ namespace SWBF2CodeHelper
             }
             else if (this.LuaType == LuaType.SIMPLE_ASSIGNMENT)
             {
+                builder.Append(GetIndenting());
                 if (mChildren.Count > 0)
                     builder.Append(string.Format("{0} = {1}\n", mAssignmentLvalue, mChildren[0]));
                 else if (ConstantValue != null)
@@ -231,7 +248,8 @@ namespace SWBF2CodeHelper
         public override string ToString()
         {
             StringBuilder bu = new StringBuilder();
-            
+            bool dropLine = false;
+            bu.Append(GetIndenting());//check this
             if (this.mAssignmentLvalue != null)
                 bu.Append(mAssignmentLvalue + " = ");
             bu.Append("{ ");
@@ -249,6 +267,11 @@ namespace SWBF2CodeHelper
                 {
                     if (kvp.Value.LuaType == LuaType.TABLE)
                         bu.Append("\n");
+                    if (kvp.Value.LuaType == LuaType.TABLE)
+                    {
+                        bu.Append(GetIndenting() + "  ");
+                        dropLine = true;
+                    }
                     bu.Append(kvp.Key);
                     bu.Append(" = ");
                     bu.Append(kvp.Value);
@@ -257,6 +280,12 @@ namespace SWBF2CodeHelper
             }
             if (mEntries.Count > 0 || (ListMode && mChildren.Count > 0))
                 bu.Remove(bu.Length - 2, 2);
+
+            if (dropLine)
+            {
+                bu.Append("\n");
+                bu.Append(GetIndenting());
+            }
             bu.Append(" }");
             if (ParentChunk.LuaType != LuaType.TABLE && ParentChunk.LuaType != LuaType.FUNCTION_CALL )
                 bu.Append("\n");
@@ -280,18 +309,19 @@ namespace SWBF2CodeHelper
             string op = "";
             switch (Operation)
             {
-                case Opcode.EQ: op = "=="; break;
-                case Opcode.LT: op = "<"; break;
-                case Opcode.LE: op = "<="; break;
-                case Opcode.ADD: op = "+"; break;
-                case Opcode.SUB: op = "-"; break;
-                case Opcode.MUL: op = "*"; break;
-                case Opcode.DIV: op = "/"; break;
-                //case Opcode.MOD: op = "%"; break;
-                case Opcode.POW: op = "^"; break;
+                case Opcode.EQ: op = "==";   break;
+                case Opcode.LT: op = "<";    break;
+                case Opcode.LE: op = "<=";   break;
+                case Opcode.ADD: op = "+";   break;
+                case Opcode.SUB: op = "-";   break;
+                case Opcode.MUL: op = "*";   break;
+                case Opcode.DIV: op = "/";   break;
+                case Opcode.AND: op = "and"; break;
+                case Opcode.OR: op = "or";   break;
+                case Opcode.POW: op = "^";   break;
             }
             string assignVal = mAssignmentLvalue != null ? mAssignmentLvalue+" = " : "";
-            string retVal = String.Format("{0}{1} {2} {3}", assignVal, LValue, op, RValue);
+            string retVal = String.Format("{0}{1} {2} {3}", assignVal, LValue.ToString(), op, RValue.ToString());
             if (mAssignmentLvalue != null )
                 retVal += "\n";
             if (assignVal == "" && LocalName != null)
@@ -355,10 +385,8 @@ namespace SWBF2CodeHelper
             {
                 bu.Append("else\n");
                 bu.Append(ElseChunk);
-                bu.Append("end\n");
             }
-            else
-                bu.Append("end\n");
+            bu.Append("end\n");
             return bu.ToString();
         }
     }
@@ -413,7 +441,7 @@ namespace SWBF2CodeHelper
 
             for (int i = 0; i < NumberOfPraams; i++)
             {
-                bu.Append(Name + "_param_" + i + ", ");
+                bu.Append(Name + "Param" + i + ", ");
             }
             if (NumberOfPraams > 0)
                 bu.Remove(bu.Length - 2, 2);
@@ -430,7 +458,7 @@ namespace SWBF2CodeHelper
 
         public override string ToString()
         {
-            return String.Format("return {0}\n", ReturnValue.ToString());
+            return String.Format("{0}return {1}\n",GetIndenting(),  ReturnValue.ToString().Trim() );
         }
     }
 

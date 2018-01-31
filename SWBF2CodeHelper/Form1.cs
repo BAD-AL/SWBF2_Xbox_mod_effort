@@ -30,8 +30,13 @@ namespace SWBF2CodeHelper
         /// </summary>
         private void ColorizeText()
         {
+            //CheckKeyword("-- Decompiled with SWBF2CodeHelper", Color.Green, 0);
             CheckKeyword("function", Color.Blue, 0);
             CheckKeyword("end", Color.Blue, 0);
+            CheckKeyword("if", Color.Blue, 0);
+            CheckKeyword("then", Color.Blue, 0);
+            CheckKeyword("else", Color.Blue, 0);
+            CheckKeyword("return", Color.Blue, 0);
         }
 
         private void CheckKeyword(string word, Color color, int startIndex)
@@ -43,7 +48,7 @@ namespace SWBF2CodeHelper
 
                 while ((index = mLuaTextBox.Text.IndexOf(word, (index + 1))) != -1)
                 {
-                    if (Char.IsWhiteSpace(mLuaTextBox.Text[index - 1]))
+                    if (index == 0 || Char.IsWhiteSpace(mLuaTextBox.Text[index - 1]))
                     {
                         mLuaTextBox.Select((index + startIndex), word.Length);
                         mLuaTextBox.SelectionColor = color;

@@ -47,6 +47,11 @@ namespace SWBF2CodeHelper
 
             for (int i = 0; i < lines.Length; i++)
             {
+                if (i < 0)
+                {
+                    Program.ReportError("Line number: " + i, "Something got messed up");
+                    break;
+                }
                 line = lines[i].Trim();
                 if (line.StartsWith("--") || line.Length < 2)
                     continue;
@@ -103,6 +108,7 @@ namespace SWBF2CodeHelper
                         for (j = currentRegister; j <= vmArgs[0]; j++)
                             mRegisters[j] = new LuaChunk() { ConstantValue = "nil" };
                         break;
+                    case Opcode.TAILCALL:
                     case Opcode.CALL:
                         // CALL A B C                R(A), ... ,R(A+C-2) := R(A)(R(A+1), ... ,R(A+B-1))
                         // Performs a function call, with register R(A) holding the reference to the 
@@ -166,10 +172,24 @@ namespace SWBF2CodeHelper
                             LValue = GetExpressionArgument(line, 1),
                             RValue = GetExpressionArgument(line, 2)
                         };
-                        if_stmt.ThenChunk = GatherThenChunk(lines, i + 2, upValues);
-                        if_stmt.ElseChunk = GatherElseChunk(lines, i + 1, upValues);
+                        
+                        int currentLineNumber = GetLineNumber(lines[i]); // get the current line number
+                        int difference = i  - currentLineNumber;
+                        int startLineNumber = JumpToLineNumber(lines[i + 1]); // get the jump to line number
+                        int startLinesIndex = startLineNumber + difference;
+                        if (Operation.GetOpcode(lines[startLinesIndex-1]) == Opcode.JMP) // if / else case
+                        {
+                            if_stmt.ThenChunk = GatherThenChunk(lines, i + 2, upValues);
+                            if_stmt.ElseChunk = GatherElseChunk(lines, i + 1, upValues);
+                            i = if_stmt.ElseChunk.LastLine - 1; // is this always correct?
+                        }
+                        else
+                        {
+                            if_stmt.ThenChunk = GatherLinesChunk(lines, i + 2, startLinesIndex + difference - 1, upValues);
+                            i = if_stmt.ThenChunk.LastLine - 1; // is this always correct?
+                        }
                         scopeChunk.AddChunk(if_stmt);
-                        i = if_stmt.ElseChunk.LastLine + 1; // is this always correct?
+                        
                         break;
                     case Opcode.ADD: // Binary operators (arithmetic operators with two inputs.) 
                     case Opcode.SUB: // The result of the operation between RK(B) and RK(C) is placed into R(A). 
@@ -201,6 +221,22 @@ namespace SWBF2CodeHelper
                             tmpExpr.RValue = mRegisters[vmArgs[1]];
                             mRegisters[currentRegister] = tmpExpr;
                         }
+                        break;
+                    case Opcode.TEST:
+                        // TEST A B C                if (R(B) != C) then R(A) := R(B) else PC++
+                        // Used to implement and and or logical operators, or for testing a single
+                        // register in a conditional statement.
+                        // For TEST, register R(B) is coerced into a boolean and compared to
+                        // the boolean field C. If R(B) matches C, the next instruction is skipped,
+                        // otherwise R(B) is assigned to R(A) and the VM continues with the next
+                        // instruction. The 'and' operator uses a C of 0 (false) while 'or' uses a C value of 1 (true).
+                        tmpExpr = new LuaExpression();
+                        tmpExpr.Operation =  vmArgs[1] == 0 ? Opcode.AND : Opcode.OR;
+                        tmpExpr.LValue = PluckRegister(vmArgs[0]);
+                        // for RValue, skip the jmp
+                        tmpExpr.RValue = GetTestRValue(lines[i + 2]);
+                        mRegisters[currentRegister] = tmpExpr;
+                        i += 2;
                         break;
                     case Opcode.CONCAT:
                         // CONCAT A B C             R(A) := R(B).. ... ..R(C)
@@ -317,21 +353,13 @@ namespace SWBF2CodeHelper
                     case Opcode.RETURN:
                         if (vmArgs[0] > 1)
                         {
-                            LuaReturn retStmt = new LuaReturn() { ReturnValue = currentRegisterValue.Clone() };
-                            scopeChunk.AddChunk(retStmt);
+                            LuaReturn retStmt = new LuaReturn() { ReturnValue = currentRegisterValue };
+                            scopeChunk.ReplaceChunk(currentRegisterValue, retStmt);
+                            //scopeChunk.AddChunk(retStmt);
                         }
                         break;
                     case Opcode.NONE:
                         break;
-                    case Opcode.TEST:
-                    // TEST A B C                if (R(B) <=> C) then R(A) := R(B) else PC++
-                    // Used to implement and and or logical operators, or for testing a single
-                    // register in a conditional statement.
-                    // For TEST, register R(B) is coerced into a boolean and compared to
-                    // the boolean field C. If R(B) matches C, the next instruction is skipped,
-                    // otherwise R(B) is assigned to R(A) and the VM continues with the next
-                    // instruction. The and operator uses a C of 0 (false) while or uses a C value
-                    // of 1 (true).
                     default:
                         Program.ReportError("", String.Format("OpCode {0} NOT IMPLEMENTED ", code));
                         break;
@@ -357,6 +385,26 @@ namespace SWBF2CodeHelper
                 //retVal = chunk.Clone();
             }
             return retVal;
+        }
+
+        /// <summary>
+        /// This should be expanded later.
+        /// </summary>
+        /// <param name="line"></param>
+        /// <returns></returns>
+        private LuaChunk GetTestRValue(string line)
+        {
+            string arg = Operation.GetArgument(line);
+            if (arg != null)
+                return new LuaChunk() 
+                { 
+                    ConstantValue = arg 
+                };
+
+            Opcode code = Operation.GetOpcode(line);
+            //TODO: more effort in this method; could create tables in here too. What else...
+            Program.ReportError("GetTestRValue ERROR ", "couldn't determine RValue "+ line);
+            return null;
         }
 
         /// <summary>
@@ -467,22 +515,19 @@ namespace SWBF2CodeHelper
             return null;
         }
 
+        // only used when paired with 'GatherElseChunk'
         private LuaChunk GatherThenChunk(string[] lines, int index, List<LuaChunk> upValues)
         {
             List<string> dudes = new List<string>();
+            int startIndex = index;
             int i = index;
             // process to next JMP
-            while (lines[i].IndexOf("[-]	JMP") == -1)
-            {
-                dudes.Add(lines[i]);
-                i++;
-            }
-            LuaChunk thenChunk = new LuaChunk();
-            ProcessLines(dudes.ToArray(), thenChunk, upValues);
-            thenChunk.LastLine = i;
-            return thenChunk;
+            while (lines[i].IndexOf("[-]	JMP") == -1) i++;
+
+            return GatherLinesChunk(lines, startIndex, i, upValues);
         }
 
+        // only used when paired with 'GatherThenChunk'
         private LuaChunk GatherElseChunk(string[] lines, int index, List<LuaChunk> upValues)
         {
             int currentLineNumber = GetLineNumber(lines[index]);
@@ -492,16 +537,20 @@ namespace SWBF2CodeHelper
             int startLinesIndex = startLineNumber + difference;
             // figure out where to end
             int endLinesIndex = JumpToLineNumber(lines[startLinesIndex - 1]) + difference;
-            List<string> dudes = new List<string>();
-            for (int i = startLinesIndex; i < endLinesIndex; i++)
-                dudes.Add(lines[i]);
 
-            LuaChunk elseChunk = new LuaChunk();
-            ProcessLines(dudes.ToArray(), elseChunk, upValues);
-            elseChunk.LastLine = endLinesIndex;
-            return elseChunk;
+            return GatherLinesChunk(lines, startLinesIndex, endLinesIndex, upValues);
         }
 
+        private LuaChunk GatherLinesChunk(string[] lines, int startIndex, int endIndex, List<LuaChunk> upValues)
+        {
+            List<string> dudes = new List<string>();
+            for (int i = startIndex; i < endIndex; i++)
+                dudes.Add(lines[i]);
+            LuaChunk chunk = new LuaChunk();
+            ProcessLines(dudes.ToArray(), chunk, upValues);
+            chunk.LastLine = endIndex;
+            return chunk;
+        }
 
         private int GetLineNumber(string line)
         {
