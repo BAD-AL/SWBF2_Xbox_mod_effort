@@ -49,7 +49,7 @@ namespace SWBF2CodeHelper
             {
                 if (i < 0)
                 {
-                    Program.ReportError("Line number: " + i, "Something got messed up");
+                    Program.ReportError("Line number: " + i, "Something got messed up", null);
                     break;
                 }
                 line = lines[i].Trim();
@@ -85,12 +85,15 @@ namespace SWBF2CodeHelper
                         // Copies the value of register R(B) into register R(A). 
                         // If R(B) holds a table, function or userdata, then the reference to that object 
                         // is copied. MOVE is often used for moving values into place for the next operation.
-                        if (mRegisters[vmArgs[0]] != null && mRegisters[vmArgs[0]].LuaType == LuaType.CONSTANT)
+                        /*if (mRegisters[vmArgs[0]] != null && mRegisters[vmArgs[0]].LuaType == LuaType.CONSTANT)
                             mRegisters[currentRegister] = mRegisters[vmArgs[0]].Clone();
                         else
-                            mRegisters[currentRegister] = mRegisters[vmArgs[0]];
+                            mRegisters[currentRegister] = mRegisters[vmArgs[0]];*/
+                        mRegisters[currentRegister] = mRegisters[vmArgs[0]];
                         if (mRegisters[currentRegister] == null)
-                            mRegisters[currentRegister] = GetLocalBackup(vmArgs[0]);
+                            mRegisters[currentRegister] = GetLocalBackup(vmArgs[0]); // already does a clone
+                        else if( mRegisters[currentRegister].LuaType != LuaType.TABLE)// make a better clone for table?  - probably a good idea
+                            mRegisters[currentRegister] = mRegisters[currentRegister].Clone();
                         break;
                     case Opcode.LOADK:
                         // LOADK A Bx               R(A) := Kst(Bx)
@@ -222,22 +225,22 @@ namespace SWBF2CodeHelper
                             mRegisters[currentRegister] = tmpExpr;
                         }
                         break;
-                    case Opcode.TEST:
-                        // TEST A B C                if (R(B) != C) then R(A) := R(B) else PC++
-                        // Used to implement and and or logical operators, or for testing a single
-                        // register in a conditional statement.
-                        // For TEST, register R(B) is coerced into a boolean and compared to
-                        // the boolean field C. If R(B) matches C, the next instruction is skipped,
-                        // otherwise R(B) is assigned to R(A) and the VM continues with the next
-                        // instruction. The 'and' operator uses a C of 0 (false) while 'or' uses a C value of 1 (true).
-                        tmpExpr = new LuaExpression();
-                        tmpExpr.Operation =  vmArgs[1] == 0 ? Opcode.AND : Opcode.OR;
-                        tmpExpr.LValue = PluckRegister(vmArgs[0]);
-                        // for RValue, skip the jmp
-                        tmpExpr.RValue = GetTestRValue(lines[i + 2]);
-                        mRegisters[currentRegister] = tmpExpr;
-                        i += 2;
-                        break;
+                    //case Opcode.TEST:
+                    //    // TEST A B C                if (R(B) != C) then R(A) := R(B) else PC++
+                    //    // Used to implement and and or logical operators, or for testing a single
+                    //    // register in a conditional statement.
+                    //    // For TEST, register R(B) is coerced into a boolean and compared to
+                    //    // the boolean field C. If R(B) matches C, the next instruction is skipped,
+                    //    // otherwise R(B) is assigned to R(A) and the VM continues with the next
+                    //    // instruction. The 'and' operator uses a C of 0 (false) while 'or' uses a C value of 1 (true).
+                    //    tmpExpr = new LuaExpression();
+                    //    tmpExpr.Operation =  vmArgs[1] == 0 ? Opcode.AND : Opcode.OR;
+                    //    tmpExpr.LValue = PluckRegister(vmArgs[0]);
+                    //    // for RValue, skip the jmp
+                    //    tmpExpr.RValue = GetTestRValue(lines[i + 2]);
+                    //    mRegisters[currentRegister] = tmpExpr;
+                    //    i += 2;
+                    //    break;
                     case Opcode.CONCAT:
                         // CONCAT A B C             R(A) := R(B).. ... ..R(C)
                         // Performs concatenation of two or more strings. In a Lua source, this is equivalent to one or more concatenation 
@@ -245,7 +248,7 @@ namespace SWBF2CodeHelper
                         // greater than B. The result is placed in R(A).
                         LuaConcat lc = new LuaConcat();
                         for (j = vmArgs[0]; j <= vmArgs[1]; j++)
-                            lc.AddChunk(PluckRegister(j));
+                            lc.AddChunk(PluckRegister(j).Clone());
                         mRegisters[currentRegister] = lc;
                         break;
                     case Opcode.SELF: // For object-oriented programming using tables. Retrieves a function reference from a 
@@ -302,6 +305,8 @@ namespace SWBF2CodeHelper
                         break;
                     case Opcode.FUNCTION_DEF:
                         func = this.GetFunction(line);
+                        if (func == null)
+                            Program.ReportError("Function Lookup failed for:", "lookup failed", line);
                         GatherFunctionChunk(func, lines, i);
                         i = func.LastLine;
                         if (func.ParentChunk == null) // could be a table value
@@ -361,7 +366,7 @@ namespace SWBF2CodeHelper
                     case Opcode.NONE:
                         break;
                     default:
-                        Program.ReportError("", String.Format("OpCode {0} NOT IMPLEMENTED ", code));
+                        Program.ReportError("", String.Format("OpCode {0} NOT IMPLEMENTED ", code), line);
                         break;
                 }
                 prevOp = code;
@@ -403,7 +408,7 @@ namespace SWBF2CodeHelper
 
             Opcode code = Operation.GetOpcode(line);
             //TODO: more effort in this method; could create tables in here too. What else...
-            Program.ReportError("GetTestRValue ERROR ", "couldn't determine RValue "+ line);
+            Program.ReportError("GetTestRValue ERROR ", "couldn't determine RValue ", line);
             return null;
         }
 

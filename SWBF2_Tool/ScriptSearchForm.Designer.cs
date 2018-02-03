@@ -52,6 +52,7 @@
             this.mExtractScriptsButton = new System.Windows.Forms.Button();
             this.mScriptTextBox = new SWBF2_Tool.SearchTextBox();
             this.mUseMethod2CheckBox = new System.Windows.Forms.CheckBox();
+            this.luaRadioButton = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -256,6 +257,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.luaRadioButton);
             this.groupBox1.Controls.Add(this.mLuacListingRadioButton);
             this.groupBox1.Controls.Add(this.mPcLuaCodeRadioButton);
             this.groupBox1.Location = new System.Drawing.Point(3, 49);
@@ -268,7 +270,7 @@
             // mLuacListingRadioButton
             // 
             this.mLuacListingRadioButton.AutoSize = true;
-            this.mLuacListingRadioButton.Location = new System.Drawing.Point(97, 13);
+            this.mLuacListingRadioButton.Location = new System.Drawing.Point(89, 13);
             this.mLuacListingRadioButton.Name = "mLuacListingRadioButton";
             this.mLuacListingRadioButton.Size = new System.Drawing.Size(86, 17);
             this.mLuacListingRadioButton.TabIndex = 1;
@@ -339,6 +341,16 @@
             this.mUseMethod2CheckBox.UseVisualStyleBackColor = true;
             this.mUseMethod2CheckBox.Visible = false;
             // 
+            // luaRadioButton
+            // 
+            this.luaRadioButton.AutoSize = true;
+            this.luaRadioButton.Location = new System.Drawing.Point(177, 13);
+            this.luaRadioButton.Name = "luaRadioButton";
+            this.luaRadioButton.Size = new System.Drawing.Size(63, 17);
+            this.luaRadioButton.TabIndex = 2;
+            this.luaRadioButton.Text = "Lua (try)";
+            this.luaRadioButton.UseVisualStyleBackColor = true;
+            // 
             // ScriptSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,5 +407,6 @@
         private System.Windows.Forms.RadioButton mPcLuaCodeRadioButton;
         private System.Windows.Forms.Panel mOperationPanel;
         private System.Windows.Forms.CheckBox mUseMethod2CheckBox;
+        private System.Windows.Forms.RadioButton luaRadioButton;
     }
 }

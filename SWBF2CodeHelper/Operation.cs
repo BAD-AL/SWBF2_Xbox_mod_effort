@@ -13,7 +13,7 @@ namespace SWBF2CodeHelper
             if (line.Length > 8 && !line.StartsWith("--"))
             {
                 string token = "";
-                string getAt = "[-]";
+                string getAt = "]";
                 int dashIndex = line.IndexOf(getAt);
                 if (dashIndex > -1)
                 {
@@ -106,12 +106,13 @@ namespace SWBF2CodeHelper
         ///     the numbers after the Operation are the arguments to the vm. 
         ///     They mean different things to different operations. For details see:
         ///     http://luaforge.net/docman/83/98/ANoFrillsIntroToLua51VMInstructions.pdf
+        ///     http://luaforge.net/docman/83/95/ANoFrillsIntroToLua5VMInstructions.pdf
         /// </summary>
         /// <param name="line"></param>
         /// <returns>Returns the list of VM args excluding register. Should be 1 or 2 values.</returns>
         public static List<int> GetVMArgs(string line)
         {
-            int index = line.IndexOf("[-]") + 3;
+            int index = line.IndexOf("]") + 1;
             int index2 = line.IndexOf(";");
             if (index2 > -1)
                 line = line.Substring(0, index2 - 1);

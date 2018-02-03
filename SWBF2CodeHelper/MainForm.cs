@@ -11,11 +11,36 @@ using System.Diagnostics;
 
 namespace SWBF2CodeHelper
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+
+            mLuacTextBox.Text =
+@"-- Paste luac listing in here (luac -l compiledLuaFile )
+-- Or load compiled Lua File with the button below.
+";
+            mLuacTextBox.DragEnter += new DragEventHandler(mLuacTextBox_DragOver);
+            mLuacTextBox.DragDrop += new DragEventHandler(mLuacTextBox_DragDrop);
+        }
+
+        void mLuacTextBox_DragOver(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.All;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        void mLuacTextBox_DragDrop(object sender, DragEventArgs e)
+        {
+            Control tb = sender as Control;
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (files != null && files.Length == 1 )
+            {
+                LoadListing( files[0]);
+            }
         }
 
         private void mGoButton_Click(object sender, EventArgs e)
@@ -23,6 +48,15 @@ namespace SWBF2CodeHelper
             LuaCodeHelper3 helper = new LuaCodeHelper3();
             mLuaTextBox.Text = helper.DecompileLuacListing(mLuacTextBox.Text);
             ColorizeText();
+            CompileResult();
+        }
+
+        private void CompileResult()
+        {
+            File.WriteAllText("tmp.lua", mLuaTextBox.Text);
+            string compileOutput = Program.RunCommand(".\\luac.exe", " -s tmp.lua", true, true).Trim();
+            if (compileOutput.Length > 10)
+                MessageBox.Show("Results did not pass compile check.", compileOutput);
         }
 
         /// <summary>
@@ -136,6 +170,38 @@ namespace SWBF2CodeHelper
             }
             else{
                 MessageBox.Show("You need to place luac.exe in the same folder.");
+            }
+        }
+
+        private void loadLuacButton_Click(object sender, EventArgs e)
+        {
+            string fileName = null;
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog(this) == DialogResult.OK)
+            {
+                fileName = Program.RunCommand(".\\luac.exe", " -l " + dlg.FileName, true, true);
+            }
+            dlg.Dispose();
+
+            if( fileName != null)
+                LoadListing(fileName);
+        }
+
+        private void LoadListing(string fileName)
+        {
+            if (!File.Exists(".\\luac.exe"))
+            {
+                MessageBox.Show("Error! Luac.exe not found in current directory. Place luac.exe in this directory.");
+                return;
+            }
+            if (fileName.EndsWith(".list"))
+            {
+                mLuacTextBox.Text = File.ReadAllText(fileName);
+            }
+            else
+            {
+                mLuacTextBox.Text = "-- luac -l listing for " + fileName + "\n" +
+                    Program.RunCommand(".\\luac.exe", " -l " + fileName, true, true);
             }
         }
 

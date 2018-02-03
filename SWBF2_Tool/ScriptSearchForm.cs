@@ -29,7 +29,42 @@ namespace SWBF2_Tool
             mScriptTextBox.StatusControl = mStatusControl;
         }
 
+        /// <summary>
+        /// Just some simple stuff, don't go crazy
+        /// </summary>
+        private void ColorizeText()
+        {
+            //CheckKeyword("-- Decompiled with SWBF2CodeHelper", Color.Green, 0);
+            CheckKeyword("function", Color.Blue, 0);
+            CheckKeyword("end", Color.Blue, 0);
+            CheckKeyword("if", Color.Blue, 0);
+            CheckKeyword("then", Color.Blue, 0);
+            CheckKeyword("else", Color.Blue, 0);
+            CheckKeyword("return", Color.Blue, 0);
+        }
+
+        private void CheckKeyword(string word, Color color, int startIndex)
+        {
+            if (mScriptTextBox.Text.Contains(word))
+            {
+                int index = -1;
+                int selectStart = mScriptTextBox.SelectionStart;
+
+                while ((index = mScriptTextBox.Text.IndexOf(word, (index + 1))) != -1)
+                {
+                    if (index == 0 || Char.IsWhiteSpace(mScriptTextBox.Text[index - 1]))
+                    {
+                        mScriptTextBox.Select((index + startIndex), word.Length);
+                        mScriptTextBox.SelectionColor = color;
+                        mScriptTextBox.Select(selectStart, 0);
+                        mScriptTextBox.SelectionColor = Color.Black;
+                    }
+                }
+            }
+        }
+
         public static bool ShowPcLuaCode = true;
+        public static bool ShowDecompiledLuaCode = false;
 
         private void mBrowseLVL_Click(object sender, EventArgs e)
         {
@@ -148,6 +183,10 @@ namespace SWBF2_Tool
                     mLuacCodeSizeTextBox.Text = "";
                 mScriptTextBox.SelectionStart = 0;
                 mScriptTextBox.ScrollToCaret();
+                if (ShowDecompiledLuaCode || ShowPcLuaCode )
+                {
+                    ColorizeText();
+                }
             }
         }
 
@@ -346,7 +385,8 @@ namespace SWBF2_Tool
         private void mPcLuaCodeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             ShowPcLuaCode = mPcLuaCodeRadioButton.Checked;
-            mSaveScriptChangesButton.Enabled = mPcLuaCodeRadioButton.Checked;
+            ShowDecompiledLuaCode = luaRadioButton.Checked;
+            mSaveScriptChangesButton.Enabled = mPcLuaCodeRadioButton.Checked || luaRadioButton.Checked;
             UpdateLuaDetails();
         }
 
@@ -597,10 +637,24 @@ namespace SWBF2_Tool
                     }
                     retVal = retVal + string.Format("\n-- {0}\n-- PC luac code size = {1}; PC code:\n{2}", sourceFileName, sz, code);
                 }
+                else if (ScriptSearchForm.ShowDecompiledLuaCode)
+                {
+                    string listing = ShowLuaListing(this.GetAssetData());
+                    string luaCode = "";
+                    try
+                    {
+                        luaCode = DecompileLuacListing(listing);
+                    }
+                    catch (Exception ex)
+                    {
+                        luaCode = ex.Message + "\n" + ex.StackTrace;
+                    }
+                    retVal = string.Format("\n-- {0}\n-- luac -l listing \n{1}", GetName(), luaCode);
+                }
                 else
                 {
-                    string code = DecompileLua(this.GetAssetData());
-                    retVal =  string.Format("\n-- {0}\n-- luac -l listing \n{1}", GetName(), code);
+                    string listing = ShowLuaListing(this.GetAssetData());
+                    retVal = string.Format("\n-- {0}\n-- luac -l listing \n{1}", GetName(), listing);
                 }
             }
             else
@@ -718,15 +772,23 @@ namespace SWBF2_Tool
             return null;
         }
 
-        private static string DecompileLua(byte[] luaCode)
+        private static string ShowLuaListing(byte[] luacCode)
         {
             string fileName = ".\\decompile.luac";
-            File.WriteAllBytes(fileName, luaCode);
+            File.WriteAllBytes(fileName, luacCode);
             string luac = @"C:\BF2_ModTools\ToolsFL\bin\luac.exe";
             if (!File.Exists(luac) && File.Exists("luac.exe"))
                 luac = "luac.exe";
             string output = ScriptSearchForm.RunCommand(luac, " -l " + fileName, true);
             return output;
+        }
+
+        private string DecompileLuacListing(string listing)
+        {
+            string retVal = "";
+            SWBF2CodeHelper.LuaCodeHelper3 helper = new SWBF2CodeHelper.LuaCodeHelper3();
+            retVal = helper.DecompileLuacListing(listing);
+            return retVal;
         }
     }
 }

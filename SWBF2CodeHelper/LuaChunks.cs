@@ -59,7 +59,7 @@ namespace SWBF2CodeHelper
                 if (child.ParentChunk != null)
                     child.ParentChunk.mChildren.Remove(child);
                 if (child == this)
-                    Program.ReportError(this.GlobalName, "Adding self as a child! Fix the code!!!");
+                    Program.ReportError(this.GlobalName, "Adding self as a child! Fix the code!!!", null);
                 child.ParentChunk = this;
                 mChildren.Add(child);
             }
@@ -75,6 +75,7 @@ namespace SWBF2CodeHelper
                 pops = pops.ParentChunk;
             }
             spaces *= 2;
+            if (spaces < 0) spaces = 0;
             string retVal = new String(' ', spaces);
             return retVal;
         }
@@ -131,13 +132,13 @@ namespace SWBF2CodeHelper
                 else if (GlobalName != null)
                     builder.Append(string.Format("{0} = {1}\n", mAssignmentLvalue, GlobalName));
                 else
-                    Program.ReportError(this.mAssignmentLvalue, "Error with simple assignment!!!");
+                    Program.ReportError(this.mAssignmentLvalue, "Error with simple assignment!!!", null);
             }
             else if (mChildren.Count > 0)
             {
                 foreach (LuaChunk child in mChildren)
                     if (child == this)
-                        Program.ReportError(this.GlobalName, "How did this get in here!! Child == self???");
+                        Program.ReportError(this.GlobalName, "How did this get in here!! Child == self???", null);
                     else
                         builder.Append(child.ToString());// +"\n";
             }
@@ -155,7 +156,7 @@ namespace SWBF2CodeHelper
             if (index > -1)
             {
                 if (replacement == this)
-                    Program.ReportError(this.GlobalName, "Cannot add self as a Child!!!");
+                    Program.ReportError(this.GlobalName, "Cannot add self as a Child!!!", null);
                 replacement.ParentChunk = this;
                 mChildren.Insert(index, replacement);
                 mChildren.RemoveAt(index + 1);
@@ -433,11 +434,11 @@ namespace SWBF2CodeHelper
         {
             StringBuilder bu = new StringBuilder();
             if (Name != null)
-                bu.Append(String.Format("function {0}(", Name.Replace("\"", "")));
+                bu.Append(String.Format("\nfunction {0}(", Name.Replace("\"", "")));
             else if (mAssignmentLvalue != null)
                 bu.Append(String.Format("{0} = function (", mAssignmentLvalue.Replace("\"", "")));
             else
-                Program.ReportError("Function un-nammed", "ToString on a function; function has no name!!!");
+                Program.ReportError("Function un-nammed", "ToString on a function; function has no name!!!", null);
 
             for (int i = 0; i < NumberOfPraams; i++)
             {
@@ -467,13 +468,20 @@ namespace SWBF2CodeHelper
         public override string ToString()
         {
             StringBuilder builder = new StringBuilder();
-
+            if (mAssignmentLvalue != null)
+            {
+                builder.Append(GetIndenting());
+                builder.Append(mAssignmentLvalue);
+                builder.Append(" = ");
+            }
             foreach (LuaChunk child in mChildren)
             {
                 builder.Append(child.ToString());
                 builder.Append(" .. ");
             }
             builder.Remove(builder.Length - 4, 4);
+            if (mAssignmentLvalue != null)
+                builder.Append("\n");
             return builder.ToString();
         }
     }

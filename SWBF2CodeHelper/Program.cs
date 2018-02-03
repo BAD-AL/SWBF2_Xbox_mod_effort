@@ -27,7 +27,7 @@ namespace SWBF2CodeHelper
                 InteractiveMode = true;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Form1());
+                Application.Run(new MainForm());
             }
             else if ("/? -h /h --help ".Contains(args[0]))
             {
@@ -110,9 +110,13 @@ namespace SWBF2CodeHelper
             return output;
         }
 
-        public static void ReportError(string errorMsg, string errorDetails)
+        public static void ReportError(string errorMsg, string errorDetails, string line)
         {
             string error = String.Format("ERROR! {0} {1} ", errorMsg, errorDetails);
+            if (!string.IsNullOrEmpty(line))
+            {
+                error += "\n" + line;
+            }
             Console.Error.WriteLine(error);
             if (InteractiveMode && MessageBox.Show(errorDetails + "\nContinue?", errorMsg, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 return;
