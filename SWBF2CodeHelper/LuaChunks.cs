@@ -447,8 +447,11 @@ namespace SWBF2CodeHelper
             if (NumberOfPraams > 0)
                 bu.Remove(bu.Length - 2, 2);
             bu.Append(")\n");
-            bu.Append(Body.ToString());
-            bu.Append("end\n");
+            if (Body != null)
+            {
+                bu.Append(Body.ToString());
+                bu.Append("end\n");
+            }
             return bu.ToString();
         }
     }

@@ -187,8 +187,6 @@ it to a project using 'dotPeek').
 
         private void PopulateListBox(ListBox listBox, byte[] data)
         {
-            //byte[] data  = File.ReadAllBytes(fileName);
-            byte[] searchBytes = ASCIIEncoding.ASCII.GetBytes("lvl_");
             List<AssetListItem> assetItems = GetItems(data);
             listBox.Items.Clear();
             listBox.Items.AddRange(assetItems.ToArray());

@@ -210,7 +210,7 @@ namespace SWBF2_Tool
                     // copy over .msh file first
                     string destFile = "";
                     int filesCopied = 0;
-                    string optionFile = "";
+
                     destFile = targetDir + mMshFileNameTextBox.Text.Substring(mMshFileNameTextBox.Text.LastIndexOf('\\') + 1);
                     if (!File.Exists(destFile))
                     {

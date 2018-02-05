@@ -212,7 +212,7 @@ namespace SWBF2_Tool
         public static int LuacCodeSize(string luaSourceFile)
         {
             int retVal = -1;
-            string result = ScriptSearchForm.RunCommand(@"C:\BF2_ModTools\ToolsFL\bin\luac.exe", " -s -o tmp.luac " + luaSourceFile, true);
+            string result = ScriptSearchForm.RunCommand(Program.Luac, " -s -o tmp.luac " + luaSourceFile, true);
             if (result.Length < 10)
             {
                 FileInfo info = new FileInfo(".\\tmp.luac");
@@ -384,10 +384,12 @@ namespace SWBF2_Tool
 
         private void mPcLuaCodeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            RadioButton btn = sender as RadioButton;
             ShowPcLuaCode = mPcLuaCodeRadioButton.Checked;
             ShowDecompiledLuaCode = luaRadioButton.Checked;
             mSaveScriptChangesButton.Enabled = mPcLuaCodeRadioButton.Checked || luaRadioButton.Checked;
-            UpdateLuaDetails();
+            if( btn.Checked)
+                UpdateLuaDetails();
         }
 
         private void mLVLFileTextBox_TextChanged(object sender, EventArgs e)
@@ -463,7 +465,6 @@ namespace SWBF2_Tool
             return retVal;
         }
         #endregion
-
     }
 
     public class AssetListItem
@@ -709,11 +710,18 @@ namespace SWBF2_Tool
             {
                 if (sAllLuaFiles == null)
                 {
+                    while (!Directory.Exists(Program.BF2_Tools_BaseDir))
+                    {
+                        Program.BF2_Tools_BaseDir = StringInputDlg.GetString("Please enter SWBF2 mod tools base directory", "Could not find " + Program.BF2_Tools_BaseDir + ". Please enter base SWBF2 mod tools directory", Program.BF2_Tools_BaseDir);
+                        if ( String.IsNullOrEmpty( Program.BF2_Tools_BaseDir ))
+                            return null;
+                        if (!Program.BF2_Tools_BaseDir.EndsWith("\\")) Program.BF2_Tools_BaseDir += "\\";
+                    }
                     sAllLuaFiles = new List<string>();
-                    sAllLuaFiles.AddRange(Directory.GetFiles(@"C:\BF2_ModTools\assets\", "*.lua", SearchOption.AllDirectories));
-                    sAllLuaFiles.AddRange(Directory.GetFiles(@"C:\BF2_ModTools\TEMPLATE\Common\scripts\", "*.lua", SearchOption.AllDirectories));
-                    sAllLuaFiles.AddRange(Directory.GetFiles(@"C:\BF2_ModTools\space_template\", "*.lua", SearchOption.AllDirectories));
-                    sAllLuaFiles.AddRange(Directory.GetFiles(@"C:\BF2_ModTools\data\Common\scripts\", "*.lua", SearchOption.AllDirectories));
+                    sAllLuaFiles.AddRange(Directory.GetFiles(Program.BF2_Tools_BaseDir + "assets\\", "*.lua", SearchOption.AllDirectories));
+                    sAllLuaFiles.AddRange(Directory.GetFiles(Program.BF2_Tools_BaseDir + "TEMPLATE\\Common\\scripts\\", "*.lua", SearchOption.AllDirectories));
+                    sAllLuaFiles.AddRange(Directory.GetFiles(Program.BF2_Tools_BaseDir + "space_template\\", "*.lua", SearchOption.AllDirectories));
+                    sAllLuaFiles.AddRange(Directory.GetFiles(Program.BF2_Tools_BaseDir + "data\\Common\\scripts\\", "*.lua", SearchOption.AllDirectories));
                 }
 
                 string searchFor = fileName.EndsWith(".lua") ? fileName : fileName + ".lua";
@@ -739,8 +747,8 @@ namespace SWBF2_Tool
         {
             string tmpLuaFileName = ".\\_spliceTmp.lua";
             File.WriteAllText(tmpLuaFileName, newCode);
-            
-            string result = ScriptSearchForm.RunCommand(@"C:\BF2_ModTools\ToolsFL\bin\luac.exe", " -s -o tmp.luac " + tmpLuaFileName, true);
+
+            string result = ScriptSearchForm.RunCommand(Program.Luac, " -s -o tmp.luac " + tmpLuaFileName, true);
             if (result.Trim() != "")
             {
                 MessageBox.Show("Error compiling code", result);
@@ -776,10 +784,8 @@ namespace SWBF2_Tool
         {
             string fileName = ".\\decompile.luac";
             File.WriteAllBytes(fileName, luacCode);
-            string luac = @"C:\BF2_ModTools\ToolsFL\bin\luac.exe";
-            if (!File.Exists(luac) && File.Exists("luac.exe"))
-                luac = "luac.exe";
-            string output = ScriptSearchForm.RunCommand(luac, " -l " + fileName, true);
+            
+            string output = ScriptSearchForm.RunCommand(Program.Luac, " -l " + fileName, true);
             return output;
         }
 
