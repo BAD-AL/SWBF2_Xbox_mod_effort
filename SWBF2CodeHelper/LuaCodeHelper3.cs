@@ -459,7 +459,7 @@ namespace SWBF2CodeHelper
         {
             LuaChunk retVal = mRegisters[registerNumber];
 
-            if(retVal != null )
+            if(retVal != null && retVal.LuaType != LuaType.FUNCTION_CALL)
                 mLocalVarBackup[registerNumber] = retVal;
 
             if (mRegisters[registerNumber] != null && 

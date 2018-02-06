@@ -299,9 +299,32 @@ namespace SWBF2CodeHelper
     {
         public Opcode Operation { get; set; }
 
-        public LuaChunk LValue { get; set; }
+        private LuaChunk mLValue = null;
 
-        public LuaChunk RValue { get; set; }
+        public LuaChunk LValue 
+        {
+            get { return mLValue; }
+
+            set 
+            {
+                mLValue = value;
+                if (value != null)
+                    AddChunk(value);
+            }
+        }
+
+        private LuaChunk mRValue = null;
+
+        public LuaChunk RValue 
+        {
+            get { return mRValue; }
+            set 
+            {
+                mRValue = value;
+                if (value != null)
+                    AddChunk(value);
+            }
+        }
 
         public override LuaType LuaType { get { return LuaType.EXPRESSION; } protected set { } }
 
@@ -322,7 +345,7 @@ namespace SWBF2CodeHelper
                 case Opcode.POW: op = "^";   break;
             }
             string assignVal = mAssignmentLvalue != null ? mAssignmentLvalue+" = " : "";
-            string retVal = String.Format("{0}{1} {2} {3}", assignVal, LValue.ToString(), op, RValue.ToString());
+            string retVal = String.Format("{0}{1} {2} {3}", assignVal, LValue.ToString().Trim(), op, RValue.ToString().Trim() );
             if (mAssignmentLvalue != null )
                 retVal += "\n";
             if (assignVal == "" && LocalName != null)

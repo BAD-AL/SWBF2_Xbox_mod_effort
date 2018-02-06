@@ -14,6 +14,7 @@ namespace SWBF2_Tool
 {
     public partial class ScriptSearchForm : Form
     {
+        internal static String CurrentFile { get; set; }
 
         public static byte[] NameBytes = { 0x00, 0x00, 0x4e, 0x41, 0x4d, 0x45 }; // 00 00 NAME
 
@@ -89,7 +90,9 @@ namespace SWBF2_Tool
                 MessageBox.Show(this, "Ensure there is a valid .lvl file in the LVL Text box.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            ScriptSearchForm.CurrentFile = fileName;
             mData  = File.ReadAllBytes(fileName);
+
             byte[] searchBytes = NameBytes;
             switch (mSearchTypeComboBox.SelectedIndex)
             {
@@ -650,7 +653,7 @@ namespace SWBF2_Tool
                     {
                         luaCode = ex.Message + "\n" + ex.StackTrace;
                     }
-                    retVal = string.Format("\n-- {0}\n-- luac -l listing \n{1}", GetName(), luaCode);
+                    retVal = string.Format("\n-- {0}\n{1}", GetName(), luaCode);
                 }
                 else
                 {
@@ -761,6 +764,14 @@ namespace SWBF2_Tool
             {
                 try
                 {
+                    if (!String.IsNullOrEmpty(ScriptSearchForm.CurrentFile))
+                    {
+                        int lastSlash = ScriptSearchForm.CurrentFile.LastIndexOf(Path.DirectorySeparatorChar);
+                        if (lastSlash > -1)
+                        {
+                            newLvlFile = tmpLuaFileName = ScriptSearchForm.CurrentFile.Substring(0, lastSlash+1) + newLvlFile;
+                        }
+                    }
                     using (FileStream fs = File.OpenWrite(newLvlFile))
                     {
                         BinaryWriter bw = new BinaryWriter(fs);
@@ -769,6 +780,7 @@ namespace SWBF2_Tool
                         bw.BaseStream.Write(newLuacCode, 0, newLuacCode.Length);
                         bw.BaseStream.Write(mData, (int)this.BodyEnd, (int)(mData.Length - this.BodyEnd));
                         bw.Close();
+                        MessageBox.Show("Saved to " + newLvlFile);
                         return newLvlFile;
                     }
                 }
