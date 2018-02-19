@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.mGoButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.mLuacTextBox = new SWBF2CodeHelper.SearchTextBox();
-            this.mLuaTextBox = new SWBF2CodeHelper.SearchTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.mCompareButton = new System.Windows.Forms.Button();
             this.mLoadLuacButton = new System.Windows.Forms.Button();
+            this.mLuacTextBox = new SWBF2CodeHelper.SearchTextBox();
+            this.mLuaTextBox = new SWBF2CodeHelper.SearchTextBox();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -82,6 +82,50 @@
             this.splitContainer1.SplitterDistance = 424;
             this.splitContainer1.TabIndex = 4;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(561, 9);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(240, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://www.scootersoftware.com/download.php";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(436, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "The Best Compare Tool:";
+            // 
+            // mCompareButton
+            // 
+            this.mCompareButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.mCompareButton.Location = new System.Drawing.Point(786, 607);
+            this.mCompareButton.Name = "mCompareButton";
+            this.mCompareButton.Size = new System.Drawing.Size(135, 23);
+            this.mCompareButton.TabIndex = 20;
+            this.mCompareButton.Text = "Compare Listings";
+            this.mCompareButton.UseVisualStyleBackColor = true;
+            this.mCompareButton.Click += new System.EventHandler(this.mCompareButton_Click);
+            // 
+            // mLoadLuacButton
+            // 
+            this.mLoadLuacButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.mLoadLuacButton.Location = new System.Drawing.Point(15, 607);
+            this.mLoadLuacButton.Name = "mLoadLuacButton";
+            this.mLoadLuacButton.Size = new System.Drawing.Size(171, 23);
+            this.mLoadLuacButton.TabIndex = 3;
+            this.mLoadLuacButton.Text = "Load compiled lua file";
+            this.mLoadLuacButton.UseVisualStyleBackColor = true;
+            this.mLoadLuacButton.Click += new System.EventHandler(this.loadLuacButton_Click);
+            // 
             // mLuacTextBox
             // 
             this.mLuacTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,50 +153,6 @@
             this.mLuaTextBox.TabIndex = 2;
             this.mLuaTextBox.Text = "";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(561, 9);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(181, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://blackmiaool.com/lua-beautify/";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(461, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "To Beautify, go to:";
-            // 
-            // mCompareButton
-            // 
-            this.mCompareButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.mCompareButton.Location = new System.Drawing.Point(786, 607);
-            this.mCompareButton.Name = "mCompareButton";
-            this.mCompareButton.Size = new System.Drawing.Size(135, 23);
-            this.mCompareButton.TabIndex = 20;
-            this.mCompareButton.Text = "Compare Listings";
-            this.mCompareButton.UseVisualStyleBackColor = true;
-            this.mCompareButton.Click += new System.EventHandler(this.mCompareButton_Click);
-            // 
-            // mLoadLuacButton
-            // 
-            this.mLoadLuacButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.mLoadLuacButton.Location = new System.Drawing.Point(15, 607);
-            this.mLoadLuacButton.Name = "mLoadLuacButton";
-            this.mLoadLuacButton.Size = new System.Drawing.Size(171, 23);
-            this.mLoadLuacButton.TabIndex = 3;
-            this.mLoadLuacButton.Text = "Load compiled lua file";
-            this.mLoadLuacButton.UseVisualStyleBackColor = true;
-            this.mLoadLuacButton.Click += new System.EventHandler(this.loadLuacButton_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +167,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "SWBF2 CodeRecover";
+            this.Text = "SWBF2 CodeHelper";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);

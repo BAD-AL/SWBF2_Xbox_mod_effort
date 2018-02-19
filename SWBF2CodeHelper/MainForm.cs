@@ -125,10 +125,12 @@ namespace SWBF2CodeHelper
             }
 
             DialogResult result = MessageBox.Show(
-                    "Could not find an installed text diff tool.\nPlease choose file diff program on your computer.\n" +
-                    "If you do not have one installed, you can download \n"+
-                    "ExamDiff from: http://www.prestosoft.com/edp_examdiff.asp\n" + 
-                    "Navigate to a diff tool on your computer?",
+                    "Could not find Beyond Compare on your computer.\nPlease choose file diff program on your computer.\n" +
+                    "(Was hoping to find BeyondCompare at \n'C:\\Program Files\\Beyond Compare 4\\BCompare.exe' or at \n"+
+                    "'C:\\Program Files (x86)\\Beyond Compare 4\\BCompare.exe')\n"+
+                    "If you do not have it installed, you can download\n"+
+                    "Beyond Compare 4 from: https://www.scootersoftware.com/download.php\n" + 
+                    "Navigate to a different diff tool on your computer?",
                     "Diff tool not found", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {

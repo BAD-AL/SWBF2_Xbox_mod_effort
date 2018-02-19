@@ -51,8 +51,8 @@
             this.mPcLuaCodeRadioButton = new System.Windows.Forms.RadioButton();
             this.mExtractTypeComboBox = new System.Windows.Forms.ComboBox();
             this.mExtractScriptsButton = new System.Windows.Forms.Button();
-            this.mScriptTextBox = new SWBF2_Tool.SearchTextBox();
             this.mUseMethod2CheckBox = new System.Windows.Forms.CheckBox();
+            this.mScriptTextBox = new SWBF2_Tool.SearchTextBox();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -109,7 +109,6 @@
             // 
             // mSearchButton
             // 
-            this.mSearchButton.Enabled = false;
             this.mSearchButton.Location = new System.Drawing.Point(3, 5);
             this.mSearchButton.Name = "mSearchButton";
             this.mSearchButton.Size = new System.Drawing.Size(72, 23);
@@ -123,7 +122,6 @@
             this.mSearchTypeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.mSearchTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mSearchTypeComboBox.Enabled = false;
             this.mSearchTypeComboBox.FormattingEnabled = true;
             this.mSearchTypeComboBox.Items.AddRange(new object[] {
             "Lua",
@@ -327,6 +325,17 @@
             this.mExtractScriptsButton.UseVisualStyleBackColor = true;
             this.mExtractScriptsButton.Click += new System.EventHandler(this.mExtractScriptsButton_Click);
             // 
+            // mUseMethod2CheckBox
+            // 
+            this.mUseMethod2CheckBox.AutoSize = true;
+            this.mUseMethod2CheckBox.Location = new System.Drawing.Point(273, 27);
+            this.mUseMethod2CheckBox.Name = "mUseMethod2CheckBox";
+            this.mUseMethod2CheckBox.Size = new System.Drawing.Size(93, 17);
+            this.mUseMethod2CheckBox.TabIndex = 27;
+            this.mUseMethod2CheckBox.Text = "Use Method 2";
+            this.mUseMethod2CheckBox.UseVisualStyleBackColor = true;
+            this.mUseMethod2CheckBox.Visible = false;
+            // 
             // mScriptTextBox
             // 
             this.mScriptTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -341,17 +350,6 @@
             this.mScriptTextBox.StatusControl = null;
             this.mScriptTextBox.TabIndex = 16;
             this.mScriptTextBox.Text = "";
-            // 
-            // mUseMethod2CheckBox
-            // 
-            this.mUseMethod2CheckBox.AutoSize = true;
-            this.mUseMethod2CheckBox.Location = new System.Drawing.Point(273, 27);
-            this.mUseMethod2CheckBox.Name = "mUseMethod2CheckBox";
-            this.mUseMethod2CheckBox.Size = new System.Drawing.Size(93, 17);
-            this.mUseMethod2CheckBox.TabIndex = 27;
-            this.mUseMethod2CheckBox.Text = "Use Method 2";
-            this.mUseMethod2CheckBox.UseVisualStyleBackColor = true;
-            this.mUseMethod2CheckBox.Visible = false;
             // 
             // ScriptSearchForm
             // 

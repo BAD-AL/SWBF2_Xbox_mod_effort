@@ -241,6 +241,17 @@ namespace SWBF2CodeHelper
                     //    mRegisters[currentRegister] = tmpExpr;
                     //    i += 2;
                     //    break;
+                    //case Opcode.TEST:
+                    //    if_stmt = new IfStatement();
+                    //    if_stmt.Expression = 
+                    //    tmpExpr = new LuaExpression();
+                    //    tmpExpr.Operation = vmArgs[1] == 0 ? Opcode.AND : Opcode.OR;
+                    //    tmpExpr.LValue = PluckRegister(vmArgs[0]);
+                    //    // for RValue, skip the jmp
+                    //    tmpExpr.RValue = GetTestRValue(lines[i + 2]);
+                    //    mRegisters[currentRegister] = tmpExpr;
+                    //    i += 2;
+                    //    break;
                     case Opcode.CONCAT:
                         // CONCAT A B C             R(A) := R(B).. ... ..R(C)
                         // Performs concatenation of two or more strings. In a Lua source, this is equivalent to one or more concatenation 
@@ -549,7 +560,7 @@ namespace SWBF2CodeHelper
         private LuaChunk GatherLinesChunk(string[] lines, int startIndex, int endIndex, List<LuaChunk> upValues)
         {
             List<string> dudes = new List<string>();
-            for (int i = startIndex; i < endIndex; i++)
+            for (int i = startIndex; i < endIndex && i < lines.Length; i++)
                 dudes.Add(lines[i]);
             LuaChunk chunk = new LuaChunk();
             ProcessLines(dudes.ToArray(), chunk, upValues);
