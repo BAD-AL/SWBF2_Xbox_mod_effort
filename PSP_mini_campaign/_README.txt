@@ -29,7 +29,18 @@ ScriptCB_GetPSPMCProgress(1)
 }
 --------------------------------------
 
-Also in the PSP mission.lvl are 'cor1c_mcm' and 'tat3g_mcm'.
-I don't believe these were playable in the PSP and I am wondering what they are like.
-I'm also not yet sure what the '_mcp', '_dcp', '_mct', '_mcp', '_scp' mission files.
-There's also an oddball called just 'gal1', not sure what it is either.
+Also in the PSP mission.lvl are 'cor1c_mcm' and 'tat3g_mcm'; I don't believe these were playable in the PSP.
+
+The '_mcp', '_dcp', '_mct', '_mcp', '_scp' and '_scm' mission files are selectable in the multiplayer mode on PSP.
+'_mct' ==> Rogue Assassin Co-op
+'_mcp' ==> Rogue Assassin Competitive
+'_dcm' ==> Imperial Enforcer Co-op
+'_dcp' ==> Imperial Enforcer Competitive
+'_scm' ==> Rebel Raider Co-op
+'_scp' ==> Rebel Raider Competitive
+
+There are 2 unused multiplayer levels 'cor1c_mcp','tat3_mcp'.
+
+There's also an oddball called just 'gal1', not sure what it is.
+
+The 'xxx_mct' and 'xxx_mcp' files appear to be identical.
