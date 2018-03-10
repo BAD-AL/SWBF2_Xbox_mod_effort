@@ -1,5 +1,5 @@
 -- end1g_dcm.lua
--- partially Decompiled with SWBF2CodeHelper
+-- PSP 'Imperial Enforcer' Endor mission
 ScriptCB_DoFile("ObjectiveConquest")
 ScriptCB_DoFile("setup_teams")
 ScriptCB_DoFile("MultiObjectiveContainer")

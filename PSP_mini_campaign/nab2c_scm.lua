@@ -1,6 +1,5 @@
--- myg1c_scm.lua
--- PSP Mission Script; 'Rebel Raider' Mygeeto level
-
+-- nab2c_scm.lua
+-- PSP Mission Script; 'Rebel Raider' Namboo level
 ScriptCB_DoFile("ObjectiveCTF")
 ScriptCB_DoFile("setup_teams")
 ALL = 1
@@ -9,31 +8,24 @@ ATT = ALL
 DEF = IMP
 
 function ScriptPostLoad()
-    DisableBarriers("dropship")
-    DisableBarriers("shield_03")
-    DisableBarriers("shield_02")
-    DisableBarriers("shield_01")
-    DisableBarriers("ctf")
-    DisableBarriers("ctf1")
-    DisableBarriers("ctf2")
-    DisableBarriers("ctf3")
     missiontimer = CreateTimer("missiontimer")
-    SetTimerValue(missiontimer, 360)
-    timelimit = 360
+    SetTimerValue(missiontimer, 330)
+    timelimit = 330
     fiveminremains = CreateTimer("fiveminremains")
-    SetTimerValue(fiveminremains, 60)
+    SetTimerValue(fiveminremains, 30)
     fourminremains = CreateTimer("fourminremains")
-    SetTimerValue(fourminremains, 120)
+    SetTimerValue(fourminremains, 90)
     threeminremains = CreateTimer("threeminremains")
-    SetTimerValue(threeminremains, 180)
+    SetTimerValue(threeminremains, 150)
     twominremains = CreateTimer("twominremains")
-    SetTimerValue(twominremains, 240)
+    SetTimerValue(twominremains, 210)
     oneminremains = CreateTimer("oneminremains")
-    SetTimerValue(oneminremains, 300)
+    SetTimerValue(oneminremains, 270)
     thirtysecremains = CreateTimer("thirtysecremains")
-    SetTimerValue(thirtysecremains, 330)
+    SetTimerValue(thirtysecremains, 300)
     tensecremains = CreateTimer("tensecremains")
-    SetTimerValue(tensecremains, 350)
+    SetTimerValue(tensecremains, 320)
+
     StartTimer(missiontimer)
     StartTimer(fiveminremains)
     StartTimer(fourminremains)
@@ -43,27 +35,38 @@ function ScriptPostLoad()
     StartTimer(thirtysecremains)
     StartTimer(tensecremains)
     ShowTimer(missiontimer)
-    SetProperty("flag1", "GeometryName", "myg1_prop_shield_generator")
+
+    SetProperty("flag1", "GeometryName", "tan4_prop_console")
     SetProperty("flag1", "CarriedGeometryName", "com_icon_alliance_contraband_carried")
     SetProperty("flag1", "AllowAIPickup", 0)
-    SetProperty("flag2", "GeometryName", "myg1_prop_shield_generator")
+    SetProperty("flag2", "GeometryName", "tan4_prop_console")
     SetProperty("flag2", "CarriedGeometryName", "com_icon_alliance_contraband_carried")
     SetProperty("flag2", "AllowAIPickup", 0)
-    SetProperty("flag3", "GeometryName", "myg1_prop_shield_generator")
+    SetProperty("flag3", "GeometryName", "tan4_prop_console")
     SetProperty("flag3", "CarriedGeometryName", "com_icon_alliance_contraband_carried")
     SetProperty("flag3", "AllowAIPickup", 0)
-    SetProperty("flag4", "GeometryName", "myg1_prop_shield_generator")
+    SetProperty("flag4", "GeometryName", "tan4_prop_console")
     SetProperty("flag4", "CarriedGeometryName", "com_icon_alliance_contraband_carried")
     SetProperty("flag4", "AllowAIPickup", 0)
+    SetProperty("flag5", "GeometryName", "tan4_prop_console")
+    SetProperty("flag5", "CarriedGeometryName", "com_icon_alliance_contraband_carried")
+    SetProperty("flag5", "AllowAIPickup", 0)
+    SetProperty("flag6", "GeometryName", "tan4_prop_console")
+    SetProperty("flag6", "CarriedGeometryName", "com_icon_alliance_contraband_carried")
+    SetProperty("flag6", "AllowAIPickup", 0)
+    SetProperty("flag7", "GeometryName", "tan4_prop_console")
+    SetProperty("flag7", "CarriedGeometryName", "com_icon_alliance_contraband_carried")
+    SetProperty("flag7", "AllowAIPickup", 0)
     SetClassProperty("myg1_prop_shield_generator", "DroppedColorize", 1)
+
     ctf =
         ObjectiveCTF:New(
         {
             teamATT = ATT,
             teamDEF = DEF,
-            captureLimit = 3,
-            popupText = "level.myg1c_s.objectives.detail",
-            text = "level.myg1c_s.objectives.1",
+            captureLimit = 4,
+            popupText = "level.nab2c_s.objectives.detail",
+            text = "level.nab2c_s.objectives.1",
             hideCPs = false,
             multiplayerRules = true
         }
@@ -116,22 +119,62 @@ function ScriptPostLoad()
             mapIconScale = 3
         }
     )
-    object_count = 3
+    ctf:AddFlag(
+        {
+            name = "flag5",
+            homeRegion = "",
+            captureRegion = "togozone5",
+            capRegionMarker = "hud_objective_icon_circle",
+            capRegionMarkerScale = 3,
+            icon = "",
+            mapIcon = "hud_target_flag_onscreen2",
+            mapIconScale = 3
+        }
+    )
+    ctf:AddFlag(
+        {
+            name = "flag6",
+            homeRegion = "",
+            captureRegion = "togozone6",
+            capRegionMarker = "hud_objective_icon_circle",
+            capRegionMarkerScale = 3,
+            icon = "",
+            mapIcon = "hud_target_flag_onscreen2",
+            mapIconScale = 3
+        }
+    )
+    ctf:AddFlag(
+        {
+            name = "flag7",
+            homeRegion = "",
+            captureRegion = "togozone7",
+            capRegionMarker = "hud_objective_icon_circle",
+            capRegionMarkerScale = 3,
+            icon = "",
+            mapIcon = "hud_target_flag_onscreen2",
+            mapIconScale = 3
+        }
+    )
+    object_count = 4
     ctf:Start()
     ctf.OnCapture = function(arg1, arg2)
         object_count = object_count - 1
         if 0 < object_count then
+            if object_count == 3 then
+                ShowMessageText("level.nab2c_s.objectives.5")
+            end
             if object_count == 2 then
-                ShowMessageText("level.myg1c_s.objectives.4")
+                ShowMessageText("level.nab2c_s.objectives.6")
             end
             if object_count == 1 then
-                ShowMessageText("level.myg1c_s.objectives.5")
+                ShowMessageText("level.nab2c_s.objectives.7")
             end
         end
         if object_count == 0 then
             MissionVictory(ATT)
         end
     end
+
     OnTimerElapse(
         function()
             MissionVictory(DEF)
@@ -188,10 +231,10 @@ function ScriptPostLoad()
         "tensecremains"
     )
 
-    AICanCaptureCP("CP1_CON", 2, false)
-    AICanCaptureCP("CP2_CON", 2, false)
-    AICanCaptureCP("CP4_CON", 2, false)
-    SetAIDifficulty(-7, 2, "medium")
+    AICanCaptureCP("CP1", 2, false)
+    AICanCaptureCP("CP2", 2, false)
+    AICanCaptureCP("CP4", 2, false)
+    SetAIDifficulty(-5, 2, "medium")
     AddAIGoal(ALL, "Deathmatch", 100)
     AddAIGoal(IMP, "Deathmatch", 100)
 end
@@ -199,27 +242,42 @@ end
 function ScriptInit()
     StealArtistHeap(135 * 1024)
     if ScriptCB_GetPlatform() == "PSP" then
-        SetPSPModelMemory(3996881)
-        SetPSPClipper(0)
+        SetPSPModelMemory(1979297)
+        SetPSPClipper(1)
     else
         SetPS2ModelMemory(4880000)
     end
     ReadDataFile("ingame.lvl")
-    ReadDataFile("sound\\myg.lvl;myg1gcw")
-    ReadDataFile("SIDE\\all.lvl", "all_inf_engineer_jungle", "all_hero_hansolo_tat", "all_hover_combatspeeder")
+    SetTeamAggressiveness(ALL, 0.75)
+    SetTeamAggressiveness(IMP, 0.5)
+    SetMaxFlyHeight(40)
+    SetMaxPlayerFlyHeight(40)
+    ReadDataFile("sound\\nab.lvl;nab2gcw")
+    ReadDataFile("SIDE\\all.lvl", "all_inf_engineer_jungle", "all_hero_hansolo_tat")
     ReadDataFile(
         "SIDE\\imp.lvl",
         "imp_inf_rifleman",
         "imp_inf_rocketeer",
-        "imp_inf_officer",
-        "imp_inf_sniper",
         "imp_inf_engineer",
-        "imp_inf_dark_trooper",
-        "imp_hero_bobafett",
-        "imp_hover_fightertank",
-        "imp_hover_speederbike",
-        "imp_walk_atst"
+        "imp_inf_sniper",
+        "imp_inf_officer",
+        "imp_inf_dark_trooper"
     )
+    ClearWalkers()
+    AddWalkerType(0, 8)
+    AddWalkerType(1, 0)
+    AddWalkerType(2, 0)
+    AddWalkerType(3, 4)
+    SetMemoryPoolSize("Weapon", 280)
+    SetMemoryPoolSize("CommandWalker", 0)
+    SetMemoryPoolSize("MountedTurret", 55)
+    SetMemoryPoolSize("EntityFlyer", 1)
+    SetMemoryPoolSize("EntityHover", 8)
+    SetMemoryPoolSize("EntityCarrier", 0)
+    SetMemoryPoolSize("PowerupItem", 40)
+    SetMemoryPoolSize("EntityMine", 40)
+    SetMemoryPoolSize("Aimer", 220)
+    SetMemoryPoolSize("FlagItem", 7)
     if ScriptCB_GetPlatform() == "PSP" then
         SetupTeams(
             {
@@ -231,7 +289,7 @@ function ScriptInit()
                 },
                 imp = {
                     team = IMP,
-                    units = 15,
+                    units = 8,
                     reinforcements = -1,
                     soldier = {"imp_inf_rifleman"},
                     assault = {"imp_inf_rocketeer"},
@@ -247,13 +305,13 @@ function ScriptInit()
             {
                 all = {
                     team = ALL,
-                    units = 4,
+                    units = 6,
                     reinforcements = -1,
                     engineer = {"all_inf_engineer_jungle"}
                 },
                 imp = {
                     team = IMP,
-                    units = 25,
+                    units = 8,
                     reinforcements = -1,
                     soldier = {"imp_inf_rifleman"},
                     assault = {"imp_inf_rocketeer"},
@@ -266,79 +324,58 @@ function ScriptInit()
         )
     end
     ForceHumansOntoTeam1()
+    SetUnitCount(ATT, 6)
+    SetReinforcementCount(ATT, -1)
+    SetUnitCount(DEF, 8)
+    SetReinforcementCount(DEF, -1)
     SetHeroClass(ALL, "all_hero_hansolo_tat")
-    ClearWalkers()
-    AddWalkerType(0, 4)
-    AddWalkerType(2, 0)
-    SetMemoryPoolSize("EntityHover", 8)
-    SetMemoryPoolSize("CommandWalker", 5)
-    SetMemoryPoolSize("MountedTurret", 16)
-    SetMemoryPoolSize("PowerupItem", 40)
-    SetMemoryPoolSize("EntityMine", 30)
-    SetMemoryPoolSize("EntityDroid", 12)
-    SetMemoryPoolSize("Aimer", 100)
-    SetMemoryPoolSize("Obstacle", 500)
-    SetMemoryPoolSize("Decal", 0)
-    SetMemoryPoolSize("PassengerSlot", 0)
-    SetMemoryPoolSize("ParticleEmitter", 350)
-    SetMemoryPoolSize("ParticleEmitterInfoData", 800)
-    SetMemoryPoolSize("ParticleEmitterObject", 256)
-    SetMemoryPoolSize("PathNode", 512)
-    SetMemoryPoolSize("TreeGridStack", 300)
-    SetMemoryPoolSize("Ordnance", 70)
-    SetMemoryPoolSize("FlagItem", 5)
-    SetMemoryPoolSize("EntityCloth", 24)
+    AddAIGoal(ATT, "Deathmatch", 100)
+    AddAIGoal(DEF, "Deathmatch", 100)
     SetSpawnDelay(10, 0.25)
-    ReadDataFile("myg\\myg1.lvl", "myg1_Smuggler")
-    SetDenseEnvironment("false")
-    AddDeathRegion("deathregion")
+    ReadDataFile("NAB\\nab2.lvl", "naboo2_Smuggler")
+    SetDenseEnvironment("true")
+    AddDeathRegion("Water")
+    AddDeathRegion("Waterfall")
+    SetNumBirdTypes(1)
+    SetBirdType(0, 1, "bird")
     OpenAudioStream("sound\\global.lvl", "gcw_music")
-    SetAmbientMusic(ALL, 1, "all_myg_amb_start", 0, 1)
-    SetAmbientMusic(ALL, 0.80000001192093, "all_myg_amb_middle", 1, 1)
-    SetAmbientMusic(ALL, 0.20000000298023, "all_myg_amb_end", 2, 1)
-    SetAmbientMusic(IMP, 1, "imp_myg_amb_start", 0, 1)
-    SetAmbientMusic(IMP, 0.80000001192093, "imp_myg_amb_middle", 1, 1)
-    SetAmbientMusic(IMP, 0.20000000298023, "imp_myg_amb_end", 2, 1)
-    SetVictoryMusic(ALL, "all_myg_amb_victory")
-    SetDefeatMusic(ALL, "all_myg_amb_defeat")
-    SetVictoryMusic(IMP, "imp_myg_amb_victory")
-    SetDefeatMusic(IMP, "imp_myg_amb_defeat")
+    SetAmbientMusic(ALL, 1, "all_nab_amb_start", 0, 1)
+    SetAmbientMusic(ALL, 0.80000001192093, "all_nab_amb_middle", 1, 1)
+    SetAmbientMusic(ALL, 0.20000000298023, "all_nab_amb_end", 2, 1)
+    SetAmbientMusic(IMP, 1, "imp_nab_amb_start", 0, 1)
+    SetAmbientMusic(IMP, 0.80000001192093, "imp_nab_amb_middle", 1, 1)
+    SetAmbientMusic(IMP, 0.20000000298023, "imp_nab_amb_end", 2, 1)
+    SetVictoryMusic(IMP, "imp_nab_amb_victory")
+    SetDefeatMusic(IMP, "imp_nab_amb_defeat")
+    SetVictoryMusic(ALL, "all_nab_amb_victory")
+    SetDefeatMusic(ALL, "all_nab_amb_defeat")
     SetSoundEffect("CaptureFlag", "sfx_start_beep")
     SetAttackingTeam(ATT)
     AddCameraShot(
-        0.94799000024796,
-        -0.029190000146627,
-        0.31680798530579,
-        0.0097549995407462,
-        -88.997039794922,
-        14.15385055542,
-        -17.227827072144
+        0.98306602239609,
+        -0.039190001785755,
+        0.17886799573898,
+        0.0071310000494123,
+        44.779041290283,
+        -92.555015563965,
+        223.60920715332
     )
     AddCameraShot(
-        0.96342700719833,
-        -0.26038599014282,
-        -0.061110001057386,
-        -0.016516000032425,
-        -118.96892547607,
-        39.055625915527,
-        124.03238677979
+        0.55807101726532,
+        -0.0048639997839928,
+        -0.82974702119827,
+        -0.0072320001199841,
+        -99.522422790527,
+        -104.18943786621,
+        102.9930267334
     )
     AddCameraShot(
-        0.73388397693634,
-        -0.18114300072193,
-        0.63560098409653,
-        0.15688399970531,
-        67.597633361816,
-        39.055625915527,
-        55.312774658203
-    )
-    AddCameraShot(
-        0.0083149997517467,
-        9.9999999747524e-007,
-        -0.99996501207352,
-        7.4000003223773e-005,
-        -64.894348144531,
-        5.541570186615,
-        201.71109008789
+        -0.18034499883652,
+        0.002299000043422,
+        -0.98352098464966,
+        -0.012535000219941,
+        38.772453308105,
+        -105.3145980835,
+        24.777696609497
     )
 end

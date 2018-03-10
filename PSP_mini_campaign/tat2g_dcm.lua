@@ -1,5 +1,5 @@
 -- tat2g_dcm.lua
--- partially Decompiled with SWBF2CodeHelper
+-- PSP 'Imperial Enforcer' Tatooine mission
 ScriptCB_DoFile("setup_teams")
 ScriptCB_DoFile("ObjectiveConquest")
 ScriptCB_DoFile("MultiObjectiveContainer")
