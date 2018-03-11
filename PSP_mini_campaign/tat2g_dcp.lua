@@ -1,5 +1,6 @@
 -- tat2g_dcp.lua
-
+-- Imperial Enforcer Competitive
+-- Verified
 ScriptCB_DoFile("setup_teams")
 ScriptCB_DoFile("ObjectiveConquest")
 ScriptCB_DoFile("MultiObjectiveContainer")
