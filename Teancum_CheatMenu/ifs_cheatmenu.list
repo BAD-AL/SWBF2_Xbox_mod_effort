@@ -1,0 +1,762 @@
+
+-- ifs_cheatmenu
+-- luac -l listing 
+
+main <(none):0> (351 instructions, 1404 bytes at 00834DE8)
+0 params, 33 stacks, 0 upvalues, 0 locals, 225 constants, 8 functions
+	1	[-]	NEWTABLE 	0 0 3
+	2	[-]	SETTABLE 	0 129 130	; "ySpacing" 5
+	3	[-]	SETTABLE 	0 131 132	; "width" 360
+	4	[-]	GETGLOBAL	1 6	; gMenuButtonFont
+	5	[-]	SETTABLE 	0 133 1	; "font" 
+	6	[-]	NEWTABLE 	1 12 0
+	7	[-]	NEWTABLE 	2 0 2
+	8	[-]	SETTABLE 	2 136 137	; "tag" "unlock_hero_and_units"
+	9	[-]	SETTABLE 	2 138 139	; "string" "Unlock Heroes & Classes"
+	10	[-]	NEWTABLE 	3 0 2
+	11	[-]	SETTABLE 	3 136 140	; "tag" "jetpacks"
+	12	[-]	SETTABLE 	3 138 141	; "string" "Add Jetpacks"
+	13	[-]	NEWTABLE 	4 0 2
+	14	[-]	SETTABLE 	4 136 142	; "tag" "reinforcements"
+	15	[-]	SETTABLE 	4 138 143	; "string" "Add 50 reinforcements"
+	16	[-]	NEWTABLE 	5 0 2
+	17	[-]	SETTABLE 	5 136 144	; "tag" "victory"
+	18	[-]	SETTABLE 	5 138 145	; "string" "Force Mission Victory"
+	19	[-]	NEWTABLE 	6 0 2
+	20	[-]	SETTABLE 	6 136 146	; "tag" "extra_vehicles"
+	21	[-]	SETTABLE 	6 138 147	; "string" "Enable Hidden Vehicles"
+	22	[-]	NEWTABLE 	7 0 2
+	23	[-]	SETTABLE 	7 136 148	; "tag" "no_ai_vehicles"
+	24	[-]	SETTABLE 	7 138 149	; "string" "No AI in Vehicles"
+	25	[-]	NEWTABLE 	8 0 2
+	26	[-]	SETTABLE 	8 136 150	; "tag" "classic_flyers"
+	27	[-]	SETTABLE 	8 138 151	; "string" "Classic Starfighters"
+	28	[-]	NEWTABLE 	9 0 2
+	29	[-]	SETTABLE 	9 136 152	; "tag" "restore_hud"
+	30	[-]	SETTABLE 	9 138 153	; "string" "Restore HUD"
+	31	[-]	SETLIST  	1 7
+	32	[-]	SETTABLE 	0 135 1	; "buttonlist" 
+	33	[-]	SETTABLE 	0 154 155	; "title" "Cheat Menu"
+	34	[-]	SETGLOBAL	0 0	; ifs_cheatmenu_vbutton_layout
+	35	[-]	NEWTABLE 	0 0 0
+	36	[-]	SETGLOBAL	0 28	; gConsoleCmdList
+	37	[-]	CLOSURE  	0 0	; 00836390
+	38	[-]	SETGLOBAL	0 29	; ifs_pausemenu_fnUpdateFlyersText
+	39	[-]	GETGLOBAL	0 31	; NewIFShellScreen
+	40	[-]	NEWTABLE 	1 0 4
+	41	[-]	SETTABLE 	1 160 161	; "nologo" 1
+	42	[-]	SETTABLE 	1 162 161	; "bAcceptIsSelect" 1
+	43	[-]	SETTABLE 	1 163 164	; "movieIntro" nil
+	44	[-]	SETTABLE 	1 165 161	; "bDimBackdrop" 1
+	45	[-]	GETGLOBAL	2 39	; NewIFContainer
+	46	[-]	NEWTABLE 	3 0 2
+	47	[-]	SETTABLE 	3 168 169	; "ScreenRelativeX" 0.5
+	48	[-]	SETTABLE 	3 170 171	; "ScreenRelativeY" 0.40000000596046
+	49	[-]	CALL     	2 2 2
+	50	[-]	SETTABLE 	1 166 2	; "buttons" 
+	51	[-]	CLOSURE  	2 1	; 00836560
+	52	[-]	SETTABLE 	1 172 2	; "Enter" 
+	53	[-]	CLOSURE  	2 2	; 00838568
+	54	[-]	SETTABLE 	1 173 2	; "Input_Accept" 
+	55	[-]	CLOSURE  	2 3	; 00839408
+	56	[-]	SETTABLE 	1 174 2	; "Input_Back" 
+	57	[-]	CALL     	0 2 2
+	58	[-]	SETGLOBAL	0 30	; ifs_cheatmenu
+	59	[-]	NEWTABLE 	0 46 0
+	60	[-]	LOADK    	1 48	; "all_inf_engineer"
+	61	[-]	LOADK    	2 49	; "all_inf_engineer_fleet"
+	62	[-]	LOADK    	3 50	; "all_inf_engineer_jungle"
+	63	[-]	LOADK    	4 51	; "all_inf_engineer_snow"
+	64	[-]	LOADK    	5 52	; "all_inf_fleet_soldier"
+	65	[-]	LOADK    	6 53	; "all_inf_marine"
+	66	[-]	LOADK    	7 54	; "all_inf_officer"
+	67	[-]	LOADK    	8 55	; "all_inf_officer_jungle"
+	68	[-]	LOADK    	9 56	; "all_inf_officer_snow"
+	69	[-]	LOADK    	10 57	; "all_inf_pilot"
+	70	[-]	LOADK    	11 58	; "all_inf_rifleman"
+	71	[-]	LOADK    	12 59	; "all_inf_rifleman_desert"
+	72	[-]	LOADK    	13 60	; "all_inf_rifleman_fleet"
+	73	[-]	LOADK    	14 61	; "all_inf_rifleman_jungle"
+	74	[-]	LOADK    	15 62	; "all_inf_rifleman_snow"
+	75	[-]	LOADK    	16 63	; "all_inf_rifleman_urban"
+	76	[-]	LOADK    	17 64	; "all_inf_rocketeer"
+	77	[-]	LOADK    	18 65	; "all_inf_rocketeer_fleet"
+	78	[-]	LOADK    	19 66	; "all_inf_rocketeer_jungle"
+	79	[-]	LOADK    	20 67	; "all_inf_rocketeer_snow"
+	80	[-]	LOADK    	21 68	; "all_inf_sniper"
+	81	[-]	LOADK    	22 69	; "all_inf_sniper_fleet"
+	82	[-]	LOADK    	23 70	; "all_inf_sniper_jungle"
+	83	[-]	LOADK    	24 71	; "all_inf_sniper_snow"
+	84	[-]	LOADK    	25 72	; "all_inf_wookiee"
+	85	[-]	LOADK    	26 73	; "all_inf_wookiee_snow"
+	86	[-]	LOADK    	27 74	; "all_hero_luke_jedi"
+	87	[-]	LOADK    	28 75	; "all_hero_luke_pilot"
+	88	[-]	LOADK    	29 76	; "all_hero_luke_storm"
+	89	[-]	LOADK    	30 77	; "all_hero_hansolo_storm"
+	90	[-]	LOADK    	31 78	; "all_hero_hansolo_tat"
+	91	[-]	LOADK    	32 79	; "all_hero_leia"
+	92	[-]	SETLIST  	0 31
+	93	[-]	LOADK    	1 80	; "all_hero_chewbacca"
+	94	[-]	LOADK    	2 81	; "all_inf_specialops"
+	95	[-]	LOADK    	3 82	; "cis_inf_droideka"
+	96	[-]	LOADK    	4 83	; "cis_inf_engineer"
+	97	[-]	LOADK    	5 84	; "cis_inf_marine"
+	98	[-]	LOADK    	6 85	; "cis_inf_officer"
+	99	[-]	LOADK    	7 86	; "cis_inf_officer_hunt"
+	100	[-]	LOADK    	8 87	; "cis_inf_pilot"
+	101	[-]	LOADK    	9 88	; "cis_inf_rifleman"
+	102	[-]	LOADK    	10 89	; "cis_inf_rocketeer"
+	103	[-]	LOADK    	11 90	; "cis_inf_sniper"
+	104	[-]	LOADK    	12 91	; "cis_hero_countdooku"
+	105	[-]	LOADK    	13 92	; "cis_hero_darthmaul"
+	106	[-]	LOADK    	14 93	; "cis_hero_grievous"
+	107	[-]	LOADK    	15 94	; "cis_hero_jangofett"
+	108	[-]	LOADK    	16 95	; "cis_inf_commando"
+	109	[-]	LOADK    	17 96	; "imp_inf_dark_trooper"
+	110	[-]	LOADK    	18 97	; "imp_inf_dark_trooper_hunt"
+	111	[-]	LOADK    	19 98	; "imp_inf_darthvader"
+	112	[-]	LOADK    	20 99	; "imp_inf_engineer"
+	113	[-]	LOADK    	21 100	; "imp_inf_engineer_snow"
+	114	[-]	LOADK    	22 101	; "imp_inf_marine"
+	115	[-]	LOADK    	23 102	; "imp_inf_officer"
+	116	[-]	LOADK    	24 103	; "imp_inf_officer_gray"
+	117	[-]	LOADK    	25 104	; "imp_inf_officer_hunt"
+	118	[-]	LOADK    	26 105	; "imp_inf_officer_snow"
+	119	[-]	LOADK    	27 106	; "imp_inf_pilot"
+	120	[-]	LOADK    	28 107	; "imp_inf_pilot_atat"
+	121	[-]	LOADK    	29 108	; "imp_inf_pilot_atst"
+	122	[-]	LOADK    	30 109	; "imp_inf_pilot_tie"
+	123	[-]	LOADK    	31 110	; "imp_inf_rifleman"
+	124	[-]	LOADK    	32 111	; "imp_inf_rifleman_desert"
+	125	[-]	SETLIST  	0 63
+	126	[-]	LOADK    	1 112	; "imp_inf_rifleman_snow"
+	127	[-]	LOADK    	2 113	; "imp_inf_rocketeer"
+	128	[-]	LOADK    	3 114	; "imp_inf_rocketeer_snow"
+	129	[-]	LOADK    	4 115	; "imp_inf_sniper"
+	130	[-]	LOADK    	5 116	; "imp_inf_sniper_snow"
+	131	[-]	LOADK    	6 117	; "imp_hero_emperor"
+	132	[-]	LOADK    	7 118	; "imp_hero_darthvader"
+	133	[-]	LOADK    	8 119	; "imp_hero_bobafett"
+	134	[-]	LOADK    	9 120	; "imp_inf_commando"
+	135	[-]	LOADK    	10 121	; "rep_inf_ep2_engineer"
+	136	[-]	LOADK    	11 122	; "rep_inf_ep2_jettrooper"
+	137	[-]	LOADK    	12 123	; "rep_inf_ep2_jettrooper_rifleman"
+	138	[-]	LOADK    	13 124	; "rep_inf_ep2_jettrooper_sniper"
+	139	[-]	LOADK    	14 125	; "rep_inf_ep2_jettrooper_training"
+	140	[-]	LOADK    	15 126	; "rep_inf_ep2_marine"
+	141	[-]	LOADK    	16 127	; "rep_inf_ep2_officer"
+	142	[-]	LOADK    	17 128	; "rep_inf_ep2_officer_training"
+	143	[-]	LOADK    	18 129	; "rep_inf_ep2_pilot"
+	144	[-]	LOADK    	19 130	; "rep_inf_ep2_rifleman"
+	145	[-]	LOADK    	20 131	; "rep_inf_ep2_rocketeer"
+	146	[-]	LOADK    	21 132	; "rep_inf_ep2_rocketeer_chaingun"
+	147	[-]	LOADK    	22 133	; "rep_inf_ep2_sniper"
+	148	[-]	LOADK    	23 134	; "rep_inf_ep3_engineer"
+	149	[-]	LOADK    	24 135	; "rep_inf_ep3_jettrooper"
+	150	[-]	LOADK    	25 136	; "rep_inf_ep3_marine"
+	151	[-]	LOADK    	26 137	; "rep_inf_ep3_officer"
+	152	[-]	LOADK    	27 138	; "rep_inf_ep3_pilot"
+	153	[-]	LOADK    	28 139	; "rep_inf_ep3_rifleman"
+	154	[-]	LOADK    	29 140	; "rep_inf_ep3_rifleman_space"
+	155	[-]	LOADK    	30 141	; "rep_inf_ep3_rocketeer"
+	156	[-]	LOADK    	31 142	; "rep_inf_ep3_sniper"
+	157	[-]	LOADK    	32 143	; "rep_inf_ep3_sniper_felucia"
+	158	[-]	SETLIST  	0 95
+	159	[-]	LOADK    	1 144	; "rep_inf_ep3_space_pilot"
+	160	[-]	LOADK    	2 145	; "rep_hero_obiwan"
+	161	[-]	LOADK    	3 146	; "rep_hero_anakin"
+	162	[-]	LOADK    	4 147	; "rep_hero_cloakedanakin"
+	163	[-]	LOADK    	5 148	; "rep_hero_macewindu"
+	164	[-]	LOADK    	6 149	; "rep_hero_yoda"
+	165	[-]	LOADK    	7 150	; "rep_hero_aalya"
+	166	[-]	LOADK    	8 151	; "rep_hero_kiyadimundi"
+	167	[-]	LOADK    	9 152	; "rep_inf_commando"
+	168	[-]	LOADK    	10 153	; "rvs_inf_rbasic"
+	169	[-]	LOADK    	11 154	; "rvs_inf_rheavy"
+	170	[-]	LOADK    	12 155	; "rvs_inf_rmelee"
+	171	[-]	LOADK    	13 156	; "rvs_inf_rsupport"
+	172	[-]	LOADK    	14 157	; "rvs_inf_rstealth"
+	173	[-]	LOADK    	15 158	; "rvs_inf_radept"
+	174	[-]	LOADK    	16 159	; "rvs_inf_rofficer"
+	175	[-]	LOADK    	17 160	; "rvs_inf_rdroid"
+	176	[-]	LOADK    	18 161	; "rvs_inf_jedi"
+	177	[-]	LOADK    	19 162	; "rvs_inf_jedi_master"
+	178	[-]	LOADK    	20 163	; "kor_hero_atton"
+	179	[-]	LOADK    	21 164	; "kor_hero_bastila"
+	180	[-]	LOADK    	22 165	; "kor_hero_carth"
+	181	[-]	LOADK    	23 166	; "kor_hero_hk47"
+	182	[-]	LOADK    	24 167	; "kor_hero_jolee"
+	183	[-]	LOADK    	25 168	; "kor_hero_mandalore"
+	184	[-]	LOADK    	26 169	; "kor_hero_mission"
+	185	[-]	LOADK    	27 170	; "kor_hero_vandar"
+	186	[-]	LOADK    	28 171	; "rvs_inf_sbasic"
+	187	[-]	LOADK    	29 172	; "rvs_inf_sheavy"
+	188	[-]	LOADK    	30 173	; "rvs_inf_smelee"
+	189	[-]	LOADK    	31 174	; "rvs_inf_ssupport"
+	190	[-]	LOADK    	32 175	; "rvs_inf_sstealth"
+	191	[-]	SETLIST  	0 127
+	192	[-]	LOADK    	1 176	; "rvs_inf_sadept"
+	193	[-]	LOADK    	2 177	; "rvs_inf_sofficer"
+	194	[-]	LOADK    	3 178	; "rvs_inf_sdroid"
+	195	[-]	LOADK    	4 179	; "rvs_inf_sith"
+	196	[-]	LOADK    	5 180	; "rvs_inf_sith_lord"
+	197	[-]	LOADK    	6 181	; "kor_hero_malak"
+	198	[-]	LOADK    	7 182	; "kor_hero_nihilus"
+	199	[-]	LOADK    	8 183	; "kor_hero_revan"
+	200	[-]	LOADK    	9 184	; "kor_hero_sion"
+	201	[-]	LOADK    	10 185	; "kor_hero_traya"
+	202	[-]	LOADK    	11 186	; "tat_inf_jawa"
+	203	[-]	LOADK    	12 187	; "tat_inf_tuskenhunter"
+	204	[-]	LOADK    	13 188	; "tat_inf_tuskenraider"
+	205	[-]	LOADK    	14 189	; "ewk_inf_scout"
+	206	[-]	LOADK    	15 190	; "ewk_inf_repair"
+	207	[-]	LOADK    	16 191	; "ewk_inf_trooper"
+	208	[-]	LOADK    	17 192	; "gam_inf_gamorreanguard"
+	209	[-]	LOADK    	18 193	; "gar_inf_defender"
+	210	[-]	LOADK    	19 194	; "gar_inf_naboo_queen"
+	211	[-]	LOADK    	20 195	; "gar_inf_soldier"
+	212	[-]	LOADK    	21 196	; "gar_inf_temple_soldier"
+	213	[-]	LOADK    	22 197	; "gar_inf_temple_vanguard"
+	214	[-]	LOADK    	23 198	; "gar_inf_vanguard"
+	215	[-]	LOADK    	24 199	; "gen_inf_geonosian"
+	216	[-]	LOADK    	25 200	; "geo_inf_acklay"
+	217	[-]	LOADK    	26 201	; "geo_inf_agro_geonosian"
+	218	[-]	LOADK    	27 202	; "gun_inf_soldier"
+	219	[-]	LOADK    	28 203	; "gun_inf_rider"
+	220	[-]	LOADK    	29 204	; "gun_inf_defender"
+	221	[-]	LOADK    	30 205	; "jed_knight_01"
+	222	[-]	LOADK    	31 206	; "jed_knight_02"
+	223	[-]	LOADK    	32 207	; "jed_knight_03"
+	224	[-]	SETLIST  	0 159
+	225	[-]	LOADK    	1 208	; "jed_knight_04"
+	226	[-]	LOADK    	2 209	; "jed_master_01"
+	227	[-]	LOADK    	3 210	; "jed_master_02"
+	228	[-]	LOADK    	4 211	; "jed_master_03"
+	229	[-]	LOADK    	5 212	; "jed_runner"
+	230	[-]	LOADK    	6 213	; "jed_sith_01"
+	231	[-]	LOADK    	7 214	; "snw_inf_wampa"
+	232	[-]	LOADK    	8 215	; "wok_inf_mechanic"
+	233	[-]	LOADK    	9 216	; "wok_inf_rocketeer"
+	234	[-]	LOADK    	10 217	; "wok_inf_warrior"
+	235	[-]	SETLIST  	0 169
+	236	[-]	SETGLOBAL	0 47	; all_classes
+	237	[-]	NEWTABLE 	0 38 0
+	238	[-]	LOADK    	1 48	; "all_inf_engineer"
+	239	[-]	LOADK    	2 49	; "all_inf_engineer_fleet"
+	240	[-]	LOADK    	3 50	; "all_inf_engineer_jungle"
+	241	[-]	LOADK    	4 51	; "all_inf_engineer_snow"
+	242	[-]	LOADK    	5 52	; "all_inf_fleet_soldier"
+	243	[-]	LOADK    	6 53	; "all_inf_marine"
+	244	[-]	LOADK    	7 54	; "all_inf_officer"
+	245	[-]	LOADK    	8 55	; "all_inf_officer_jungle"
+	246	[-]	LOADK    	9 56	; "all_inf_officer_snow"
+	247	[-]	LOADK    	10 57	; "all_inf_pilot"
+	248	[-]	LOADK    	11 58	; "all_inf_rifleman"
+	249	[-]	LOADK    	12 59	; "all_inf_rifleman_desert"
+	250	[-]	LOADK    	13 60	; "all_inf_rifleman_fleet"
+	251	[-]	LOADK    	14 61	; "all_inf_rifleman_jungle"
+	252	[-]	LOADK    	15 62	; "all_inf_rifleman_snow"
+	253	[-]	LOADK    	16 63	; "all_inf_rifleman_urban"
+	254	[-]	LOADK    	17 64	; "all_inf_rocketeer"
+	255	[-]	LOADK    	18 65	; "all_inf_rocketeer_fleet"
+	256	[-]	LOADK    	19 66	; "all_inf_rocketeer_jungle"
+	257	[-]	LOADK    	20 67	; "all_inf_rocketeer_snow"
+	258	[-]	LOADK    	21 68	; "all_inf_sniper"
+	259	[-]	LOADK    	22 69	; "all_inf_sniper_fleet"
+	260	[-]	LOADK    	23 70	; "all_inf_sniper_jungle"
+	261	[-]	LOADK    	24 71	; "all_inf_sniper_snow"
+	262	[-]	LOADK    	25 72	; "all_inf_wookiee"
+	263	[-]	LOADK    	26 73	; "all_inf_wookiee_snow"
+	264	[-]	LOADK    	27 81	; "all_inf_specialops"
+	265	[-]	LOADK    	28 82	; "cis_inf_droideka"
+	266	[-]	LOADK    	29 83	; "cis_inf_engineer"
+	267	[-]	LOADK    	30 84	; "cis_inf_marine"
+	268	[-]	LOADK    	31 85	; "cis_inf_officer"
+	269	[-]	LOADK    	32 86	; "cis_inf_officer_hunt"
+	270	[-]	SETLIST  	0 31
+	271	[-]	LOADK    	1 87	; "cis_inf_pilot"
+	272	[-]	LOADK    	2 88	; "cis_inf_rifleman"
+	273	[-]	LOADK    	3 89	; "cis_inf_rocketeer"
+	274	[-]	LOADK    	4 90	; "cis_inf_sniper"
+	275	[-]	LOADK    	5 95	; "cis_inf_commando"
+	276	[-]	LOADK    	6 99	; "imp_inf_engineer"
+	277	[-]	LOADK    	7 100	; "imp_inf_engineer_snow"
+	278	[-]	LOADK    	8 101	; "imp_inf_marine"
+	279	[-]	LOADK    	9 102	; "imp_inf_officer"
+	280	[-]	LOADK    	10 103	; "imp_inf_officer_gray"
+	281	[-]	LOADK    	11 104	; "imp_inf_officer_hunt"
+	282	[-]	LOADK    	12 105	; "imp_inf_officer_snow"
+	283	[-]	LOADK    	13 106	; "imp_inf_pilot"
+	284	[-]	LOADK    	14 107	; "imp_inf_pilot_atat"
+	285	[-]	LOADK    	15 108	; "imp_inf_pilot_atst"
+	286	[-]	LOADK    	16 109	; "imp_inf_pilot_tie"
+	287	[-]	LOADK    	17 110	; "imp_inf_rifleman"
+	288	[-]	LOADK    	18 111	; "imp_inf_rifleman_desert"
+	289	[-]	LOADK    	19 112	; "imp_inf_rifleman_snow"
+	290	[-]	LOADK    	20 113	; "imp_inf_rocketeer"
+	291	[-]	LOADK    	21 114	; "imp_inf_rocketeer_snow"
+	292	[-]	LOADK    	22 115	; "imp_inf_sniper"
+	293	[-]	LOADK    	23 116	; "imp_inf_sniper_snow"
+	294	[-]	LOADK    	24 120	; "imp_inf_commando"
+	295	[-]	LOADK    	25 121	; "rep_inf_ep2_engineer"
+	296	[-]	LOADK    	26 126	; "rep_inf_ep2_marine"
+	297	[-]	LOADK    	27 127	; "rep_inf_ep2_officer"
+	298	[-]	LOADK    	28 128	; "rep_inf_ep2_officer_training"
+	299	[-]	LOADK    	29 129	; "rep_inf_ep2_pilot"
+	300	[-]	LOADK    	30 130	; "rep_inf_ep2_rifleman"
+	301	[-]	LOADK    	31 131	; "rep_inf_ep2_rocketeer"
+	302	[-]	LOADK    	32 132	; "rep_inf_ep2_rocketeer_chaingun"
+	303	[-]	SETLIST  	0 63
+	304	[-]	LOADK    	1 133	; "rep_inf_ep2_sniper"
+	305	[-]	LOADK    	2 134	; "rep_inf_ep3_engineer"
+	306	[-]	LOADK    	3 136	; "rep_inf_ep3_marine"
+	307	[-]	LOADK    	4 137	; "rep_inf_ep3_officer"
+	308	[-]	LOADK    	5 138	; "rep_inf_ep3_pilot"
+	309	[-]	LOADK    	6 139	; "rep_inf_ep3_rifleman"
+	310	[-]	LOADK    	7 140	; "rep_inf_ep3_rifleman_space"
+	311	[-]	LOADK    	8 141	; "rep_inf_ep3_rocketeer"
+	312	[-]	LOADK    	9 142	; "rep_inf_ep3_sniper"
+	313	[-]	LOADK    	10 143	; "rep_inf_ep3_sniper_felucia"
+	314	[-]	LOADK    	11 144	; "rep_inf_ep3_space_pilot"
+	315	[-]	LOADK    	12 152	; "rep_inf_commando"
+	316	[-]	LOADK    	13 153	; "rvs_inf_rbasic"
+	317	[-]	LOADK    	14 154	; "rvs_inf_rheavy"
+	318	[-]	LOADK    	15 155	; "rvs_inf_rmelee"
+	319	[-]	LOADK    	16 156	; "rvs_inf_rsupport"
+	320	[-]	LOADK    	17 157	; "rvs_inf_rstealth"
+	321	[-]	LOADK    	18 159	; "rvs_inf_rofficer"
+	322	[-]	LOADK    	19 171	; "rvs_inf_sbasic"
+	323	[-]	LOADK    	20 172	; "rvs_inf_sheavy"
+	324	[-]	LOADK    	21 173	; "rvs_inf_smelee"
+	325	[-]	LOADK    	22 174	; "rvs_inf_ssupport"
+	326	[-]	LOADK    	23 175	; "rvs_inf_sstealth"
+	327	[-]	LOADK    	24 177	; "rvs_inf_sofficer"
+	328	[-]	SETLIST  	0 87
+	329	[-]	SETGLOBAL	0 218	; non_jetpack_classes
+	330	[-]	CLOSURE  	0 4	; 00839488
+	331	[-]	SETGLOBAL	0 219	; uf_changeClassProperties
+	332	[-]	CLOSURE  	0 5	; 008396A0
+	333	[-]	SETGLOBAL	0 220	; uf_applyFunctionOnTeamUnits
+	334	[-]	CLOSURE  	0 6	; 008398B8
+	335	[-]	SETGLOBAL	0 221	; uf_changeObjectProperty
+	336	[-]	CLOSURE  	0 7	; 00839A40
+	337	[-]	SETGLOBAL	0 222	; ifs_cheatmenu_fnBuildScreen
+	338	[-]	GETGLOBAL	0 222	; ifs_cheatmenu_fnBuildScreen
+	339	[-]	GETGLOBAL	1 30	; ifs_cheatmenu
+	340	[-]	CALL     	0 2 1
+	341	[-]	LOADNIL  	0 0 0
+	342	[-]	SETGLOBAL	0 222	; ifs_cheatmenu_fnBuildScreen
+	343	[-]	GETGLOBAL	0 223	; AddIFScreen
+	344	[-]	GETGLOBAL	1 30	; ifs_cheatmenu
+	345	[-]	LOADK    	2 30	; "ifs_cheatmenu"
+	346	[-]	CALL     	0 3 1
+	347	[-]	GETGLOBAL	0 224	; DoPostDelete
+	348	[-]	GETGLOBAL	1 30	; ifs_cheatmenu
+	349	[-]	CALL     	0 2 2
+	350	[-]	SETGLOBAL	0 30	; ifs_cheatmenu
+	351	[-]	RETURN   	0 1 0
+
+function <(none):32> (25 instructions, 100 bytes at 00836390)
+1 param, 4 stacks, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETTABLE 	1 0 128	; "buttons"
+	2	[-]	GETTABLE 	1 1 129	; "classic_flyers"
+	3	[-]	TEST     	1 1 0
+	4	[-]	JMP      	0 20	; to 25
+	5	[-]	GETTABLE 	1 0 130	; "bClassic"
+	6	[-]	TEST     	1 1 0
+	7	[-]	JMP      	0 9	; to 17
+	8	[-]	GETGLOBAL	1 3	; SetGroundFlyerMap
+	9	[-]	LOADK    	2 4	; 1
+	10	[-]	CALL     	1 2 1
+	11	[-]	GETGLOBAL	1 5	; RoundIFButtonLabel_fnSetString
+	12	[-]	GETTABLE 	2 0 128	; "buttons"
+	13	[-]	GETTABLE 	2 2 129	; "classic_flyers"
+	14	[-]	LOADK    	3 6	; "Advanced Starfighters"
+	15	[-]	CALL     	1 3 1
+	16	[-]	JMP      	0 8	; to 25
+	17	[-]	GETGLOBAL	1 3	; SetGroundFlyerMap
+	18	[-]	LOADK    	2 7	; 0
+	19	[-]	CALL     	1 2 1
+	20	[-]	GETGLOBAL	1 5	; RoundIFButtonLabel_fnSetString
+	21	[-]	GETTABLE 	2 0 128	; "buttons"
+	22	[-]	GETTABLE 	2 2 129	; "classic_flyers"
+	23	[-]	LOADK    	3 8	; "Classic Starfighters"
+	24	[-]	CALL     	1 3 1
+	25	[-]	RETURN   	0 1 0
+
+function <(none):56> (38 instructions, 152 bytes at 00836560)
+2 params, 6 stacks, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	2 0	; gIFShellScreenTemplate_fnEnter
+	2	[-]	MOVE     	3 0 0
+	3	[-]	MOVE     	4 1 0
+	4	[-]	CALL     	2 3 1
+	5	[-]	TEST     	1 1 0
+	6	[-]	JMP      	0 31	; to 38
+	7	[-]	GETGLOBAL	2 1	; ScriptCB_GetShellActive
+	8	[-]	CALL     	2 1 2
+	9	[-]	GETGLOBAL	3 2	; ScriptCB_PausingIsPrimary
+	10	[-]	TEST     	3 3 0
+	11	[-]	JMP      	0 7	; to 19
+	12	[-]	GETTABLE 	3 0 131	; "buttons"
+	13	[-]	GETTABLE 	3 3 132	; "sound"
+	14	[-]	GETGLOBAL	4 2	; ScriptCB_PausingIsPrimary
+	15	[-]	CALL     	4 1 2
+	16	[-]	NOT      	4 4 0
+	17	[-]	SETTABLE 	3 133 4	; "hidden" 
+	18	[-]	JMP      	0 9	; to 28
+	19	[-]	GETTABLE 	3 0 131	; "buttons"
+	20	[-]	GETTABLE 	3 3 132	; "sound"
+	21	[-]	GETGLOBAL	4 6	; ScriptCB_GetPausingViewport
+	22	[-]	CALL     	4 1 2
+	23	[-]	EQ       	0 4 135	; - 0
+	24	[-]	JMP      	0 1	; to 26
+	25	[-]	LOADBOOL 	4 0 1
+	26	[-]	LOADBOOL 	4 1 0
+	27	[-]	SETTABLE 	3 133 4	; "hidden" 
+	28	[-]	GETGLOBAL	3 9	; ShowHideVerticalButtons
+	29	[-]	GETTABLE 	4 0 131	; "buttons"
+	30	[-]	GETGLOBAL	5 10	; ifs_cheatmenu_vbutton_layout
+	31	[-]	CALL     	3 3 2
+	32	[-]	SETTABLE 	0 136 3	; "CurButton" 
+	33	[-]	GETGLOBAL	3 11	; SetCurButton
+	34	[-]	GETTABLE 	4 0 136	; "CurButton"
+	35	[-]	CALL     	3 2 1
+	36	[-]	GETGLOBAL	3 12	; ScriptCB_GetConsoleCmds
+	37	[-]	CALL     	3 1 1
+	38	[-]	RETURN   	0 1 0
+
+function <(none):76> (182 instructions, 728 bytes at 00838568)
+1 param, 20 stacks, 0 upvalues, 0 locals, 76 constants, 0 functions
+	1	[-]	GETGLOBAL	1 0	; gShellScreen_fnDefaultInputAccept
+	2	[-]	MOVE     	2 0 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	TEST     	1 1 0
+	5	[-]	JMP      	0 1	; to 7
+	6	[-]	RETURN   	0 1 0
+	7	[-]	GETGLOBAL	1 1	; ifelm_shellscreen_fnPlaySound
+	8	[-]	GETTABLE 	2 0 130	; "acceptSound"
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETTABLE 	1 0 131	; "CurButton"
+	11	[-]	EQ       	0 1 132	; - "unlock_hero_and_units"
+	12	[-]	JMP      	0 16	; to 29
+	13	[-]	GETGLOBAL	1 5	; UnlockHeroForTeam
+	14	[-]	LOADK    	2 6	; 1
+	15	[-]	CALL     	1 2 1
+	16	[-]	GETGLOBAL	1 5	; UnlockHeroForTeam
+	17	[-]	LOADK    	2 7	; 2
+	18	[-]	CALL     	1 2 1
+	19	[-]	NEWTABLE 	1 1 0
+	20	[-]	NEWTABLE 	2 0 2
+	21	[-]	SETTABLE 	2 136 137	; "name" "PointsToUnlock"
+	22	[-]	SETTABLE 	2 138 139	; "value" "0"
+	23	[-]	SETLIST  	1 0
+	24	[-]	GETGLOBAL	2 12	; uf_changeClassProperties
+	25	[-]	GETGLOBAL	3 13	; all_classes
+	26	[-]	MOVE     	4 1 0
+	27	[-]	CALL     	2 3 1
+	28	[-]	JMP      	0 153	; to 182
+	29	[-]	GETTABLE 	1 0 131	; "CurButton"
+	30	[-]	EQ       	0 1 142	; - "nearly_unstoppable"
+	31	[-]	JMP      	0 21	; to 53
+	32	[-]	GETGLOBAL	1 15	; uf_changeObjectProperty
+	33	[-]	LOADK    	2 16	; "AddHealth"
+	34	[-]	LOADK    	3 17	; 2000
+	35	[-]	LOADK    	4 18	; "human"
+	36	[-]	CALL     	1 4 1
+	37	[-]	NEWTABLE 	1 3 0
+	38	[-]	NEWTABLE 	2 0 2
+	39	[-]	SETTABLE 	2 136 147	; "name" "JetFuelRechargeRate"
+	40	[-]	SETTABLE 	2 138 148	; "value" "2000"
+	41	[-]	NEWTABLE 	3 0 2
+	42	[-]	SETTABLE 	3 136 149	; "name" "EnergyRestore"
+	43	[-]	SETTABLE 	3 138 148	; "value" "2000"
+	44	[-]	NEWTABLE 	4 0 2
+	45	[-]	SETTABLE 	4 136 150	; "name" "EnergyRestoreIdle"
+	46	[-]	SETTABLE 	4 138 148	; "value" "2000"
+	47	[-]	SETLIST  	1 2
+	48	[-]	GETGLOBAL	2 12	; uf_changeClassProperties
+	49	[-]	GETGLOBAL	3 13	; all_classes
+	50	[-]	MOVE     	4 1 0
+	51	[-]	CALL     	2 3 1
+	52	[-]	JMP      	0 129	; to 182
+	53	[-]	GETTABLE 	1 0 131	; "CurButton"
+	54	[-]	EQ       	0 1 151	; - "jetpacks"
+	55	[-]	JMP      	0 61	; to 117
+	56	[-]	NEWTABLE 	1 21 0
+	57	[-]	NEWTABLE 	2 0 2
+	58	[-]	SETTABLE 	2 136 152	; "name" "AnimatedAddon"
+	59	[-]	SETTABLE 	2 138 153	; "value" "jetpack_cheat"
+	60	[-]	NEWTABLE 	3 0 2
+	61	[-]	SETTABLE 	3 136 154	; "name" "GeometryAddon"
+	62	[-]	SETTABLE 	3 138 155	; "value" "neu_addon_phaze1_pack"
+	63	[-]	NEWTABLE 	4 0 2
+	64	[-]	SETTABLE 	4 136 156	; "name" "AddonAttachJoint"
+	65	[-]	SETTABLE 	4 138 157	; "value" "bone_ribcage"
+	66	[-]	NEWTABLE 	5 0 2
+	67	[-]	SETTABLE 	5 136 158	; "name" "JetEffect"
+	68	[-]	SETTABLE 	5 138 159	; "value" "com_sfx_jet_cht"
+	69	[-]	NEWTABLE 	6 0 2
+	70	[-]	SETTABLE 	6 136 160	; "name" "ControlSpeed"
+	71	[-]	SETTABLE 	6 138 161	; "value" "jet 10.85 1.85 2.00"
+	72	[-]	NEWTABLE 	7 0 2
+	73	[-]	SETTABLE 	7 136 162	; "name" "JetJump"
+	74	[-]	SETTABLE 	7 138 163	; "value" "8.0"
+	75	[-]	NEWTABLE 	8 0 2
+	76	[-]	SETTABLE 	8 136 164	; "name" "JetPush"
+	77	[-]	SETTABLE 	8 138 163	; "value" "8.0"
+	78	[-]	NEWTABLE 	9 0 2
+	79	[-]	SETTABLE 	9 136 165	; "name" "JetAcceleration"
+	80	[-]	SETTABLE 	9 138 166	; "value" "20.0"
+	81	[-]	NEWTABLE 	10 0 2
+	82	[-]	SETTABLE 	10 136 167	; "name" "JetType"
+	83	[-]	SETTABLE 	10 138 168	; "value" "hover"
+	84	[-]	NEWTABLE 	11 0 2
+	85	[-]	SETTABLE 	11 136 169	; "name" "JetFuelRechangeRate"
+	86	[-]	SETTABLE 	11 138 170	; "value" "1"
+	87	[-]	NEWTABLE 	12 0 2
+	88	[-]	SETTABLE 	12 136 171	; "name" "JetFuelCost"
+	89	[-]	SETTABLE 	12 138 172	; "value" "0.0"
+	90	[-]	NEWTABLE 	13 0 2
+	91	[-]	SETTABLE 	13 136 173	; "name" "JetFuelInitialCost"
+	92	[-]	SETTABLE 	13 138 172	; "value" "0.0"
+	93	[-]	NEWTABLE 	14 0 2
+	94	[-]	SETTABLE 	14 136 174	; "name" "JetFuelMinBorder"
+	95	[-]	SETTABLE 	14 138 172	; "value" "0.0"
+	96	[-]	NEWTABLE 	15 0 2
+	97	[-]	SETTABLE 	15 136 175	; "name" "CollisionScale"
+	98	[-]	SETTABLE 	15 138 176	; "value" "0.0 0.0 0.0"
+	99	[-]	NEWTABLE 	16 0 2
+	100	[-]	SETTABLE 	16 136 177	; "name" "EngineSound"
+	101	[-]	SETTABLE 	16 138 178	; "value" "rep_inf_Jetpack_engine_parameterized"
+	102	[-]	NEWTABLE 	17 0 2
+	103	[-]	SETTABLE 	17 136 179	; "name" "TurnOnSound"
+	104	[-]	SETTABLE 	17 138 180	; "value" "rep_weap_jetpack_turnon"
+	105	[-]	NEWTABLE 	18 0 2
+	106	[-]	SETTABLE 	18 136 181	; "name" "TurnOffSound"
+	107	[-]	SETTABLE 	18 138 182	; "value" "rep_weap_jetpack_turnoff"
+	108	[-]	NEWTABLE 	19 0 2
+	109	[-]	SETTABLE 	19 136 183	; "name" "TurnOffTime"
+	110	[-]	SETTABLE 	19 138 172	; "value" "0.0"
+	111	[-]	SETLIST  	1 17
+	112	[-]	GETGLOBAL	2 12	; uf_changeClassProperties
+	113	[-]	GETGLOBAL	3 56	; non_jetpack_classes
+	114	[-]	MOVE     	4 1 0
+	115	[-]	CALL     	2 3 1
+	116	[-]	JMP      	0 65	; to 182
+	117	[-]	GETTABLE 	1 0 131	; "CurButton"
+	118	[-]	EQ       	0 1 185	; - "reinforcements"
+	119	[-]	JMP      	0 9	; to 129
+	120	[-]	GETGLOBAL	1 58	; AddReinforcements
+	121	[-]	LOADK    	2 6	; 1
+	122	[-]	LOADK    	3 59	; 50
+	123	[-]	CALL     	1 3 1
+	124	[-]	GETGLOBAL	1 58	; AddReinforcements
+	125	[-]	LOADK    	2 7	; 2
+	126	[-]	LOADK    	3 59	; 50
+	127	[-]	CALL     	1 3 1
+	128	[-]	JMP      	0 53	; to 182
+	129	[-]	GETTABLE 	1 0 131	; "CurButton"
+	130	[-]	EQ       	0 1 188	; - "victory"
+	131	[-]	JMP      	0 7	; to 139
+	132	[-]	GETGLOBAL	1 61	; MissionVictory
+	133	[-]	NEWTABLE 	2 2 0
+	134	[-]	LOADK    	3 6	; 1
+	135	[-]	LOADK    	4 7	; 2
+	136	[-]	SETLIST  	2 1
+	137	[-]	CALL     	1 2 1
+	138	[-]	JMP      	0 43	; to 182
+	139	[-]	GETTABLE 	1 0 131	; "CurButton"
+	140	[-]	EQ       	0 1 190	; - "enhanced_weapons"
+	141	[-]	JMP      	0 9	; to 151
+	142	[-]	GETGLOBAL	1 63	; ActivateBonus
+	143	[-]	LOADK    	2 6	; 1
+	144	[-]	LOADK    	3 64	; "team_bonus_advanced_blasters"
+	145	[-]	CALL     	1 3 1
+	146	[-]	GETGLOBAL	1 63	; ActivateBonus
+	147	[-]	LOADK    	2 7	; 2
+	148	[-]	LOADK    	3 64	; "team_bonus_advanced_blasters"
+	149	[-]	CALL     	1 3 1
+	150	[-]	JMP      	0 31	; to 182
+	151	[-]	GETTABLE 	1 0 131	; "CurButton"
+	152	[-]	EQ       	0 1 193	; - "extra_vehicles"
+	153	[-]	JMP      	0 4	; to 158
+	154	[-]	GETGLOBAL	1 66	; SetHistorical
+	155	[-]	LOADK    	2 6	; 1
+	156	[-]	CALL     	1 2 1
+	157	[-]	JMP      	0 24	; to 182
+	158	[-]	GETTABLE 	1 0 131	; "CurButton"
+	159	[-]	EQ       	0 1 195	; - "no_ai_vehicles"
+	160	[-]	JMP      	0 4	; to 165
+	161	[-]	GETGLOBAL	1 68	; ForceAIOutOfVehicles
+	162	[-]	LOADK    	2 6	; 1
+	163	[-]	CALL     	1 2 1
+	164	[-]	JMP      	0 17	; to 182
+	165	[-]	GETTABLE 	1 0 131	; "CurButton"
+	166	[-]	EQ       	0 1 197	; - "classic_flyers"
+	167	[-]	JMP      	0 7	; to 175
+	168	[-]	GETTABLE 	1 0 198	; "bClassic"
+	169	[-]	NOT      	1 1 0
+	170	[-]	SETTABLE 	0 198 1	; "bClassic" 
+	171	[-]	GETGLOBAL	1 71	; ifs_pausemenu_fnUpdateFlyersText
+	172	[-]	MOVE     	2 0 0
+	173	[-]	CALL     	1 2 1
+	174	[-]	JMP      	0 7	; to 182
+	175	[-]	GETTABLE 	1 0 131	; "CurButton"
+	176	[-]	EQ       	0 1 200	; - "restore_hud"
+	177	[-]	JMP      	0 4	; to 182
+	178	[-]	GETGLOBAL	1 73	; ScriptCB_DoConsoleCmd
+	179	[-]	GETGLOBAL	2 74	; gConsoleCmdList
+	180	[-]	GETTABLE 	2 2 203	; 0
+	181	[-]	CALL     	1 2 1
+	182	[-]	RETURN   	0 1 0
+
+function <(none):146> (3 instructions, 12 bytes at 00839408)
+1 param, 2 stacks, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 0	; ScriptCB_PopScreen
+	2	[-]	CALL     	1 1 1
+	3	[-]	RETURN   	0 1 0
+
+function <(none):448> (36 instructions, 144 bytes at 00839488)
+2 params, 14 stacks, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADNIL  	2 2 0
+	2	[-]	LOADK    	3 0	; 1
+	3	[-]	GETGLOBAL	4 1	; table
+	4	[-]	GETTABLE 	4 4 130	; "getn"
+	5	[-]	MOVE     	5 0 0
+	6	[-]	CALL     	4 2 2
+	7	[-]	LOADK    	5 0	; 1
+	8	[-]	SUB      	3 3 5
+	9	[-]	JMP      	0 25	; to 35
+	10	[-]	LOADNIL  	6 6 0
+	11	[-]	LOADK    	7 0	; 1
+	12	[-]	GETGLOBAL	8 1	; table
+	13	[-]	GETTABLE 	8 8 130	; "getn"
+	14	[-]	MOVE     	9 1 0
+	15	[-]	CALL     	8 2 2
+	16	[-]	LOADK    	9 0	; 1
+	17	[-]	SUB      	7 7 9
+	18	[-]	JMP      	0 15	; to 34
+	19	[-]	GETGLOBAL	10 3	; FindEntityClass
+	20	[-]	GETTABLE 	11 0 3
+	21	[-]	CALL     	10 2 2
+	22	[-]	GETGLOBAL	11 3	; FindEntityClass
+	23	[-]	LOADK    	12 4	; "Zerted hopes no one names a class like this"
+	24	[-]	CALL     	11 2 2
+	25	[-]	EQ       	1 10 11
+	26	[-]	JMP      	0 7	; to 34
+	27	[-]	GETGLOBAL	10 5	; SetClassProperty
+	28	[-]	GETTABLE 	11 0 3
+	29	[-]	GETTABLE 	12 1 7
+	30	[-]	GETTABLE 	12 12 134	; "name"
+	31	[-]	GETTABLE 	13 1 7
+	32	[-]	GETTABLE 	13 13 135	; "value"
+	33	[-]	CALL     	10 4 1
+	34	[-]	FORLOOP  	7 -16	; to 19
+	35	[-]	FORLOOP  	3 -26	; to 10
+	36	[-]	RETURN   	0 1 0
+
+function <(none):481> (46 instructions, 184 bytes at 008396A0)
+5 params, 23 stacks, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	EQ       	0 0 128	; - nil
+	2	[-]	JMP      	0 1	; to 4
+	3	[-]	RETURN   	0 1 0
+	4	[-]	TEST     	5 3 1
+	5	[-]	JMP      	0 4	; to 10
+	6	[-]	NEWTABLE 	5 2 0
+	7	[-]	LOADK    	6 1	; 1
+	8	[-]	LOADK    	7 2	; 2
+	9	[-]	SETLIST  	5 1
+	10	[-]	LOADNIL  	6 6 0
+	11	[-]	LOADK    	7 1	; 1
+	12	[-]	GETGLOBAL	8 3	; table
+	13	[-]	GETTABLE 	8 8 132	; "getn"
+	14	[-]	MOVE     	9 5 0
+	15	[-]	CALL     	8 2 2
+	16	[-]	LOADK    	9 1	; 1
+	17	[-]	SUB      	7 7 9
+	18	[-]	JMP      	0 26	; to 45
+	19	[-]	GETGLOBAL	10 5	; GetTeamSize
+	20	[-]	GETTABLE 	11 5 7
+	21	[-]	CALL     	10 2 2
+	22	[-]	LOADNIL  	11 11 0
+	23	[-]	LOADK    	12 6	; 0
+	24	[-]	SUB      	13 10 129	; - 1
+	25	[-]	LOADK    	14 1	; 1
+	26	[-]	SUB      	12 12 14
+	27	[-]	JMP      	0 16	; to 44
+	28	[-]	GETGLOBAL	15 7	; GetTeamMember
+	29	[-]	GETTABLE 	16 5 7
+	30	[-]	MOVE     	17 12 0
+	31	[-]	CALL     	15 3 2
+	32	[-]	GETGLOBAL	16 8	; IsCharacterHuman
+	33	[-]	MOVE     	17 15 0
+	34	[-]	CALL     	16 2 2
+	35	[-]	GETGLOBAL	17 9	; GetCharacterUnit
+	36	[-]	MOVE     	18 15 0
+	37	[-]	CALL     	17 2 2
+	38	[-]	MOVE     	18 0 0
+	39	[-]	MOVE     	19 15 0
+	40	[-]	MOVE     	20 17 0
+	41	[-]	MOVE     	21 1 0
+	42	[-]	MOVE     	22 2 0
+	43	[-]	CALL     	18 5 1
+	44	[-]	FORLOOP  	12 -17	; to 28
+	45	[-]	FORLOOP  	7 -27	; to 19
+	46	[-]	RETURN   	0 1 0
+
+function <(none):520> (12 instructions, 48 bytes at 008398B8)
+3 params, 11 stacks, 0 upvalues, 0 locals, 3 constants, 1 function
+	1	[-]	CLOSURE  	3 0	; 00839938
+	2	[-]	GETGLOBAL	4 0	; uf_applyFunctionOnTeamUnits
+	3	[-]	MOVE     	5 3 0
+	4	[-]	MOVE     	6 0 0
+	5	[-]	MOVE     	7 1 0
+	6	[-]	NEWTABLE 	8 2 0
+	7	[-]	LOADK    	9 1	; 1
+	8	[-]	LOADK    	10 2	; 2
+	9	[-]	SETLIST  	8 1
+	10	[-]	MOVE     	9 2 0
+	11	[-]	CALL     	4 6 1
+	12	[-]	RETURN   	0 1 0
+
+function <(none):522> (13 instructions, 52 bytes at 00839938)
+4 params, 8 stacks, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	EQ       	1 1 128	; - nil
+	2	[-]	JMP      	0 4	; to 7
+	3	[-]	EQ       	1 2 128	; - nil
+	4	[-]	JMP      	0 2	; to 7
+	5	[-]	EQ       	0 3 128	; - nil
+	6	[-]	JMP      	0 1	; to 8
+	7	[-]	RETURN   	0 1 0
+	8	[-]	GETGLOBAL	4 1	; SetProperty
+	9	[-]	MOVE     	5 1 0
+	10	[-]	MOVE     	6 2 0
+	11	[-]	MOVE     	7 3 0
+	12	[-]	CALL     	4 4 1
+	13	[-]	RETURN   	0 1 0
+
+function <(none):531> (20 instructions, 80 bytes at 00839A40)
+1 param, 6 stacks, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADNIL  	1 2 0
+	2	[-]	GETGLOBAL	3 0	; ScriptCB_GetSafeScreenInfo
+	3	[-]	CALL     	3 1 3
+	4	[-]	MOVE     	2 4 0
+	5	[-]	MOVE     	1 3 0
+	6	[-]	GETGLOBAL	3 1	; ScriptCB_GetShellActive
+	7	[-]	CALL     	3 1 2
+	8	[-]	TEST     	3 3 0
+	9	[-]	JMP      	0 5	; to 15
+	10	[-]	GETGLOBAL	3 2	; gPlatformStr
+	11	[-]	EQ       	1 3 131	; - "PC"
+	12	[-]	JMP      	0 2	; to 15
+	13	[-]	GETGLOBAL	3 4	; ifs_cheatmenu_vbutton_layout
+	14	[-]	SETTABLE 	3 133 134	; "bLeftJustifyButtons" 1
+	15	[-]	GETGLOBAL	3 8	; AddVerticalButtons
+	16	[-]	GETTABLE 	4 0 137	; "buttons"
+	17	[-]	GETGLOBAL	5 4	; ifs_cheatmenu_vbutton_layout
+	18	[-]	CALL     	3 3 2
+	19	[-]	SETTABLE 	0 135 3	; "CurButton" 
+	20	[-]	RETURN   	0 1 0
+
+
+-- INFO 0x1 0x0 0x0 0x0 0x1 0x0 0x0 0x0 
