@@ -1,7 +1,4 @@
 -- Recovered with the help of SWBF2CodeHelper 
--- NAME: ifs_mpgs_pclogin mLocation: 0xc393c; Body Length: 19719, Body Start: 0xc3974, Body End: 0xc867b
--- C:\BF2_ModTools\assets\Shell\scripts\PC\ifs_mpgs_pclogin.lua
--- PC luac code size = 19480; PC code:
 --
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --

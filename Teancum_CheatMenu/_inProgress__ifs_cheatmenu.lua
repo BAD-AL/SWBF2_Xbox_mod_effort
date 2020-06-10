@@ -18,14 +18,14 @@ ifs_cheatmenu_vbutton_layout = {
 gConsoleCmdList = {}
 
 --Orig Closure id: 00836390
-function ifs_pausemenu_fnUpdateFlyersText(param0)
-    if param0.buttons.classic_flyers then
-        if (param0.bClassic) then
+function ifs_pausemenu_fnUpdateFlyersText(this)
+    if this.buttons.classic_flyers then
+        if (this.bClassic) then
             SetGroundFlyerMap(1)
-            RoundIFButtonLabel_fnSetString(param0.buttons.classic_flyers, "Advanced Starfighters")
+            RoundIFButtonLabel_fnSetString(this.buttons.classic_flyers, "Advanced Starfighters")
         else
             SetGroundFlyerMap(0)
-            RoundIFButtonLabel_fnSetString(param0.buttons.classic_flyers, "Classic Starfighters")
+            RoundIFButtonLabel_fnSetString(this.buttons.classic_flyers, "Classic Starfighters")
         end
     end
 end
@@ -37,54 +37,48 @@ ifs_cheatmenu =
     movieIntro = nil,
     bDimBackdrop = 1,
     buttons = NewIFContainer {ScreenRelativeX = 0.5, ScreenRelativeY = 0.40000000596046},
-    Enter = function(EnterParam0, EnterParam1)
-        gIFShellScreenTemplate_fnEnter(EnterParam0, EnterParam1)
-        if (EnterParam1) then
+    Enter = function(this, bFwd)
+        gIFShellScreenTemplate_fnEnter(this, bFwd)
+        if (bFwd) then
             local result = ScriptCB_GetShellActive()
-            local tmp = ScriptCB_PausingIsPrimary
-            if (tmp) then
-                tmp = EnterParam0.buttons
-                tmp = tmp.sound
-                tmp.hidden = not ScriptCB_PausingIsPrimary()
+            
+            if (ScriptCB_PausingIsPrimary) then
+                this.buttons.sound.hidden = not ScriptCB_PausingIsPrimary()
             else
-                tmp = EnterParam0.buttons
-                tmp = tmp.sound
-                tmp.hidden = ScriptCB_GetPausingViewport() ~= 0
+                this.buttons.sound.hidden = ScriptCB_GetPausingViewport() ~= 0
             end
-            tmp = ShowHideVerticalButtons
-            local loc_1 = EnterParam0.buttons
-            ifs_cheatmenu_vbutton_layout()
-            EnterParam0.CurButton = tmp
-            SetCurButton(EnterParam0.CurButton)
+            
+            this.CurButton = ShowHideVerticalButtons(this.buttons,ifs_cheatmenu_vbutton_layout)
+            SetCurButton(this.CurButton)
             ScriptCB_GetConsoleCmds()
         end
     end,
-    Input_Accept = function(Input_AcceptParam0)
-        local tmp1 = gShellScreen_fnDefaultInputAccept(Input_AcceptParam0)
-        tmp1 = tmp1 or Input_AcceptParam0
+    Input_Accept = function(this)
+        if( gShellScreen_fnDefaultInputAccept(this)) then 
+            return 
+        end 
+        ifelm_shellscreen_fnPlaySound(this.acceptSound)
 
-        if ifelm_shellscreen_fnPlaySound.CurButton(Input_AcceptParam0) == "unlock_hero_and_units" then
+        if (this.CurButton == "unlock_hero_and_units") then
             UnlockHeroForTeam(1)
             UnlockHeroForTeam(2)
-            uf_changeClassProperties(all_classes)
-        elseif {{name = "PointsToUnlock", value = "0"}} == "nearly_unstoppable" then
+            local tbl = {{name = "PointsToUnlock", value = "0"}}
+            uf_changeClassProperties( all_classes, tbl) 
+        elseif(this.CurButton   == "nearly_unstoppable") then
             uf_changeObjectProperty("AddHealth", 2000, "human")
-            uf_changeClassProperties(all_classes)
-        elseif
-            {
+            local tbl = {
                 {name = "JetFuelRechargeRate", value = "2000"},
                 {name = "EnergyRestore", value = "2000"},
                 {name = "EnergyRestoreIdle", value = "2000"}
-            } == "jetpacks"
-         then
-            uf_changeClassProperties(non_jetpack_classes)
-        elseif
-            {
+            }
+            uf_changeClassProperties(all_classes, tbl)
+        elseif(this.CurButton   ==  "jetpacks" ) then 
+            local tbl =  {
                 {name = "AnimatedAddon", value = "jetpack_cheat"},
                 {name = "GeometryAddon", value = "neu_addon_phaze1_pack"},
                 {name = "AddonAttachJoint", value = "bone_ribcage"},
                 {name = "JetEffect", value = "com_sfx_jet_cht"},
-                {name = "ControlSpeed"},
+                {name = "ControlSpeed", value = "jet 10.85 1.85 2.00"},
                 {name = "JetJump", value = "8.0"},
                 {name = "JetPush", value = "8.0"},
                 {name = "JetAcceleration", value = "20.0"},
@@ -93,24 +87,33 @@ ifs_cheatmenu =
                 {name = "JetFuelCost", value = "0.0"},
                 {name = "JetFuelInitialCost", value = "0.0"},
                 {name = "JetFuelMinBorder", value = "0.0"},
-                {name = "CollisionScale"},
+                {name = "CollisionScale", value =  "0.0 0.0 0.0"},
                 {name = "EngineSound", value = "rep_inf_Jetpack_engine_parameterized"},
                 {name = "TurnOnSound", value = "rep_weap_jetpack_turnon"},
                 {name = "TurnOffSound", value = "rep_weap_jetpack_turnoff"},
                 {name = "TurnOffTime", value = "0.0"}
-            } == "reinforcements"
-         then
+            }
+            uf_changeClassProperties(non_jetpack_classes, tbl)
+        elseif(this.CurButton == "reinforcements")  then
             AddReinforcements(1, 50)
-        elseif AddReinforcements.CurButton(2, 50) == "victory" then
-        elseif MissionVictory.CurButton({1, 2}) == "enhanced_weapons" then
+            AddReinforcements(2, 50)
+        elseif(this.CurButton  == "victory") then
+            MissionVictory({1, 2})
+        elseif this.CurButton == "enhanced_weapons" then
             ActivateBonus(1, "team_bonus_advanced_blasters")
-        elseif ActivateBonus.CurButton(2, "team_bonus_advanced_blasters") == "extra_vehicles" then
-        elseif SetHistorical.CurButton(1) == "no_ai_vehicles" then
-        elseif ForceAIOutOfVehicles.CurButton(1) == "classic_flyers" then
-        elseif ifs_pausemenu_fnUpdateFlyersText.CurButton({bClassic = nil}) == "restore_hud" then
+            ActivateBonus(2, "team_bonus_advanced_blasters")
+        elseif this.CurButton == "extra_vehicles" then
+            SetHistorical(1)
+        elseif this.CurButton == "no_ai_vehicles" then
+            ForceAIOutOfVehicles(1)
+        elseif this.CurButton  == "classic_flyers" then
+            this.bClassic = not this.bClassic
+            ifs_pausemenu_fnUpdateFlyersText( this)
+        elseif this.CurButton  == "restore_hud" then
+            ScriptCB_DoConsoleCmd(gConsoleCmdList[0] )
         end
     end,
-    Input_Back = function(Input_BackParam0)
+    Input_Back = function(this)
         ScriptCB_PopScreen()
     end
 }
@@ -410,9 +413,9 @@ non_jetpack_classes = {
     "rep_inf_ep2_rocketeer",
     "rep_inf_ep2_rocketeer_chaingun"
 }--]]
-function uf_changeClassProperties(uf_changeClassPropertiesParam0, uf_changeClassPropertiesParam1)
-    table.getn(uf_changeClassPropertiesParam0)
-    table.getn(uf_changeClassPropertiesParam1)
+function uf_changeClassProperties(param0, param1)
+    table.getn(param0)
+    table.getn(param1)
     if FindEntityClass() == FindEntityClass("Zerted hopes no one names a class like this") then
     end
     SetClassProperty("Zerted hopes no one names a class like this", nil)

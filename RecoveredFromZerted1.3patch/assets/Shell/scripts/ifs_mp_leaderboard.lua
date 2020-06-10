@@ -1,4 +1,4 @@
--- **** WIP *****
+-- **** WIP *****  Need to complete 'ifs_mp_leaderboard_fnUpdateDetailListbox'
 
 -- NAME: ifs_mp_leaderboard mLocation: 0x93b94; Body Length: 23913, Body Start: 0x93bcc, Body End: 0x99935
 -- C:\BF2_ModTools\assets\Shell\scripts\ifs_mp_leaderboard.lua
@@ -827,27 +827,45 @@ function ifs_mp_leaderboard_OneColumn_Listbox_CreateItem( layout )
 	return Temp
 end
 
+-- Added by Zerted -- needs review for param names
 function ifs_mp_leaderboard_OneColumn_Listbox_PopulateItem(param0, param1, param2, param3, param4, param5, param6)
-
+	if param1 then
+		IFObj_fnSetColor(param0.name1, param3, param4,param5)
+		IFObj_fnSetAlpha(param0.name1,param6)
+		IFObj_fnSetColor(param0.value1, param3,param4,param5)
+		IFObj_fnSetAlpha(param0.value1, param6)
+		IFText_fnSetString(param0.name1,param1.name)
+		IFObj_fnSetVis(param0.name1,1)
+		IFObj_fnSetVis(param0.value1,1)
+		IFText_fnSetString(param0.value1,  param1.value or "")
+	end	
+	
+	IFObj_fnSetVis(param0,param1)
+	
 end
 
 ifs_mp_leaderboard_details_listbox_layout = { 
     showcount = 6, yHeight = 12, ySpacing = 2, width = 430, x = 0, 
 	slider = 1, CreateFn = ifs_mp_leaderboard_OneColumn_Listbox_CreateItem, 
 	PopulateFn = ifs_mp_leaderboard_OneColumn_Listbox_PopulateItem,
+	
 }
 
-function ifs_mp_leaderboard_fnUpdateDetailListbox(param0)
+-- this one is tricky for me
+function ifs_mp_leaderboard_fnUpdateDetailListbox(this)
 	
-	if leaderboard_listbox_layout ~= nil then
-		if leaderboard_detail_listbox_contents_onecolumn ~= nil then
-			if leaderboard_detail_listbox_contents_onecolumn.detail_listbox ~= nil then
-				local reg1 = leaderboard_listbox_layout.SelectedIdx
-				--leaderboard_detail_listbox_contents_onecolumn[1]
-				--leaderboard_listbox_contents[reg1].rattingfield
-			end
-		end
-	
+	if leaderboard_listbox_layout ~= nil and 
+	    leaderboard_detail_listbox_contents_onecolumn ~= nil and
+		this.detail_listbox ~= nil and 
+		 leaderboard_listbox_layout.SelectedIdx == leaderboard_listbox_contents  ~= nil then -- this line is wrong
+		 
+			leaderboard_detail_listbox_contents_onecolumn[1]
+			
+			
+			ListManager_fnFillContents( leaderboard_listbox_contents, 
+                           leaderboard_detail_listbox_contents_onecolumn, 
+                           ifs_mp_leaderboard_details_listbox_layout)
+						   
 	end
 end
 -- 
@@ -987,33 +1005,47 @@ function ifs_mp_leaderboard_fnInitScreen(this)
 	end
 	
 	if(gPlatformStr == "PC") then
+		local dude1 = 80
 		this.filter_buttons = NewIFContainer
 		{		
 			ScreenRelativeX = 0.5,
 			ScreenRelativeY = 0,
-			y = 30,
+			y = 500,
 			halign = "hcenter",
 							
-			player = NewClickableIFButton -- NewRoundIFButton
+			player = NewPCIFButton 
 			{
-				x = 300,
-				y = 0,
-				btnw = 250, -- made wider to fix 9173 - NM 8/25/04
+				x = dude1,
+				y = 40,
+				btnw = 150, -- made wider to fix 9173 - NM 8/25/04
 				btnh = 10,
-				font = "gamefont_medium",
-				halign = "hcenter",
+				font = "gamefont_small",
+				--halign = "hcenter",
 				--bg_width = BackButtonW,
 				--bg_xflipped = 1,
 				tag = "_btn_player",
-				nocreatebackground=1,
+				string = "ifs.mp.leaderboard.me",
+				--nocreatebackground=1,
 				
 			}, -- end of btn
-
-			time = NewClickableIFButton -- NewRoundIFButton
+			
+			top = NewPCIFButton
+			{
+				x = 200 + dude1,
+				y = 40,
+				btnw = 150, -- made wider to fix 9173 - NM 8/25/04
+				btnh = 10,
+				font = "gamefont_small",
+				tag = "_btn_top",
+				string = "ifs.mp.leaderboard.top",
+				
+			}, -- end of btn
+			
+			time = NewClickableIFButton
 			{
 				x = 300,
 				y = 25,
-				btnw = 250, -- made wider to fix 9173 - NM 8/25/04
+				btnw = 250,
 				btnh = 10,
 				font = "gamefont_medium",
 				halign = "hcenter",
@@ -1059,14 +1091,16 @@ function ifs_mp_leaderboard_fnInitScreen(this)
 		nocreatebackground = 1,
 	}
 
+	local dude2 = -18
+	
 	this.rankTitle = NewIFText {
 		ZPos = 100,
 		string = "ifs.stats.rank",
-		font = "gamefont_medium",
+		font = "gamefont_small",
 		halign = "left",
 		valign = "vcenter",
 		x = 65,
-		y = ColumnTitleY,
+		y = ColumnTitleY + dude2,
 		ScreenRelativeX = 0.0, -- center
 		ScreenRelativeY = 0.0, -- top
 		ColorR= 255, ColorG = 255, ColorB = 255, -- Something that's readable!
@@ -1076,11 +1110,11 @@ function ifs_mp_leaderboard_fnInitScreen(this)
 	this.nameTitle = NewIFText {
 		ZPos = 100,
 		string = "ifs.stats.playername",
-		font = "gamefont_medium",
+		font = "gamefont_small",
 		halign = "hcenter",
 		valign = "vcenter",
 		x = 0,
-		y = ColumnTitleY,
+		y = ColumnTitleY + dude2,
 		ScreenRelativeX = 0.5, -- center
 		ScreenRelativeY = 0.0, -- top
 		ColorR= 255, ColorG = 255, ColorB = 255, -- Something that's readable!
@@ -1091,11 +1125,11 @@ function ifs_mp_leaderboard_fnInitScreen(this)
 	this.ratingTitle = NewIFText {
 		ZPos = 100,
 		string = "ifs.stats.rating",
-		font = "gamefont_medium",
+		font = "gamefont_small",
 		halign = "right",
 		valign = "vcenter",
 		x = -80,
-		y = ColumnTitleY,
+		y = ColumnTitleY +dude2,
 		ScreenRelativeX = 1.0, -- center
 		ScreenRelativeY = 0.0, -- top
 		ColorR= 255, ColorG = 255, ColorB = 255, -- Something that's readable!
@@ -1114,19 +1148,37 @@ function ifs_mp_leaderboard_fnInitScreen(this)
 		ScreenRelativeX = 0.5, -- center
 		ScreenRelativeY = 0.0, -- middle of screen
 		width = screenWidth,
-		height = BottomBarY - ListBoxY,
+		height = BottomBarY - ListBoxY -110,
 		x = 0,
-		y = (BottomBarY - ListBoxY)*0.5 + ListBoxY,
+		y = ((BottomBarY - ListBoxY)*0.5 + ListBoxY)-70,
 	}
 
 	leaderboard_listbox_layout.width = screenWidth - 35
-	leaderboard_listbox_layout.showcount = math.floor((this.listbox.height) / (leaderboard_listbox_layout.yHeight + leaderboard_listbox_layout.ySpacing)) - 1
-
+	
+	--leaderboard_listbox_layout.showcount = math.floor((this.listbox.height) / (leaderboard_listbox_layout.yHeight + leaderboard_listbox_layout.ySpacing)) - 1
+	leaderboard_listbox_layout.showcount = 20
+	
 	if(gPlatformStr == "PC") then
-		leaderboard_listbox_layout.yTop = -175
+		leaderboard_listbox_layout.yTop = -125
 	end
 	
 	ListManager_fnInitList(ifs_mp_leaderboard.listbox,leaderboard_listbox_layout)
+	
+	this.detail_listbox = NewButtonWindow { 
+		ZPos = 200,
+		ScreenRelativeX = 0.5, -- center
+		ScreenRelativeY = 0.0, -- middle of screen
+		width = screenWidth,
+		height = 110,
+		x = 0,
+		y = 457,
+		font= "gamefont_small",
+		titleText= "ifs.Stats.details",
+	}
+	
+	ifs_mp_leaderboard_details_listbox_layout.width = screenWidth - 35
+	
+	ListManager_fnInitList(this.detail_listbox, ifs_mp_leaderboard_details_listbox_layout)
 	
 	if(gPlatformStr == "PC") then
 --		print(" +++add tabs")
