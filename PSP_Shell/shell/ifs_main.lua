@@ -1,5 +1,6 @@
 -- PSP ifs_main.lua
 -- Recovered by cbadal
+-- verified 
 --
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --

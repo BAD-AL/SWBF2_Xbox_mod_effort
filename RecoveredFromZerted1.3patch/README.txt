@@ -11,7 +11,7 @@ ifs_freeform_main        ** got this one
 ifs_freeform_battlemode
 ifs_freeform_battle_card
 ifs_mp_sessionlist
-ifs_mp_leaderboard  ** in progress
+ifs_mp_leaderboard  ** got this one
 ifs_missionselect_pcmulti
 ifs_mpqs_pclogin ** got this one
 

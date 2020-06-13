@@ -1,6 +1,7 @@
 -- PSP ifs_missionselect.lua
 -- based on  C:\BF2_ModTools\assets\Shell\scripts\ifs_missionselect.lua
 -- decompiled by cbadal
+-- verified 
 
 --
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.

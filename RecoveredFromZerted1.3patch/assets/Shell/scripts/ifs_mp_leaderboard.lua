@@ -1,8 +1,5 @@
--- **** WIP *****  Need to complete 'ifs_mp_leaderboard_fnUpdateDetailListbox'
-
--- NAME: ifs_mp_leaderboard mLocation: 0x93b94; Body Length: 23913, Body Start: 0x93bcc, Body End: 0x99935
--- C:\BF2_ModTools\assets\Shell\scripts\ifs_mp_leaderboard.lua
--- PC luac code size = 20809; PC code:
+-- ifs_mp_leaderboard.lua (Zerted1.3 patch ) 
+-- verified 
 --
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --
@@ -853,20 +850,28 @@ ifs_mp_leaderboard_details_listbox_layout = {
 
 -- this one is tricky for me
 function ifs_mp_leaderboard_fnUpdateDetailListbox(this)
-	
+
 	if leaderboard_listbox_layout ~= nil and 
-	    leaderboard_detail_listbox_contents_onecolumn ~= nil and
-		this.detail_listbox ~= nil and 
-		 leaderboard_listbox_layout.SelectedIdx == leaderboard_listbox_contents  ~= nil then -- this line is wrong
-		 
-			leaderboard_detail_listbox_contents_onecolumn[1]
-			
-			
-			ListManager_fnFillContents( leaderboard_listbox_contents, 
-                           leaderboard_detail_listbox_contents_onecolumn, 
-                           ifs_mp_leaderboard_details_listbox_layout)
-						   
-	end
+	   leaderboard_detail_listbox_contents_onecolumn ~= nil and 
+	   this.detail_listbox ~= nil
+    then 
+		local index = leaderboard_listbox_layout.SelectedIdx
+	--if( index and ( this.detail_index ~= index ) and leaderboard_listbox_contents[index].ratingfield ) then
+	--	this.detail_index = index
+		if leaderboard_listbox_contents[index] ~= nil then 
+			leaderboard_detail_listbox_contents_onecolumn[1].value = leaderboard_listbox_contents[index].ratingfield
+			leaderboard_detail_listbox_contents_onecolumn[2].value = leaderboard_listbox_contents[index].HeroPoints
+			leaderboard_detail_listbox_contents_onecolumn[3].value = leaderboard_listbox_contents[index].Starts
+			leaderboard_detail_listbox_contents_onecolumn[4].value = leaderboard_listbox_contents[index].Finishes
+			leaderboard_detail_listbox_contents_onecolumn[5].value = leaderboard_listbox_contents[index].Kills
+			leaderboard_detail_listbox_contents_onecolumn[6].value = leaderboard_listbox_contents[index].Deaths
+			leaderboard_detail_listbox_contents_onecolumn[7].value = leaderboard_listbox_contents[index].TotalTimePlayed
+			leaderboard_detail_listbox_contents_onecolumn[8].value = leaderboard_listbox_contents[index].LastGamePlayed
+			leaderboard_detail_listbox_contents_onecolumn[9].value = leaderboard_listbox_contents[index].LongestLiving
+
+			ListManager_fnFillContents( this.detail_listbox, leaderboard_detail_listbox_contents_onecolumn, ifs_mp_leaderboard_details_listbox_layout )
+		end 
+	end 
 end
 -- 
 
@@ -1197,4 +1202,3 @@ ifs_mp_leaderboard_fnInitScreen(ifs_mp_leaderboard)
 ifs_mp_leaderboard_fnInitScreen = nil
 AddIFScreen(ifs_mp_leaderboard,"ifs_mp_leaderboard")
 
--- INFO 0x1 0x0 0x0 0x0 0x1 0x0 0x0 0x0 
