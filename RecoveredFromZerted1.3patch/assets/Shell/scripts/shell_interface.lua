@@ -1,6 +1,6 @@
--- Zerted Modified shell_interface.lua
+-- shell_interface.lua (1.3 Zerted patch ) 
 -- Decompiled by cbadal with help from SWBF2Helper
--- The 'custom_gc' for loop area did not quite decompile exactly to what was in Zerted's script; but it is very close
+-- verified 
 --
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --
@@ -85,12 +85,11 @@ if(gPlatformStr == "PC") then
 end
 
 ---------- added by zerted --------------
--- this chunk does not decompile to exactly the same as in Zerted's script;
 ScriptCB_DoFile("ifs_era_handler")
 
-local l1 = 1024 -- these 2 lines are junk to get the rest of the listings to compare better
-local l2 = 1024
-for i = 10, 1,-1 do 
+local r0 = 10 
+local r1 = nil 
+for i = 0, r0, 1 do 
 	if ScriptCB_IsFileExist("custom_gc_" .. i .. ".lvl") == 0 then
 		print("shell_interface: No custom_gc_" .. i .. ".lvl")
 	else

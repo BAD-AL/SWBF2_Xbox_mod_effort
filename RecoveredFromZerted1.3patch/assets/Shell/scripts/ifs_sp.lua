@@ -1,6 +1,7 @@
--- Decompiled by cbadal; Couldn't quite figure out all the logic to decompile perfectly. 
---  Check the #FIXME near the bottom of the file.
---
+-- ifs_sp.lua (Zerted1.3 patch )
+-- Decompiled by cbadal; 
+-- verified 
+
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --
 
@@ -236,10 +237,8 @@ ifs_sp = NewIFShellScreen {
 		end
 
 		if(ScreenToPush) then
-		-- The following Chunk was altered in Zerted's Modification. I couldn't quite figure out the 
-		-- exact logic he used though. Does it really need to change though? -cbadal  #FIXME???
 			-- We can't invalidate profile on this screen - NM 7/18/05
-			if(ScriptCB_IsCurProfileDirty()) then
+			if(nil) then -- ScriptCB_IsCurProfileDirty()) then
 				this.NextScreenAfterSave = ScreenToPush
 				ifs_sp_StartSaveProfile()
 			else

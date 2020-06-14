@@ -1,9 +1,9 @@
 1.3 Patch differences:
-shell_interface ** mostly got this one, needs review.
+shell_interface ** got this one
 ifs_login
 ifs_missionselect
 missionlist
-ifs_sp         ** mostly got this one, code review by Zerted would be nice.
+ifs_sp         ** got this one
 ifs_sp_campaign
 ifs_instant_options_tags ** got this one
 ifs_freeform_init_common ** got this one
