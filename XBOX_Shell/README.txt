@@ -27,3 +27,7 @@ To build the xbox shell.lvl file open a terminal inside your '_BUILD' folder and
 
 Remember....
 If you 'clean' out your Build, you'll need to copy the shell_movies.config file again
+
+
+*Update
+  Instead of using the .config file you could just use the 'shell_movies.mcfg' by placing it at "data_<xxx>/Shell/movies/XBOX'" 
