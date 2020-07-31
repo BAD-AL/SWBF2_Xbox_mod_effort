@@ -14,6 +14,9 @@ ifs_mp_sessionlist
 ifs_mp_leaderboard  ** got this one
 ifs_missionselect_pcmulti
 ifs_mpqs_pclogin ** got this one
+popup_prompt.lua ** got this one
+ifs_fakeconsole.lua ** got this one
+
 
 ** added **
 ifs_era_handler
