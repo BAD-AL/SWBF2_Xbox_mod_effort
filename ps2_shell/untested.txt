@@ -1,1 +1,3 @@
 This shell_movies.config for the ps2 should work, but I didn't test it.
+
+There is 1 unknown string in the shell_movies.mcfg file (0x5ad89f27); it is probably not used.
