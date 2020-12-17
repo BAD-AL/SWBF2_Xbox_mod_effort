@@ -1,0 +1,56 @@
+[OrdnanceClass]
+
+ClassLabel          = "emitterordnance"
+
+[Properties]
+ImpactEffectWater   = "com_sfx_watersplash_ord"
+
+ConeLength          = "15"
+ConeAngle           = "60"
+FirstRadius         = "2.0"
+MaxTargets          = "15"  // Max number of targets to hit. Chaining is off so the damage will be split between the number of targets
+NoChaining          = "1"   // No chaining - all bolts coming from the attacker
+
+//Explosion           =  "com_weap_inf_incinerator_exp"
+
+//OrdnanceSound         = "com_weap_launcher_energy_dumbfire"
+
+Damage              = "30"  // This is the min damage. Even if the initial damage is split between the number of targets, it will never go below this number for each target
+MaxDamage           = "30" // This is the max damage
+JumpDeduction       = "0"  // No jump deduction. This is for chaining only
+DamageThreshold     = "0"  // Always do damage (no threshold)
+MaxJumpDistance     = "0"  // No max jump distance because the chaining is off
+
+VehicleScale        = "0.1"
+ShieldScale         = "1.0"
+PersonScale         = "1.0"
+AnimalScale         = "1.0"
+DroidScale          = "1.0"
+BuildingScale       = "0.1"
+
+//Push                = "0.0"
+//LightningEffect     = "com_sfx_lightning"
+//LightningEffectScale = "0.25"
+//NoTargetLightningEffectCount = "5"  // The number of ligthning effects to display when the ordinance has no targets to hit
+//NoTargetLightningEffectRandomSpread = "0.4"  // The random rotation spread the ligthning effects does when the ordinance has no targets to hit
+
+AffectFriends = "1"  // default is 1. should the ordnance affect friends. 
+AffectEnemies = "1"  // default is 1. should the ordnance affect enemies. 
+
+PlayEffectOnOwnerAimer = "com_sfx_weap_candycane_big_ord"
+SmolderDamageRate = "50.0" // default is 0.  the damage rate for smoldering targets
+
+SmolderEffectTimer = 1.5
+
+SmolderEffect = "com_sfx_inf_damage_candy"
+SmolderBone = "bone_l_forearm"
+
+SmolderEffect = "com_sfx_inf_damage_candy"
+SmolderBone = "bone_r_forearm"
+
+//SmolderEffect = "com_sfx_inf_damage_candy"
+//SmolderBone = "bone_ribcage"
+
+SmolderVanishDeath = "1"
+
+BonusAmplification  = "0.25"				//how much more damage will be done when team_bonus_blaster_amplication is on

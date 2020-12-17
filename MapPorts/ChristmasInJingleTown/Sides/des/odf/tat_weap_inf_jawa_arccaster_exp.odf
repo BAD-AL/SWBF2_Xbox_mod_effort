@@ -1,0 +1,5 @@
+[ExplosionClass]
+ClassParent 			= "com_weap_inf_arccaster_exp"    
+
+[Properties]
+

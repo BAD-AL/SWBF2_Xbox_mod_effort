@@ -1,0 +1,89 @@
+[GameObjectClass]
+ClassLabel              = "portableturret"
+GeometryName            = "snow_wall_straight_ord.msh"
+
+[Properties]
+Pilottype       = "self"
+
+BUILDINGSECTION         = "BODY"
+GeometryName            = "snow_wall_straight_ord"
+ExplosionName           = "tat_bldg_inf_autoturret_exp"
+
+StickPerson         = 0
+StickAnimal         = 0
+StickDroid          = 0
+StickVehicle        = 1
+StickBuilding       = 1
+StickBuildingDead   = 0
+StickBuildingUnbuilt= 0
+StickTerrain        = 1
+
+MapTexture          = "turret_icon"
+MapScale                = "1.2"
+HealthTexture           = "HUD_kam_turret_icon"
+
+MaxHealth               = "5000.0"
+LifeTime        = "5000.0"
+
+MaxTurnSpeed            = "0.0"
+MaxPitchSpeed           = "0.0"
+PCMaxPitchSpeed         = "0.0"
+PCMaxTurnSpeed          = "0.0"      
+TrackCenter             = "0.0 8.0 5.0"
+TrackOffset             = "0.0 -7.0 10.0"
+
+TurretYawSound         = ""
+TurretYawSoundPitch    = ""
+TurretPitchSound       = ""
+TurretPitchSoundPitch  = ""
+TurretAmbientSound     = ""
+TurretActivateSound    = ""
+TurretDeactivateSound  = ""
+TurretStartSound       = ""
+TurretStopSound        = ""
+
+FoleyFXGroup        = "metal_foley"
+
+CHUNKSECTION 			= "CHUNK1"
+ChunkGeometryName 		= "snow_wall_chunk1"
+ChunkNodeName 			= ""
+ChunkTerrainCollisions 		= "4"
+ChunkTerrainEffect 		= "dirtspray"
+ChunkPhysics 			= "FULL"
+ChunkOmega 			= "0.0 0.0 0.0"
+
+
+CHUNKSECTION 			= "CHUNK2"
+ChunkGeometryName 		= "snow_wall_chunk2"
+ChunkNodeName 			= ""
+ChunkTerrainCollisions 		= "4"
+ChunkTerrainEffect 		= "dirtspray"
+ChunkPhysics 			= "FULL"
+ChunkOmega 			= "0.0 0.0 0.0"
+
+
+CHUNKSECTION 			= "CHUNK3"
+ChunkGeometryName 		= "snow_wall_chunk3"
+ChunkNodeName 			= ""
+ChunkTerrainCollisions 		= "4"
+ChunkTerrainEffect 		= "dirtspray"
+ChunkPhysics 			= "FULL"
+ChunkOmega 			= "0.0 0.0 0.0"
+
+
+CHUNKSECTION 			= "CHUNK4"
+ChunkGeometryName 		= "snow_wall_chunk4"
+ChunkNodeName 			= ""
+ChunkTerrainCollisions 		= "4"
+ChunkTerrainEffect 		= "dirtspray"
+ChunkPhysics 			= "FULL"
+ChunkOmega 			= "0.0 0.0 0.0"
+
+
+CHUNKSECTION 			= "CHUNK5"
+ChunkGeometryName 		= "snow_wall_chunk5"
+ChunkNodeName 			= ""
+ChunkTerrainCollisions 		= "4"
+ChunkTerrainEffect 		= "dirtspray"
+ChunkPhysics 			= "FULL"
+ChunkOmega 			= "0.0 0.0 0.0"

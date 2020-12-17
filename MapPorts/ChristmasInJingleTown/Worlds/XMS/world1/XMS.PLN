@@ -1,0 +1,1563 @@
+
+Hub("Hub0")
+{
+	Pos(-113.127464, 0.000000, -54.488579);
+	Radius(8.000000);
+}
+
+Hub("Hub2")
+{
+	Pos(-192.704102, 0.000000, 45.675976);
+	Radius(4.000000);
+}
+
+Hub("Hub3")
+{
+	Pos(-138.988495, 0.089655, -54.365204);
+	Radius(12.000000);
+}
+
+Hub("Hub4")
+{
+	Pos(-121.175194, 0.000001, -43.180492);
+	Radius(4.542599);
+}
+
+Hub("Hub6")
+{
+	Pos(-121.722084, 0.000000, 46.625042);
+	Radius(4.278017);
+}
+
+Hub("Hub7")
+{
+	Pos(-252.421982, 0.000001, -43.073776);
+	Radius(3.155392);
+}
+
+Hub("Hub8")
+{
+	Pos(-193.533005, 0.000003, -43.193375);
+	Radius(3.793897);
+}
+
+Hub("Hub9")
+{
+	Pos(-253.527710, -0.000003, 1.676998);
+	Radius(2.596733);
+}
+
+Hub("Hub10")
+{
+	Pos(-253.592575, 0.000002, -12.394209);
+	Radius(2.975720);
+}
+
+Hub("Hub11")
+{
+	Pos(-262.711212, -0.000001, -11.534771);
+	Radius(1.030950);
+}
+
+Hub("Hub12")
+{
+	Pos(-263.576721, 0.000000, 14.566953);
+	Radius(1.234544);
+}
+
+Hub("Hub13")
+{
+	Pos(-263.293365, 0.000000, 1.548284);
+	Radius(0.645417);
+}
+
+Hub("Hub14")
+{
+	Pos(-253.339325, -0.000003, 15.667585);
+	Radius(3.233734);
+}
+
+Hub("Hub15")
+{
+	Pos(-253.444733, 0.000002, 45.363716);
+	Radius(3.371603);
+}
+
+Hub("Hub16")
+{
+	Pos(-291.831146, 9.999999, 45.203510);
+	Radius(3.606913);
+}
+
+Hub("Hub17")
+{
+	Pos(-292.362854, 9.890933, 78.528900);
+	Radius(3.768580);
+}
+
+Hub("Hub18")
+{
+	Pos(-315.955963, 9.843794, 78.585388);
+	Radius(3.637887);
+}
+
+Hub("Hub19")
+{
+	Pos(-316.195496, 9.904068, 111.859680);
+	Radius(3.542705);
+}
+
+Hub("Hub20")
+{
+	Pos(-292.605621, 10.000002, 111.284363);
+	Radius(3.653386);
+}
+
+Hub("Hub22")
+{
+	Pos(-220.054810, 0.000005, 110.559631);
+	Radius(3.380853);
+}
+
+Hub("Hub23")
+{
+	Pos(-219.694931, 3.000009, 68.673958);
+	Radius(3.992149);
+}
+
+Hub("Hub24")
+{
+	Pos(-193.308594, -0.000005, 68.872192);
+	Radius(4.241243);
+}
+
+Hub("Hub25")
+{
+	Pos(-192.838470, -0.000002, 111.132080);
+	Radius(3.087428);
+}
+
+Hub("Hub26")
+{
+	Pos(-127.363503, -0.000002, 109.733391);
+	Radius(3.243723);
+}
+
+Hub("Hub27")
+{
+	Pos(-126.707245, 0.000000, 90.641769);
+	Radius(4.000000);
+}
+
+Hub("Hub28")
+{
+	Pos(-2.819874, 0.000000, 89.672699);
+	Radius(4.000000);
+}
+
+Hub("Hub29")
+{
+	Pos(-3.214399, 0.000000, -9.762478);
+	Radius(2.500000);
+}
+
+Hub("Hub30")
+{
+	Pos(21.628725, 0.000000, -9.699948);
+	Radius(2.500000);
+}
+
+Hub("Hub31")
+{
+	Pos(25.899574, 0.000000, 53.668671);
+	Radius(5.000000);
+}
+
+Hub("Hub32")
+{
+	Pos(19.389029, 0.000000, 79.944542);
+	Radius(2.800000);
+}
+
+Hub("Hub33")
+{
+	Pos(32.300690, 14.580642, 154.913086);
+	Radius(9.034205);
+}
+
+Hub("Hub34")
+{
+	Pos(111.344337, 29.414339, 220.646515);
+	Radius(15.000000);
+}
+
+Hub("Hub35")
+{
+	Pos(151.159042, 22.520178, 86.976501);
+	Radius(28.254820);
+}
+
+Hub("Hub36")
+{
+	Pos(-0.324049, 18.788200, 253.092102);
+	Radius(9.234328);
+}
+
+Hub("Hub38")
+{
+	Pos(-147.625153, 50.264290, 252.663406);
+	Radius(4.867947);
+}
+
+Hub("Hub39")
+{
+	Pos(-197.365067, 55.136024, 288.024048);
+	Radius(13.154554);
+}
+
+Hub("Hub40")
+{
+	Pos(-224.239059, 57.972492, 311.208191);
+	Radius(6.491535);
+}
+
+Hub("Hub41")
+{
+	Pos(-263.707672, 67.005981, 312.357849);
+	Radius(20.000000);
+}
+
+Hub("Hub42")
+{
+	Pos(-135.324127, 67.166435, 356.270050);
+	Radius(27.385538);
+}
+
+Hub("Hub43")
+{
+	Pos(289.278442, 60.000000, -158.820694);
+	Radius(4.000000);
+}
+
+Hub("Hub44")
+{
+	Pos(319.491913, 59.987930, -158.989914);
+	Radius(4.000000);
+}
+
+Hub("Hub45")
+{
+	Pos(318.530365, 59.989998, -211.939819);
+	Radius(4.000000);
+}
+
+Hub("Hub46")
+{
+	Pos(295.060181, 59.989998, -212.418793);
+	Radius(4.000000);
+}
+
+Hub("Hub47")
+{
+	Pos(295.128113, 59.989998, -277.159241);
+	Radius(4.000000);
+}
+
+Hub("Hub48")
+{
+	Pos(294.991577, 59.967476, -321.526489);
+	Radius(4.000000);
+}
+
+Hub("Hub49")
+{
+	Pos(259.814728, 59.882412, -321.137817);
+	Radius(4.000000);
+}
+
+Hub("Hub50")
+{
+	Pos(259.057983, 59.989998, -366.255615);
+	Radius(4.000000);
+}
+
+Hub("Hub52")
+{
+	Pos(-2.979698, 0.000000, -43.998043);
+	Radius(3.544141);
+}
+
+Hub("Hub53")
+{
+	Pos(-192.377090, 0.000009, 1.277985);
+	Radius(4.603800);
+}
+
+Hub("Hub54")
+{
+	Pos(-120.477127, 0.000005, 0.662351);
+	Radius(4.092673);
+}
+
+Hub("Hub55")
+{
+	Pos(-3.257878, 0.000000, -130.647186);
+	Radius(3.927471);
+}
+
+Hub("Hub56")
+{
+	Pos(116.339760, 15.000013, -129.316910);
+	Radius(2.424818);
+}
+
+Hub("Hub57")
+{
+	Pos(156.720734, 14.945374, -90.857361);
+	Radius(3.636134);
+}
+
+Hub("Hub58")
+{
+	Pos(207.957748, 14.990000, -90.842072);
+	Radius(3.706566);
+}
+
+Hub("Hub59")
+{
+	Pos(208.358368, 40.000000, -211.587479);
+	Radius(4.000000);
+}
+
+Hub("Hub60")
+{
+	Pos(-211.269058, 65.743279, 349.352692);
+	Radius(24.005791);
+}
+
+Hub("Hub61")
+{
+	Pos(-85.458794, 0.000000, 89.409973);
+	Radius(4.000000);
+}
+
+Hub("Hub62")
+{
+	Pos(-85.830666, -0.000004, 45.941223);
+	Radius(3.520431);
+}
+
+Hub("Hub63")
+{
+	Pos(177.010986, 18.505072, -36.372116);
+	Radius(17.456213);
+}
+
+Hub("Hub64")
+{
+	Pos(343.633636, -17.000000, 315.304962);
+	Radius(2.222068);
+}
+
+Hub("Hub65")
+{
+	Pos(341.191711, -17.000000, 319.358154);
+	Radius(1.749639);
+}
+
+Hub("Hub66")
+{
+	Pos(339.146606, -17.000000, 329.975616);
+	Radius(1.405571);
+}
+
+Hub("Hub68")
+{
+	Pos(326.502594, -17.000000, 318.830963);
+	Radius(1.390627);
+}
+
+Hub("Hub69")
+{
+	Pos(326.123352, -17.000000, 311.680206);
+	Radius(2.974675);
+}
+
+Hub("Hub71")
+{
+	Pos(325.025665, -17.000000, 302.160187);
+	Radius(3.145849);
+}
+
+Hub("Hub73")
+{
+	Pos(336.013092, -17.000000, 303.389709);
+	Radius(3.318658);
+}
+
+Hub("Hub74")
+{
+	Pos(334.535492, -17.000000, 296.298218);
+	Radius(2.762500);
+}
+
+Hub("Hub75")
+{
+	Pos(342.722992, -17.000000, 291.227905);
+	Radius(2.922057);
+}
+
+Hub("Hub78")
+{
+	Pos(321.961578, -17.000000, 286.037842);
+	Radius(3.293463);
+}
+
+Hub("Hub79")
+{
+	Pos(353.840912, -17.000000, 311.757050);
+	Radius(2.105033);
+}
+
+Hub("Hub80")
+{
+	Pos(360.036255, -16.975346, 305.648102);
+	Radius(3.928946);
+}
+
+Hub("Hub81")
+{
+	Pos(368.352417, -16.593840, 301.827240);
+	Radius(1.719333);
+}
+
+Hub("Hub82")
+{
+	Pos(358.999268, -17.000000, 291.542542);
+	Radius(1.583924);
+}
+
+Hub("Hub83")
+{
+	Pos(348.867737, -17.000000, 295.557190);
+	Radius(3.434945);
+}
+
+Hub("Hub84")
+{
+	Pos(301.082611, -5.010000, 164.420776);
+	Radius(1.353552);
+}
+
+Hub("Hub85")
+{
+	Pos(302.505402, -5.010000, 158.754364);
+	Radius(2.217716);
+}
+
+Hub("Hub86")
+{
+	Pos(311.218414, -5.010000, 159.704025);
+	Radius(6.996584);
+}
+
+Hub("Hub87")
+{
+	Pos(320.893188, -5.010000, 158.790375);
+	Radius(2.214299);
+}
+
+Hub("Hub88")
+{
+	Pos(320.533630, -5.010000, 152.308136);
+	Radius(1.601233);
+}
+
+Hub("Hub89")
+{
+	Pos(320.826019, -5.008967, 165.659470);
+	Radius(1.352599);
+}
+
+Hub("Hub90")
+{
+	Pos(301.052704, -5.010000, 151.887741);
+	Radius(1.269195);
+}
+
+Hub("Hub91")
+{
+	Pos(326.790344, -14.999997, 48.534119);
+	Radius(3.586039);
+}
+
+Hub("Hub92")
+{
+	Pos(320.158661, -15.000000, 32.222641);
+	Radius(2.630247);
+}
+
+Hub("Hub93")
+{
+	Pos(333.008087, -15.000006, 34.626804);
+	Radius(3.015540);
+}
+
+Hub("Hub94")
+{
+	Pos(344.501251, -14.993409, 24.155483);
+	Radius(1.757117);
+}
+
+Hub("Hub95")
+{
+	Pos(336.935547, -14.999999, 26.321459);
+	Radius(3.514503);
+}
+
+Hub("Hub96")
+{
+	Pos(328.620575, -14.999996, 26.924540);
+	Radius(5.344649);
+}
+
+Hub("Hub97")
+{
+	Pos(313.320862, -15.000000, 26.559870);
+	Radius(3.540063);
+}
+
+Hub("Hub98")
+{
+	Pos(306.755920, -14.394873, 17.948706);
+	Radius(1.350672);
+}
+
+Hub("Hub99")
+{
+	Pos(302.723663, -14.358311, 18.045799);
+	Radius(1.522846);
+}
+
+Hub("Hub100")
+{
+	Pos(302.051849, -13.961351, 1.506155);
+	Radius(1.578991);
+}
+
+Hub("Hub101")
+{
+	Pos(310.189697, -14.199995, 6.362899);
+	Radius(3.112656);
+}
+
+Hub("Hub102")
+{
+	Pos(323.378784, -14.537878, 10.417551);
+	Radius(2.413227);
+}
+
+Hub("Hub103")
+{
+	Pos(330.910980, -14.999995, 12.419353);
+	Radius(2.192561);
+}
+
+Hub("Hub104")
+{
+	Pos(338.975861, -15.000002, 10.463006);
+	Radius(1.882385);
+}
+
+Hub("Hub105")
+{
+	Pos(343.629150, -15.000000, 1.708657);
+	Radius(1.350573);
+}
+
+Hub("Hub106")
+{
+	Pos(-220.102722, 2.999999, 76.385239);
+	Radius(3.635825);
+}
+
+Hub("Hub109")
+{
+	Pos(-305.128754, 9.993670, 111.450813);
+	Radius(3.475745);
+}
+
+Hub("Hub110")
+{
+	Pos(-305.798737, 9.906767, 119.635124);
+	Radius(0.834678);
+}
+
+Hub("Hub111")
+{
+	Pos(-305.661591, 9.684825, 124.923485);
+	Radius(0.697160);
+}
+
+Hub("Hub112")
+{
+	Pos(-302.591370, 9.850429, 124.927963);
+	Radius(0.733024);
+}
+
+Hub("Hub113")
+{
+	Pos(299.718414, -13.839302, 94.167137);
+	Radius(21.565964);
+}
+
+Hub("Hub115")
+{
+	Pos(343.720428, -12.343423, 98.946243);
+	Radius(20.485287);
+}
+
+Hub("Hub116")
+{
+	Pos(304.143921, -9.724700, 230.051056);
+	Radius(33.861267);
+}
+
+Hub("Hub107")
+{
+	Pos(-225.999496, 3.000000, 75.815109);
+	Radius(1.743538);
+}
+
+Hub("Hub108")
+{
+	Pos(31.216494, -0.627236, 32.241802);
+	Radius(2.654960);
+}
+
+Hub("Hub114")
+{
+	Pos(31.583511, -0.008244, 6.594757);
+	Radius(2.560592);
+}
+
+Hub("Hub117")
+{
+	Pos(-121.501526, -0.000001, 10.959707);
+	Radius(3.832575);
+}
+
+Hub("Hub118")
+{
+	Pos(-97.359337, 0.000000, 11.304496);
+	Radius(4.425590);
+}
+
+Hub("Hub120")
+{
+	Pos(283.196869, 59.998417, -174.735565);
+	Radius(6.000000);
+}
+
+Connection("Connection0")
+{
+	Start("Hub4");
+	End("Hub8");
+	Flag(31);
+}
+
+Connection("Connection1")
+{
+	Start("Hub8");
+	End("Hub7");
+	Flag(31);
+}
+
+Connection("Connection2")
+{
+	Start("Hub7");
+	End("Hub10");
+	Flag(31);
+}
+
+Connection("Connection3")
+{
+	Start("Hub10");
+	End("Hub9");
+	Flag(31);
+}
+
+Connection("Connection4")
+{
+	Start("Hub9");
+	End("Hub14");
+	Flag(31);
+}
+
+Connection("Connection5")
+{
+	Start("Hub14");
+	End("Hub15");
+	Flag(31);
+}
+
+Connection("Connection6")
+{
+	Start("Hub9");
+	End("Hub53");
+	Flag(31);
+}
+
+Connection("Connection7")
+{
+	Start("Hub53");
+	End("Hub54");
+	Flag(31);
+}
+
+Connection("Connection8")
+{
+	Start("Hub54");
+	End("Hub4");
+	Flag(31);
+}
+
+Connection("Connection9")
+{
+	Start("Hub8");
+	End("Hub53");
+	Flag(31);
+}
+
+Connection("Connection10")
+{
+	Start("Hub53");
+	End("Hub2");
+	Flag(31);
+}
+
+Connection("Connection11")
+{
+	Start("Hub6");
+	End("Hub2");
+	Flag(31);
+}
+
+Connection("Connection13")
+{
+	Start("Hub2");
+	End("Hub15");
+	Flag(31);
+}
+
+Connection("Connection14")
+{
+	Start("Hub15");
+	End("Hub16");
+	Flag(31);
+}
+
+Connection("Connection15")
+{
+	Start("Hub16");
+	End("Hub17");
+	Flag(31);
+}
+
+Connection("Connection16")
+{
+	Start("Hub17");
+	End("Hub18");
+	Flag(31);
+}
+
+Connection("Connection17")
+{
+	Start("Hub18");
+	End("Hub19");
+	Flag(31);
+}
+
+Connection("Connection22")
+{
+	Start("Hub23");
+	End("Hub24");
+	Flag(31);
+}
+
+Connection("Connection23")
+{
+	Start("Hub24");
+	End("Hub2");
+	Flag(31);
+}
+
+Connection("Connection24")
+{
+	Start("Hub24");
+	End("Hub25");
+	Flag(31);
+}
+
+Connection("Connection25")
+{
+	Start("Hub22");
+	End("Hub25");
+	Flag(31);
+}
+
+Connection("Connection26")
+{
+	Start("Hub25");
+	End("Hub26");
+	Flag(31);
+}
+
+Connection("Connection27")
+{
+	Start("Hub26");
+	End("Hub27");
+	Flag(31);
+}
+
+Connection("Connection29")
+{
+	Start("Hub28");
+	End("Hub29");
+	Flag(31);
+}
+
+Connection("Connection30")
+{
+	Start("Hub29");
+	End("Hub52");
+	Flag(31);
+}
+
+Connection("Connection31")
+{
+	Start("Hub52");
+	End("Hub4");
+	Flag(31);
+}
+
+Connection("Connection32")
+{
+	Start("Hub52");
+	End("Hub55");
+	Flag(30);
+}
+
+Connection("Connection33")
+{
+	Start("Hub55");
+	End("Hub56");
+	Flag(30);
+}
+
+Connection("Connection34")
+{
+	Start("Hub56");
+	End("Hub57");
+	Flag(30);
+}
+
+Connection("Connection35")
+{
+	Start("Hub57");
+	End("Hub58");
+	Flag(30);
+}
+
+Connection("Connection36")
+{
+	Start("Hub58");
+	End("Hub59");
+	Flag(31);
+}
+
+Connection("Connection37")
+{
+	Start("Hub59");
+	End("Hub46");
+	Flag(31);
+}
+
+Connection("Connection38")
+{
+	Start("Hub43");
+	End("Hub44");
+	Flag(31);
+}
+
+Connection("Connection39")
+{
+	Start("Hub44");
+	End("Hub45");
+	Flag(31);
+}
+
+Connection("Connection40")
+{
+	Start("Hub45");
+	End("Hub46");
+	Flag(31);
+}
+
+Connection("Connection41")
+{
+	Start("Hub46");
+	End("Hub47");
+	Flag(31);
+}
+
+Connection("Connection42")
+{
+	Start("Hub47");
+	End("Hub48");
+	Flag(31);
+}
+
+Connection("Connection43")
+{
+	Start("Hub48");
+	End("Hub49");
+	Flag(31);
+}
+
+Connection("Connection44")
+{
+	Start("Hub49");
+	End("Hub50");
+	Flag(31);
+}
+
+Connection("Connection46")
+{
+	Start("Hub3");
+	End("Hub4");
+	Flag(29);
+}
+
+Connection("Connection47")
+{
+	Start("Hub0");
+	End("Hub4");
+	Flag(29);
+}
+
+Connection("Connection48")
+{
+	Start("Hub3");
+	End("Hub8");
+	Flag(29);
+}
+
+Connection("Connection49")
+{
+	Start("Hub10");
+	End("Hub11");
+	Flag(29);
+}
+
+Connection("Connection50")
+{
+	Start("Hub11");
+	End("Hub12");
+	Flag(29);
+}
+
+Connection("Connection51")
+{
+	Start("Hub12");
+	End("Hub14");
+	Flag(29);
+}
+
+Connection("Connection52")
+{
+	Start("Hub9");
+	End("Hub13");
+	Flag(29);
+}
+
+Connection("Connection57")
+{
+	Start("Hub29");
+	End("Hub30");
+	Flag(29);
+}
+
+Connection("Connection59")
+{
+	Start("Hub31");
+	End("Hub32");
+	Flag(29);
+}
+
+Connection("Connection60")
+{
+	Start("Hub32");
+	End("Hub33");
+	Flag(29);
+}
+
+Connection("Connection61")
+{
+	Start("Hub28");
+	End("Hub33");
+	Flag(29);
+}
+
+Connection("Connection62")
+{
+	Start("Hub33");
+	End("Hub34");
+	Flag(29);
+}
+
+Connection("Connection63")
+{
+	Start("Hub34");
+	End("Hub35");
+	Flag(29);
+}
+
+Connection("Connection64")
+{
+	Start("Hub34");
+	End("Hub36");
+	Flag(29);
+}
+
+Connection("Connection67")
+{
+	Start("Hub38");
+	End("Hub39");
+	Flag(29);
+}
+
+Connection("Connection68")
+{
+	Start("Hub39");
+	End("Hub40");
+	Flag(29);
+}
+
+Connection("Connection69")
+{
+	Start("Hub40");
+	End("Hub41");
+	Flag(29);
+}
+
+Connection("Connection70")
+{
+	Start("Hub40");
+	End("Hub60");
+	Flag(29);
+}
+
+Connection("Connection71")
+{
+	Start("Hub41");
+	End("Hub60");
+	Flag(29);
+}
+
+Connection("Connection72")
+{
+	Start("Hub60");
+	End("Hub42");
+	Flag(29);
+}
+
+Connection("Connection73")
+{
+	Start("Hub27");
+	End("Hub61");
+	Flag(31);
+}
+
+Connection("Connection74")
+{
+	Start("Hub61");
+	End("Hub28");
+	Flag(31);
+}
+
+Connection("Connection75")
+{
+	Start("Hub61");
+	End("Hub62");
+	Flag(31);
+}
+
+Connection("Connection76")
+{
+	Start("Hub62");
+	End("Hub6");
+	Flag(31);
+}
+
+Connection("Connection77")
+{
+	Start("Hub35");
+	End("Hub63");
+	Flag(31);
+}
+
+Connection("Connection78")
+{
+	Start("Hub63");
+	End("Hub58");
+	Flag(31);
+}
+
+Connection("Connection79")
+{
+	Start("Hub64");
+	End("Hub65");
+	Flag(29);
+}
+
+Connection("Connection80")
+{
+	Start("Hub65");
+	End("Hub66");
+	Flag(29);
+}
+
+Connection("Connection84")
+{
+	Start("Hub68");
+	End("Hub69");
+	Flag(29);
+}
+
+Connection("Connection81")
+{
+	Start("Hub66");
+	End("Hub68");
+	Flag(29);
+}
+
+Connection("Connection86")
+{
+	Start("Hub69");
+	End("Hub73");
+	Flag(29);
+}
+
+Connection("Connection83")
+{
+	Start("Hub69");
+	End("Hub71");
+	Flag(29);
+}
+
+Connection("Connection85")
+{
+	Start("Hub71");
+	End("Hub73");
+	Flag(29);
+}
+
+Connection("Connection87")
+{
+	Start("Hub73");
+	End("Hub74");
+	Flag(29);
+}
+
+Connection("Connection88")
+{
+	Start("Hub75");
+	End("Hub74");
+	Flag(29);
+}
+
+Connection("Connection89")
+{
+	Start("Hub73");
+	End("Hub83");
+	Flag(29);
+}
+
+Connection("Connection90")
+{
+	Start("Hub83");
+	End("Hub75");
+	Flag(29);
+}
+
+Connection("Connection91")
+{
+	Start("Hub83");
+	End("Hub82");
+	Flag(29);
+}
+
+Connection("Connection92")
+{
+	Start("Hub82");
+	End("Hub81");
+	Flag(29);
+}
+
+Connection("Connection93")
+{
+	Start("Hub81");
+	End("Hub80");
+	Flag(29);
+}
+
+Connection("Connection94")
+{
+	Start("Hub80");
+	End("Hub79");
+	Flag(29);
+}
+
+Connection("Connection95")
+{
+	Start("Hub79");
+	End("Hub64");
+	Flag(29);
+}
+
+Connection("Connection96")
+{
+	Start("Hub74");
+	End("Hub78");
+	Flag(29);
+}
+
+Connection("Connection102")
+{
+	Start("Hub84");
+	End("Hub85");
+	Flag(29);
+}
+
+Connection("Connection103")
+{
+	Start("Hub85");
+	End("Hub86");
+	Flag(29);
+}
+
+Connection("Connection104")
+{
+	Start("Hub86");
+	End("Hub87");
+	Flag(29);
+}
+
+Connection("Connection105")
+{
+	Start("Hub87");
+	End("Hub89");
+	Flag(29);
+}
+
+Connection("Connection109")
+{
+	Start("Hub91");
+	End("Hub92");
+	Flag(29);
+}
+
+Connection("Connection110")
+{
+	Start("Hub92");
+	End("Hub96");
+	Flag(29);
+}
+
+Connection("Connection111")
+{
+	Start("Hub93");
+	End("Hub96");
+	Flag(29);
+}
+
+Connection("Connection112")
+{
+	Start("Hub93");
+	End("Hub95");
+	Flag(29);
+}
+
+Connection("Connection113")
+{
+	Start("Hub95");
+	End("Hub94");
+	Flag(29);
+}
+
+Connection("Connection114")
+{
+	Start("Hub94");
+	End("Hub105");
+	Flag(29);
+}
+
+Connection("Connection115")
+{
+	Start("Hub105");
+	End("Hub104");
+	Flag(29);
+}
+
+Connection("Connection116")
+{
+	Start("Hub104");
+	End("Hub103");
+	Flag(29);
+}
+
+Connection("Connection117")
+{
+	Start("Hub103");
+	End("Hub102");
+	Flag(29);
+}
+
+Connection("Connection118")
+{
+	Start("Hub102");
+	End("Hub101");
+	Flag(29);
+}
+
+Connection("Connection119")
+{
+	Start("Hub101");
+	End("Hub100");
+	Flag(29);
+}
+
+Connection("Connection120")
+{
+	Start("Hub100");
+	End("Hub99");
+	Flag(29);
+}
+
+Connection("Connection121")
+{
+	Start("Hub99");
+	End("Hub98");
+	Flag(29);
+}
+
+Connection("Connection122")
+{
+	Start("Hub98");
+	End("Hub97");
+	Flag(29);
+}
+
+Connection("Connection123")
+{
+	Start("Hub97");
+	End("Hub92");
+	Flag(29);
+}
+
+Connection("Connection124")
+{
+	Start("Hub96");
+	End("Hub97");
+	Flag(29);
+}
+
+Connection("Connection125")
+{
+	Start("Hub23");
+	End("Hub106");
+	Flag(31);
+}
+
+Connection("Connection126")
+{
+	Start("Hub106");
+	End("Hub22");
+	Flag(31);
+}
+
+Connection("Connection129")
+{
+	Start("Hub88");
+	End("Hub87");
+	Flag(29);
+}
+
+Connection("Connection100")
+{
+	Start("Hub85");
+	End("Hub90");
+	Flag(29);
+}
+
+Connection("Connection18")
+{
+	Start("Hub19");
+	End("Hub109");
+	Flag(31);
+}
+
+Connection("Connection130")
+{
+	Start("Hub109");
+	End("Hub20");
+	Flag(31);
+}
+
+Connection("Connection131")
+{
+	Start("Hub110");
+	End("Hub111");
+	Flag(29);
+}
+
+Connection("Connection132")
+{
+	Start("Hub109");
+	End("Hub110");
+	Flag(29);
+}
+
+Connection("Connection138")
+{
+	Start("Hub36");
+	End("Hub38");
+	Flag(29);
+}
+
+Connection("Connection133")
+{
+	Start("Hub112");
+	End("Hub111");
+	Flag(29);
+}
+
+Connection("Connection134")
+{
+	Start("Hub20");
+	End("Hub22");
+	Flag(31);
+}
+
+Connection("Connection136")
+{
+	Start("Hub17");
+	End("Hub20");
+	Flag(31);
+}
+
+Connection("Connection137")
+{
+	Start("Hub78");
+	End("Hub116");
+	Flag(29);
+}
+
+Connection("Connection139")
+{
+	Start("Hub116");
+	End("Hub89");
+	Flag(29);
+}
+
+Connection("Connection140")
+{
+	Start("Hub116");
+	End("Hub84");
+	Flag(29);
+}
+
+Connection("Connection141")
+{
+	Start("Hub115");
+	End("Hub88");
+	Flag(29);
+}
+
+Connection("Connection142")
+{
+	Start("Hub113");
+	End("Hub90");
+	Flag(29);
+}
+
+Connection("Connection143")
+{
+	Start("Hub91");
+	End("Hub115");
+	Flag(29);
+}
+
+Connection("Connection144")
+{
+	Start("Hub91");
+	End("Hub113");
+	Flag(29);
+}
+
+Connection("Connection128")
+{
+	Start("Hub106");
+	End("Hub107");
+	Flag(29);
+}
+
+Connection("Connection135")
+{
+	Start("Hub114");
+	End("Hub30");
+	Flag(29);
+}
+
+Connection("Connection145")
+{
+	Start("Hub108");
+	End("Hub31");
+	Flag(29);
+}
+
+Connection("Connection146")
+{
+	Start("Hub108");
+	End("Hub114");
+	Flag(29);
+}
+
+Connection("Connection127")
+{
+	Start("Hub54");
+	End("Hub117");
+	Flag(31);
+}
+
+Connection("Connection147")
+{
+	Start("Hub117");
+	End("Hub6");
+	Flag(31);
+}
+
+Connection("Connection148")
+{
+	Start("Hub117");
+	End("Hub118");
+	Flag(31);
+}
+
+Connection("Connection149")
+{
+	Start("Hub43");
+	End("Hub120");
+	Flag(29);
+}

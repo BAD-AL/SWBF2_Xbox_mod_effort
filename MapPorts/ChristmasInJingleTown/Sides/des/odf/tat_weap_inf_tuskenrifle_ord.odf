@@ -1,0 +1,12 @@
+[OrdnanceClass]
+ClassParent 		= "com_weap_inf_rifle_ord"
+
+[Properties]
+ImpactEffectWater 	= "com_sfx_watersplash_ord"
+
+LaserTexture		= "com_sfx_laser_green"
+LaserLength		= "2.0"
+LaserWidth		= "0.15"
+LaserGlowColor		= "10 127 10 100"
+LightColor              = "64 224 64 150"
+

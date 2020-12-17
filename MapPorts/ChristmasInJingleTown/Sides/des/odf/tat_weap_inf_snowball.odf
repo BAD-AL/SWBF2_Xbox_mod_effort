@@ -1,0 +1,11 @@
+[WeaponClass]
+ClassParent             = "com_weap_inf_snowball"
+
+[Properties]
+OffhandWeapon       = 0
+AnimationBank     = "pistol"
+
+OrdnanceName	= "tat_weap_inf_snowball_ord"
+
+ShotDelay           = "0.12"
+ShotElevate         = "0.1"

@@ -1,0 +1,8 @@
+[WeaponClass]
+ClassParent 			= "com_weap_inf_fusioncutter"
+
+[Properties]
+GeometryName 		= "des_weap_inf_fusioncutter"
+HighResGeometry         = "des_1st_weap_inf_fusioncutter"
+
+FireLoopSound			= "com_weap_inf_fusioncutter_fire"

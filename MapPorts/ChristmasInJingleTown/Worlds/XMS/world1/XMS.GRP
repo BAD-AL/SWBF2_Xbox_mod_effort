@@ -1,0 +1,12 @@
+Version(1);
+NextID(1);
+
+Group("[Base]", 0, 8)
+{
+	Layer("[Base]", 0);
+	Layer("conquest", 1);
+	Layer("hunt", 2);
+	Layer("Fence", 3);
+	Layer("trees", 4);
+}
+

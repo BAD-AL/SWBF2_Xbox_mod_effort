@@ -1,0 +1,2213 @@
+Version(3);
+SaveType(0);
+
+Camera("camera")
+{
+	Rotation(0.617, 0.139, 0.756, -0.170);
+	Position(-164.809, 275.202, -155.347);
+	FieldOfView(55.400);
+	NearPlane(1.000);
+	FarPlane(2700.000);
+	ZoomFactor(1.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(348.738, 34.820, 340.477,  0.220, 0.056, -0.944, 0.239);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+}
+LightName("XMS_hunt.LGT");
+ControllerManager("StandardCtrlMgr");
+
+WorldExtents()
+{
+	Min(0.000000, 0.000000, 0.000000);
+	Max(0.000000, 0.000000, 0.000000);
+}
+
+NextSequence(-3435771);
+
+Object("hunt1a", "com_bldg_controlzone", -1073688872)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(325.863, -9.150, 0.922);
+	SeqNo(-1073688872);
+	Team(1);
+	NetworkId(-1);
+	Layer(2);
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("hunt1a");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("hunt3", "com_bldg_controlzone", -1380713771)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(311.015, -5.000, 159.293);
+	SeqNo(-1380713771);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	CaptureRegion("huntcap");
+	ControlRegion("");
+	SpawnPath("hunt3");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("hunt1b", "com_bldg_controlzone", 1812828156)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(330.993, -15.000, 21.834);
+	SeqNo(1812828156);
+	Team(1);
+	NetworkId(-1);
+	Layer(2);
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("hunt1b");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("hunt2a", "com_bldg_controlzone", 1581260255)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(353.239, -11.295, 320.533);
+	SeqNo(1581260255);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("hunt2a");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("hunt2b", "com_bldg_controlzone", 593634891)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(335.841, -17.105, 309.109);
+	SeqNo(593634891);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+	CaptureRegion("");
+	ControlRegion("");
+	SpawnPath("hunt2b");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("end_prop_treeclump94", "end_prop_treeclump01", 19961007)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(329.578, -10.000, 230.986);
+	SeqNo(19961007);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_crate3101", "cal_prop_crate", 20355526)
+{
+	ChildRotation(0.655, 0.652, 0.271, -0.270);
+	ChildPosition(329.760, -16.500, 313.340);
+	SeqNo(20355526);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall290", "snow_wall", 57663132)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(353.344, -11.295, 315.009);
+	SeqNo(57663132);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall24", "snow_wall", 61068003)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(323.279, -11.200, 16.339);
+	SeqNo(61068003);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall210", "snow_wall", 75802466)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(338.364, -17.146, 286.721);
+	SeqNo(75802466);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight11", "snow_wall_straight", 85292570)
+{
+	ChildRotation(0.866, 0.000, 0.500, 0.000);
+	ChildPosition(309.728, -15.000, 33.931);
+	SeqNo(85292570);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall27", "snow_wall", 166084586)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(306.468, -11.250, 9.450);
+	SeqNo(166084586);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct2", "snow_wall_indestruct", 191325519)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(337.488, -15.000, -5.000);
+	SeqNo(191325519);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight136", "snow_wall_straight", 196306882)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(344.932, -13.900, 28.291);
+	SeqNo(196306882);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps200", "snow_steps", 213433871)
+{
+	ChildRotation(0.000, -0.383, 0.000, -0.924);
+	ChildPosition(364.122, -15.415, 299.402);
+	SeqNo(213433871);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_crate9", "cal_prop_crate", 226771233)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(369.035, 35.750, -73.448);
+	SeqNo(226771233);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump68", "end_prop_treeclump01", 271007641)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(361.921, 2.000, 166.271);
+	SeqNo(271007641);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct3", "snow_wall_indestruct", 286981805)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(322.043, -15.000, -5.012);
+	SeqNo(286981805);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump93", "end_prop_treeclump01", 302802694)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(336.450, -10.000, 202.834);
+	SeqNo(302802694);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight2", "snow_wall_straight", 336765498)
+{
+	ChildRotation(0.866, 0.000, -0.500, 0.000);
+	ChildPosition(316.507, -15.000, 34.182);
+	SeqNo(336765498);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight", "snow_wall_straight", 375111519)
+{
+	ChildRotation(0.866, 0.000, -0.500, 0.000);
+	ChildPosition(336.891, -15.000, 38.031);
+	SeqNo(375111519);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight14", "snow_wall_straight", 396279735)
+{
+	ChildRotation(-0.260, 0.000, -0.965, 0.000);
+	ChildPosition(323.907, -5.100, 162.657);
+	SeqNo(396279735);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump67", "end_prop_treeclump02", 397101195)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(362.173, 3.000, 191.492);
+	SeqNo(397101195);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_skeleton_sitting", "cal_prop_skeleton_sitting", 406987573)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(368.238, 35.000, -73.017);
+	SeqNo(406987573);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump66", "end_prop_treeclump01", 409994310)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(376.397, 15.000, 168.558);
+	SeqNo(409994310);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump90", "end_prop_treeclump01", 417887660)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(280.381, -10.000, 213.841);
+	SeqNo(417887660);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps23", "snow_steps", 439028200)
+{
+	ChildRotation(0.000, -0.383, 0.000, -0.924);
+	ChildPosition(333.247, -15.345, 327.575);
+	SeqNo(439028200);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight42", "snow_wall_straight", 449811869)
+{
+	ChildRotation(-0.131, 0.000, -0.991, 0.000);
+	ChildPosition(320.044, -17.107, 300.962);
+	SeqNo(449811869);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight12", "snow_wall_straight", 468102662)
+{
+	ChildRotation(0.866, 0.000, 0.500, 0.000);
+	ChildPosition(307.416, -5.100, 168.060);
+	SeqNo(468102662);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs5", "snowballs", 494050188)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(298.698, -3.760, 158.383);
+	SeqNo(494050188);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_sm3", "snow_platform_sm", 501692495)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(349.887, -11.645, 320.491);
+	SeqNo(501692495);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct10", "snow_wall_indestruct", 549317041)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(343.534, -17.145, 305.399);
+	SeqNo(549317041);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps22", "snow_steps", 554755106)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(315.198, -11.200, 2.065);
+	SeqNo(554755106);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight5", "snow_wall_straight", 569605543)
+{
+	ChildRotation(0.966, 0.000, 0.259, 0.000);
+	ChildPosition(324.109, -5.100, 156.071);
+	SeqNo(569605543);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge3100", "com_item_snowball_recharge", 631388207)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(337.588, -13.750, 20.940);
+	SeqNo(631388207);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snow_platform_sm10", "snow_platform_sm", 652304719)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(340.578, -13.715, 326.494);
+	SeqNo(652304719);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct700", "snow_wall_indestruct", 739572138)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(353.421, -13.345, 314.127);
+	SeqNo(739572138);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall200", "snow_wall", 747846525)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(335.485, -17.145, 272.831);
+	SeqNo(747846525);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs3100", "snowballs", 754187166)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(337.588, -13.750, 20.940);
+	SeqNo(754187166);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight1", "snow_wall_straight", 854155912)
+{
+	ChildRotation(0.866, 0.000, 0.500, 0.000);
+	ChildPosition(330.112, -15.000, 37.781);
+	SeqNo(854155912);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_sm0", "snow_platform_sm", 934509988)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(320.648, -9.500, 3.361);
+	SeqNo(934509988);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump70", "end_prop_treeclump01", 960996546)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(387.395, 30.000, 235.505);
+	SeqNo(960996546);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_sm2", "snow_platform_sm", 964697338)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(302.508, -11.610, 3.744);
+	SeqNo(964697338);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight10", "snow_wall_straight", 1001388430)
+{
+	ChildRotation(0.866, 0.000, 0.500, 0.000);
+	ChildPosition(308.436, -14.949, 49.075);
+	SeqNo(1001388430);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps11", "snow_steps", 1018382628)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(329.142, -17.089, 323.486);
+	SeqNo(1018382628);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge31000", "com_item_snowball_recharge", 1035915212)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(329.786, -9.740, 6.790);
+	SeqNo(1035915212);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snow_platform0", "snow_platform", 1064827942)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(346.992, -14.345, 311.891);
+	SeqNo(1064827942);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall11", "snow_wall", 1201582074)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(321.539, -17.145, 297.851);
+	SeqNo(1201582074);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump72", "end_prop_treeclump02", 1231737060)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(371.977, 20.000, 226.842);
+	SeqNo(1231737060);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps20", "snow_steps", 1239797519)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(303.942, -13.270, 8.142);
+	SeqNo(1239797519);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall280", "snow_wall", 1250204124)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(348.050, -11.295, 320.139);
+	SeqNo(1250204124);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_med0", "snow_platform_med", 1258861509)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(360.251, -14.005, 302.316);
+	SeqNo(1258861509);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs6", "snowballs", 1308997424)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(323.747, -3.760, 159.270);
+	SeqNo(1308997424);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_sm1", "snow_platform_sm", 1312328292)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(339.744, -11.570, 5.633);
+	SeqNo(1312328292);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps", "snow_steps", 1347402713)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(345.695, -13.200, 11.023);
+	SeqNo(1347402713);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump63", "end_prop_treeclump01", 1354928655)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(397.776, 10.000, 109.522);
+	SeqNo(1354928655);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall21", "snow_wall", 1358575756)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(313.188, -15.000, 35.320);
+	SeqNo(1358575756);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump76", "end_prop_treeclump02", 1394361549)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(307.164, -24.000, 78.751);
+	SeqNo(1394361549);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct7", "snow_wall_indestruct", 1409002761)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(330.282, -11.200, 5.301);
+	SeqNo(1409002761);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump95", "end_prop_treeclump02", 1453455732)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(367.754, 35.000, -79.869);
+	SeqNo(1453455732);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall26", "snow_wall", 1453504430)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(312.640, -11.250, 12.748);
+	SeqNo(1453504430);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall240", "snow_wall", 1484425442)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(346.312, -13.345, 306.543);
+	SeqNo(1484425442);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall220", "snow_wall", 1524782418)
+{
+	ChildRotation(-0.001, 0.000, -1.000, 0.000);
+	ChildPosition(334.393, -13.345, 318.622);
+	SeqNo(1524782418);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("nab2_prop_lampost1", "nab2_prop_lampost1", 1527163632)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(325.775, -9.150, -1.144);
+	SeqNo(1527163632);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall0", "snow_wall", 1594799157)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(318.269, -15.000, 47.509);
+	SeqNo(1594799157);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge5", "com_item_snowball_recharge", 1596747586)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(298.698, -3.760, 158.383);
+	SeqNo(1596747586);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("cal_prop_crate31000", "cal_prop_crate", 1656886144)
+{
+	ChildRotation(0.709, 0.705, 0.000, 0.000);
+	ChildPosition(329.761, -10.490, 5.728);
+	SeqNo(1656886144);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs3101", "snowballs", 1669693051)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(330.429, -15.750, 313.910);
+	SeqNo(1669693051);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight135", "snow_wall_straight", 1677161351)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(303.118, -13.900, 23.395);
+	SeqNo(1677161351);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge31001", "com_item_snowball_recharge", 1783445234)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(348.989, -11.884, 317.345);
+	SeqNo(1783445234);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snow_wall312", "snow_wall", 1825856721)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(297.164, -5.100, 158.427);
+	SeqNo(1825856721);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall28", "snow_wall", 1840027071)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(330.148, -9.150, 4.802);
+	SeqNo(1840027071);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall13", "snow_wall", 1876567806)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(310.833, -5.100, 148.900);
+	SeqNo(1876567806);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform", "snow_platform", 1921050886)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(324.883, -12.200, 11.423);
+	SeqNo(1921050886);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall311", "snow_wall", 1922786254)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(325.292, -5.100, 159.322);
+	SeqNo(1922786254);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall22", "snow_wall", 1928707845)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(336.760, -11.200, 16.533);
+	SeqNo(1928707845);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall260", "snow_wall", 1952492391)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(354.714, -13.395, 302.295);
+	SeqNo(1952492391);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall100", "snow_wall", 1954584012)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(328.799, -17.145, 275.073);
+	SeqNo(1954584012);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps10", "snow_steps", 1971300478)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(303.953, -15.070, 13.936);
+	SeqNo(1971300478);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump87", "end_prop_treeclump02", 1971743400)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(303.515, -20.000, 233.148);
+	SeqNo(1971743400);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_sm", "snow_platform_sm", 1973619178)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(328.917, -9.500, 3.296);
+	SeqNo(1973619178);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump74", "end_prop_treeclump01", 1974086168)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(417.229, 40.000, 387.060);
+	SeqNo(1974086168);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs31000", "snowballs", 1981104602)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(329.786, -9.740, 6.790);
+	SeqNo(1981104602);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump92", "end_prop_treeclump01", 1990482894)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(346.941, -8.000, 222.799);
+	SeqNo(1990482894);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight160", "snow_wall_straight", 1999916007)
+{
+	ChildRotation(0.866, 0.000, 0.499, 0.000);
+	ChildPosition(309.446, -11.210, 11.402);
+	SeqNo(1999916007);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight40", "snow_wall_straight", 2007752314)
+{
+	ChildRotation(-0.131, 0.000, -0.991, 0.000);
+	ChildPosition(327.328, -17.100, 278.334);
+	SeqNo(2007752314);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall23", "snow_wall", 2042124848)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(328.295, -17.145, 295.392);
+	SeqNo(2042124848);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct40", "snow_wall_indestruct", 2060089870)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(355.906, -16.345, 299.943);
+	SeqNo(2060089870);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight162", "snow_wall_straight", 2069480209)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(350.974, -11.295, 317.902);
+	SeqNo(2069480209);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump86", "end_prop_treeclump01", 2084185524)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(320.457, -15.000, 253.413);
+	SeqNo(2084185524);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_crate31001", "cal_prop_crate", 2123493080)
+{
+	ChildRotation(0.655, 0.652, 0.271, -0.270);
+	ChildPosition(348.750, -12.634, 317.104);
+	SeqNo(2123493080);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall30", "snow_wall", -2085078373)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(344.692, -15.000, 28.488);
+	SeqNo(-2085078373);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_crate5", "cal_prop_crate", -2050519815)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(298.520, -4.510, 157.652);
+	SeqNo(-2050519815);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump88", "end_prop_treeclump01", -2044906003)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(319.089, -15.000, 210.625);
+	SeqNo(-2044906003);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("nab2_prop_lampost2", "nab2_prop_lampost2", -2043422600)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(355.121, -11.295, 321.899);
+	SeqNo(-2043422600);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall211", "snow_wall", -1973495168)
+{
+	ChildRotation(0.384, 0.000, -0.923, 0.000);
+	ChildPosition(304.305, -5.100, 166.026);
+	SeqNo(-1973495168);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight132", "snow_wall_straight", -1962222595)
+{
+	ChildRotation(0.795, 0.000, -0.607, 0.000);
+	ChildPosition(324.785, -17.107, 296.337);
+	SeqNo(-1962222595);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump77", "end_prop_treeclump01", -1876574347)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(327.752, -20.000, 76.550);
+	SeqNo(-1876574347);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall20", "snow_wall", -1874613357)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(305.257, -15.000, 47.336);
+	SeqNo(-1874613357);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps0", "snow_steps", -1795834205)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(303.946, -13.270, 9.113);
+	SeqNo(-1795834205);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_sm00", "snow_platform_sm", -1780682652)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(355.831, -11.645, 314.638);
+	SeqNo(-1780682652);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump85", "end_prop_treeclump01", -1755960207)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(308.672, -15.000, 256.977);
+	SeqNo(-1755960207);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps210", "snow_steps", -1705656841)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(347.507, -13.345, 330.064);
+	SeqNo(-1705656841);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs9", "snowballs", -1654365351)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(368.997, 36.500, -72.672);
+	SeqNo(-1654365351);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct0", "snow_wall_indestruct", -1618192076)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(332.770, -17.100, 316.141);
+	SeqNo(-1618192076);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall250", "snow_wall", -1600649653)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(338.680, -13.345, 310.950);
+	SeqNo(-1600649653);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump84", "end_prop_treeclump01", -1593643834)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(280.907, -20.000, 80.523);
+	SeqNo(-1593643834);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump64", "end_prop_treeclump02", -1499624225)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(385.619, 5.000, 132.280);
+	SeqNo(-1499624225);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps21", "snow_steps", -1476297138)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(337.369, -11.200, -1.792);
+	SeqNo(-1476297138);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct70", "snow_wall_indestruct", -1453681895)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(321.919, -11.200, 5.296);
+	SeqNo(-1453681895);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump80", "end_prop_treeclump01", -1359560860)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(350.974, -20.000, 73.020);
+	SeqNo(-1359560860);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall212", "snow_wall", -1343521530)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(317.283, -5.100, 151.905);
+	SeqNo(-1343521530);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump91", "end_prop_treeclump01", -1312445958)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(280.563, -10.000, 242.339);
+	SeqNo(-1312445958);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_crate6", "cal_prop_crate", -1300785911)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(323.801, -4.510, 158.476);
+	SeqNo(-1300785911);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump83", "end_prop_treeclump01", -1293008949)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(351.953, -15.000, 135.186);
+	SeqNo(-1293008949);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs10", "snowballs", -1274286474)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(406.443, 40.950, 351.194);
+	SeqNo(-1274286474);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snowballs31001", "snowballs", -1267580126)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(348.989, -11.884, 317.345);
+	SeqNo(-1267580126);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight15", "snow_wall_straight", -1258790666)
+{
+	ChildRotation(0.966, 0.000, -0.259, 0.000);
+	ChildPosition(298.497, -5.100, 154.981);
+	SeqNo(-1258790666);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct", "snow_wall_indestruct", -1252403543)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(337.943, -15.000, 18.474);
+	SeqNo(-1252403543);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall310", "snow_wall", -1239042954)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(353.866, -17.145, 287.893);
+	SeqNo(-1239042954);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight130", "snow_wall_straight", -1231053801)
+{
+	ChildRotation(0.794, 0.000, -0.608, 0.000);
+	ChildPosition(332.067, -17.100, 273.711);
+	SeqNo(-1231053801);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall", "snow_wall", -1222628456)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(339.984, -15.000, 36.273);
+	SeqNo(-1222628456);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight4", "snow_wall_straight", -1215624307)
+{
+	ChildRotation(0.500, 0.000, 0.866, 0.000);
+	ChildPosition(307.567, -5.100, 150.075);
+	SeqNo(-1215624307);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump89", "end_prop_treeclump01", -1192411022)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(295.029, -15.000, 204.880);
+	SeqNo(-1192411022);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall2", "snow_wall", -1083610187)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(326.957, -15.000, 35.993);
+	SeqNo(-1083610187);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall5", "snow_wall", -1063828157)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(317.312, -5.100, 166.454);
+	SeqNo(-1063828157);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall270", "snow_wall", -1028278153)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(360.513, -13.395, 300.020);
+	SeqNo(-1028278153);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall12", "snow_wall", -1013597137)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(310.756, -5.100, 169.326);
+	SeqNo(-1013597137);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct6", "snow_wall_indestruct", -996473618)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(309.559, -14.200, -1.414);
+	SeqNo(-996473618);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight131", "snow_wall_straight", -968978867)
+{
+	ChildRotation(0.794, 0.000, -0.608, 0.000);
+	ChildPosition(341.625, -17.101, 285.287);
+	SeqNo(-968978867);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump69", "end_prop_treeclump02", -949466880)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(405.156, 20.000, 170.803);
+	SeqNo(-949466880);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_crate10", "cal_prop_crate", -854476188)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(406.550, 40.200, 350.610);
+	SeqNo(-854476188);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall6", "snow_wall", -846508338)
+{
+	ChildRotation(-0.384, 0.000, -0.923, 0.000);
+	ChildPosition(304.504, -5.100, 151.842);
+	SeqNo(-846508338);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump65", "end_prop_treeclump01", -827008722)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(366.194, 0.000, 143.954);
+	SeqNo(-827008722);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct8", "snow_wall_indestruct", -810306487)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(329.959, -11.200, -2.285);
+	SeqNo(-810306487);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight134", "snow_wall_straight", -798203860)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(353.939, -16.000, 288.120);
+	SeqNo(-798203860);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge10", "com_item_snowball_recharge", -793605240)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(406.443, 40.950, 351.194);
+	SeqNo(-793605240);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snow_steps3", "snow_steps", -790258537)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(332.557, -15.345, 326.891);
+	SeqNo(-790258537);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall4", "snow_wall", -787698890)
+{
+	ChildRotation(-0.001, 0.000, -1.000, 0.000);
+	ChildPosition(319.079, -17.145, 304.357);
+	SeqNo(-787698890);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump78", "end_prop_treeclump02", -770200885)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(345.840, -22.000, 103.906);
+	SeqNo(-770200885);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_sm20", "snow_platform_sm", -728286767)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(368.246, -13.755, 301.498);
+	SeqNo(-728286767);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct800", "snow_wall_indestruct", -719107560)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(359.013, -13.345, 319.263);
+	SeqNo(-719107560);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall10", "snow_wall", -711783300)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(311.715, -15.000, 50.321);
+	SeqNo(-711783300);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall00", "snow_wall", -674265238)
+{
+	ChildRotation(-0.001, 0.000, -1.000, 0.000);
+	ChildPosition(326.502, -17.145, 281.886);
+	SeqNo(-674265238);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge6", "com_item_snowball_recharge", -669323454)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(323.747, -3.760, 159.270);
+	SeqNo(-669323454);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snow_wall_straight161", "snow_wall_straight", -661206076)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(326.091, -9.150, 4.435);
+	SeqNo(-661206076);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump75", "end_prop_treeclump01", -654570944)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(322.293, -20.000, 101.580);
+	SeqNo(-654570944);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct81", "snow_wall_indestruct", -648346072)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(353.096, -13.345, 325.173);
+	SeqNo(-648346072);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight3", "snow_wall_straight", -570318261)
+{
+	ChildRotation(0.866, 0.000, -0.500, 0.000);
+	ChildPosition(314.196, -5.100, 168.311);
+	SeqNo(-570318261);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct1", "snow_wall_indestruct", -541156735)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(322.738, -15.000, 18.458);
+	SeqNo(-541156735);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall29", "snow_wall", -529657879)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(321.999, -9.150, 4.775);
+	SeqNo(-529657879);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall1", "snow_wall", -524295199)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(333.530, -15.000, 39.262);
+	SeqNo(-524295199);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump73", "end_prop_treeclump02", -519228999)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(414.703, 35.000, 363.720);
+	SeqNo(-519228999);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight133", "snow_wall_straight", -517144937)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(321.139, -16.000, 313.865);
+	SeqNo(-517144937);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps1", "snow_steps", -468619632)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(345.702, -14.944, 15.846);
+	SeqNo(-468619632);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge9", "com_item_snowball_recharge", -423440511)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(368.997, 36.500, -72.672);
+	SeqNo(-423440511);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snow_wall_straight7", "snow_wall_straight", -422202898)
+{
+	ChildRotation(0.866, 0.000, -0.499, 0.000);
+	ChildPosition(333.308, -11.200, 16.684);
+	SeqNo(-422202898);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight6", "snow_wall_straight", -381418352)
+{
+	ChildRotation(0.259, 0.000, -0.966, 0.000);
+	ChildPosition(298.434, -5.100, 161.677);
+	SeqNo(-381418352);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight13", "snow_wall_straight", -376012426)
+{
+	ChildRotation(0.500, 0.000, -0.866, 0.000);
+	ChildPosition(314.188, -5.100, 150.155);
+	SeqNo(-376012426);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight41", "snow_wall_straight", -370085742)
+{
+	ChildRotation(-0.131, 0.000, -0.991, 0.000);
+	ChildPosition(336.886, -17.101, 289.912);
+	SeqNo(-370085742);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct71", "snow_wall_indestruct", -369475987)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(347.504, -13.345, 320.037);
+	SeqNo(-369475987);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_platform_med", "snow_platform_med", -362965390)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(308.738, -11.860, 8.818);
+	SeqNo(-362965390);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct4", "snow_wall_indestruct", -332182642)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(310.133, -14.200, 13.568);
+	SeqNo(-332182642);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_indestruct80", "snow_wall_indestruct", -327483728)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(321.597, -11.200, -2.290);
+	SeqNo(-327483728);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump96", "end_prop_treeclump01", -311297692)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(396.061, 34.999, -84.370);
+	SeqNo(-311297692);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps00", "snow_steps", -307382654)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(363.432, -15.415, 298.719);
+	SeqNo(-307382654);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall_straight0", "snow_wall_straight", -253136031)
+{
+	ChildRotation(0.866, 0.000, -0.499, 0.000);
+	ChildPosition(315.067, -14.949, 49.233);
+	SeqNo(-253136031);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump81", "end_prop_treeclump02", -223195840)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(289.938, -20.000, 107.475);
+	SeqNo(-223195840);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall25", "snow_wall", -223102834)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(330.095, -11.200, 17.965);
+	SeqNo(-223102834);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("cal_prop_crate3100", "cal_prop_crate", -188259197)
+{
+	ChildRotation(0.708, 0.706, 0.000, 0.000);
+	ChildPosition(337.563, -14.500, 19.878);
+	SeqNo(-188259197);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump82", "end_prop_treeclump01", -182799866)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(320.526, -15.000, 121.214);
+	SeqNo(-182799866);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps220", "snow_steps", -160038798)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(360.459, -13.345, 311.659);
+	SeqNo(-160038798);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall300", "snow_wall", -132840266)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(320.916, -17.145, 313.831);
+	SeqNo(-132840266);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("com_item_snowball_recharge3101", "com_item_snowball_recharge", -106319039)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(330.429, -15.750, 313.910);
+	SeqNo(-106319039);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snow_wall_straight16", "snow_wall_straight", -72747330)
+{
+	ChildRotation(0.866, 0.000, 0.500, 0.000);
+	ChildPosition(326.802, -11.200, 16.679);
+	SeqNo(-72747330);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump62", "end_prop_treeclump02", -58455625)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(389.099, 0.000, 91.636);
+	SeqNo(-58455625);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_wall31", "snow_wall", -26095430)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(303.057, -15.000, 23.530);
+	SeqNo(-26095430);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps2", "snow_steps", -24682897)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(345.691, -13.200, 10.052);
+	SeqNo(-24682897);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("snow_steps100", "snow_steps", -24672930)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(360.015, -17.215, 295.313);
+	SeqNo(-24672930);
+	Team(2);
+	NetworkId(-1);
+	Layer(2);
+}
+
+Object("end_prop_treeclump79", "end_prop_treeclump01", -3865924)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(368.493, -10.000, 97.719);
+	SeqNo(-3865924);
+	Team(0);
+	NetworkId(-1);
+	Layer(2);
+}

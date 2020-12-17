@@ -1,0 +1,1262 @@
+Version(3);
+SaveType(0);
+
+Camera("camera")
+{
+	Rotation(0.617, 0.139, 0.756, -0.170);
+	Position(-164.809, 275.202, -155.347);
+	FieldOfView(55.400);
+	NearPlane(1.000);
+	FarPlane(2700.000);
+	ZoomFactor(1.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(348.738, 34.820, 340.477,  0.220, 0.056, -0.944, 0.239);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+}
+LightName("XMS_Fence.LGT");
+ControllerManager("StandardCtrlMgr");
+
+WorldExtents()
+{
+	Min(0.000000, 0.000000, 0.000000);
+	Max(0.000000, 0.000000, 0.000000);
+}
+
+NextSequence(-3435771);
+
+Object("picket_fence302", "picket_fence2", 43921895)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-239.700, 3.000, 84.794);
+	SeqNo(43921895);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi60100", "picket_fence_multi6", 55255055)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-210.386, 0.000, 9.646);
+	SeqNo(55255055);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi70100", "picket_fence_multi6", 129853818)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-210.434, 0.000, 19.763);
+	SeqNo(129853818);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi70101", "picket_fence_multi6", 140768776)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-24.871, 0.000, 17.068);
+	SeqNo(140768776);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010042", "picket_fence2", 144896788)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-89.985, 0.000, 6.566);
+	SeqNo(144896788);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010032", "picket_fence2", 172800008)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.007, 0.000, 9.955);
+	SeqNo(172800008);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi80100", "picket_fence_multi6", 188310105)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-210.400, 0.000, 40.176);
+	SeqNo(188310105);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi801", "picket_fence_multi6", 207304894)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-139.923, 0.000, 37.521);
+	SeqNo(207304894);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010040061", "picket_fence2", 210903201)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(272.864, 59.990, -158.184);
+	SeqNo(210903201);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence300000", "picket_fence2", 227745119)
+{
+	ChildRotation(0.705, 0.000, 0.709, 0.000);
+	ChildPosition(-293.665, 9.680, 125.802);
+	SeqNo(227745119);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004004", "picket_fence1", 286122912)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-113.560, 0.000, 40.255);
+	SeqNo(286122912);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010033", "picket_fence2", 288548961)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-93.305, 0.000, 40.334);
+	SeqNo(288548961);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi30102", "picket_fence_multi3", 319604726)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-24.776, 0.000, -13.937);
+	SeqNo(319604726);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low12", "picket_fence2_low", 319911781)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-117.069, 0.000, 40.330);
+	SeqNo(319911781);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_gate_low1", "picket_gate_low", 327261405)
+{
+	ChildRotation(0.980, 0.000, 0.199, 0.000);
+	ChildPosition(-226.297, 3.000, 74.588);
+	SeqNo(327261405);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004006000", "picket_fence2", 339032546)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(272.711, 60.000, -174.747);
+	SeqNo(339032546);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi80101", "picket_fence_multi6", 361142372)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-24.838, 0.000, 37.481);
+	SeqNo(361142372);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi30100", "picket_fence_multi3", 455809321)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-210.438, 0.000, 33.293);
+	SeqNo(455809321);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi70102", "picket_fence_multi6", 482572421)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-24.772, 0.000, -27.468);
+	SeqNo(482572421);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30000", "picket_fence2", 550943896)
+{
+	ChildRotation(0.710, 0.000, -0.704, 0.000);
+	ChildPosition(-317.332, 9.687, 136.324);
+	SeqNo(550943896);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_gate1", "picket_gate", 596087014)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-307.183, 9.680, 119.281);
+	SeqNo(596087014);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence200", "picket_fence2", 599984152)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-317.541, 9.608, 119.477);
+	SeqNo(599984152);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence300100", "picket_fence2", 617139358)
+{
+	ChildRotation(0.705, 0.000, 0.709, 0.000);
+	ChildPosition(-293.700, 9.680, 119.087);
+	SeqNo(617139358);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low121", "picket_fence2_low", 640334116)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-117.117, 0.000, 33.617);
+	SeqNo(640334116);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence1_low", "picket_fence1_low", 734880200)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-226.251, 3.000, 71.103);
+	SeqNo(734880200);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi301", "picket_fence_multi3", 763204063)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-139.960, 0.000, 30.638);
+	SeqNo(763204063);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004000", "picket_fence2", 851930145)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.126, 0.000, 26.806);
+	SeqNo(851930145);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100310", "picket_fence2", 874277244)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.100, 0.000, 23.448);
+	SeqNo(874277244);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3002", "picket_fence2", 936270996)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-317.377, 9.687, 129.618);
+	SeqNo(936270996);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi800", "picket_fence_multi6", 1021653977)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-138.821, -0.001, -6.015);
+	SeqNo(1021653977);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence1_low2", "picket_fence1_low", 1073181323)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-114.008, 0.000, 16.648);
+	SeqNo(1073181323);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_gate", "picket_gate", 1114056810)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(-302.769, 9.680, 118.159);
+	SeqNo(1114056810);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30020", "picket_fence2", 1136643828)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-317.422, 9.680, 122.875);
+	SeqNo(1136643828);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30010", "picket_fence2", 1151738778)
+{
+	ChildRotation(0.710, 0.000, -0.704, 0.000);
+	ChildPosition(-317.297, 9.687, 143.038);
+	SeqNo(1151738778);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010031", "picket_fence2", 1162675582)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-100.200, 0.000, 6.625);
+	SeqNo(1162675582);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010041", "picket_fence2", 1180938375)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-103.588, 0.000, 6.603);
+	SeqNo(1180938375);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence31", "picket_fence2", 1230092042)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-314.163, 9.608, 119.436);
+	SeqNo(1230092042);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010", "picket_fence2", 1234397520)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-317.361, 9.687, 132.983);
+	SeqNo(1234397520);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301001", "picket_fence1", 1250413436)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-293.572, 9.680, 139.220);
+	SeqNo(1250413436);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30001", "picket_fence2", 1287121133)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-236.146, 3.000, 88.048);
+	SeqNo(1287121133);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low1200", "picket_fence2_low", 1327318338)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-117.127, 0.000, 30.194);
+	SeqNo(1327318338);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi8", "picket_fence_multi6", 1333574464)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-209.202, 0.000, -6.146);
+	SeqNo(1333574464);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004001", "picket_fence2", 1350238627)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.126, 0.000, 33.564);
+	SeqNo(1350238627);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence21", "picket_fence2", 1406463686)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-303.991, 9.608, 119.351);
+	SeqNo(1406463686);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3000", "picket_fence2", 1407759993)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-239.707, 3.000, 81.422);
+	SeqNo(1407759993);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi60102", "picket_fence_multi6", 1410274466)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-24.725, 0.000, -37.584);
+	SeqNo(1410274466);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100302", "picket_fence2", 1465765589)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-100.053, 0.000, 40.286);
+	SeqNo(1465765589);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100400", "picket_fence2", 1580504597)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-96.841, 0.000, 6.651);
+	SeqNo(1580504597);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi80103", "picket_fence_multi6", 1650268077)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-26.169, 0.000, 82.558);
+	SeqNo(1650268077);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low11", "picket_fence2_low", 1703590564)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-226.220, 3.000, 77.731);
+	SeqNo(1703590564);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence1", "picket_fence1", 1755566187)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-229.715, 3.000, 71.196);
+	SeqNo(1755566187);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004006", "picket_fence2", 1780839810)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(272.901, 59.990, -151.516);
+	SeqNo(1780839810);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010040", "picket_fence2", 1795417014)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-110.334, 0.000, 6.559);
+	SeqNo(1795417014);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi30", "picket_fence_multi3", 1829286559)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-174.013, 0.000, -13.491);
+	SeqNo(1829286559);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30021", "picket_fence2", 1850506509)
+{
+	ChildRotation(0.706, 0.000, 0.708, 0.000);
+	ChildPosition(-293.620, 9.680, 132.508);
+	SeqNo(1850506509);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low0", "picket_fence2_low", 1868624602)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-226.196, 3.000, 81.110);
+	SeqNo(1868624602);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30200", "picket_fence2", 1898484943)
+{
+	ChildRotation(0.706, 0.000, 0.708, 0.000);
+	ChildPosition(-293.672, 9.680, 122.430);
+	SeqNo(1898484943);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010040060", "picket_fence2", 1910633475)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(272.872, 59.991, -154.812);
+	SeqNo(1910633475);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301000", "picket_fence2", 1942971828)
+{
+	ChildRotation(0.706, 0.000, 0.708, 0.000);
+	ChildPosition(-293.591, 9.680, 135.886);
+	SeqNo(1942971828);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi70", "picket_fence_multi6", 1997894050)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-174.009, 0.000, -27.021);
+	SeqNo(1997894050);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301", "picket_fence2", 2011734361)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-239.736, 3.000, 78.081);
+	SeqNo(2011734361);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low1210", "picket_fence2_low", 2035630601)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-117.269, 0.000, 20.186);
+	SeqNo(2035630601);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi60101", "picket_fence_multi6", 2036121966)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-24.823, 0.000, 6.952);
+	SeqNo(2036121966);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100401", "picket_fence2", 2037801586)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.034, 0.000, 13.313);
+	SeqNo(2037801586);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2", "picket_fence2", 2041067392)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-233.092, 3.000, 71.237);
+	SeqNo(2041067392);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi601", "picket_fence_multi6", 2092253161)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-139.909, 0.000, 6.991);
+	SeqNo(2092253161);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence20", "picket_fence2", -2134742876)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-239.857, 3.000, 71.330);
+	SeqNo(-2134742876);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low1201", "picket_fence2_low", -2073494733)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-117.231, 0.000, 23.477);
+	SeqNo(-2073494733);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30002", "picket_fence2", -2042564522)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-232.757, 3.000, 88.006);
+	SeqNo(-2042564522);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100300", "picket_fence2", -1996303193)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-93.453, 0.000, 6.673);
+	SeqNo(-1996303193);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010043", "picket_fence2", -1965884881)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-89.916, 0.000, 40.356);
+	SeqNo(-1965884881);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100311", "picket_fence2", -1954596813)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-106.798, 0.000, 40.242);
+	SeqNo(-1954596813);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi700", "picket_fence_multi6", -1899609257)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-138.854, -0.001, -26.429);
+	SeqNo(-1899609257);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100410", "picket_fence2", -1886148687)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.078, 0.000, 20.059);
+	SeqNo(-1886148687);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010040062", "picket_fence2", -1732124150)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(272.775, 60.000, -164.782);
+	SeqNo(-1732124150);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi600", "picket_fence_multi6", -1699395926)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-138.807, -0.001, -36.545);
+	SeqNo(-1699395926);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi80", "picket_fence_multi6", -1656297334)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-173.976, 0.000, -6.608);
+	SeqNo(-1656297334);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3020", "picket_fence2", -1652905866)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-317.325, 9.687, 139.696);
+	SeqNo(-1652905866);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_gate_low", "picket_gate_low", -1630780529)
+{
+	ChildRotation(-0.282, -0.003, -0.959, -0.001);
+	ChildPosition(-227.613, 3.000, 76.974);
+	SeqNo(-1630780529);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi30103", "picket_fence_multi3", -1578844338)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-26.206, 0.000, 75.675);
+	SeqNo(-1578844338);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi6", "picket_fence_multi6", -1540766675)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-209.187, 0.000, -36.675);
+	SeqNo(-1540766675);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi7", "picket_fence_multi6", -1489857104)
+{
+	ChildRotation(0.708, 0.000, 0.707, 0.000);
+	ChildPosition(-209.235, 0.000, -26.559);
+	SeqNo(-1489857104);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004", "picket_fence2", -1486601952)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-117.081, 0.000, 6.510);
+	SeqNo(-1486601952);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2000", "picket_fence2", -1476210435)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-300.553, 9.680, 119.328);
+	SeqNo(-1476210435);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100400610", "picket_fence2", -1419215011)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(272.739, 60.000, -171.451);
+	SeqNo(-1419215011);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low122", "picket_fence2_low", -1398170814)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-117.221, 0.000, 26.899);
+	SeqNo(-1398170814);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi8010", "picket_fence_multi6", -1384791676)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-174.737, 0.000, 38.746);
+	SeqNo(-1384791676);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100400601", "picket_fence2", -1371740338)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(272.747, 60.000, -168.078);
+	SeqNo(-1371740338);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi3010", "picket_fence_multi3", -1340792211)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-174.775, 0.000, 31.863);
+	SeqNo(-1340792211);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3001", "picket_fence2", -1340635603)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-239.672, 3.000, 88.136);
+	SeqNo(-1340635603);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3010030", "picket_fence2", -1314352105)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-106.945, 0.000, 6.581);
+	SeqNo(-1314352105);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi300", "picket_fence_multi3", -1311390279)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-138.858, -0.001, -12.898);
+	SeqNo(-1311390279);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi30101", "picket_fence_multi3", -1282642070)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-24.875, 0.000, 30.598);
+	SeqNo(-1282642070);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence310", "picket_fence2", -1253725621)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-297.175, 9.680, 119.287);
+	SeqNo(-1253725621);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301003", "picket_fence2", -1244693999)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-113.692, 0.000, 6.532);
+	SeqNo(-1244693999);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100400600", "picket_fence2", -1234087416)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(272.836, 59.991, -161.481);
+	SeqNo(-1234087416);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30101", "picket_fence2", -1220628985)
+{
+	ChildRotation(0.706, 0.000, 0.708, 0.000);
+	ChildPosition(-293.636, 9.680, 129.143);
+	SeqNo(-1220628985);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004005", "picket_fence1", -1180196914)
+{
+	ChildRotation(0.707, -0.001, -0.707, 0.001);
+	ChildPosition(272.596, 60.204, -178.075);
+	SeqNo(-1180196914);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi60", "picket_fence_multi6", -1120610004)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-173.961, 0.000, -37.138);
+	SeqNo(-1120610004);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100301", "picket_fence2", -1074511139)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.056, 0.000, 16.702);
+	SeqNo(-1074511139);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence1_low1", "picket_fence1_low", -1053236853)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-108.857, 0.000, 16.646);
+	SeqNo(-1053236853);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100402", "picket_fence2", -1035703490)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-96.663, 0.000, 40.308);
+	SeqNo(-1035703490);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi701", "picket_fence_multi6", -1020671244)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-139.956, 0.000, 17.107);
+	SeqNo(-1020671244);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100", "picket_fence2", -936080901)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(-317.406, 9.680, 126.240);
+	SeqNo(-936080901);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low1211", "picket_fence2_low", -913413237)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-117.362, 0.000, 16.719);
+	SeqNo(-913413237);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004002", "picket_fence2", -905215783)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-90.110, 0.000, 36.909);
+	SeqNo(-905215783);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301004003", "picket_fence2", -881027879)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-110.157, 0.000, 40.215);
+	SeqNo(-881027879);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence301003000", "picket_fence2", -798390632)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-90.148, 0.000, 30.195);
+	SeqNo(-798390632);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30005", "picket_fence2", -736355858)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-229.422, 3.000, 87.937);
+	SeqNo(-736355858);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi3", "picket_fence_multi3", -730402767)
+{
+	ChildRotation(0.708, 0.000, 0.707, 0.000);
+	ChildPosition(-209.239, 0.000, -13.028);
+	SeqNo(-730402767);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi7010", "picket_fence_multi6", -590366605)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-174.771, 0.000, 18.333);
+	SeqNo(-590366605);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi6010", "picket_fence_multi6", -513917741)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-174.723, 0.000, 8.216);
+	SeqNo(-513917741);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi60103", "picket_fence_multi6", -502583516)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-26.155, 0.000, 52.029);
+	SeqNo(-502583516);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30006", "picket_fence2", -475325719)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-226.041, 3.000, 87.952);
+	SeqNo(-475325719);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low", "picket_fence2_low", -452323322)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-226.179, 3.000, 84.474);
+	SeqNo(-452323322);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence300", "picket_fence2", -381539152)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-239.752, 3.000, 74.716);
+	SeqNo(-381539152);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence30100411", "picket_fence2", -377897752)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-103.410, 0.000, 40.264);
+	SeqNo(-377897752);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_gate_low2", "picket_gate_low", -357135938)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-110.438, 0.000, 16.651);
+	SeqNo(-357135938);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence2_low120", "picket_fence2_low", -270243232)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-117.079, 0.000, 36.908);
+	SeqNo(-270243232);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence3", "picket_fence2", -243740452)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-236.479, 3.000, 71.289);
+	SeqNo(-243740452);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi80102", "picket_fence_multi6", -124864810)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-24.739, 0.000, -7.055);
+	SeqNo(-124864810);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence10", "picket_fence1", -50506769)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-310.776, 9.608, 119.343);
+	SeqNo(-50506769);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}
+
+Object("picket_fence_multi70103", "picket_fence_multi6", -49722907)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-26.202, 0.000, 62.145);
+	SeqNo(-49722907);
+	Team(0);
+	NetworkId(-1);
+	Layer(3);
+}

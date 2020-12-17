@@ -1,0 +1,131 @@
+[GameObjectClass]
+ClassLabel 			= "soldier"
+GeometryName 			= "tat_inf_jawa.msh"
+
+[Properties]
+FootWaterSplashEffect 		= "com_sfx_watersplash_sm"
+WaterSplashEffect 		= "com_sfx_watersplash_md"
+WakeWaterSplashEffect		= "com_sfx_watersplash_wade"
+
+//this keeps the player from entering first person with this char
+forcemode                       = 1
+
+UnitType			= "support"
+
+AISizeType			= "SOLDIER"
+NoEnterVehicles			= 1
+
+GeometryName 			= "tat_inf_jawa"
+GeometryLowRes 			= "tat_inf_jawa_low1"
+SkeletonName			= "jawa"
+SkeletonLowRes			= "jawalz"
+
+SkeletonRootScale		= "0.6"
+SkeletonRootScaleLowRes		= "0.6"
+CollisionRootScale		= "0.6"
+
+// these are correct for the dudes running around in Tat 2.....but not if you play as one, WTF?
+CollisionHeadOffset 		= "0.0 0.85 0.1"
+CollisionTorsoOffset 		= "0.0 0.7 0.0"
+
+CAMERASECTION 			= "STAND"
+
+EyePointOffset 			= "0.0 2.0 0.0"
+TrackOffset 			= "0.0 -0.75 3.5"
+TiltValue			= "7"
+
+CAMERASECTION 			= "CROUCH"
+
+EyePointOffset 			= "0.0 2.0 0.0"
+TrackOffset 			= "0.0 -0.75 3.5"
+TiltValue			= "7"
+
+CAMERASECTION       	= "SPRINT"
+
+EyePointOffset 			= "0.0 2.0 0.0"
+TrackOffset 			= "0.0 -0.75 5.0"
+TiltValue			= "7"
+CameraBlendTime     	= "0.75"
+
+MaxHealth 			= 800.0
+
+Acceleraton 			= 30.0
+MaxSpeed 			= 6.0
+MaxStrafeSpeed 			= 4.0
+MaxTurnSpeed 			= 3.0
+
+AnimatedAddon = "CHRISTMASHAT"
+GeometryAddon = "hatbig"
+AddonAttachJoint = "bone_head"
+
+WEAPONSECTION = 1
+WeaponName 			= "tat_weap_inf_snowball"
+WeaponAmmo 			= 2
+
+WEAPONSECTION = 2
+WeaponName 			= "tat_weap_inf_snowball_med"
+WeaponAmmo 			= 1
+
+WEAPONSECTION = 3
+WeaponName 			= "tat_weap_inf_snowball_big"
+WeaponAmmo 			= 2
+
+WEAPONSECTION = 4
+WeaponName 			= "tat_weap_inf_jawa_fusioncutter"
+WeaponAmmo 			= 0
+
+WEAPONSECTION = 5
+WeaponName 			= "tat_weap_inf_snow_mine"
+WeaponAmmo 			= 4
+WeaponChannel			= 1
+
+DropItemClass           = "com_item_powerup_ammo"
+DropItemProbability     = 0.25
+NextDropItem            = "-"
+DropItemClass           = "com_item_powerup_health25"
+DropItemProbability     = 0.05
+NextDropItem            = "-"
+DropItemClass           = "com_item_powerup_health100"
+DropItemProbability     = 0.8
+NextDropItem            = "-"
+DropItemClass           = "com_item_powerup_dual"
+DropItemProbability     = 0.8
+NextDropItem            = "-"
+DropItemClass           = "com_item_powerup_energy"
+DropItemProbability     = 0.10
+NextDropItem            = "-"
+DropItemClass           = "com_item_powerup_offense"
+DropItemProbability     = 0.02
+NextDropItem            = "-"
+DropItemClass           = "com_item_powerup_defense"
+DropItemProbability     = 0.02
+
+//SOUND
+HurtSound			= "tat_inf_jawa_hurt"
+DeathSound              	= "tat_inf_jawa_death"
+//LeftFootstepSound       	= "soldierstepleft"
+//RightFootstepSound      	= "soldierstepright"
+AcquiredTargetSound     	= "tat_inf_jawa_chatter"
+HidingSound             	= "tat_inf_jawa_chatter"
+ApproachingTargetSound  	= "tat_inf_jawa_chatter"
+FleeSound               	= "tat_inf_jawa_chatter"
+PreparingForDamageSound 	= "tat_inf_jawa_chatter"
+HeardEnemySound         	= "tat_inf_jawa_heard"
+//WaterWadingSound        	= "com_inf_wading"
+//ShockFadeOutTime        	= "0.8"
+//ShockFadeInTime         	= "2.0"
+//RollSound               	= "com_inf_roll"
+JumpSound               	= ""
+LandSound               	= ""
+ClothingRustleSound     	= ""
+LowHealthSound                  = "tat_inf_jawa_chatter"
+LowHealthThreshold              = "1.1"
+
+
+VOUnitType                      = 172
+
+VOSound = "jawa_inf_chatter_AcquiredTarget    AcquiredTarget"
+VOSound = "jawa_inf_chatter_NearbyFriendlySlaughter      NearbyFriendlySlaughter"
+VOSound = "jawa_inf_chatter_KillingSpree4      KillingSpree4"
+VOSound = "jawa_inf_chatter_Grenade      Grenade"
+VOSound = "jawa_inf_chatter_FriendlyFire      FriendlyFire"

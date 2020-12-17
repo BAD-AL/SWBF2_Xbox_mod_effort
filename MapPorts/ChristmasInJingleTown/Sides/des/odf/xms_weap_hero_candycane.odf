@@ -1,0 +1,46 @@
+[WeaponClass]
+ClassParent         = "com_weap_inf_force_lightning"
+
+[Properties]
+OrdnanceName        = "xms_weap_inf_candycane_ord"
+//FirePointName       = "hp_fire"
+
+FlashColor          = "80 80 255 255"
+FlashLength         = 0.025
+FlashLightColor     = "220 220 255 175"
+Discharge           = "med_smoke_effect"
+
+HUDTag                          = "hud_force_push"
+
+RoundsPerClip       = "30"
+ReloadTime          = "3.0"
+HeatRecoverRate     = "0.2"
+HeatThreshold       = "0.0"
+
+TriggerSingle       = "1"
+ShotDelay           = "0.1"
+HeatPerShot         = "0.0"
+
+SalvoCount          = "20"
+ShotsPerSalvo       = "1"
+SalvoDelay          = "0.1"
+InitialSalvoDelay   = "0.1"
+SalvoTime           = "0.0"
+
+EnergyDrain  		=  40.0
+
+//******************************************************
+//***************   SOUND       ****************
+//******************************************************
+
+FireSound           = "flame_on"
+ReloadSound         = "com_weap_inf_reload_med"
+ChangeModeSound     = "com_weap_inf_equip_med"
+FireEmptySound      = "com_weap_inf_ammo_empty"
+WeaponChangeSound   = "com_weap_inf_equip_med"
+JumpSound           = "com_weap_inf_rifle_mvt_jump"
+LandSound           = "com_weap_inf_rifle_mvt_land"
+RollSound           = "com_weap_inf_rifle_mvt_roll"
+//ProneSound          = "com_weap_inf_rifle_mvt_lie"
+SquatSound          = "com_weap_inf_rifle_mvt_squat"
+//StandSound          = "com_weap_inf_rifle_mvt_getup"

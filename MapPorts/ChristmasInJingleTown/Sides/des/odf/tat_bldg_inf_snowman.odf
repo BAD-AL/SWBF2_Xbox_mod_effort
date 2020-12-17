@@ -1,0 +1,23 @@
+[GameObjectClass]
+ClassParent          	= "com_bldg_inf_autoturret"
+GeometryName            = "snowman_ord.msh"
+
+[Properties]
+// NOBODY has override textures for this!
+//OverrideTexture 	= "com_prop_dropturret_imp"
+
+BUILDINGSECTION         = "BODY"
+GeometryName            = "snowman_ord"
+ExplosionName           = "tat_bldg_inf_autoturret_exp"
+
+BUILDINGSECTION         = "TURRET1"
+
+TurretNodeName 		= "aimer_y"
+
+TURRETSECTION       	= "TURRET1"
+
+WeaponName           	= "com_weap_inf_snowball_med"
+WeaponAmmo          	= "100"
+
+AimerNodeName           = "aimer_x"
+FirePointName           = "hp_fire"

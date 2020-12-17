@@ -1,0 +1,28 @@
+[ExplosionClass]
+ClassLabel = "explosion"
+
+[Properties]
+LifeSpan = "1.0"
+Damage = "50.0"
+DamageRadius = "4.0"
+Shake = "4.0"
+ShakeRadius = "4.0"
+Effect = "com_sfx_weap_redbolt_exp_xl"
+ArmorScale =    "1.0"
+HealthScale =   "1.0"
+ShieldScale =   "0.5"
+SoundProperty = "com_weap_obj_small_exp"
+
+NumChunks = "5"
+ChunkGeometryName = "com_smallchunk1"
+ChunkTerrainCollisions = "10"
+ChunkTrailEffect = "com_sfx_chunktrail_xs"
+ChunkPhysics = "FULL"
+ChunkOmega = "5.0 4.0 5.0"
+ChunkSpeed = "5.0 10.0"
+ChunkStartDistance = "1.0"
+
+SoundProperty = "com_weap_obj_small_exp"
+FoleyFXGroup    = "metal_foley"
+
+

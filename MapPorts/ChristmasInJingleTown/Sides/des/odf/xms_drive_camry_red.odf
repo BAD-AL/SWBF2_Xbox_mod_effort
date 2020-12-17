@@ -1,0 +1,223 @@
+[GameObjectClass]
+ClassLabel          = "hover"
+GeometryName            = "camry_red.msh"
+
+[Properties]
+FLYERSECTION            = "BODY"
+VehicleType             = "medium"
+
+ReserveOneForPlayer     = "0"
+
+MapTexture          = "car_icon"
+HealthTexture       = "car_icon"
+VehiclePosition     = "common.vehiclepositions.pilot"
+MapScale            = 1.5
+
+GeometryName        = "camry_red"
+
+Explosion           = "com_weap_veh_guided_rocket_exp"
+ExplosionCritical   = "com_weap_veh_guided_rocket_exp"
+ExplosionDestruct   = "com_weap_veh_guided_rocket_exp"
+//FirstPerson       = "cis\cishlfrd;cis_1st_cockpit_tankdroid"
+FirstPersonFOV      = "45"
+
+CockpitTension      = 35
+
+CollisionScale      = 2.0
+CollisionThreshold  = 4
+MaxHealth           = 8000.0
+HealthType          = "vehicle"
+
+TimeRequiredToEject	=	"10.0"
+EjectResistance			= "0.02"
+TimeTilReboard			= "5.0"
+
+SetAltitude     = 0.0
+GravityScale    = 3.0
+LiftSpring      = 4.0
+LiftDamp        = 3.0
+
+Acceleration    = 10.0
+Deceleration    = 20.0
+Traction        = 50.0
+ForwardSpeed    = 15.0
+ReverseSpeed    = 15.0
+StrafeSpeed = 0.0
+FloatsOnWater	= 0
+
+EnergyBar           = 100
+EnergyOverheat      = 20
+EnergyAutoRestore   = 10
+EnergyBoostDrain    = 20
+BoostSpeed          = 25
+BoostAcceleration   = 10
+BoostFOV            = 75
+
+AddSpringBody           = "0.0 1.6 2.0 2.0"              
+BodySpringLength        = 0.4                  
+BodyOmegaXSpringFactor  = -2.0
+
+AddSpringBody           = "0.0 1.6 -0.2 2.0"              
+BodySpringLength        = 0.4                
+
+AddSpringBody       = "-1.50 0.8 3.0 1.0"
+BodySpringLength    = 0.4
+AddSpringBody       = "1.50 0.8 3.0 1.0"
+BodySpringLength    = 0.4
+
+AddSpringBody       = "0.0 0.8 -2.0 1.0"              
+BodySpringLength    = 0.4 
+
+AddSpringBody       = "0.0 0.6 -4.0 0.75"              
+BodySpringLength    = 0.4 
+
+NoRandomSpring      = 1
+
+VelocitySpring      = 4
+VelocityDamp        = 2
+OmegaXSpring        = 3.0
+OmegaXDamp          = 2.0
+OmegaZSpring        = 6.0
+OmegaZDamp          = 2.5
+
+PCPitchRate         = "15.0"
+PCSpinRate          = "15.0"
+PCTurnRate          = "20.0"
+
+SpinRate            = 1.0
+TurnRate            = 1.25
+TurnFilter          = 10.0
+PitchRate           = 0.5
+LevelSpring         = 5.0
+LevelDamp           = 5.0 //3.0
+
+EyePointOffset          = "0.0 0.5 3.0"
+TrackCenter         = "0.0 3.0 -6.0"
+TrackOffset             = "0.0 0.0 2.0"
+TiltValue           = "3.0"
+//NormalDirection     = "0.0 -10.0 0.0"
+
+PitchLimits         = "-20.0 30.0"
+YawLimits           =   "-0.0 0.0"
+
+
+WEAPONSECTION       = 1
+
+WeaponName          = "xms_weap_drive_beer"
+WeaponAmmo          = 0
+
+FirePoint           = "hp_pilot"
+
+FLYERSECTION            = "TURRET1"
+
+VehiclePosition         = "common.vehiclepositions.gunner"
+
+EyePointOffset          = "0.0 0.5 3.0"
+TrackCenter         = "0.0 3.0 -6.0"
+TrackOffset             = "0.0 0.0 2.0"
+TiltValue           = "3.0"
+
+PitchTurnFactor     = "0.0"
+PitchLimits         = "-40.0 15.0"
+YawLimits           = "-180.0 180.0"
+TurnRate            = 1.8
+TurnFilter          = 10.0
+PitchRate           = 0.5
+PitchFilter         = 15.0
+
+ForceMode = 1
+
+WeaponName          = "xms_weap_drive_snowball"
+WeaponAmmo          = 0
+
+FirePoint           = "hp_pilot"
+
+CHUNKSECTION            = "CHUNK1"
+ChunkGeometryName       = "com_mediumchunk1"
+ChunkNodeName           = ""
+ChunkTerrainCollisions  = "2"
+ChunkTerrainEffect      = "com_sfx_dirtspray_lg"
+ChunkPhysics            = "FULL"
+ChunkOmega              = "1.0 -.75 3.0"
+ChunkSpeed              = "5.0"
+ChunkUpFactor           = "2.0"
+ChunkBounciness         = "0.75"
+ChunkStickiness         = "0.5"
+
+CHUNKSECTION            = "CHUNK2"
+ChunkGeometryName       = "com_mediumchunk1"
+ChunkNodeName           = ""
+ChunkTerrainCollisions      = "5"
+ChunkTerrainEffect      = "com_sfx_dirtspray_lg"
+ChunkPhysics            = "FULL"
+ChunkOmega              = "1.0 0.05 1.5"
+ChunkSpeed              = "9.0"
+ChunkUpFactor           = "6.0"
+ChunkBounciness         = "1"
+
+CHUNKSECTION            = "CHUNK3"
+ChunkGeometryName       = "com_mediumchunk1"
+ChunkNodeName           = ""
+ChunkOmega              = "0.5 0.03 1.0"
+ChunkTerrainCollisions  = "4"
+ChunkTerrainEffect      = "com_sfx_explosion_lg"
+ChunkPhysics            = "FULL"
+ChunkSpeed              = "4.0"
+
+CHUNKSECTION            = "CHUNK4"
+ChunkGeometryName       = "com_mediumchunk1"
+ChunkNodeName           = ""
+ChunkTerrainCollisions  = "3"
+ChunkTerrainEffect      = "com_sfx_dirtspray_lg"
+ChunkPhysics            = "FULL"
+ChunkOmega              = "1.0 -.05 1.0"
+ChunkSpeed              = "11.0"
+ChunkUpFactor           = "5.0"
+
+CHUNKSECTION            = "CHUNK5"
+ChunkGeometryName       = "com_mediumchunk1"
+ChunkNodeName           = ""
+ChunkTerrainCollisions  = "2"
+ChunkTerrainEffect      = "com_sfx_dirtspray_lg"
+ChunkPhysics            = "FULL"
+ChunkOmega              = "0.6 -0.05 0.9"
+ChunkSpeed              = "6.0"
+ChunkUpFactor           = "1.0"
+
+CHUNKSECTION            = "CHUNK6"
+ChunkGeometryName       = "com_mediumchunk1"
+ChunkNodeName           = ""
+ChunkOmega              = "3.0 2.0 2.0"
+ChunkTerrainCollisions      = "4"
+ChunkTerrainEffect      = "com_sfx_dirtspray_lg"
+ChunkPhysics            = "FULL"
+ChunkSpeed              = "12.0"
+ChunkUpFactor           = "6.0"
+
+AISizeType          = "MEDIUM"
+
+//////////////////////////
+////DAMAGE///////////
+///////////////
+
+DamageStartPercent      = 60.0
+DamageStopPercent       = 20.0
+DamageEffect            = "com_sfx_vehiclespark"
+DamageAttachPoint       = "hp_pilot"
+
+
+EngineSound             = ""
+//HurtSound                 = "cis_inf_com_chatter_wound"
+DeathSound              = "imp_weap_ord_exp_lg"
+VehicleCollisionSound   ="com_veh_collision_lg"
+TurnOnSound             = ""
+TurnOffSound            = ""
+Music                   = ""
+RepMusic 		= ""
+CISMusic 		= ""
+ImpMusic 		= ""
+MusicSpeed              = ".15"
+MusicDelay              = "3.0"
+GroundedSound           = ""
+GroundedHeight          = ""
+FoleyFXGroup            = "metal_foley"

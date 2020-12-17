@@ -1,0 +1,32 @@
+[ExplosionClass]
+ClassLabel          = "explosion"
+
+[Properties]
+Damage 		  = "75.0"
+
+DamageRadiusInner = "1.0"
+DamageRadiusOuter = "15.0"
+
+Push 		  = "8.0"
+PushRadiusInner   = "4.0"
+PushRadiusOuter   = "15.0"
+
+Shake 		  = "0.0"
+ShakeLength	  = "0.60"
+ShakeRadiusInner  = "8.0" 
+ShakeRadiusOuter  = "12.0"
+
+Effect 		  = "com_sfx_coal_exp"
+WaterEffect 	  = "com_sfx_watersplash_lg"
+
+LightColor 	  = "0 0 0 0"
+LightRadius 	  = "12.0"
+LightDuration 	  = "1.0"
+
+VehicleScale	  = "1.0"
+PersonScale 	  = "1.0"
+DroidScale 	  = "1.0"
+AnimalScale	  = "1.0"
+BuildingScale	  = "0.25"
+
+SoundProperty	= "com_weap_inf_rock_bounce"

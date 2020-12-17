@@ -1,0 +1,6151 @@
+Version(3);
+SaveType(0);
+
+Camera("camera")
+{
+	Rotation(0.774, 0.389, -0.447, 0.224);
+	Position(155.357, 443.520, -3.120);
+	FieldOfView(55.400);
+	NearPlane(1.000);
+	FarPlane(2700.000);
+	ZoomFactor(1.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(348.738, 34.820, 340.477,  0.220, 0.056, -0.944, 0.239);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+}
+LightName("XMS_conquest.LGT");
+ControllerManager("StandardCtrlMgr");
+
+WorldExtents()
+{
+	Min(0.000000, 0.000000, 0.000000);
+	Max(0.000000, 0.000000, 0.000000);
+}
+
+NextSequence(-3435771);
+
+Object("cp12", "com_bldg_controlzone", -84131833)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(237.222, 59.990, -359.382);
+	SeqNo(-84131833);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp12");
+	ControlRegion("cp12control");
+	SpawnPath("cp12");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp5", "com_bldg_controlzone", -174817323)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-225.679, 3.000, 76.347);
+	SeqNo(-174817323);
+	Team(2);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp5");
+	ControlRegion("cp5control");
+	SpawnPath("cp5");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp8", "com_bldg_controlzone", -286248078)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(7.635, 0.000, -9.586);
+	SeqNo(-286248078);
+	Team(1);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp8");
+	ControlRegion("cp8control");
+	SpawnPath("cp8");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp14", "com_bldg_controlzone", -423102651)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-139.392, 67.000, 354.449);
+	SeqNo(-423102651);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp14");
+	ControlRegion("");
+	SpawnPath("cp14");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp1", "com_bldg_controlzone", -502730214)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-263.325, 0.000, 1.747);
+	SeqNo(-502730214);
+	Team(1);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp1_capture");
+	ControlRegion("");
+	SpawnPath("cp1_spawn");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp9", "com_bldg_controlzone", -531860385)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(114.857, 29.800, 237.012);
+	SeqNo(-531860385);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp9");
+	ControlRegion("");
+	SpawnPath("cp9");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp4", "com_bldg_controlzone", -557173381)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-113.738, 0.000, -65.654);
+	SeqNo(-557173381);
+	Team(2);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp4_capture");
+	ControlRegion("cp4control");
+	SpawnPath("cp4_spawn");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp13", "com_bldg_controlzone", -640135611)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(291.578, 59.995, -165.734);
+	SeqNo(-640135611);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp13");
+	ControlRegion("cp13control");
+	SpawnPath("cp13");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp3", "com_bldg_controlzone", -786076975)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-109.006, 0.172, 11.531);
+	SeqNo(-786076975);
+	Team(1);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp3_capture");
+	ControlRegion("cp3control");
+	SpawnPath("cp3_spawn");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp6", "com_bldg_controlzone", -1394302233)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(27.867, 0.000, 56.991);
+	SeqNo(-1394302233);
+	Team(2);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp6");
+	ControlRegion("");
+	SpawnPath("cp6");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp10", "com_bldg_controlzone", -1513521879)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(175.853, 16.000, 87.699);
+	SeqNo(-1513521879);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp10");
+	ControlRegion("");
+	SpawnPath("cp10");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp11", "com_bldg_controlzone", -1630679549)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-253.883, 67.054, 305.181);
+	SeqNo(-1630679549);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp11");
+	ControlRegion("");
+	SpawnPath("cp11");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp2", "com_bldg_controlzone", 1195634002)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-305.666, 10.800, 125.061);
+	SeqNo(1195634002);
+	Team(2);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp2_capture");
+	ControlRegion("cp2control");
+	SpawnPath("cp2_spawn");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("cp7", "com_bldg_controlzone", 654321269)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-69.506, 0.000, 95.838);
+	SeqNo(654321269);
+	Team(1);
+	NetworkId(-1);
+	Layer(1);
+	CaptureRegion("cp7");
+	ControlRegion("cp7control");
+	SpawnPath("cp7");
+	TurretPath("");
+	AllyPath("");
+	AllyCount("65536");
+	SpawnRegion("");
+	Radius("0.0");
+	ValueBleed_Alliance("10");
+	ValueBleed_CIS("10");
+	ValueBleed_Empire("10");
+	ValueBleed_Republic("10");
+	ValueBleed_Neutral("0");
+	ValueBleed_Locals("0");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_enemyCaptured_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_enemyCaptured_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_enemyCaptured_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_enemyCaptured_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_report_captured_commandpost");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+	AISpawnWeight("");
+	HUDIndex("");
+	HUDIndexDisplay("1");
+}
+
+Object("xms_road_turn5", "xms_road_turn", 162804)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-219.943, 3.000, 68.111);
+	SeqNo(162804);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712954", "xms_road_short", 2272504)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-288.160, 9.900, 121.269);
+	SeqNo(2272504);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t", "xms_road_t", 2914960)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-229.000, 0.000, -44.000);
+	SeqNo(2914960);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2a", "thunder_house2a", 24965647)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(282.023, 61.500, -291.936);
+	SeqNo(24965647);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate", "cal_prop_crate", 32915532)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-234.658, 0.750, -60.284);
+	SeqNo(32915532);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage2", "caleb_garage", 42698518)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-181.539, 0.000, -13.526);
+	SeqNo(42698518);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7124", "xms_road_short", 54671702)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-62.809, -0.010, -44.000);
+	SeqNo(54671702);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long510", "xms_road_long", 62521193)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-121.460, 0.000, -21.545);
+	SeqNo(62521193);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5145", "xms_road_long", 77630692)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-25.174, 0.000, 89.766);
+	SeqNo(77630692);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home23", "Eddie_Prop_Home01", 86222313)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(177.812, 16.000, 96.036);
+	SeqNo(86222313);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_short110", "fragme_xmslights_short", 102056998)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-263.058, 70.199, 296.106);
+	SeqNo(102056998);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp18", "gt1_prop_lamp", 109197007)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-93.638, 4.600, 35.333);
+	SeqNo(109197007);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long7", "xms_road_long", 121281788)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-252.966, 0.000, 88.651);
+	SeqNo(121281788);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_house3b", "caleb_house3b", 123827007)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-99.284, 0.150, 29.533);
+	SeqNo(123827007);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short3", "xms_road_short", 127463708)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-189.000, -0.010, -49.000);
+	SeqNo(127463708);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712958", "xms_road_short", 129646635)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(319.034, 60.000, -176.740);
+	SeqNo(129646635);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_chalet_closed2", "fragme_chalet", 132683458)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-201.336, -4.000, 126.818);
+	SeqNo(132683458);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792443", "xms_road_long", 133817700)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-85.666, 0.000, 67.978);
+	SeqNo(133817700);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_chair_04", "cal_prop_chair_04", 148223984)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-231.508, 3.000, 75.443);
+	SeqNo(148223984);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home03", "Eddie_Prop_Home02", 148227281)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(122.000, 33.800, 246.000);
+	SeqNo(148227281);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Refrigerator1", "Refrigerator", 160663535)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-238.332, 3.000, 79.585);
+	SeqNo(160663535);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_long42", "fragme_xmslights_long", 187973988)
+{
+	ChildRotation(0.654, 0.653, 0.270, -0.271);
+	ChildPosition(-135.611, 69.800, 355.743);
+	SeqNo(187973988);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t7", "xms_road_t", 214510623)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-292.347, 9.940, 78.338);
+	SeqNo(214510623);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn", "com_item_vehicle_spawn", 233381518)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-289.000, 10.000, 119.000);
+	SeqNo(233381518);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp2");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_explorer");
+	ClassCISATK("xms_drive_explorer");
+	ClassImpATK("xms_drive_explorer");
+	ClassRepATK("xms_drive_explorer");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_explorer");
+	ClassCISDEF("xms_drive_explorer");
+	ClassImpDEF("xms_drive_explorer");
+	ClassRepDEF("xms_drive_explorer");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("cal_prop_counter122", "cal_prop_counter", 235555723)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(302.771, 63.600, -170.301);
+	SeqNo(235555723);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51470", "xms_road_long", 236506859)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-3.107, 0.000, 22.742);
+	SeqNo(236506859);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_wstv1", "cal_prop_wstv", 239532954)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(300.326, 68.500, -181.822);
+	SeqNo(239532954);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate31", "cal_prop_crate", 249066053)
+{
+	ChildRotation(0.708, 0.706, 0.000, 0.000);
+	ChildPosition(-265.894, 0.750, -5.693);
+	SeqNo(249066053);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long1", "xms_road_long", 278245186)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-229.058, 0.000, -21.621);
+	SeqNo(278245186);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman5", "snowman", 289396839)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(279.000, 59.818, -179.000);
+	SeqNo(289396839);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp11", "gt1_prop_lamp2", 295486639)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(293.719, 68.556, -182.161);
+	SeqNo(295486639);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short71", "xms_road_short", 296556812)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-211.200, 0.000, 45.558);
+	SeqNo(296556812);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_sink1", "cal_prop_sink", 300211863)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-311.677, 11.000, 128.179);
+	SeqNo(300211863);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter111", "cal_prop_counter", 308907741)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-97.958, 4.500, 29.784);
+	SeqNo(308907741);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage12", "caleb_garage", 322217646)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(306.284, 60.000, -332.401);
+	SeqNo(322217646);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7130", "xms_road_short", 322773537)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(112.247, 14.930, -130.052);
+	SeqNo(322773537);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("edsat_prop_armchair", "edsat_prop_armchair", 327113096)
+{
+	ChildRotation(0.955, 0.000, 0.295, 0.000);
+	ChildPosition(-309.984, 11.000, 136.288);
+	SeqNo(327113096);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med9", "fragme_xmslights_med", 332574418)
+{
+	ChildRotation(0.500, 0.500, -0.500, 0.500);
+	ChildPosition(-257.478, 70.200, 303.414);
+	SeqNo(332574418);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med6", "fragme_xmslights_med", 339007567)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-234.435, 7.500, 71.361);
+	SeqNo(339007567);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2a2", "thunder_house2a", 339118198)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-167.653, 1.500, -18.464);
+	SeqNo(339118198);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_long1", "fragme_xmslights_long", 357023047)
+{
+	ChildRotation(0.698, 0.113, -0.698, 0.113);
+	ChildPosition(-106.861, 8.600, 29.806);
+	SeqNo(357023047);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5147920", "xms_road_long", 359343907)
+{
+	ChildRotation(0.926, 0.000, -0.377, 0.000);
+	ChildPosition(137.962, 14.960, -109.477);
+	SeqNo(359343907);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "xboxprop", 369711690)
+{
+	ChildRotation(-0.021, 0.000, -1.000, 0.000);
+	ChildPosition(300.785, 63.766, -181.441);
+	SeqNo(369711690);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514791", "xms_road_long", 370414283)
+{
+	ChildRotation(0.990, 0.000, 0.000, 0.138);
+	ChildPosition(93.335, 12.100, -130.294);
+	SeqNo(370414283);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med90", "fragme_xmslights_med", 371877741)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-268.516, 70.199, 296.168);
+	SeqNo(371877741);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("basic_wall11", "basic_wall", 380811577)
+{
+	ChildRotation(0.710, 0.704, 0.000, 0.000);
+	ChildPosition(-95.351, -1.500, 25.597);
+	SeqNo(380811577);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short71293", "xms_road_short", 389750459)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(277.394, 59.990, -212.017);
+	SeqNo(389750459);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage", "caleb_garage", 391075161)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-132.978, 0.000, -28.034);
+	SeqNo(391075161);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long53", "xms_road_long", 396976320)
+{
+	ChildRotation(-0.384, 0.000, -0.923, 0.000);
+	ChildPosition(-53.801, 0.000, -71.977);
+	SeqNo(396976320);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_lego_couch2", "gt1_lego_couch", 398761618)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-103.000, 0.139, 31.000);
+	SeqNo(398761618);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712956", "xms_road_short", 409155662)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-98.935, 0.000, 11.106);
+	SeqNo(409155662);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792430", "xms_road_long", 411231615)
+{
+	ChildRotation(0.986, 0.000, 0.000, 0.168);
+	ChildPosition(244.080, 50.000, -212.000);
+	SeqNo(411231615);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("arf_obj.arboretumBridge", "arf_obj.arboretumBridge", 417727772)
+{
+	ChildRotation(0.693, -0.146, 0.690, -0.147);
+	ChildPosition(31.322, 1.000, 13.247);
+	SeqNo(417727772);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate310", "cal_prop_crate", 435035420)
+{
+	ChildRotation(0.708, 0.706, 0.000, 0.000);
+	ChildPosition(-225.055, 3.500, 71.120);
+	SeqNo(435035420);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate3", "cal_prop_crate", 440603558)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(176.791, 16.500, 89.793);
+	SeqNo(440603558);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_sink9", "cal_prop_sink", 459729356)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(300.784, 63.600, -167.798);
+	SeqNo(459729356);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long512", "xms_road_long", 498267500)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-98.973, 0.000, -43.934);
+	SeqNo(498267500);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_chalet", "fragme_chalet", 502353792)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(299.428, 60.000, -175.059);
+	SeqNo(502353792);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5146", "xms_road_long", 506413051)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-25.312, 0.000, -44.000);
+	SeqNo(506413051);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home21", "Eddie_Prop_Home02", 508304190)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-266.433, 70.700, 304.262);
+	SeqNo(508304190);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate8", "cal_prop_crate", 542285490)
+{
+	ChildRotation(0.708, 0.707, 0.000, 0.000);
+	ChildPosition(-104.997, 0.900, 13.797);
+	SeqNo(542285490);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1b", "thunder_house1b", 545226856)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-132.649, 2.000, 16.369);
+	SeqNo(545226856);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2a4", "thunder_house2a", 548905091)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-32.874, 1.500, 63.567);
+	SeqNo(548905091);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1b1", "thunder_house1b", 549182027)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-181.628, 2.000, -24.905);
+	SeqNo(549182027);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs30", "snowballs", 575045968)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-112.826, 1.257, -70.909);
+	SeqNo(575045968);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short710", "xms_road_short", 589345164)
+{
+	ChildRotation(0.697, 0.132, 0.692, 0.133);
+	ChildPosition(-220.116, 0.900, 93.627);
+	SeqNo(589345164);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_sink8", "cal_prop_sink", 598690111)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-98.533, 0.000, 31.224);
+	SeqNo(598690111);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_short1", "fragme_xmslights_short", 601754442)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(292.156, 67.400, -164.088);
+	SeqNo(601754442);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short705", "xms_road_short", 624026570)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-235.981, -0.010, 111.039);
+	SeqNo(624026570);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712970", "xms_road_short", 633621755)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-164.747, -0.010, 29.861);
+	SeqNo(633621755);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short70", "xms_road_short", 637482999)
+{
+	ChildRotation(0.961, 0.000, 0.000, -0.278);
+	ChildPosition(-274.675, 6.800, 45.496);
+	SeqNo(637482999);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window10", "window", 646967278)
+{
+	ChildRotation(0.654, -0.653, 0.270, 0.271);
+	ChildPosition(-100.797, 0.000, -63.088);
+	SeqNo(646967278);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5143", "xms_road_long", 655948586)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-108.084, 0.000, 89.808);
+	SeqNo(655948586);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter4", "cal_prop_counter", 664238487)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-301.438, 11.000, 133.988);
+	SeqNo(664238487);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home01", "Eddie_Prop_Home01", 665331950)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-179.765, 0.000, -59.012);
+	SeqNo(665331950);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter", "cal_prop_counter", 672935134)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-231.869, 3.000, 72.900);
+	SeqNo(672935134);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn10", "xms_road_turn", 676113988)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-3.133, 0.000, 89.775);
+	SeqNo(676113988);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1c1", "thunder_house1c", 677862390)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-110.288, 2.000, -22.121);
+	SeqNo(677862390);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter113", "cal_prop_counter", 679823282)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-102.865, 4.600, 24.079);
+	SeqNo(679823282);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn3", "xms_road_turn", 686838430)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-316.297, 9.940, 45.487);
+	SeqNo(686838430);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp19", "gt1_prop_lamp", 695044833)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-102.148, 4.600, 35.416);
+	SeqNo(695044833);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t5", "xms_road_t", 696188416)
+{
+	ChildRotation(0.000, -0.707, 0.000, 0.707);
+	ChildPosition(-292.321, 9.940, 45.440);
+	SeqNo(696188416);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1324", "xms_road_t", 702395800)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(330.842, 59.990, -321.744);
+	SeqNo(702395800);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman3", "snowman", 703177851)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(10.311, 20.486, 266.714);
+	SeqNo(703177851);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712979", "xms_road_short", 706490701)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-302.734, 9.960, 87.964);
+	SeqNo(706490701);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med2", "fragme_xmslights_med", 721214193)
+{
+	ChildRotation(-0.500, -0.500, 0.500, -0.500);
+	ChildPosition(-230.803, 7.500, 85.001);
+	SeqNo(721214193);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window40", "window", 730823816)
+{
+	ChildRotation(0.271, -0.271, -0.653, -0.653);
+	ChildPosition(-95.808, 0.000, -74.433);
+	SeqNo(730823816);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712989", "xms_road_short", 733725565)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-218.431, 0.000, 120.871);
+	SeqNo(733725565);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7120", "xms_road_short", 736934644)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-139.389, 0.000, -43.926);
+	SeqNo(736934644);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "com_item_healthrecharge", 737534354)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-94.000, 0.173, 34.000);
+	SeqNo(737534354);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("snowman", "snowman", 749461282)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-131.000, 0.400, -72.000);
+	SeqNo(749461282);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Painting1", "Painting1", 752670871)
+{
+	ChildRotation(0.000, 0.707, -0.707, 0.000);
+	ChildPosition(-297.804, 12.721, 131.018);
+	SeqNo(752670871);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792431", "xms_road_long", 754177217)
+{
+	ChildRotation(0.984, 0.000, 0.000, 0.177);
+	ChildPosition(261.770, 56.380, -212.018);
+	SeqNo(754177217);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage5", "caleb_garage", 759652784)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-167.974, 0.000, 29.874);
+	SeqNo(759652784);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("basic_wall2", "basic_wall", 768790188)
+{
+	ChildRotation(-0.500, -0.500, -0.500, 0.500);
+	ChildPosition(-308.370, 12.000, 129.636);
+	SeqNo(768790188);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp20", "gt1_prop_lamp2", 793673928)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-102.813, 5.599, 23.433);
+	SeqNo(793673928);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712990", "xms_road_short", 797280233)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-87.656, 0.000, 99.702);
+	SeqNo(797280233);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long3", "xms_road_long", 807238990)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-229.125, 0.000, 23.154);
+	SeqNo(807238990);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn6", "com_item_vehicle_spawn", 813862787)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-109.633, 0.172, -58.344);
+	SeqNo(813862787);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp4");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_camry");
+	ClassCISATK("xms_drive_camry");
+	ClassImpATK("xms_drive_camry");
+	ClassRepATK("xms_drive_camry");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_camry");
+	ClassCISDEF("xms_drive_camry");
+	ClassImpDEF("xms_drive_camry");
+	ClassRepDEF("xms_drive_camry");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("fragme_xmslights_short10", "fragme_xmslights_short", 821946607)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(291.822, 67.390, -186.043);
+	SeqNo(821946607);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window60", "window", 834079379)
+{
+	ChildRotation(0.654, -0.653, -0.270, -0.270);
+	ChildPosition(-104.553, 0.000, -76.879);
+	SeqNo(834079379);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2b1", "thunder_house2b", 854127337)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-146.495, 1.500, 26.225);
+	SeqNo(854127337);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_bookshelf4", "gt1_prop_bookshelf2", 873097775)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(297.489, 63.650, -182.503);
+	SeqNo(873097775);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn18", "xms_road_turn", 873247191)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(330.814, 59.990, -366.317);
+	SeqNo(873247191);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1b2", "thunder_house1b", 881493648)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-215.372, 2.000, 31.108);
+	SeqNo(881493648);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short711", "xms_road_short", 891901528)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-175.611, 0.000, 45.694);
+	SeqNo(891901528);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp12", "gt1_prop_lamp", 893089919)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(297.100, 63.650, -173.155);
+	SeqNo(893089919);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_table_5", "cal_prop_table_01", 899462874)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(296.008, 67.600, -168.519);
+	SeqNo(899462874);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_chalet_closed3", "fragme_chalet", 904738964)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-101.253, -4.000, 106.682);
+	SeqNo(904738964);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7129", "xms_road_short", 909011300)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(109.203, 14.950, -130.310);
+	SeqNo(909011300);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_sink3", "cal_prop_sink", 937560840)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(292.780, 67.600, -182.206);
+	SeqNo(937560840);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter5", "cal_prop_counter", 942270501)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-238.043, 3.000, 77.759);
+	SeqNo(942270501);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Refrigerator4", "Refrigerator", 970929170)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(296.886, 63.600, -167.850);
+	SeqNo(970929170);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("icesheet_pond1", "icesheet_pond", 977604565)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(47.399, -1.000, 13.000);
+	SeqNo(977604565);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51479242", "xms_road_long", 978250703)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(208.463, 40.000, -177.996);
+	SeqNo(978250703);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_short111", "fragme_xmslights_short", 980620118)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-104.988, 3.000, -62.454);
+	SeqNo(980620118);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Bridge01", "Eddie_Prop_Bridge01", 1023952181)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(-67.899, 4.215, -91.993);
+	SeqNo(1023952181);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792433", "xms_road_long", 1027889411)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(295.161, 59.990, -255.050);
+	SeqNo(1027889411);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712983", "xms_road_short", 1035538684)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(320.846, 59.980, -351.352);
+	SeqNo(1035538684);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7128", "xms_road_short", 1037648077)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-111.240, 0.000, -58.330);
+	SeqNo(1037648077);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "xboxprop", 1040363467)
+{
+	ChildRotation(0.690, 0.000, 0.724, 0.000);
+	ChildPosition(-299.338, 11.164, 140.413);
+	SeqNo(1040363467);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_chalet_closed5", "fragme_chalet", 1048397200)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-39.027, -4.000, 107.278);
+	SeqNo(1048397200);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712988", "xms_road_short", 1061860965)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-159.277, 0.000, 121.175);
+	SeqNo(1061860965);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51473", "xms_road_long", 1088426535)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-2.925, 0.000, -66.386);
+	SeqNo(1088426535);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("basic_wall10", "basic_wall", 1091695798)
+{
+	ChildRotation(0.710, 0.704, 0.000, 0.000);
+	ChildPosition(-95.364, 2.090, 25.577);
+	SeqNo(1091695798);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long", "xms_road_long", 1101593891)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-253.000, 0.000, -21.000);
+	SeqNo(1101593891);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home02", "Eddie_Prop_Home02", 1116151843)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-213.780, 3.800, -63.759);
+	SeqNo(1116151843);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712991", "xms_road_short", 1133350903)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-56.434, 0.000, 99.599);
+	SeqNo(1133350903);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_lego_couch", "gt1_lego_couch", 1134063243)
+{
+	ChildRotation(0.682, 0.000, 0.731, 0.000);
+	ChildPosition(-130.440, 67.000, 358.059);
+	SeqNo(1134063243);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_sink", "cal_prop_sink", 1134171075)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-301.135, 11.000, 130.126);
+	SeqNo(1134171075);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_lego_couch1", "gt1_lego_couch", 1139502091)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(300.362, 63.600, -174.897);
+	SeqNo(1139502091);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn7", "com_item_vehicle_spawn", 1146790604)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-56.830, 0.172, 100.750);
+	SeqNo(1146790604);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp7");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_explorer_green");
+	ClassCISATK("xms_drive_explorer_green");
+	ClassImpATK("xms_drive_explorer_green");
+	ClassRepATK("xms_drive_explorer_green");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_explorer_green");
+	ClassCISDEF("xms_drive_explorer_green");
+	ClassImpDEF("xms_drive_explorer_green");
+	ClassRepDEF("xms_drive_explorer_green");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("cal_prop_crate4", "cal_prop_crate", 1164631220)
+{
+	ChildRotation(0.708, 0.706, 0.000, 0.000);
+	ChildPosition(-308.690, 11.500, 125.286);
+	SeqNo(1164631220);
+	Team(2);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51479241", "xms_road_long", 1171133514)
+{
+	ChildRotation(0.696, 0.129, 0.694, 0.130);
+	ChildPosition(208.384, 33.000, -149.471);
+	SeqNo(1171133514);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712", "xms_road_short", 1177796223)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-175.178, 0.000, -44.000);
+	SeqNo(1177796223);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712977", "xms_road_short", 1189310742)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-37.428, -0.010, -11.593);
+	SeqNo(1189310742);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman6", "snowman", 1214924350)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-490.302, 8.047, -467.403);
+	SeqNo(1214924350);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "Rug", 1215000767)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-299.949, 11.056, 139.486);
+	SeqNo(1215000767);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712960", "xms_road_short", 1218827464)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-147.110, 0.000, 12.909);
+	SeqNo(1218827464);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way4", "xms_road_4way", 1237765185)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-252.924, 0.000, 45.524);
+	SeqNo(1237765185);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long513", "xms_road_long", 1244257184)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-78.305, 0.000, -43.959);
+	SeqNo(1244257184);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_bookshelf1", "gt1_prop_bookshelf1", 1253213100)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-234.789, 3.000, 72.145);
+	SeqNo(1253213100);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short2", "xms_road_short", 1256362721)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-227.000, -0.010, -64.000);
+	SeqNo(1256362721);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2a3", "thunder_house2a", 1263817659)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-202.873, 1.500, -27.849);
+	SeqNo(1263817659);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn4", "com_item_vehicle_spawn", 1292892866)
+{
+	ChildRotation(0.707, 0.013, -0.707, 0.013);
+	ChildPosition(270.868, 60.172, -330.737);
+	SeqNo(1292892866);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp12");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_explorer");
+	ClassCISATK("xms_drive_explorer");
+	ClassImpATK("xms_drive_explorer");
+	ClassRepATK("xms_drive_explorer");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_explorer");
+	ClassCISDEF("xms_drive_explorer");
+	ClassImpDEF("xms_drive_explorer");
+	ClassRepDEF("xms_drive_explorer");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("thunder_house1c4", "thunder_house1c", 1293569224)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(306.711, 62.000, -302.711);
+	SeqNo(1293569224);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp21", "gt1_prop_lamp2", 1305282852)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-100.159, 5.599, 26.584);
+	SeqNo(1305282852);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1327", "xms_road_t", 1305831965)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-85.667, 0.000, 89.801);
+	SeqNo(1305831965);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2b4", "thunder_house2b", 1313876635)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-17.604, 1.500, -19.533);
+	SeqNo(1313876635);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short42", "xms_road_short", 1324400556)
+{
+	ChildRotation(0.000, -0.924, 0.000, -0.383);
+	ChildPosition(-147.965, 0.000, -69.756);
+	SeqNo(1324400556);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t131", "xms_road_t", 1339354506)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-47.518, 0.000, 89.808);
+	SeqNo(1339354506);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_lego_couch4", "gt1_lego_couch", 1343173794)
+{
+	ChildRotation(-0.042, 0.000, -0.999, 0.000);
+	ChildPosition(299.439, 67.639, -176.613);
+	SeqNo(1343173794);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2b3", "thunder_house2b", 1345307896)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-182.318, 1.500, 26.487);
+	SeqNo(1345307896);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712981", "xms_road_short", 1354814130)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(322.075, 59.980, -305.336);
+	SeqNo(1354814130);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1322", "xms_road_t", 1371365696)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-47.458, 0.000, 45.064);
+	SeqNo(1371365696);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712950", "xms_road_short", 1371940216)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(277.154, 60.000, -321.768);
+	SeqNo(1371940216);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792436", "xms_road_long", 1377898592)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(330.939, 59.990, -299.752);
+	SeqNo(1377898592);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792438", "xms_road_long", 1380655361)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(330.835, 59.990, -344.029);
+	SeqNo(1380655361);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712985", "xms_road_short", 1388378283)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(263.681, 59.950, -290.575);
+	SeqNo(1388378283);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t9", "xms_road_t", 1399469396)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-220.020, 0.000, 110.981);
+	SeqNo(1399469396);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way103", "xms_road_4way", 1412918241)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(295.173, 59.990, -277.356);
+	SeqNo(1412918241);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "xboxprop", 1414258170)
+{
+	ChildRotation(0.009, 0.000, -1.000, 0.000);
+	ChildPosition(298.786, 68.639, -181.104);
+	SeqNo(1414258170);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("edsat_prop_armchair1", "edsat_prop_armchair", 1416416161)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-308.125, 11.000, 135.921);
+	SeqNo(1416416161);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "xboxprop", 1431110795)
+{
+	ChildRotation(-0.009, 0.000, -1.000, 0.000);
+	ChildPosition(-231.997, 4.083, 72.751);
+	SeqNo(1431110795);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter119", "cal_prop_counter", 1445177342)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(298.773, 63.600, -167.454);
+	SeqNo(1445177342);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712975", "xms_road_short", 1461734488)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-11.797, -0.010, 26.601);
+	SeqNo(1461734488);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short701", "xms_road_short", 1473594057)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-292.309, 9.970, 63.980);
+	SeqNo(1473594057);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home7", "Eddie_Prop_Home01", 1474418307)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-141.620, 0.000, -96.304);
+	SeqNo(1474418307);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "com_item_healthrecharge", 1499723898)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(293.000, 59.689, -171.000);
+	SeqNo(1499723898);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("edsat_prop_armchair2", "edsat_prop_armchair", 1508088204)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(305.127, 67.600, -171.432);
+	SeqNo(1508088204);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t11", "xms_road_t", 1525169193)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-193.060, 0.000, 110.976);
+	SeqNo(1525169193);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5142", "xms_road_long", 1538991913)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-150.107, 0.000, 110.927);
+	SeqNo(1538991913);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t12", "xms_road_t", 1546367400)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-157.254, 0.000, -43.978);
+	SeqNo(1546367400);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med1", "fragme_xmslights_med", 1553925765)
+{
+	ChildRotation(-0.414, -0.573, 0.414, -0.573);
+	ChildPosition(-229.543, 7.500, 76.598);
+	SeqNo(1553925765);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Bridge2", "Eddie_Prop_Bridge01", 1559217751)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(-282.666, 4.215, -306.919);
+	SeqNo(1559217751);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792435", "xms_road_long", 1571863132)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(259.309, 59.954, -299.882);
+	SeqNo(1571863132);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short600", "xms_road_short", 1577580099)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-139.389, 0.000, 0.836);
+	SeqNo(1577580099);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51471", "xms_road_long", 1598072278)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-24.610, 0.000, 0.464);
+	SeqNo(1598072278);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs2", "snowballs", 1633415332)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(110.268, 30.750, 248.616);
+	SeqNo(1633415332);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_bed03", "cal_prop_bed03", 1639963916)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-237.942, 3.000, 73.565);
+	SeqNo(1639963916);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs31", "snowballs", 1658383384)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-265.842, 1.500, -4.731);
+	SeqNo(1658383384);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short708", "xms_road_short", 1661207106)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-220.030, 3.010, 82.077);
+	SeqNo(1661207106);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window", "window", 1666570788)
+{
+	ChildRotation(0.500, -0.500, -0.500, -0.500);
+	ChildPosition(-214.587, 0.000, -68.422);
+	SeqNo(1666570788);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7123", "xms_road_short", 1672006156)
+{
+	ChildRotation(0.709, 0.000, 0.705, 0.000);
+	ChildPosition(-47.547, 0.010, -58.133);
+	SeqNo(1672006156);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1325", "xms_road_t", 1676616982)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(259.249, 60.000, -321.736);
+	SeqNo(1676616982);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp22", "gt1_prop_lamp2", 1692330981)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-98.455, 0.999, 34.393);
+	SeqNo(1692330981);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712987", "xms_road_short", 1700064064)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(303.555, 59.950, -332.616);
+	SeqNo(1700064064);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short707", "xms_road_short", 1700830933)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-220.091, -0.010, 102.102);
+	SeqNo(1700830933);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_sink7", "cal_prop_sink", 1701115274)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-100.898, 4.600, 23.766);
+	SeqNo(1701115274);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage11", "caleb_garage", 1706581424)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-288.239, 9.900, 127.390);
+	SeqNo(1706581424);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way104", "xms_road_4way", 1709133978)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(295.228, 59.967, -321.713);
+	SeqNo(1709133978);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short72", "xms_road_short", 1727077941)
+{
+	ChildRotation(0.961, 0.000, 0.000, -0.277);
+	ChildPosition(-266.846, 1.800, 111.131);
+	SeqNo(1727077941);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn20", "xms_road_turn", 1735418150)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(319.033, 60.000, -158.746);
+	SeqNo(1735418150);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med92", "fragme_xmslights_med", 1739353881)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-107.162, 3.031, -79.106);
+	SeqNo(1739353881);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn4", "xms_road_turn", 1740835749)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-316.286, 9.940, 111.032);
+	SeqNo(1740835749);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs0", "snowballs", 1744115978)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-148.638, 68.789, 342.253);
+	SeqNo(1744115978);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_chalet_closed1", "fragme_chalet", 1746851377)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-174.476, -4.000, 126.776);
+	SeqNo(1746851377);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7125", "xms_road_short", 1760918535)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-47.771, -0.010, -60.852);
+	SeqNo(1760918535);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage10", "caleb_garage", 1793300258)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-325.783, 9.914, 108.259);
+	SeqNo(1793300258);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_wstv2", "cal_prop_wstv2", 1848231156)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-102.347, 0.847, 35.316);
+	SeqNo(1848231156);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage1", "caleb_garage", 1849502047)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-133.039, 0.000, 27.785);
+	SeqNo(1849502047);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn13", "xms_road_turn", 1852017757)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(208.503, 40.000, -212.023);
+	SeqNo(1852017757);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window50", "window", 1858662943)
+{
+	ChildRotation(0.271, -0.271, -0.653, -0.653);
+	ChildPosition(-100.441, 0.000, -79.071);
+	SeqNo(1858662943);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t13", "xms_road_t", 1859974338)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-157.383, 0.000, 45.712);
+	SeqNo(1859974338);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("edsat_prop_armchair4", "edsat_prop_armchair", 1871927112)
+{
+	ChildRotation(-0.162, 0.000, -0.987, 0.000);
+	ChildPosition(297.874, 63.600, -175.111);
+	SeqNo(1871927112);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med7", "fragme_xmslights_med", 1880142624)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-305.321, 14.800, 123.741);
+	SeqNo(1880142624);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long8", "xms_road_long", 1887162667)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-193.119, 0.000, 90.601);
+	SeqNo(1887162667);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712966", "xms_road_short", 1906078434)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-165.478, -0.010, -32.768);
+	SeqNo(1906078434);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712982", "xms_road_short", 1913135453)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(305.569, 59.980, -288.942);
+	SeqNo(1913135453);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1326", "xms_road_t", 1915695319)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-85.635, 0.000, 45.847);
+	SeqNo(1915695319);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter2", "cal_prop_counter", 1924057657)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-300.793, 11.000, 132.135);
+	SeqNo(1924057657);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1320", "xms_road_t", 1929648486)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-3.086, 0.000, 0.468);
+	SeqNo(1929648486);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window7", "window", 1934208386)
+{
+	ChildRotation(0.000, 0.000, -0.707, -0.707);
+	ChildPosition(-208.424, 0.000, -68.309);
+	SeqNo(1934208386);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way102", "xms_road_4way", 1940578916)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-121.411, 0.000, -43.909);
+	SeqNo(1940578916);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window1", "window", 1942600628)
+{
+	ChildRotation(0.500, -0.500, -0.500, -0.500);
+	ChildPosition(-220.897, 0.000, -68.401);
+	SeqNo(1942600628);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn2", "xms_road_turn", 1960023510)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-289.000, 0.000, 48.000);
+	SeqNo(1960023510);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514790", "xms_road_long", 1960265275)
+{
+	ChildRotation(0.992, 0.000, 0.000, 0.129);
+	ChildPosition(77.882, 7.900, -130.265);
+	SeqNo(1960265275);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712965", "xms_road_short", 1977076133)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-184.947, -0.010, -13.505);
+	SeqNo(1977076133);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1a4", "thunder_house1a", 1977452594)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-325.621, 12.000, 96.192);
+	SeqNo(1977452594);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_wstv2", "cal_prop_wstv2", 2029816755)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-102.347, 0.847, 35.316);
+	SeqNo(2029816755);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5147", "xms_road_long", 2032112656)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-3.000, 0.000, -21.758);
+	SeqNo(2032112656);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_long2", "fragme_xmslights_long", 2042960913)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-99.104, 8.600, 21.952);
+	SeqNo(2042960913);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t130", "xms_road_t", 2051814001)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-121.580, 0.000, 45.652);
+	SeqNo(2051814001);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short6", "xms_road_short", 2055483953)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-211.088, 0.000, 0.790);
+	SeqNo(2055483953);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short5", "xms_road_short", 2060992593)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-263.000, 0.000, -36.000);
+	SeqNo(2060992593);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short71294", "xms_road_short", 2071511425)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(313.072, 59.990, -277.366);
+	SeqNo(2071511425);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1a1", "thunder_house1a", 2077550213)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-132.579, 2.000, -16.607);
+	SeqNo(2077550213);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t132", "xms_road_t", 2080105247)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-2.918, 0.000, -44.000);
+	SeqNo(2080105247);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792439", "xms_road_long", 2115403086)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(259.254, 60.000, -343.838);
+	SeqNo(2115403086);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1321", "xms_road_t", 2134657524)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-3.183, 0.000, 45.111);
+	SeqNo(2134657524);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_bed5", "cal_prop_bed03", 2143234307)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(300.650, 67.800, -168.495);
+	SeqNo(2143234307);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window6", "window", -2143868951)
+{
+	ChildRotation(0.000, 0.000, -0.707, -0.707);
+	ChildPosition(-208.491, 0.000, -61.306);
+	SeqNo(-2143868951);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short71291", "xms_road_short", -2130096084)
+{
+	ChildRotation(0.697, 0.129, 0.693, 0.130);
+	ChildPosition(208.420, 37.850, -162.040);
+	SeqNo(-2130096084);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short43", "xms_road_short", -2128747163)
+{
+	ChildRotation(0.000, -0.924, 0.000, -0.383);
+	ChildPosition(-156.913, 0.000, -78.744);
+	SeqNo(-2128747163);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs3", "snowballs", -2123409362)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(176.679, 17.200, 90.565);
+	SeqNo(-2123409362);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1a2", "thunder_house1a", -2107492506)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(319.705, 62.000, -293.943);
+	SeqNo(-2107492506);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_short", "fragme_xmslights_short", -2084615744)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-108.648, 5.700, 25.797);
+	SeqNo(-2084615744);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7127", "xms_road_short", -2070239618)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-131.647, 0.000, -57.636);
+	SeqNo(-2070239618);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712968", "xms_road_short", -2030978057)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-111.792, -0.010, -9.570);
+	SeqNo(-2030978057);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Rug", "Rug", -2028978481)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-308.941, 11.090, 138.717);
+	SeqNo(-2028978481);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("stairs2", "stairs1", -2027367808)
+{
+	ChildRotation(0.710, 0.000, -0.704, 0.000);
+	ChildPosition(-104.181, -3.000, 24.346);
+	SeqNo(-2027367808);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman9", "snowman", -2020335192)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-490.077, 15.800, -467.258);
+	SeqNo(-2020335192);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs1", "snowballs", -2008643170)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-265.555, 68.500, 314.205);
+	SeqNo(-2008643170);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_long40", "fragme_xmslights_long", -2002197886)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(301.764, 67.410, -186.043);
+	SeqNo(-2002197886);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792440", "xms_road_long", -1992832389)
+{
+	ChildRotation(0.000, 0.000, 0.000, -1.000);
+	ChildPosition(236.727, 60.000, -366.281);
+	SeqNo(-1992832389);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792432", "xms_road_long", -1992596190)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(295.138, 59.990, -234.383);
+	SeqNo(-1992596190);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1c3", "thunder_house1c", -1992216937)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-303.827, 12.000, 99.691);
+	SeqNo(-1992216937);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long52", "xms_road_long", -1976052496)
+{
+	ChildRotation(0.901, 0.068, -0.391, -0.173);
+	ChildPosition(-63.876, 1.800, -82.300);
+	SeqNo(-1976052496);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_bed8", "cal_prop_bed02", -1972272853)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-99.420, 5.000, 30.696);
+	SeqNo(-1972272853);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("basic_wall8", "basic_wall", -1928498734)
+{
+	ChildRotation(0.710, 0.704, 0.000, 0.000);
+	ChildPosition(-98.896, 2.090, 25.565);
+	SeqNo(-1928498734);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_short11", "fragme_xmslights_short", -1914241055)
+{
+	ChildRotation(0.500, 0.500, -0.500, 0.500);
+	ChildPosition(-257.416, 70.200, 308.871);
+	SeqNo(-1914241055);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman2", "snowman", -1913166721)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(-243.859, -0.200, -8.035);
+	SeqNo(-1913166721);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712969", "xms_road_short", -1908218611)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-130.456, -0.010, 27.734);
+	SeqNo(-1908218611);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("arf_obj.arboretumBridge1", "arf_obj.arboretumBridge", -1905750990)
+{
+	ChildRotation(0.709, 0.000, 0.705, 0.000);
+	ChildPosition(31.282, 2.400, 19.877);
+	SeqNo(-1905750990);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way", "xms_road_4way", -1893367818)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-229.053, 0.000, 0.741);
+	SeqNo(-1893367818);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5147922", "xms_road_long", -1892953108)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(168.881, 14.990, -90.595);
+	SeqNo(-1892953108);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "cal_prop_wstv", -1886872471)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-125.961, 67.972, 358.186);
+	SeqNo(-1886872471);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7121", "xms_road_short", -1885539987)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-103.552, 0.000, 0.853);
+	SeqNo(-1885539987);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window70", "window", -1880696134)
+{
+	ChildRotation(0.654, -0.653, -0.270, -0.270);
+	ChildPosition(-109.553, 0.000, -71.973);
+	SeqNo(-1880696134);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2b", "thunder_house2b", -1877575547)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(305.791, 61.500, -348.299);
+	SeqNo(-1877575547);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter117", "cal_prop_counter", -1874418116)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-98.207, 0.000, 29.252);
+	SeqNo(-1874418116);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long511", "xms_road_long", -1848276336)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-85.582, 0.000, 23.242);
+	SeqNo(-1848276336);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long600", "xms_road_long", -1820461117)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-47.447, 0.000, 67.425);
+	SeqNo(-1820461117);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short703", "xms_road_short", -1820201452)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-316.312, 9.970, 63.574);
+	SeqNo(-1820201452);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home5", "Eddie_Prop_Home01", -1776465974)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(-261.030, 0.000, -52.084);
+	SeqNo(-1776465974);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter118", "cal_prop_counter", -1756844906)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(302.761, 63.600, -167.446);
+	SeqNo(-1756844906);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712971", "xms_road_short", -1756757914)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-202.879, -0.010, 34.849);
+	SeqNo(-1756757914);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_long4", "fragme_xmslights_long", -1756578361)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(302.097, 67.400, -164.107);
+	SeqNo(-1756578361);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5", "xms_road_long", -1734527841)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-193.210, 0.000, 23.226);
+	SeqNo(-1734527841);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate7", "cal_prop_crate", -1723571562)
+{
+	ChildRotation(0.708, 0.707, 0.000, 0.000);
+	ChildPosition(290.543, 60.700, -175.700);
+	SeqNo(-1723571562);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short60", "xms_road_short", -1721114892)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-175.248, 0.000, 0.858);
+	SeqNo(-1721114892);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short4", "xms_road_short", -1718796097)
+{
+	ChildRotation(0.000, -0.924, 0.000, -0.383);
+	ChildPosition(-192.000, 0.000, -57.000);
+	SeqNo(-1718796097);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window30", "window", -1704999065)
+{
+	ChildRotation(-0.271, 0.271, -0.653, -0.653);
+	ChildPosition(-92.707, 0.000, -70.715);
+	SeqNo(-1704999065);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage3", "caleb_garage", -1692277080)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-215.113, 0.000, 19.724);
+	SeqNo(-1692277080);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs310", "snowballs", -1677146796)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-224.997, 4.250, 71.621);
+	SeqNo(-1677146796);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long4", "xms_road_long", -1674367698)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-252.897, 0.000, 23.142);
+	SeqNo(-1674367698);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_bookshelf5", "gt1_prop_bookshelf2", -1673557470)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-101.499, 4.600, 32.200);
+	SeqNo(-1673557470);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51474", "xms_road_long", -1662581217)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-2.905, 0.000, -87.168);
+	SeqNo(-1662581217);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712984", "xms_road_short", -1659008081)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(285.000, 59.980, -306.512);
+	SeqNo(-1659008081);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window0", "window", -1644588743)
+{
+	ChildRotation(0.654, -0.653, 0.270, 0.271);
+	ChildPosition(-105.275, 0.000, -67.536);
+	SeqNo(-1644588743);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712986", "xms_road_short", -1642545196)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(269.568, 59.950, -331.089);
+	SeqNo(-1642545196);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792442", "xms_road_long", -1633595587)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(296.016, 59.998, -158.837);
+	SeqNo(-1633595587);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs7", "snowballs", -1628208316)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(290.569, 61.450, -174.858);
+	SeqNo(-1628208316);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1c5", "thunder_house1c", -1608244400)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-167.826, 2.000, 18.533);
+	SeqNo(-1608244400);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman10", "snowman", -1600880703)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-485.628, 8.040, -462.142);
+	SeqNo(-1600880703);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter114", "cal_prop_counter", -1592373523)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-100.707, 4.600, 26.946);
+	SeqNo(-1592373523);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("icesheet_pond3", "icesheet_pond", -1545179315)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(28.000, -1.000, 32.324);
+	SeqNo(-1545179315);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn15", "xms_road_turn", -1541131975)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(330.992, 60.000, -277.310);
+	SeqNo(-1541131975);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman1", "snowman", -1536376701)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-213.000, 2.900, 77.000);
+	SeqNo(-1536376701);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t8", "xms_road_t", -1533975044)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-316.264, 9.940, 78.281);
+	SeqNo(-1533975044);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter3", "cal_prop_counter", -1533218442)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-312.002, 11.000, 131.500);
+	SeqNo(-1533218442);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51476", "xms_road_long", -1531728235)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-121.463, 0.000, -66.134);
+	SeqNo(-1531728235);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window4", "window", -1526575242)
+{
+	ChildRotation(0.500, -0.500, 0.500, 0.500);
+	ChildPosition(-216.403, 0.000, -56.852);
+	SeqNo(-1526575242);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way2", "xms_road_4way", -1522190776)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-193.205, 0.000, 45.645);
+	SeqNo(-1522190776);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712972", "xms_road_short", -1518714139)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-11.570, -0.010, 59.846);
+	SeqNo(-1518714139);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2a1", "thunder_house2a", -1518703330)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(319.728, 61.500, -337.700);
+	SeqNo(-1518703330);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short709", "xms_road_short", -1515030464)
+{
+	ChildRotation(0.984, 0.000, 0.000, -0.179);
+	ChildPosition(-202.352, 0.900, 68.133);
+	SeqNo(-1515030464);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t133", "xms_road_t", -1501787231)
+{
+	ChildRotation(0.000, 0.000, 0.000, -1.000);
+	ChildPosition(-47.524, 0.000, 0.504);
+	SeqNo(-1501787231);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_table_8", "cal_prop_table_02", -1500879501)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(299.831, 67.600, -172.259);
+	SeqNo(-1500879501);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1a3", "thunder_house1a", -1491555233)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-15.641, 2.000, 15.298);
+	SeqNo(-1491555233);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med3", "fragme_xmslights_med", -1488387794)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-234.729, 7.500, 88.502);
+	SeqNo(-1488387794);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51472", "xms_road_long", -1485584549)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-24.951, 0.000, 45.156);
+	SeqNo(-1485584549);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792437", "xms_road_long", -1457322517)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(295.315, 59.983, -343.987);
+	SeqNo(-1457322517);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "cal_prop_table_01", -1438328313)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-126.511, 67.000, 357.835);
+	SeqNo(-1438328313);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712953", "xms_road_short", -1402051068)
+{
+	ChildRotation(0.020, -1.000, 0.000, 0.000);
+	ChildPosition(-226.404, 2.870, 69.494);
+	SeqNo(-1402051068);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs", "snowballs", -1397974340)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-234.606, 1.500, -59.322);
+	SeqNo(-1397974340);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("basic_wall1", "basic_wall", -1394110074)
+{
+	ChildRotation(0.708, 0.000, 0.000, 0.706);
+	ChildPosition(-304.833, 12.000, 139.330);
+	SeqNo(-1394110074);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Rug1", "Rug", -1373819429)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(300.541, 63.700, -177.241);
+	SeqNo(-1373819429);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short", "xms_road_short", -1373338624)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-211.065, 0.000, -44.000);
+	SeqNo(-1373338624);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short40", "xms_road_short", -1360771994)
+{
+	ChildRotation(0.000, -0.924, 0.000, -0.383);
+	ChildPosition(-124.686, -0.010, -90.203);
+	SeqNo(-1360771994);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("basic_wall4", "basic_wall", -1349866107)
+{
+	ChildRotation(0.708, 0.706, 0.000, 0.000);
+	ChildPosition(-309.377, 12.000, 134.653);
+	SeqNo(-1349866107);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn1", "xms_road_turn", -1342271540)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-253.000, 0.000, -44.000);
+	SeqNo(-1342271540);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Refrigerator2", "Refrigerator", -1334714249)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-96.380, 0.000, 26.917);
+	SeqNo(-1334714249);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short71292", "xms_road_short", -1331710292)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(208.495, 40.000, -194.226);
+	SeqNo(-1331710292);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short41", "xms_road_short", -1329636016)
+{
+	ChildRotation(0.000, -0.924, 0.000, -0.383);
+	ChildPosition(-139.051, 0.010, -60.784);
+	SeqNo(-1329636016);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window5", "window", -1326144334)
+{
+	ChildRotation(0.500, -0.500, 0.500, 0.500);
+	ChildPosition(-209.848, 0.000, -56.848);
+	SeqNo(-1326144334);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Rug2", "Rug", -1316502325)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-101.781, 0.149, 32.251);
+	SeqNo(-1316502325);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7122", "xms_road_short", -1304333545)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-103.606, 0.000, 45.739);
+	SeqNo(-1304333545);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t6", "xms_road_t", -1298253529)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-292.443, 9.940, 111.143);
+	SeqNo(-1298253529);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home3", "Eddie_Prop_Home01", -1293840311)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-233.240, 0.000, -60.564);
+	SeqNo(-1293840311);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage9", "caleb_garage", -1279700147)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-15.937, 0.000, 59.871);
+	SeqNo(-1279700147);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med5", "fragme_xmslights_med", -1270751344)
+{
+	ChildRotation(0.500, 0.500, 0.500, -0.500);
+	ChildPosition(-239.637, 7.500, 76.008);
+	SeqNo(-1270751344);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way1", "xms_road_4way", -1265197009)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-193.189, 0.000, 0.844);
+	SeqNo(-1265197009);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long6", "xms_road_long", -1261650175)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-252.937, 0.000, 67.937);
+	SeqNo(-1261650175);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712973", "xms_road_short", -1259527592)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-37.426, -0.010, 76.967);
+	SeqNo(-1259527592);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712963", "xms_road_short", -1232545238)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-218.774, 0.000, -13.225);
+	SeqNo(-1232545238);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate31014", "cal_prop_crate", -1223599084)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(-136.714, 67.000, 364.047);
+	SeqNo(-1223599084);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1b5", "thunder_house1b", -1222488862)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(270.797, 62.000, -301.959);
+	SeqNo(-1222488862);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51479240", "xms_road_long", -1221673201)
+{
+	ChildRotation(0.697, 0.129, 0.693, 0.130);
+	ChildPosition(208.296, 26.000, -131.305);
+	SeqNo(-1221673201);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage13", "caleb_garage", -1216507749)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-15.330, 0.000, 26.782);
+	SeqNo(-1216507749);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712940", "xms_road_short", -1215859512)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(313.079, 60.000, -321.696);
+	SeqNo(-1215859512);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house2b2", "thunder_house2b", -1207786540)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-303.931, 11.500, 58.236);
+	SeqNo(-1207786540);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Refrigerator", "Refrigerator", -1176030044)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-299.061, 11.000, 127.410);
+	SeqNo(-1176030044);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short1", "xms_road_short", -1169305182)
+{
+	ChildRotation(0.000, -0.707, 0.000, 0.707);
+	ChildPosition(-227.000, 0.000, -54.000);
+	SeqNo(-1169305182);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman8", "snowman", -1167377892)
+{
+	ChildRotation(0.000, -0.074, -0.997, 0.000);
+	ChildPosition(-490.411, 13.200, -467.235);
+	SeqNo(-1167377892);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman7", "snowman", -1158761525)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-490.416, 10.600, -467.333);
+	SeqNo(-1158761525);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn3", "com_item_vehicle_spawn", -1134506736)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-229.598, 3.139, 67.824);
+	SeqNo(-1134506736);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp5");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_camry");
+	ClassCISATK("xms_drive_camry");
+	ClassImpATK("xms_drive_camry");
+	ClassRepATK("xms_drive_camry");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_camry");
+	ClassCISDEF("xms_drive_camry");
+	ClassImpDEF("xms_drive_camry");
+	ClassRepDEF("xms_drive_camry");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("fragme_xmslights_long41", "fragme_xmslights_long", -1126907307)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(-127.586, 69.800, 363.753);
+	SeqNo(-1126907307);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51", "xms_road_long", -1115074437)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-157.300, 0.000, -21.561);
+	SeqNo(-1115074437);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home020", "Eddie_Prop_Home02", -1114783332)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-102.547, 3.800, -71.404);
+	SeqNo(-1114783332);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("arf_obj.arboretumBridge2", "arf_obj.arboretumBridge", -1111008663)
+{
+	ChildRotation(0.695, 0.139, 0.691, 0.140);
+	ChildPosition(31.295, 1.000, 26.710);
+	SeqNo(-1111008663);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window20", "window", -1107464893)
+{
+	ChildRotation(-0.271, 0.271, -0.653, -0.653);
+	ChildPosition(-96.667, 0.000, -66.584);
+	SeqNo(-1107464893);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs8", "snowballs", -1099146732)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-104.974, 1.650, 14.510);
+	SeqNo(-1099146732);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman13", "snowman", -1094418193)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-113.896, 0.000, -33.356);
+	SeqNo(-1094418193);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage7", "caleb_garage", -1080880686)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(319.266, 60.000, -305.323);
+	SeqNo(-1080880686);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51479", "xms_road_long", -1075785034)
+{
+	ChildRotation(0.992, 0.000, 0.000, 0.129);
+	ChildPosition(58.047, 2.650, -130.249);
+	SeqNo(-1075785034);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn16", "xms_road_turn", -1069250937)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(259.213, 59.970, -277.460);
+	SeqNo(-1069250937);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Painting3", "Painting3", -1067284630)
+{
+	ChildRotation(-0.500, 0.500, -0.500, 0.500);
+	ChildPosition(-308.241, 13.000, 134.476);
+	SeqNo(-1067284630);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window3", "window", -1063201110)
+{
+	ChildRotation(0.707, -0.707, 0.000, 0.000);
+	ChildPosition(-221.224, 0.000, -57.288);
+	SeqNo(-1063201110);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712952", "xms_road_short", -1050295125)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-226.897, 2.500, 68.318);
+	SeqNo(-1050295125);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn2", "com_item_vehicle_spawn", -1046863522)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-97.643, 0.172, 11.622);
+	SeqNo(-1046863522);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp3");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_camry_red");
+	ClassCISATK("xms_drive_camry_red");
+	ClassImpATK("xms_drive_camry_red");
+	ClassRepATK("xms_drive_camry_red");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_camry_red");
+	ClassCISDEF("xms_drive_camry_red");
+	ClassImpDEF("xms_drive_camry_red");
+	ClassRepDEF("xms_drive_camry_red");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("xms_road_long514792", "xms_road_long", -1046661807)
+{
+	ChildRotation(0.926, 0.000, -0.377, 0.000);
+	ChildPosition(123.189, 14.940, -123.866);
+	SeqNo(-1046661807);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn17", "xms_road_turn", -1043310837)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(295.263, 59.990, -366.367);
+	SeqNo(-1043310837);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("stairs1", "stairs1", -1034447236)
+{
+	ChildRotation(0.713, 0.000, -0.701, 0.000);
+	ChildPosition(-99.089, 0.640, 24.324);
+	SeqNo(-1034447236);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp", "gt1_prop_lamp", -1011630690)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-311.070, 11.000, 136.875);
+	SeqNo(-1011630690);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t2", "xms_road_t", -1010089083)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-252.973, 0.000, 0.752);
+	SeqNo(-1010089083);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t4", "xms_road_t", -1008508366)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-252.946, 0.000, 111.097);
+	SeqNo(-1008508366);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_house", "caleb_house", -1007170815)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-305.042, 9.000, 134.732);
+	SeqNo(-1007170815);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long2", "xms_road_long", -1006491998)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-193.140, 0.000, -21.592);
+	SeqNo(-1006491998);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("icesheet_pond2", "icesheet_pond", -1000032100)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(47.384, -1.000, 32.405);
+	SeqNo(-1000032100);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712955", "xms_road_short", -987769828)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-111.357, 0.000, 11.061);
+	SeqNo(-987769828);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712967", "xms_road_short", -980498074)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-126.266, -0.010, -28.194);
+	SeqNo(-980498074);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn8", "xms_road_turn", -965203304)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-127.720, 0.000, 110.886);
+	SeqNo(-965203304);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med", "fragme_xmslights_med", -953880100)
+{
+	ChildRotation(0.708, 0.000, -0.707, 0.000);
+	ChildPosition(-108.664, 5.700, 31.812);
+	SeqNo(-953880100);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman12", "snowman", -935900515)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-488.284, 11.321, -493.743);
+	SeqNo(-935900515);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_chair_5", "cal_prop_chair_04", -934669249)
+{
+	ChildRotation(-0.493, 0.000, -0.870, 0.000);
+	ChildPosition(-233.317, 3.000, 78.984);
+	SeqNo(-934669249);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t10", "xms_road_t", -930813751)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-193.168, -0.010, 68.290);
+	SeqNo(-930813751);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_fireplace1", "gt1_prop_fireplace1", -930166312)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-308.907, 11.000, 142.265);
+	SeqNo(-930166312);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_bed04", "cal_prop_bed04", -929934818)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-311.527, 11.000, 133.192);
+	SeqNo(-929934818);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1b4", "thunder_house1b", -929263614)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-34.955, 2.000, -26.656);
+	SeqNo(-929263614);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5147924", "xms_road_long", -928809298)
+{
+	ChildRotation(0.696, 0.130, 0.694, 0.130);
+	ChildPosition(208.237, 18.600, -112.149);
+	SeqNo(-928809298);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_long3", "fragme_xmslights_long", -916443769)
+{
+	ChildRotation(0.500, 0.500, -0.500, 0.500);
+	ChildPosition(-91.684, 8.600, 29.694);
+	SeqNo(-916443769);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712974", "xms_road_short", -900475523)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-37.189, -0.010, 11.991);
+	SeqNo(-900475523);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_chair_02", "cal_prop_chair_02", -898628145)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-311.256, 11.000, 141.328);
+	SeqNo(-898628145);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "xboxprop", -898176196)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-101.146, 0.251, 34.827);
+	SeqNo(-898176196);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter112", "cal_prop_counter", -889937474)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-98.981, 4.600, 24.089);
+	SeqNo(-889937474);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_chair_04", "cal_prop_chair_04", -881689418)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-231.508, 3.000, 75.443);
+	SeqNo(-881689418);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_table_3", "cal_prop_table_02", -873701110)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-308.939, 11.000, 138.463);
+	SeqNo(-873701110);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman11", "snowman", -865228675)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-495.780, 8.040, -471.240);
+	SeqNo(-865228675);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7110", "xms_road_short", -862180648)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-139.128, 0.000, 45.735);
+	SeqNo(-862180648);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_chalet_closed4", "fragme_chalet", -841903048)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-69.702, -4.000, 106.721);
+	SeqNo(-841903048);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_lego_couch1", "gt1_lego_couch", -821068954)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(300.362, 63.600, -174.897);
+	SeqNo(-821068954);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate0", "cal_prop_crate", -818233351)
+{
+	ChildRotation(-0.500, -0.500, 0.500, -0.500);
+	ChildPosition(-147.865, 68.039, 342.201);
+	SeqNo(-818233351);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long50", "xms_road_long", -816355233)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-157.314, 0.000, 22.743);
+	SeqNo(-816355233);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short706", "xms_road_short", -803611283)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-206.402, -0.010, 110.968);
+	SeqNo(-803611283);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn19", "xms_road_turn", -801174468)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(259.272, 60.000, -366.241);
+	SeqNo(-801174468);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_house2b", "caleb_house2b", -796492556)
+{
+	ChildRotation(0.924, 0.000, 0.382, 0.000);
+	ChildPosition(-131.669, 67.000, 359.799);
+	SeqNo(-796492556);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Painting6", "Painting6", -793898372)
+{
+	ChildRotation(0.000, -0.707, 0.707, 0.000);
+	ChildPosition(307.158, 66.000, -169.787);
+	SeqNo(-793898372);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_lego_couch3", "gt1_lego_couch", -786647698)
+{
+	ChildRotation(0.720, 0.000, 0.693, 0.000);
+	ChildPosition(-303.532, 11.036, 138.830);
+	SeqNo(-786647698);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way100", "xms_road_4way", -780720289)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-121.487, 0.000, 0.863);
+	SeqNo(-780720289);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short702", "xms_road_short", -776842373)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-292.382, 9.970, 95.951);
+	SeqNo(-776842373);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514", "xms_road_long", -776210364)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-47.676, 0.000, -21.656);
+	SeqNo(-776210364);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1323", "xms_road_t", -762959431)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(295.062, 59.990, -212.080);
+	SeqNo(-762959431);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1c", "thunder_house1c", -753779139)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-36.249, 2.000, 26.586);
+	SeqNo(-753779139);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712951", "xms_road_short", -730042186)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(313.239, 59.990, -366.267);
+	SeqNo(-730042186);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med8", "fragme_xmslights_med", -724542252)
+{
+	ChildRotation(-0.500, -0.500, -0.500, 0.500);
+	ChildPosition(289.295, 68.800, -175.222);
+	SeqNo(-724542252);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home6", "Eddie_Prop_Home01", -709336607)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-163.669, 0.000, -75.391);
+	SeqNo(-709336607);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter115", "cal_prop_counter", -708702778)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-98.117, 0.000, 34.980);
+	SeqNo(-708702778);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn1", "com_item_vehicle_spawn", -707640159)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(290.366, 60.170, -158.845);
+	SeqNo(-707640159);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp13");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_explorer_green");
+	ClassCISATK("xms_drive_explorer_green");
+	ClassImpATK("xms_drive_explorer_green");
+	ClassRepATK("xms_drive_explorer_green");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_explorer_green");
+	ClassCISDEF("xms_drive_explorer_green");
+	ClassImpDEF("xms_drive_explorer_green");
+	ClassRepDEF("xms_drive_explorer_green");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("", "com_item_healthrecharge", -697653202)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-481.000, 8.477, -445.000);
+	SeqNo(-697653202);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("xms_road_long500", "xms_road_long", -675346996)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-121.523, 0.000, 23.291);
+	SeqNo(-675346996);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter120", "cal_prop_counter", -673595136)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(298.862, 63.600, -170.296);
+	SeqNo(-673595136);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("edsat_prop_armchair3", "edsat_prop_armchair", -667360323)
+{
+	ChildRotation(0.170, 0.000, -0.985, 0.000);
+	ChildPosition(303.041, 63.600, -175.535);
+	SeqNo(-667360323);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5147923", "xms_road_long", -625891911)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(189.605, 14.990, -90.607);
+	SeqNo(-625891911);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_bed7", "cal_prop_bed02", -624219682)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-99.520, 5.000, 28.299);
+	SeqNo(-624219682);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51475", "xms_road_long", -588447116)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-2.910, 0.000, -107.903);
+	SeqNo(-588447116);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn12", "xms_road_turn", -578037404)
+{
+	ChildRotation(0.709, 0.000, -0.705, 0.000);
+	ChildPosition(208.271, 14.980, -90.672);
+	SeqNo(-578037404);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t3", "xms_road_t", -577249452)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-229.083, 0.000, 45.537);
+	SeqNo(-577249452);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate1", "cal_prop_crate", -574251340)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-265.700, 67.780, 313.467);
+	SeqNo(-574251340);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712976", "xms_road_short", -566917794)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-13.208, -0.010, -32.922);
+	SeqNo(-566917794);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn11", "xms_road_turn", -553377342)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-2.891, 0.000, -130.271);
+	SeqNo(-553377342);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_chair_9", "cal_prop_chair_04", -547193465)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-104.802, 0.140, 35.003);
+	SeqNo(-547193465);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5141", "xms_road_long", -544335057)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-170.819, 0.000, 110.949);
+	SeqNo(-544335057);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51477", "xms_road_long", -542567425)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(19.428, 0.000, -130.252);
+	SeqNo(-542567425);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792441", "xms_road_long", -535964017)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(319.003, 60.010, -193.037);
+	SeqNo(-535964017);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short71295", "xms_road_short", -535780365)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(277.147, 59.990, -277.437);
+	SeqNo(-535780365);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1c2", "thunder_house1c", -498494088)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-215.182, 2.000, -26.488);
+	SeqNo(-498494088);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_short112", "fragme_xmslights_short", -489956269)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-111.021, 2.969, -75.246);
+	SeqNo(-489956269);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way101", "xms_road_4way", -485647396)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-47.677, 0.000, -44.000);
+	SeqNo(-485647396);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_table_6", "cal_prop_table_01", -474158109)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(303.793, 67.600, -168.520);
+	SeqNo(-474158109);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1b3", "thunder_house1b", -468600359)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-15.819, 2.000, 71.212);
+	SeqNo(-468600359);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_bookshelf3", "gt1_prop_bookshelf2", -425051209)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(304.261, 63.650, -182.565);
+	SeqNo(-425051209);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712964", "xms_road_short", -409582829)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-201.468, -0.010, -11.297);
+	SeqNo(-409582829);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7", "xms_road_short", -388537944)
+{
+	ChildRotation(0.960, 0.000, 0.000, -0.279);
+	ChildPosition(-266.755, 1.800, 45.498);
+	SeqNo(-388537944);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1b6", "thunder_house1b", -380133801)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-144.736, 2.000, -28.311);
+	SeqNo(-380133801);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712980", "xms_road_short", -374785822)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-322.461, 9.920, 108.298);
+	SeqNo(-374785822);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short71290", "xms_road_short", -368562961)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(161.279, 14.970, -90.737);
+	SeqNo(-368562961);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate30", "cal_prop_crate", -364931426)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(-112.878, 0.500, -71.872);
+	SeqNo(-364931426);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long70", "xms_road_long", -363300640)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-47.431, 0.000, 23.600);
+	SeqNo(-363300640);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712959", "xms_road_short", -338098911)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-147.113, 0.000, -11.073);
+	SeqNo(-338098911);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_chalet_closed", "fragme_chalet", -337630524)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(276.013, 56.000, -343.655);
+	SeqNo(-337630524);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_4way10", "xms_road_4way", -335425529)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-157.281, 0.000, 0.859);
+	SeqNo(-335425529);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowman4", "snowman", -330202412)
+{
+	ChildRotation(0.924, 0.000, -0.383, 0.000);
+	ChildPosition(-112.234, 0.000, 20.997);
+	SeqNo(-330202412);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_table_7", "cal_prop_table_01", -324430366)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(300.042, 67.600, -181.784);
+	SeqNo(-324430366);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long700", "xms_road_long", -322798277)
+{
+	ChildRotation(1.000, 0.000, 0.000, -0.002);
+	ChildPosition(-67.533, 0.010, 89.780);
+	SeqNo(-322798277);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("com_item_vehicle_spawn6", "com_item_vehicle_spawn", -319782075)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-109.633, 0.172, -58.344);
+	SeqNo(-319782075);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+	ControlZone("cp4");
+	SpawnCount("2");
+	SpawnTime("5.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("1000000.0");
+	ClassNeutral("");
+	ClassAllATK("xms_drive_camry");
+	ClassCISATK("xms_drive_camry");
+	ClassImpATK("xms_drive_camry");
+	ClassRepATK("xms_drive_camry");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("xms_drive_camry");
+	ClassCISDEF("xms_drive_camry");
+	ClassImpDEF("xms_drive_camry");
+	ClassRepDEF("xms_drive_camry");
+	ClassLocDEF("");
+	ClassHisDEF("");
+	ClassLocals("");
+}
+
+Object("xms_road_short700", "xms_road_short", -299393199)
+{
+	ChildRotation(0.961, 0.000, 0.000, -0.277);
+	ChildPosition(-274.789, 6.800, 111.117);
+	SeqNo(-299393199);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_long", "fragme_xmslights_long", -288760262)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-98.938, 8.600, 37.125);
+	SeqNo(-288760262);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter121", "cal_prop_counter", -271999253)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(300.789, 63.600, -170.305);
+	SeqNo(-271999253);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("caleb_garage6", "caleb_garage", -264081688)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(271.009, 60.000, -290.609);
+	SeqNo(-264081688);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_lamp23", "gt1_prop_lamp2", -263232526)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-98.360, 0.999, 29.770);
+	SeqNo(-263232526);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5147921", "xms_road_long", -259072754)
+{
+	ChildRotation(-0.384, 0.000, -0.923, 0.000);
+	ChildPosition(150.611, 14.980, -96.896);
+	SeqNo(-259072754);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("basic_wall9", "basic_wall", -248846412)
+{
+	ChildRotation(0.710, 0.704, 0.000, 0.000);
+	ChildPosition(-98.902, -1.500, 25.588);
+	SeqNo(-248846412);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short704", "xms_road_short", -246555129)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-316.243, 9.970, 95.738);
+	SeqNo(-246555129);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn9", "xms_road_turn", -244362414)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-127.816, -0.010, 89.826);
+	SeqNo(-244362414);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712978", "xms_road_short", -227020369)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-302.672, 9.960, 69.430);
+	SeqNo(-227020369);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Eddie_Prop_Home4", "Eddie_Prop_Home01", -215622146)
+{
+	ChildRotation(0.708, 0.000, -0.706, 0.000);
+	ChildPosition(-252.468, 0.000, -51.501);
+	SeqNo(-215622146);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_t1", "xms_road_t", -194496306)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-193.103, 0.000, -44.000);
+	SeqNo(-194496306);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("window2", "window", -194071241)
+{
+	ChildRotation(0.707, -0.707, 0.000, 0.000);
+	ChildPosition(-221.345, 0.000, -63.009);
+	SeqNo(-194071241);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712962", "xms_road_short", -180032371)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-218.761, 0.000, 19.652);
+	SeqNo(-180032371);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short7126", "xms_road_short", -175734908)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-121.441, 0.000, -82.485);
+	SeqNo(-175734908);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_crate2", "cal_prop_crate", -167897192)
+{
+	ChildRotation(0.707, 0.707, 0.000, 0.000);
+	ChildPosition(110.249, 30.000, 248.028);
+	SeqNo(-167897192);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("thunder_house1a", "thunder_house1a", -167090572)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(-204.730, 2.000, 18.935);
+	SeqNo(-167090572);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712961", "xms_road_short", -150395091)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-182.798, 0.000, 12.724);
+	SeqNo(-150395091);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712992", "xms_road_short", -148942747)
+{
+	ChildRotation(0.000, -0.707, 0.000, -0.707);
+	ChildPosition(-26.146, 0.000, 99.847);
+	SeqNo(-148942747);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_wstv3", "cal_prop_wstv3", -148779155)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(300.847, 63.500, -182.854);
+	SeqNo(-148779155);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("icesheet_pond", "icesheet_pond", -145339435)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(28.000, -1.000, 13.000);
+	SeqNo(-145339435);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("Painting2", "Painting2", -137011456)
+{
+	ChildRotation(0.707, 0.000, 0.000, -0.707);
+	ChildPosition(-304.660, 12.721, 138.392);
+	SeqNo(-137011456);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn6", "xms_road_turn", -120013763)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-85.547, 0.000, 0.865);
+	SeqNo(-120013763);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_toilet_7", "cal_prop_toilet_03", -116335162)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-98.705, 4.600, 26.451);
+	SeqNo(-116335162);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter111", "cal_prop_counter", -110684075)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-97.958, 4.500, 29.784);
+	SeqNo(-110684075);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long514792434", "xms_road_long", -99278535)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(295.224, 59.990, -299.265);
+	SeqNo(-99278535);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51479243", "xms_road_long", -96569287)
+{
+	ChildRotation(0.986, 0.000, 0.000, 0.168);
+	ChildPosition(225.285, 43.400, -212.001);
+	SeqNo(-96569287);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med91", "fragme_xmslights_med", -96263703)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-108.847, 3.000, -66.313);
+	SeqNo(-96263703);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_short712957", "xms_road_short", -94337767)
+{
+	ChildRotation(0.000, -1.000, 0.000, 0.000);
+	ChildPosition(-98.937, -0.060, 18.482);
+	SeqNo(-94337767);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("snowballs4", "snowballs", -94308388)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-308.718, 12.240, 125.971);
+	SeqNo(-94308388);
+	Team(2);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_bed6", "cal_prop_bed03", -92596650)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(299.112, 67.800, -168.513);
+	SeqNo(-92596650);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_turn14", "xms_road_turn", -90846580)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(319.054, 60.000, -212.046);
+	SeqNo(-90846580);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_counter9", "cal_prop_counter", -68176639)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(294.780, 67.600, -181.882);
+	SeqNo(-68176639);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long5140", "xms_road_long", -63490739)
+{
+	ChildRotation(0.708, 0.000, 0.706, 0.000);
+	ChildPosition(-3.133, 0.000, 67.408);
+	SeqNo(-63490739);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("icesheet", "icesheet", -32303999)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-256.136, -2.000, -283.000);
+	SeqNo(-32303999);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_house1", "cal_prop_house1", -25854015)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-235.728, 3.000, 84.248);
+	SeqNo(-25854015);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_chair_8", "cal_prop_chair_02", -25414488)
+{
+	ChildRotation(0.707, 0.000, -0.707, 0.000);
+	ChildPosition(-98.923, 4.600, 32.838);
+	SeqNo(-25414488);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("fragme_xmslights_med4", "fragme_xmslights_med", -16543986)
+{
+	ChildRotation(-0.500, -0.500, -0.500, 0.500);
+	ChildPosition(-239.043, 7.500, 84.359);
+	SeqNo(-16543986);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("xms_road_long51478", "xms_road_long", -12646131)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(40.083, 0.000, -130.270);
+	SeqNo(-12646131);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("", "xboxprop", -8442240)
+{
+	ChildRotation(0.690, 0.000, 0.724, 0.000);
+	ChildPosition(-126.936, 68.235, 356.700);
+	SeqNo(-8442240);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("gt1_prop_bookshelf2", "gt1_prop_bookshelf1", -3435772)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-233.729, 3.000, 72.147);
+	SeqNo(-3435772);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+
+Object("cal_prop_wstv5", "cal_prop_wstv3", 1040781578)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-298.194, 10.861, 139.212);
+	SeqNo(1040781578);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}
+
+Object("cal_prop_wstv4", "cal_prop_wstv", -1515996181)
+{
+	ChildRotation(0.705, 0.000, 0.709, 0.000);
+	ChildPosition(-231.901, 4.000, 72.234);
+	SeqNo(-1515996181);
+	Team(0);
+	NetworkId(-1);
+	Layer(1);
+}

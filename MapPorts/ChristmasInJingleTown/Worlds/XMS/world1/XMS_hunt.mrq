@@ -1,0 +1,13 @@
+ucft
+{
+	REQN
+	{
+		"congraph"
+		"XMS_hunt"
+	}
+	REQN
+	{
+		"world"
+		"XMS_hunt"
+	}
+}

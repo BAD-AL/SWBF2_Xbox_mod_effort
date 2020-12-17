@@ -1,0 +1,9 @@
+[WeaponClass]
+ClassParent             = "com_weap_inf_snowball_big"
+
+[Properties]
+OffhandWeapon       = 0
+
+OrdnanceName	= "tat_weap_inf_snowball_big_ord"
+
+AnimationBank     = "pistol"

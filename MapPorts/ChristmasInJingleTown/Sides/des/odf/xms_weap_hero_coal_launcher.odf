@@ -1,0 +1,58 @@
+[WeaponClass]
+ClassParent         = "com_weap_inf_rocket_launcher"
+GeometryName        = "rep_weap_inf_launcher.msh"
+
+[Properties]
+GeometryName        = "rep_weap_inf_launcher"
+HighResGeometry     = "rep_1st_weap_inf_launcher"
+
+//OrdnanceName        = "rep_weap_inf_rocket_launcher_ord"
+OrdnanceName            = "xms_weap_inf_coal_ord"
+
+//************************************************
+//*******************   SOUND    *****************
+//************************************************
+
+FireSound           = "rep_weap_inf_rocket_launcher_fire"
+FireEmptySound      = "com_weap_inf_ammo_empty"
+FireLoopSound       = ""
+ReloadSound         = "com_weap_inf_reload_lg"
+ChargeSound         = "rep_weap_inf_rocket_launcher_tracking"
+ChargeSoundPitch    = "0.0"
+ChangeModeSound     = "com_weap_inf_equip_lg"
+WeaponChangeSound   = "com_weap_inf_equip_lg"
+JumpSound           = "com_weap_inf_bazooka_mvt_jump"
+LandSound           = "com_weap_inf_bazooka_mvt_land"
+RollSound           = "com_weap_inf_bazooka_mvt_roll"
+//ProneSound          = "com_weap_inf_bazooka_mvt_lie"
+SquatSound          = "com_weap_inf_bazooka_mvt_squat"
+//StandSound          = "com_weap_inf_bazooka_mvt_getup"
+
+
+SpreadPerShot       = "1.1"
+SpreadRecoverRate   = "4.8"
+SpreadThreshold     = "1.6"
+SpreadLimit         = "6.0"
+
+StandStillSpread    = "0.0"
+StandMoveSpread     = "0.0"
+CrouchStillSpread   = "0.0"
+CrouchMoveSpread    = "0.0"
+ProneStillSpread    = "0.0"
+ProneMoveSpread     = "0.0"
+
+//***********************************************
+//*********** WEAPON PERFORMANCE VALUES *********
+//***********************************************
+
+RoundsPerClip       = "0"
+ReloadTime          = "0.0"
+ShotDelay           = "0.3"
+ShotElevate         = "0.04"
+MaxPressedTime      = "0.0"
+
+SalvoCount          = "1"
+ShotsPerSalvo       = "20"
+SalvoDelay          = "0.0"
+InitialSalvoDelay   = "0.51"
+

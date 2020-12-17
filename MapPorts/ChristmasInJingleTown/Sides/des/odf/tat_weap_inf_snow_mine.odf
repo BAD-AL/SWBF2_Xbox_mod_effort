@@ -1,0 +1,26 @@
+[WeaponClass]
+ClassParent          = "com_weap_inf_mine_dispenser"
+GeometryName         = "com_weap_inf_landmine.msh"
+
+[Properties]
+//NextCharge            = 0.99
+OrdnanceName            = "com_weap_inf_landmine"
+
+//************************************************
+//***************** SOUND ************************
+//************************************************
+
+FireSound           = "com_weap_throw"
+FireEmptySound      = "com_weap_inf_ammo_empty"
+FireLoopSound       = ""
+//ReloadSound         = "com_weap_inf_equip_med"
+ChargeSound         = ""
+ChargeSoundPitch    = ""
+ChangeModeSound     = "com_weap_inf_equip_med"
+WeaponChangeSound   = "com_weap_inf_equip_med"
+JumpSound               = "com_weap_inf_rifle_mvt_jump"
+LandSound               = "com_weap_inf_rifle_mvt_land"
+RollSound               = "com_weap_inf_rifle_mvt_roll"
+//ProneSound              = "com_weap_inf_rifle_mvt_squat"
+SquatSound              = "com_weap_inf_rifle_mvt_squat"
+//StandSound              = "com_weap_inf_rifle_mvt_getup"

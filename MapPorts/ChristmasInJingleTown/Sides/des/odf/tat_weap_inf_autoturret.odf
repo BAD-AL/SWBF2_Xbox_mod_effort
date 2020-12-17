@@ -1,0 +1,7 @@
+[WeaponClass]
+ClassParent                 = "com_weap_inf_autoturret"
+
+[Properties]
+OrdnanceName            = "tat_weap_inf_autoturret_ord"
+
+

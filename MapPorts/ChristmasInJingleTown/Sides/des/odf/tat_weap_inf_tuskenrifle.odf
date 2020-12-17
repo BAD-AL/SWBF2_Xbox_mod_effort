@@ -1,0 +1,33 @@
+[WeaponClass]
+ClassParent 		= "com_weap_inf_rifle"
+
+[Properties]
+ScoreForMedalsType = -1
+MedalsTypeToLock = -1
+
+GeometryName 		= "tat_weap_tuskrifle"
+AnimationBank		= "rifle"
+
+OrdnanceName 		= "tat_weap_inf_tuskenrifle_ord"
+
+
+//***********************************************
+//*********** WEAPON PERFORMANCE VALUES *********
+//***********************************************
+
+RoundsPerClip 		= "30"
+ReloadTime 		= "1.5"
+ShotDelay 		= "0.33"
+
+FlashColor 		= "10 127 10 255"
+FlashLightColor 	= "10 127 10 175"
+
+//******************************************************
+//***************	SOUND		****************
+//******************************************************
+
+FireSound       	= "tat_weap_tusken_fire"
+ReloadSound     	= "tat_weap_tusken_reload"
+FireEmptySound		= "com_weap_inf_ammo_empty"
+
+

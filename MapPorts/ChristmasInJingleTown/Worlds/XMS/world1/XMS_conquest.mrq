@@ -1,0 +1,14 @@
+ucft
+{
+	REQN
+	{
+		"congraph"
+		"XMS_conquest"
+	}
+	REQN
+	{
+		"world"
+		"XMS_conquest"
+		"XMS_trees"
+	}
+}

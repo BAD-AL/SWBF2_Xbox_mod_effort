@@ -1,0 +1,15 @@
+[WeaponClass]
+
+ClassLabel          = "melee"
+ClassParent			= "com_weap_inf_lightsaber"
+
+[Properties]
+
+GeometryName        = "all_weap_inf_lightsabre"
+ComboAnimationBank	= "human_sabre melee all_hero_luke_jedi"
+
+FirePointName       = "hp_fire"
+LightSaberLength	= "1.0"
+LightSaberWidth		= "0.32"
+LightSaberTexture 	= "candycane"
+LightSaberTrailColor = "255 200 200 128"

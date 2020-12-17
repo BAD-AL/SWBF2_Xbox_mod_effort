@@ -1,0 +1,20 @@
+[OrdnanceClass]
+
+ClassParent 			= "com_weap_inf_arccaster_ord"
+
+[Properties]
+Explosion	    		= "tat_weap_inf_jawa_arccaster_exp"
+
+ConeLength			= "20"
+ConeAngle			= "50"
+FirstRadius			= "1.2"
+MaxTargets			= "3"
+
+//OrdnanceSound			= "com_weap_launcher_energy_dumbfire"
+
+Damage 				= "165"
+MaxDamage			= "165"
+JumpDeduction			= "5"
+DamageThreshold			= "150"
+MaxJumpDistance			= "8"
+

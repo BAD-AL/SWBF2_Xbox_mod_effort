@@ -1,0 +1,70 @@
+[GameObjectClass]
+ClassParent             = "com_jedi_default"
+GeometryName            = "xms_inf_badsanta.msh"
+
+[Properties]
+AISizeType              = "HOVER"
+
+GeometryName            = "xms_inf_badsanta"
+GeometryLowRes          = "xms_inf_badsanta_low1"
+
+MaxHealth           = 3500.0
+
+MaxSpeed                = 8.0
+MaxStrafeSpeed          = 4.5
+MaxTurnSpeed            = 3.0
+JumpHeight              = 3.5
+
+JetJump             = "20.0"    //The initial jump-push given when enabling the jet
+JetPush             = "0.0"     //The constant push given while the jet is enabled (20 is gravity)
+JetAcceleration     = "20.0"    // for characters with jet jump, use this acceleration for in air control
+JetEffect           = ""
+JetFuelRechargeRate = "0.0" //Additional fuel per second (fuel is 0 to 1)
+JetFuelCost         = "0.0" //Cost per second when hovering (only used for jet-hovers)(fuel is 0 to 1)
+JetFuelInitialCost  = "0.0" //4initial cost when jet jumping(fuel is 0 to 1)
+JetFuelMinBorder    = "0.0" //minimum fuel to perform a jet jump(fuel is 0 to 1)
+JetShowHud          = 0
+JetEnergyDrain      = 35.0
+
+CollisionScale      = "0.0 0.0 0.0" // don't take damage from collisions
+
+WEAPONSECTION = 1
+//WeaponName1             = "xms_weap_hero_coal_gun"
+WeaponName1             = "xms_weap_hero_coal_launcher"
+WeaponAmmo1             = 0
+
+WEAPONSECTION = 2
+WeaponName2             = "xms_weap_hero_present_bad"
+WeaponAmmo2             = 0
+WeaponChannel2          = 1
+
+WEAPONSECTION = 3
+WeaponName3             = "xms_weap_hero_snow"
+WeaponAmmo3             = 100
+WeaponChannel3          = 1
+
+//SOUND
+SndHeroSelectable           = ""
+SndHeroSpawned              = ""
+SndHeroDefeated             = ""
+SndHeroKiller               = ""
+
+VOUnitType                  = 195
+SoldierMusic                = ""
+HurtSound                   = ""
+DeathSound                  = ""
+AcquiredTargetSound         = ""
+HidingSound                 = ""
+ApproachingTargetSound      = ""
+FleeSound                   = ""
+PreparingForDamageSound     = ""
+HeardEnemySound             = ""
+//ShockFadeOutTime          = "0.8"
+//ShockFadeInTime           = "2.0"
+ShockFadeOutGain        = ""
+ShockSound              = ""
+ClothingRustleSound     = ""
+LowHealthSound          = ""
+LowHealthThreshold      = "0.0"
+FoleyFXClass            = "cis_inf_soldier"
+

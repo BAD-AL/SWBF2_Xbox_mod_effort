@@ -1,0 +1,11 @@
+Version(1);
+RegionCount(1);
+
+Region("huntcap", 2)
+{
+	Layer(2);
+	Position(311.203552, -5.000000, 159.796738);
+	Rotation(1.000000, 0.000000, 0.000000, 0.000000);
+	Size(5.000000, 5.000000, 5.000000);
+	Name("huntcap");
+}

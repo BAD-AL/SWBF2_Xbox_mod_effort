@@ -1,0 +1,24 @@
+[OrdnanceClass]
+ClassLabel      = "shell"
+
+[Properties]
+
+GeometryName	= "beer"
+ExplosionName	= "com_weap_inf_snowball_exp"
+
+TrailEffect	= "com_sfx_weap_grenade_white"
+
+LifeSpan            = "5"
+Velocity            = "40.0"
+Gravity             = "0.5"
+Rebound             = "0.0"
+
+MaxDamage           = "75.0"
+VehicleScale            = "1.0"
+BuildingScale           =   "1.0"
+
+//***************************************
+//**********SOUNDS***********************
+//***************************************
+OrdnanceSound           = ""
+CollisionSound      = "com_weap_inf_rock_bounce"

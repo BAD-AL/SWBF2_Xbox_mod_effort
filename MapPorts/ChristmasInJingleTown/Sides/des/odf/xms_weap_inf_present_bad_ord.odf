@@ -1,0 +1,28 @@
+[OrdnanceClass]
+ClassLabel      = "shell"
+
+[Properties]
+
+GeometryName	= "p2a"
+ExplosionName	= "xms_weap_inf_coal_exp"
+
+TrailEffect	= "com_sfx_weap_grenade_white"
+
+LifeSpan            = "5.0"
+Velocity            = "40.0"
+Gravity             = "0.5"
+Rebound             = "0.0"
+
+MaxDamage           	= "500.0"
+DamageTransitionDelay   = "0.0"     //How long in seconds before the damage change begins.
+DamageTransitionPeriod  = "0.5"     //How long in seconds the damage change lasts.
+DamageFinalDamage       = "1500.0"    //What the damage would be at the end of the transition period.  A negative value means that no change is applied.
+
+VehicleScale            = "1.0"
+BuildingScale           =   "1.0"
+
+//***************************************
+//**********SOUNDS***********************
+//***************************************
+OrdnanceSound           = ""
+CollisionSound      = "com_weap_inf_rock_bounce"

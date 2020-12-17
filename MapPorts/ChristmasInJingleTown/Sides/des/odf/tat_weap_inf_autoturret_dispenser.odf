@@ -1,0 +1,51 @@
+[WeaponClass]
+ClassLabel          = "dispenser"
+
+[Properties]
+RoundsPerClip       = "1"
+ReloadTime          = "2.0"
+
+TriggerAll          = "1"
+
+OrdnanceName        = "tat_bldg_inf_autoturret"
+
+OffhandWeapon       = 1
+
+ShotDelay           = "1.2"
+MaxItems            = "50.0"
+InitialSalvoDelay   = "0.5"
+
+AutoAimSize         = "1.0"
+MaxPressedTime      = "0.0"
+
+MinStrength         = "0.3"
+MaxStrength         = "0.4"
+
+TargetEnemy         = "0"
+TargetNeutral       = "0"
+TargetFriendly      = "0"
+
+TargetPerson        = "0"
+TargetAnimal        = "0"
+TargetDroid         = "0"
+TargetVehicle       = "0"
+TargetBuilding      = "0"
+
+//**********************************************
+//****************** SOUND *********************
+//**********************************************
+
+FireSound           = ""
+FireEmptySound      = "com_weap_inf_ammo_empty"
+FireLoopSound       = ""
+ReloadSound         = "com_weap_inf_equip_med"
+ChargeSound         = ""
+ChargeSoundPitch    = ""
+ChangeModeSound     = "com_weap_inf_equip_med"
+WeaponChangeSound   = "com_weap_inf_equip_med"
+JumpSound           = "com_weap_inf_rifle_mvt_jump"
+LandSound           = "com_weap_inf_rifle_mvt_land"
+RollSound           = "com_weap_inf_rifle_mvt_roll"
+//ProneSound          = "com_weap_inf_rifle_mvt_lie"
+SquatSound          = "com_weap_inf_rifle_mvt_squat"
+//StandSound          = "com_weap_inf_rifle_mvt_getup"

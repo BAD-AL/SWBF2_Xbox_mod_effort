@@ -1,0 +1,1162 @@
+Version(3);
+SaveType(0);
+
+Camera("camera")
+{
+	Rotation(-0.089, -0.004, -0.995, 0.047);
+	Position(178.107, 41.471, -11.561);
+	FieldOfView(55.400);
+	NearPlane(1.000);
+	FarPlane(2700.000);
+	ZoomFactor(1.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(348.738, 34.820, 340.477,  0.220, 0.056, -0.944, 0.239);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+}
+LightName("XMS_trees.LGT");
+ControllerManager("StandardCtrlMgr");
+
+WorldExtents()
+{
+	Min(0.000000, 0.000000, 0.000000);
+	Max(0.000000, 0.000000, 0.000000);
+}
+
+NextSequence(-3435771);
+
+Object("end_prop_treeclump43", "end_prop_treeclump01", 8727325)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(81.174, 20.000, 95.807);
+	SeqNo(8727325);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump48", "end_prop_treeclump01", 17594229)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(99.527, 22.308, 48.701);
+	SeqNo(17594229);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump23", "end_prop_treeclump01", 18447028)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(57.969, 14.907, 202.737);
+	SeqNo(18447028);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump26", "end_prop_treeclump02", 85105083)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-351.556, 13.000, 81.837);
+	SeqNo(85105083);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump18", "end_prop_treeclump02", 86435710)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-220.556, 16.000, 199.016);
+	SeqNo(86435710);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump47", "end_prop_treeclump01", 222381325)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(150.253, 25.000, 13.611);
+	SeqNo(222381325);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump01", "end_prop_treeclump01", 235788403)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-214.000, 7.000, 166.000);
+	SeqNo(235788403);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump50", "end_prop_treeclump02", 240179810)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(146.033, 20.000, 173.948);
+	SeqNo(240179810);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree37", "yav_prop_leaftree3", 285396426)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(8.000, 1.000, 14.000);
+	SeqNo(285396426);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree10", "yav_prop_leaftree3", 355956376)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-100.547, 2.036, 74.053);
+	SeqNo(355956376);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree40", "yav_prop_leaftree", 388253377)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(47.298, 0.000, 39.713);
+	SeqNo(388253377);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree20", "yav_prop_leaftree3", 407266520)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-243.456, 0.000, -18.403);
+	SeqNo(407266520);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump55", "end_prop_treeclump01", 536105118)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(184.322, 14.000, 73.700);
+	SeqNo(536105118);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump2", "end_prop_treeclump01", 560619548)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-291.000, 22.308, 173.000);
+	SeqNo(560619548);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump28", "end_prop_treeclump01", 568525332)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-281.336, 66.000, 235.587);
+	SeqNo(568525332);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree34", "yav_prop_leaftree2", 603617358)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(53.366, 0.000, 3.334);
+	SeqNo(603617358);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree52", "yav_prop_leaftree3", 647754227)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-70.861, 1.174, 1.383);
+	SeqNo(647754227);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump71", "end_prop_treeclump01", 654585961)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(16.710, 21.384, 274.568);
+	SeqNo(654585961);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree5", "yav_prop_leaftree3", 762358498)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-161.213, 3.736, 62.866);
+	SeqNo(762358498);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump8", "end_prop_treeclump01", 783165985)
+{
+	ChildRotation(0.924, 0.000, -0.382, 0.000);
+	ChildPosition(-222.066, 56.356, 286.024);
+	SeqNo(783165985);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump61", "end_prop_treeclump01", 789716812)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-197.139, 75.000, 369.438);
+	SeqNo(789716812);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree42", "yav_prop_leaftree2", 792300200)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(10.332, 0.000, 67.843);
+	SeqNo(792300200);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree35", "yav_prop_leaftree3", 891501519)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(41.148, 0.000, -17.061);
+	SeqNo(891501519);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump15", "end_prop_treeclump01", 925693044)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-189.964, 57.575, 314.794);
+	SeqNo(925693044);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree16", "yav_prop_leaftree", 1034620324)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-294.862, 12.520, -20.145);
+	SeqNo(1034620324);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree36", "yav_prop_leaftree3", 1060905541)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(13.661, 1.305, 26.328);
+	SeqNo(1060905541);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump38", "end_prop_treeclump01", 1093802821)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(133.327, 26.600, 123.604);
+	SeqNo(1093802821);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree23", "yav_prop_leaftree3", 1130541282)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-244.045, 0.000, 23.169);
+	SeqNo(1130541282);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree56", "yav_prop_leaftree3", 1137163203)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-235.129, 1.038, 127.499);
+	SeqNo(1137163203);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump45", "end_prop_treeclump01", 1283544681)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(128.104, 30.000, 51.399);
+	SeqNo(1283544681);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree39", "yav_prop_leaftree3", 1352851600)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(24.930, 0.000, -18.075);
+	SeqNo(1352851600);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree", "yav_prop_leaftree", 1363534459)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-168.966, 4.000, 75.626);
+	SeqNo(1363534459);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump31", "end_prop_treeclump02", 1374483540)
+{
+	ChildRotation(0.383, 0.000, -0.924, 0.000);
+	ChildPosition(107.456, 20.000, 154.311);
+	SeqNo(1374483540);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump19", "end_prop_treeclump02", 1455271333)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-240.779, 53.000, 244.929);
+	SeqNo(1455271333);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump17", "end_prop_treeclump02", 1466753655)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-300.432, 30.000, 204.185);
+	SeqNo(1466753655);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump49", "end_prop_treeclump02", 1497564630)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(128.519, 25.000, 216.272);
+	SeqNo(1497564630);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree49", "yav_prop_leaftree3", 1569286496)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-68.303, 1.873, -28.065);
+	SeqNo(1569286496);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree43", "yav_prop_leaftree3", 1589485289)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(30.236, 0.000, 71.098);
+	SeqNo(1589485289);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree33", "yav_prop_leaftree2", 1600407339)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(44.000, 0.000, -6.000);
+	SeqNo(1600407339);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree31", "yav_prop_leaftree", 1636077399)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(39.037, 0.000, -30.254);
+	SeqNo(1636077399);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree32", "yav_prop_leaftree", 1690798539)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(17.787, 0.000, -25.916);
+	SeqNo(1690798539);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump16", "end_prop_treeclump02", 1736611067)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-257.586, 10.000, 172.636);
+	SeqNo(1736611067);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree11", "yav_prop_leaftree3", 1773079491)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-109.201, 2.418, 66.772);
+	SeqNo(1773079491);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree25", "yav_prop_leaftree3", 1847691488)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-210.990, 0.000, 84.676);
+	SeqNo(1847691488);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree22", "yav_prop_leaftree2", 1895545052)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-242.091, -2.000, 14.708);
+	SeqNo(1895545052);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree14", "yav_prop_leaftree2", 1913274859)
+{
+	ChildRotation(0.924, 0.000, 0.383, 0.000);
+	ChildPosition(-272.300, 0.000, -19.295);
+	SeqNo(1913274859);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump59", "end_prop_treeclump02", 1923823969)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(192.674, 15.000, 18.758);
+	SeqNo(1923823969);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump53", "end_prop_treeclump01", 1927724140)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(154.132, 20.099, 140.755);
+	SeqNo(1927724140);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree6", "yav_prop_leaftree3", 1953089842)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-130.788, 2.833, 64.626);
+	SeqNo(1953089842);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree28", "yav_prop_leaftree2", 1965326185)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(26.000, 0.000, -41.000);
+	SeqNo(1965326185);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree57", "yav_prop_leaftree3", 1974260690)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-250.596, 3.173, 127.964);
+	SeqNo(1974260690);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree50", "yav_prop_leaftree2", 2104164143)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-79.304, 0.700, -22.991);
+	SeqNo(2104164143);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree15", "yav_prop_leaftree", -2032092968)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-293.058, 0.000, -61.860);
+	SeqNo(-2032092968);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump10", "end_prop_treeclump01", -2025609267)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-166.260, 16.325, 189.843);
+	SeqNo(-2025609267);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree3", "yav_prop_leaftree3", -1829756789)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-236.961, 3.000, 67.473);
+	SeqNo(-1829756789);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree41", "yav_prop_leaftree", -1799102197)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(16.000, 0.000, 47.000);
+	SeqNo(-1799102197);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump32", "end_prop_treeclump01", -1776157110)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(70.141, 20.000, 163.194);
+	SeqNo(-1776157110);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump52", "end_prop_treeclump02", -1692712236)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(156.145, 15.000, 99.409);
+	SeqNo(-1692712236);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump46", "end_prop_treeclump01", -1661549360)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(133.016, 29.629, 38.999);
+	SeqNo(-1661549360);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree55", "yav_prop_leaftree2", -1624355785)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-243.884, 4.000, 133.986);
+	SeqNo(-1624355785);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump42", "end_prop_treeclump02", -1622494847)
+{
+	ChildRotation(0.707, 0.000, 0.707, 0.000);
+	ChildPosition(121.896, 27.000, 98.631);
+	SeqNo(-1622494847);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump30", "end_prop_treeclump01", -1519451234)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-238.029, 72.000, 369.025);
+	SeqNo(-1519451234);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree7", "yav_prop_leaftree3", -1447703961)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-139.814, 2.658, 76.076);
+	SeqNo(-1447703961);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump24", "end_prop_treeclump01", -1419165157)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(30.444, 15.000, 204.627);
+	SeqNo(-1419165157);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree24", "yav_prop_leaftree", -1412775701)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-238.789, -3.000, 32.049);
+	SeqNo(-1412775701);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree12", "yav_prop_leaftree3", -1402275254)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-118.802, 1.920, 75.781);
+	SeqNo(-1402275254);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump37", "end_prop_treeclump01", -1334557316)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(95.038, 28.132, 119.636);
+	SeqNo(-1334557316);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree21", "yav_prop_leaftree3", -1304173601)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-238.672, -2.000, -12.546);
+	SeqNo(-1304173601);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree30", "yav_prop_leaftree", -1298879074)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(16.052, 0.000, 0.682);
+	SeqNo(-1298879074);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump34", "end_prop_treeclump01", -1294058100)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(44.513, 13.000, 175.049);
+	SeqNo(-1294058100);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree9", "yav_prop_leaftree3", -1211231410)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-144.981, 3.371, 96.349);
+	SeqNo(-1211231410);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump02", "end_prop_treeclump02", -1181433498)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-339.599, 18.000, 152.185);
+	SeqNo(-1181433498);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree8", "yav_prop_leaftree3", -1168433509)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-176.852, 2.107, 94.919);
+	SeqNo(-1168433509);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump58", "end_prop_treeclump01", -1128039368)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(103.913, 25.000, 247.387);
+	SeqNo(-1128039368);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump51", "end_prop_treeclump02", -1126674519)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(164.258, 20.000, 52.302);
+	SeqNo(-1126674519);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree4", "yav_prop_leaftree3", -1036056186)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-158.571, 5.874, 88.977);
+	SeqNo(-1036056186);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump12", "end_prop_treeclump01", -978978148)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-250.326, 66.490, 319.337);
+	SeqNo(-978978148);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree48", "yav_prop_leaftree3", -972423702)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-63.786, 4.748, 18.768);
+	SeqNo(-972423702);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump29", "end_prop_treeclump01", -953814679)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-201.747, 61.000, 262.492);
+	SeqNo(-953814679);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump39", "end_prop_treeclump01", -940597976)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(120.559, 28.562, 182.531);
+	SeqNo(-940597976);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump41", "end_prop_treeclump01", -873927885)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(18.829, 16.000, 220.226);
+	SeqNo(-873927885);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree44", "yav_prop_leaftree3", -863173422)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(57.216, 1.305, 21.627);
+	SeqNo(-863173422);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump21", "end_prop_treeclump02", -810472550)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-161.546, 60.585, 291.284);
+	SeqNo(-810472550);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree19", "yav_prop_leaftree", -792581324)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-238.416, -2.000, -30.784);
+	SeqNo(-792581324);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump54", "end_prop_treeclump02", -784383680)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(180.528, 10.000, 156.128);
+	SeqNo(-784383680);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump14", "end_prop_treeclump01", -760700719)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-332.656, 38.875, 200.063);
+	SeqNo(-760700719);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree45", "yav_prop_leaftree2", -654267702)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-64.687, 2.500, 55.931);
+	SeqNo(-654267702);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump3", "end_prop_treeclump01", -646873867)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-163.000, 41.774, 240.000);
+	SeqNo(-646873867);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump7", "end_prop_treeclump01", -600705198)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-188.000, 60.575, 328.000);
+	SeqNo(-600705198);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump6", "end_prop_treeclump01", -594063191)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-267.000, 45.000, 202.000);
+	SeqNo(-594063191);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree58", "yav_prop_leaftree3", -561710731)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-225.891, 1.293, 138.369);
+	SeqNo(-561710731);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump9", "end_prop_treeclump01", -548942964)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-216.385, 40.000, 240.656);
+	SeqNo(-548942964);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump57", "end_prop_treeclump01", -535837754)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(176.683, 17.322, 195.966);
+	SeqNo(-535837754);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump56", "end_prop_treeclump01", -526469294)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(179.667, 12.000, 114.563);
+	SeqNo(-526469294);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree53", "yav_prop_leaftree3", -511753169)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-64.395, 5.966, 36.116);
+	SeqNo(-511753169);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump11", "end_prop_treeclump01", -507321012)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-319.850, 63.004, 219.743);
+	SeqNo(-507321012);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump4", "end_prop_treeclump01", -504567527)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-265.383, 62.000, 256.003);
+	SeqNo(-504567527);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump36", "end_prop_treeclump01", -443212040)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(3.068, 13.043, 152.916);
+	SeqNo(-443212040);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump35", "end_prop_treeclump02", -420524067)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(61.906, 16.000, 135.924);
+	SeqNo(-420524067);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump5", "end_prop_treeclump01", -362442074)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-356.432, 19.658, 110.546);
+	SeqNo(-362442074);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree13", "yav_prop_leaftree3", -345279692)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-262.272, 0.000, 25.650);
+	SeqNo(-345279692);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump44", "end_prop_treeclump02", -280702117)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(111.786, 27.000, 72.985);
+	SeqNo(-280702117);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump20", "end_prop_treeclump02", -266809463)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-184.847, 30.000, 216.331);
+	SeqNo(-266809463);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump33", "end_prop_treeclump02", -207860895)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(94.538, 25.000, 193.633);
+	SeqNo(-207860895);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump13", "end_prop_treeclump01", -178217005)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-296.556, 70.079, 224.946);
+	SeqNo(-178217005);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump25", "end_prop_treeclump01", -146723863)
+{
+	ChildRotation(-0.383, 0.000, -0.924, 0.000);
+	ChildPosition(-131.830, 44.152, 262.942);
+	SeqNo(-146723863);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree17", "yav_prop_leaftree3", -120865538)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-303.446, 7.889, 4.250);
+	SeqNo(-120865538);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree54", "yav_prop_leaftree3", -100632706)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-96.598, 0.038, -24.918);
+	SeqNo(-100632706);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump60", "end_prop_treeclump01", -93348063)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-144.000, 62.000, 322.000);
+	SeqNo(-93348063);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump22", "end_prop_treeclump02", -70736613)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(10.854, 8.000, 188.506);
+	SeqNo(-70736613);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump27", "end_prop_treeclump02", -49825553)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-302.089, 65.000, 256.122);
+	SeqNo(-49825553);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("yav_prop_leaftree2", "yav_prop_leaftree2", -18858783)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-155.274, 6.520, 73.762);
+	SeqNo(-18858783);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}
+
+Object("end_prop_treeclump40", "end_prop_treeclump02", -15442529)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(82.812, 23.436, 237.793);
+	SeqNo(-15442529);
+	Team(0);
+	NetworkId(-1);
+	Layer(4);
+}

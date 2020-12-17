@@ -1,0 +1,28 @@
+[WeaponClass]
+ClassParent 		= "com_weap_inf_rocket_launcher"
+
+[Properties]
+OrdnanceName        = "com_weap_inf_present_ord"
+
+RoundsPerClip       = "0"
+ShotDelay           = "0.3"
+
+InstantPlayFireAnim             = 1
+OffhandWeapon                   = 1
+
+FireSound           = "com_weap_throw"
+FireEmptySound      = ""
+FireLoopSound       = ""
+ReloadSound         = ""
+ChargeSound         = ""
+ChargeSoundPitch    = ""
+ChangeModeSound     = ""
+WeaponChangeSound   = ""
+JumpSound           = "com_weap_inf_pistol_mvt_jump"
+LandSound           = "com_weap_inf_pistol_mvt_land"
+RollSound           = "com_weap_inf_pistol_mvt_roll"
+//ProneSound          = "com_weap_inf_pistol_mvt_lie"
+SquatSound          = "com_weap_inf_pistol_mvt_squat"
+//StandSound          = "com_weap_inf_pistol_mvt_getup"
+
+

@@ -1,0 +1,39 @@
+[WeaponClass]
+ClassParent 		= "com_weap_inf_sniper_rifle"
+
+[Properties]
+ScoreForMedalsType = -1
+MedalsTypeToLock = -1
+
+AnimationBank		= "rifle"
+GeometryName 		= "tat_weap_tuskrifle"
+
+//***********************************************
+//*************	TARGET & RANGE VALUES  **********
+//***********************************************
+
+ZoomMin			= "5.0"
+ZoomMax			= "5.0"
+
+//***********************************************
+//*********** WEAPON PERFORMANCE VALUES *********
+//***********************************************
+
+OrdnanceName		= "tat_weap_inf_tuskensniperrifle_ord"
+
+//***********************************************
+//***********  HUD & CONTROLLER VALUES  *********
+//***********************************************
+
+FlashColor 		= "255 80 80 255"
+FlashLightColor 	= "255 192 192 175"
+
+//************************************************
+//*******************   SOUND    *****************
+//************************************************
+
+FireSound       	= "tat_weap_tuskensniper_fire"
+ReloadSound     	= "tat_weap_tusken_reload"
+FireEmptySound		= "com_weap_inf_ammo_empty"
+
+

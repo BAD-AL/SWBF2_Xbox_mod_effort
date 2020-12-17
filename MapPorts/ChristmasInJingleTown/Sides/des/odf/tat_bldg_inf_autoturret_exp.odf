@@ -1,0 +1,4 @@
+[ExplosionClass]
+ClassParent = "com_weap_inf_snowball_big_exp"
+
+[Properties]

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XboxLiveSubmissionProject Version="1.0">
+	<ContentProject clsid="{B85BDAB7-DFE6-4123-88F6-FDF10AB93820}" Name="Christmas in Jinglin' Town" TitleID="4c41001a" ActivationDate="11/25/2020" PubOfferingID="0000025" PubBitFlags="FFFFFFFF" HasCost="true" DashIconPath=".\Dash_icon_64x64.bmp">
+		<LanguageSettings clsid="{007BB28D-926C-4C02-9199-19E8C3066965}">
+			<Language clsid="{19FB1DF8-BC4A-470D-A533-07CA924CBDF4}" DisplayName="Christmas in Jinglin' Town" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="Christmas in Jinglin' Town" Description="Have a hot cup of christmas spirit! Let's get Jinglin'!"/>
+			<Language clsid="{19FB1DF9-BC4A-470D-A533-07CA924CBDF4}" DisplayName="Christmas in Jinglin' Town" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="Christmas in Jinglin' Town" Description="Have a hot cup of christmas spirit! Let's get Jinglin'!"/>
+			<Language clsid="{19FB1DFB-BC4A-470D-A533-07CA924CBDF4}" DisplayName="Christmas in Jinglin' Town" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="Christmas in Jinglin' Town" Description="Have a hot cup of christmas spirit! Let's get Jinglin'!"/>
+			<Language clsid="{19FB1DFC-BC4A-470D-A533-07CA924CBDF4}" DisplayName="Christmas in Jinglin' Town" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="Christmas in Jinglin' Town" Description="Have a hot cup of christmas spirit! Let's get Jinglin'!"/>
+			<Language clsid="{19FB1DFD-BC4A-470D-A533-07CA924CBDF4}" DisplayName="Christmas in Jinglin' Town" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="Christmas in Jinglin' Town" Description="Have a hot cup of christmas spirit! Let's get Jinglin'!"/>
+			<Language clsid="{19FB1DFE-BC4A-470D-A533-07CA924CBDF4}" DisplayName="Christmas in Jinglin' Town" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="Christmas in Jinglin' Town" Description="Have a hot cup of christmas spirit! Let's get Jinglin'!"/>
+		</LanguageSettings>
+		<Contents clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}">
+			<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="_LVL_XBOX">
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="Load">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\common.lvl" TargetName="common.lvl"/>
+				</Folder>
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="Side">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\all.lvl" TargetName="all.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\allshell.lvl" TargetName="allshell.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\cis.lvl" TargetName="cis.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\cisshell.lvl" TargetName="cisshell.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\des.lvl" TargetName="des.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\ewk.lvl" TargetName="ewk.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\imp.lvl" TargetName="imp.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\impshell.lvl" TargetName="impshell.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\rep.lvl" TargetName="rep.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\repshell.lvl" TargetName="repshell.lvl"/>
+				</Folder>
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="XMS">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\xms.lvl" TargetName="xms.lvl"/>
+				</Folder>
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="SOUND">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\xms.lvl" TargetName="xms.lvl"/>
+				</Folder>
+				<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\addme.script" TargetName="addme.script"/>
+				<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\core.lvl" TargetName="core.lvl"/>
+				<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\mission.lvl" TargetName="mission.lvl"/>
+			</Folder>
+			<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\manifest" TargetName="manifest"/>
+		</Contents>
+	</ContentProject>
+</XboxLiveSubmissionProject>

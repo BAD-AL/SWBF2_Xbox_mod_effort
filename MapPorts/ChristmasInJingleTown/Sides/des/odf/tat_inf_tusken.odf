@@ -1,0 +1,39 @@
+[GameObjectClass]
+ClassParent 		= "com_inf_default"
+GeometryName 		= "tat_inf_tusken.msh"
+
+[Properties]
+GeometryName 		= "tat_inf_tusken"
+GeometryLowRes 		= "tat_inf_tusken_low1"
+
+//this keeps the player from entering first person with this char
+forcemode                       = 1
+
+NoEnterVehicles		= 1
+
+WeaponName1 		= "tat_weap_inf_tuskenrifle"
+WeaponAmmo1 		= 0
+
+//SOUND
+HurtSound	          = "tusken_hurt"
+DeathSound                = "tusken_die"
+//LeftFootstepSound       = "soldierstepleft"
+//RightFootstepSound      = "soldierstepright"
+AcquiredTargetSound       = "tusken_chatter"
+HidingSound               = "tusken_chatter"
+ApproachingTargetSound    = "tusken_chatter"
+FleeSound                 = "tusken_chatter"
+PreparingForDamageSound   = "tusken_chatter"
+HeardEnemySound           = "tusken_chatter"
+//WaterWadingSound        = "com_inf_wading"
+//ShockFadeOutTime        = "0.8"
+//ShockFadeInTime         = "2.0"
+
+
+VOUnitType                = 173
+
+
+VOSound = "raider_inf_chatter_AcquiredTarget    AcquiredTarget"
+VOSound = "raider_inf_chatter_NearbyFriendlySlaughter      NearbyFriendlySlaughter"
+VOSound = "raider_inf_chatter_KillingSpree4      KillingSpree4"
+VOSound = "raider_inf_chatter_Grenade      Grenade"

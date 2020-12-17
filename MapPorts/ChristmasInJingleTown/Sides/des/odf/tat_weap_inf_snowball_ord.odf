@@ -1,0 +1,6 @@
+[OrdnanceClass]
+ClassParent             = "com_weap_inf_snowball_ord"
+
+[Properties]
+Velocity            = "18.0"
+Gravity             = "0.45"

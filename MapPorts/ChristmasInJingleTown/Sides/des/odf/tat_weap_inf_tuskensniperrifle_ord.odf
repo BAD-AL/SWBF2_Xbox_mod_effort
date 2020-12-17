@@ -1,0 +1,39 @@
+[OrdnanceClass]
+//This area defines the ordnances class and the effects associated with it.
+ClassLabel 		= "beam"
+
+[Properties]
+ImpactEffectWater 	= "com_sfx_watersplash_ord"
+
+LaserTexture		= "com_sfx_laser_green"
+LaserGlowColor		= "64 224 64 100"
+LightColor              = "64 224 64 150"
+LightRadius             = "4.0"
+
+LaserWidth		= "0.1"
+FadeOutTime		= "0.25"
+
+ImpactEffectSoft	= "com_sfx_ord_exp"
+ImpactEffectRigid	= "com_sfx_ord_exp"
+ImpactEffectStatic	= "com_sfx_ord_exp"
+ImpactEffectTerrain	= "com_sfx_ord_exp"
+ImpactEffectWater	= "com_sfx_ord_exp"
+ImpactEffectShield	= "com_sfx_ord_exp"
+
+ExpireEffect		= "com_sfx_ord_exp"
+
+LifeSpan 		= "0.15"
+Range	 		= "500.0"
+Gravity			= "1.0"
+Rebound			= "0.0"
+
+MaxDamage 		= "200.0"
+PassThrough		= "1"
+
+VehicleScale		= "0.1"
+ShieldScale		= "1.0"
+PersonScale		= "1.0"
+DroidScale		= "1.0"
+BuildingScale		= "0.1"
+
+OrdnanceSound		= "com_weap_inf_ord_hum_sm"

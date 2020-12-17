@@ -1,0 +1,64 @@
+[WeaponClass]
+//ClassParent             = "com_weap_inf_arccaster"
+ClassLabel          = "cannon"
+
+//GeometryName        = "tat_weap_tuskrifle"
+
+[Properties]
+//GeometryName        = "tat_weap_tuskrifle"
+GeometryName        = "com_weap_inf_torpedo"
+HighResGeometry     = "com_1st_weap_inf_torpedo"
+
+
+//***********************************************
+//*********** WEAPON PERFORMANCE VALUES *********
+//***********************************************
+
+RoundsPerClip       = "0"
+ReloadTime          = "0.0"
+ShotDelay           = "0.3"
+ShotElevate         = "0.04"
+MaxPressedTime      = "0.0"
+
+SalvoCount          = "1"
+ShotsPerSalvo       = "20"
+SalvoDelay          = "0.0"
+InitialSalvoDelay   = "0.51"
+
+OrdnanceName            = "xms_weap_inf_coal_ord"
+
+//OrdnanceName            = "tat_weap_inf_jawa_arccaster_ord"
+
+//SOUND
+//FireSound               = "force_lightning_fire"
+//ReloadSound             = ""
+//WeaponChangeSound       = "com_weap_inf_equip_med"
+//ChangeModeSound         = "com_weap_inf_equip_med"
+//FireEmptySound          = "com_weap_inf_weapon_empty"
+//ChargeSound             = "imp_weap_inf_arccaster_charge"
+//ChargeSoundPitch        = "0.05"
+//OverheatSound           = "com_weap_energy_depleted"
+//OverheatSoundPitch      = "0.5"
+//OverheatStopSound       = "com_weap_energy_refilled"
+//JumpSound               = "com_weap_inf_rifle_mvt_jump"
+//LandSound               = "com_weap_inf_rifle_mvt_land"
+//RollSound               = "com_weap_inf_rifle_mvt_roll"
+////ProneSound              = "com_weap_inf_rifle_mvt_squat"
+//SquatSound              = "com_weap_inf_rifle_mvt_squat"
+////StandSound              = "com_weap_inf_rifle_mvt_getup"
+
+//***************************************************
+//******************** SOUND ************************
+//***************************************************
+
+FireSound           = "imp_weap_inf_mortar_launcher_fire"
+ReloadSound         = "com_weap_inf_reload_lg"
+ChangeModeSound     = "com_weap_inf_equip_lg"
+FireEmptySound      = "com_weap_inf_ammo_empty"
+WeaponChangeSound   = "com_weap_inf_equip_lg"
+JumpSound           = "com_weap_inf_bazooka_mvt_jump"
+LandSound           = "com_weap_inf_bazooka_mvt_land"
+RollSound           = "com_weap_inf_bazooka_mvt_roll"
+//ProneSound          = "com_weap_inf_bazooka_mvt_lie"
+SquatSound          = "com_weap_inf_bazooka_mvt_squat"
+//StandSound          = "com_weap_inf_bazooka_mvt_getup"
