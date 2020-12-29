@@ -1,0 +1,4706 @@
+DoConsoleCmd
+dofile
+DoFile
+ingame.lvl
+ingame.mvs
+ingamefr.mvs
+ingamegr.mvs
+mission.lvl
+MISSION.lvl
+MISSION\%s.lvl
+Input_
+Input_Accept
+Input_Back
+Input_GeneralDown
+Input_GeneralRight
+Input_GeneralUp
+Input_Start
+invalid control char
+loadfile
+loadstring
+mpsessionlist
+mpsessionlist_listbox_contents
+mpsessionlist_listbox_layout
+mpsessionlist_playerlist_contents
+mpsessionlist_serverinfo_contents
+No such file or directory
+Open
+OpenAudioStream
+OpenErrorBox
+OpenMovie
+OpenPopup
+pausemenu
+PostLoadHack
+ReadAllControllers
+ReadDataFile
+ReadDataFileInGame
+ScriptCB_DoConsoleCmd
+ScriptCB_DoFile
+ScriptCB_Freecamera
+ScriptCB_GetDifficulty
+ScriptCB_GetError
+ScriptCB_GetErrorLevel
+ScriptCB_GetHuntScoreLimit
+ScriptCB_GetIPAddr
+ScriptCB_GetLanguage
+ScriptCB_GetLatestError
+ScriptCB_getlocalizestr
+ScriptCB_GetMaxControllers
+ScriptCB_GetMaxMissionQueue
+ScriptCB_GetNumCameras
+ScriptCB_GetNumControllers
+ScriptCB_GetPlatform
+ScriptCB_GetPrimaryController
+ScriptCB_HideDownloadableContent
+ScriptCB_IFText_SetString
+ScriptCB_IFText_SetUString
+ScriptCB_InMemoryProfileMode
+ScriptCB_IsControllerBound
+ScriptCB_IsControllerConnected
+ScriptCB_IsInShell
+ScriptCB_IsSplitscreen
+ScriptCB_PostLoadHack
+ScriptCB_random
+ScriptCB_RestartMission
+ScriptCB_SaveCampaignState
+ScriptCB_SaveMetagameState
+ScriptCB_SaveMissionSetup
+ScriptCB_SetAIDifficulty
+ScriptCB_SetCanSwitchSides
+ScriptCB_SetControlMode
+ScriptCB_SetDifficulty
+ScriptCB_SetGameName
+ScriptCB_SetGameRules
+ScriptCB_SetHUDScale
+ScriptCB_SetMemoryProfileMode
+ScriptCB_SetMissionNames
+ScriptCB_SetSplitscreen
+ScriptCB_SetTeamNames
+ScriptCB_SndPlaySound
+ScriptCB_SoundDisable
+ScriptCB_SoundEnable
+ScriptCB_Unpause
+ScriptCB_ununicode
+ScriptCB_usprintf
+ScriptCB_ustrupper
+ScriptCB_XB_Reboot
+ScriptInit
+ScriptPostLoad
+ScriptPreInit
+SetDifficulty
+SetUrbanEnvironment
+SetVictoryMovie
+SetVictoryMusic
+SetVictoryTimer
+ShowAllUnitsOnMinimap
+ShowHuntScoreLimit
+ShowLoadDisplay
+ShowMessageText
+ShowMultipageText
+ShowObjectiveTextPopup
+ShowPopup
+ShowSelectionTextPopup
+ShowTeamPoints
+ShowTimer
+StopInGameMovie
+StopInGameMusic
+StopMovie
+StopTimer
+ToggleBarriers
+TogglePlanningGraphArcs
+TriggerSoundRegion
+TriggerSoundRegion::Group
+TriggerSoundRegion::Properties
+TriggerSoundRegionEnable
+unable to dump given function
+UnblockPlanningGraphArcs
+UpdateScreen
+VERSION
+victorytimer
+Weapon
+WeaponAreaEffect
+WeaponAreaEffectClass
+WeaponBinoculars
+WeaponBinocularsClass
+WeaponCannon
+WeaponCannonClass
+WeaponCatapult
+WeaponCatapultClass
+WeaponChange
+WeaponClass
+WeaponDestruct
+WeaponDestructClass
+WeaponDetonator
+WeaponDetonatorClass
+WeaponDisguise
+WeaponDisguiseClass
+WeaponDispenser
+WeaponDispenserClass
+WeaponGrapplingHook
+WeaponGrapplingHookClass
+WeaponGrenade
+WeaponGrenadeClass
+WeaponInvisibility
+WeaponInvisibilityClass
+WeaponLaser
+WeaponLaserClass
+WeaponLauncher
+WeaponLauncherClass
+WeaponMelee
+WeaponMeleeClass
+WeaponMeleeThrow
+WeaponMeleeThrowClass
+WeaponRemote
+WeaponRemoteClass
+WeaponRepair
+WeaponRepairClass
+weapons.%s
+WeaponShield
+WeaponShieldClass
+WeaponTowCable
+WeaponTowCableClass
+-----
+        %3d %3d %3d %3d %3d %3d %3d %3d
+    Component %d
+    s
+    with %d x %d thumbnail image
+    xmlns
+   %'
+   Data
+   Type
+   Type: %i
+  Class
+  Class: %x
+ %d components
+ %d, max %d
+ %d.%d.%d.%d
+ %d:%02d
+ %s %f
+ %s %s
+ %s near `%s'
+ %s, file %s, line %d
+ %u extraneous bytes before marker 0x%02x
+ %u.%u.%u.%u
+ bad Huffman code
+ block too big
+- C\
+ CSU
+ defer
+ expected %d
+ expected at least %d.%d
+ expected at most %d.%d
+- floating point not loaded
+ found marker 0x%02x instead of RST%d
+ in function `%s'
+ in main chunk
+ j:Q
+ library is %d, caller expects %d
+ library thinks size is %u, caller expects %u
+ Localize game.tooltips.leaving
+ Method
+ missing SOS marker
+- not enough space for 
+- not enough space for _onexit/atexit table
+- not enough space for arguments
+- not enough space for environment
+- not enough space for lowio initialization
+- not enough space for stdio initialization
+- not enough space for thread data
+ premature end of data segment
+- pure virtual function call
+ PWV
+ quantization tables are too coarse for baseline JPEG
+ read %d
+ read version %d.%d
+ size of %s is %d but read %d
+ SOF type 0x%02x
+ SOS before SOF
+ Source
+ sQ3
+ starts with 0x%02x 0x%02x
+ SUV
+ SUV3
+ text/xml
+- This application cannot run using the active version of the Microsoft .NET Runtime
+ thumbnail image size does not match data length %u
+ two SOF markers
+ two SOI markers
+- unable to initialize heap
+- unable to open console device
+- unexpected heap error
+- unexpected multithread lock error
+ unknown JFIF revision number %d.%02d
+ urn
+ UVW
+- wR
+ XBOXKRNL
+- XN
+ xon/%x
+-%02d
+%02d GMT
+%02d:%02d
+%02d:%02d:%02d
+%02x
+%1233
+%2x%2x%2x%2x
+%d - '%s'
+%d %%%%
+%d %d %d %d
+%d,%d,%d
+%d.%d.%d.%d
+%d.dat
+%d/%d
+%D\D
+%f %f
+%f %f %f
+%f %f %f %f
+%f %f %s
+%f %s
+%i %f
+%i %f %f %f
+%i %i
+%i %i %i %i
+%i Arguments Found
+%s %d
+%s %f
+%s %f %d
+%s %f %f
+%s %f %f %f
+%s %f %f %f %f %f %f
+%s %f %s %s %f %s %s
+%s %i
+%s %s
+%s %s %f
+%s %s %s %f %f %f %f %f %f
+%s expected, got %s
+%s Joined
+%s Left
+%s too new
+%s too new: read version %d.%d; expected at most %d.%d
+%s too old
+%s too old: read version %d.%d; expected at least %d.%d
+%s%d
+%s%s
+%s%s%s
+%s%s%s.%s
+%s%s.lvl
+%s.%d
+%s.firstnames.%02d
+%s.lastnames.%02d
+%s.lvl
+%s: 
+%s:%d: %s
+%s:%d: %s near `%s'
+%s;%s
+%s\%s
+%s\_LVL_XBOX\addme.script
+%s\manifest
+%s_%s
+%s_%s_%s
+%s_full
+%s_listbox_contents
+%s_map
+%sprofiles.dat
+%u %u %u %u
+.data
+.data1
+.eBinterval is empty
+.E'O
+.lua
+.qxq
+.rdata
+.text
+.uGf
+.vSUV
+.wQtc
+.XTLID
+//msg.%02x/u
+/A\w
+/A`w
+/ADr
+/Adw
+/AHr-
+/Ahw
+/Alvl
+/Alw
+/Axv
+/Chr
+/droplateupdate
+/fbserver/fbserver.ashx
+/login
+/msgserver/getstring.ashx
+/msgserver/msgserver.ashx
+/msgserver/vetstring.ashx
+/nodroplateupdate
+/stfd/readfile.ashx
+/stfd/reportbrokenlink.ashx
+/stfd/resolvename.ashx
+/stfd/writefile.ashx
+/xmatch/xmatchclient.srf
+/xmatch/xmatchhost.srf
+/xmatch/xmatchhostdelete.srf
+/xpnfront/xmessaging.srf
+/xpnfront/xnotification.srf
+/xpnfront/xpresence.srf
+/xpnfront/xteams.srf
+/xsig/GetSigningKey.ashx
+/xstats/statpost.ashx
+/xstats/statunitenum.ashx
+/xstats/statunitget.ashx
+/xstats/xstatscommitatt.ashx
+/xstats/xstatsenumlb.ashx
+/xstats/xstatsget.ashx
+/xstats/xstatsreset.ashx
+/xstats/xstatsset.ashx
+;Asteroid
+;Battlefront2.xbe
+;CommandBuilding
+;CommandFlyer
+;EntityBuilding
+;EntityBuildingAnimated
+;EntityCloth
+;EntityEffectClass
+;EntityGeometry
+;EntityHologram
+;EntityItem
+;EntityProp
+;EntitySoundStream
+;EntityTrap
+;OrdnanceHaywire
+;PassengerSlot
+;Red3DModelAnimator
+;RotatingModel
+@DSOUND
+@EntitySoldier
+@Ordnance
+@UnitAgent
+@UnitController
+@VOICMAIL
+@XGRAPHCL
+@XVOICE
+\\\\
+\_lvl_xbox\
+\Al3
+\contentmeta.xbx
+\ContentMeta.xbx
+\Device\Cdrom0
+\Device\CdRom0
+\Device\Cdrom0\XODASH
+\Device\Cdrom0\XODash\xonlinedash.xbe
+\Device\Harddisk0\Partition%d\
+\Device\Harddisk0\partition0
+\Device\Harddisk0\partition1\
+\Device\Harddisk0\Partition1\devkit\xbmovie.dat
+\Device\Harddisk0\partition1\TDATA
+\Device\Harddisk0\partition1\UDATA
+\Device\Harddisk0\Partition2\
+\Device\Harddisk0\partition2\XODash
+\Device\Harddisk0\partition2\XODash\xonlinedash.xbe
+\Device\MU_%x
+\Device\MU_0
+\SaveImage.xbx
+\SaveMeta.xbx
+\SUV
+\SUVW
+\SV3
+\TitleImage.xbx
+\TitleMeta.xbx
+\TVW
+\uuU
+\VSP
+\WUA
+__add
+__call
+__concat
+__DEFAULT__
+__div
+__eq
+__fenv
+__gc
+__index
+__le
+__lt
+__metatable
+__mode
+__mul
+__newindex
+__pow
+__sub
+__tostring
+__unm
+_1flag
+_ALERT
+_ass
+_cabs
+_con
+_ctf
+_DebugGroup
+_eli
+_Essq
+_full
+_hunt
+_hypot
+_ijA
+_input
+_IuR
+_LOADED
+_LOCALIZE_
+_logb
+_lower
+_lvl_xbox\
+_mox
+_mXEn
+_nextafter
+_obj
+_output
+_REQUIREDNAME
+_sW1
+_tdm
+_them_
+_TRACEBACK
+_upper
+_us_
+_VERSION
+`%s' expected
+`_LOADED' is not a table
+`for' initial value must be a number
+`for' limit must be a number
+`for' step must be a number
+`mxHGahEJcfvu
+`setfenv' cannot change a protected environment
+`setfenv' cannot change environment of given function
+`SUV
+`SUVW
+`SUVW3
+`SV3
+`tostring' must return a string to `print'
+`while' condition too complex
+=33SA
+=A TH
+=ANIM
+=anmgua
+=anmh
+=AXIS
+=BARRwlt
+=BIN_
+=BMAP
+=BNAM
+=BODY
+=CLTH
+=COLL
+=comb
+=COMN
+=CPAT
+=CUTR
+=CUTS
+=DATA
+=DATAuK
+=DCAL
+=DTEX
+=DTLX
+=expc
+=FBOD
+=ffx_
+=FijH
+=FLAG
+=FOLG
+=FTEX
+=fx__
+=HEAD
+=HEXP
+=hud_
+=i:RC
+=IFaceSoldierAnimator
+=INFO
+=INFOt
+=instt
+=LAYR
+=LEAFt
+=lghtur
+=load
+=LOD0
+=LOWD
+=LOWR
+=LTEX
+=LUMI
+=lvl_t
+=MASK
+=modl
+=MountedTurretClass
+=MTRL
+=mus_
+=NAME
+=NAMEt
+=NODE
+=NOHI
+=ordc
+=PASS
+=path
+=PCHS
+=plan
+=PLNS
+=POSI
+=prim
+=PRNTug
+=PROPuB
+=prp_
+=qnNzW
+=regnu,
+=RTYP
+=sBUZ
+=SCAL
+=SCOP
+=SCOPu
+=SCOPuyU
+=scr_
+=SIZE
+=skel
+=SMNA
+=snd_
+=SPHR
+=STAT
+=stdin
+=sX_.
+=tern
+=TREE
+=tsr_
+=TYPE
+=VS__
+=WeaponDispenser
+=WeaponGrenade
+=WeaponMelee
+=WeaponMeleeThrow
+=wrld
+=XFRM
+=YClpW
+=zaf_
+0.0.0.0
+0.dat
+1flag
+20%02d/%02d/%02d %02x
+20%02d/%02d/%02d %02x:%02x:%02x
+AbortCapture
+AbortNeutralize
+Accept
+ACCEPT
+AcceptHero
+ACCEPT-LANGUAGE
+ACCEPT-LANGUAGE: en
+AcceptString
+ACCOUNT
+accuracy
+acklay%d
+AcklayData
+acklaystepleft
+acklaystepright
+ACommandBuildingAnimatedArmed
+ACommandBuildingArmed
+ACommandHover
+ACommandWalker
+AConquestGoal
+AController
+acos
+ACTFGoal
+ACTFGoalD
+Action1
+Action2
+Action3
+ActivateBonus
+ActivateObject
+ActivateObjective
+ActivateRegion
+ActiveRegion
+AddAIGoal
+AddAssaultDestroyPoints
+AddCameraShot
+AddDeathRegion
+AddDownloadableContent
+added player %s
+AddFlagCapturePoints
+AddIFContainer
+AddIFFlashyText
+AddIFImage
+AddIFMaskImage
+AddIFModel
+AddIFScreen
+AddIFText
+Additive
+AddLandingRegion
+addmap
+addme
+addme.script
+AddMissionHint
+AddMissionObjective
+AddPortMapping xmlns
+AddPortMappingResponse
+AddProfile
+AddReinforcements
+AddShieldStrength
+AddSpaceAssaultDestroyPoints
+AddTeamPoints
+AddUnitClass
+ADDVOICE
+AddWalkerType
+ADeathmatchGoal
+ADefendGoal
+ADestroyGoal
+Admin
+ADMIN
+adminpw
+advanced
+advanced_blasters
+AEntityBuildingAnimatedArmed
+AEntityBuildingArmed
+AEntityBuildingArmedDynamic
+AEntityCarrier
+AEntityDefenseGridTurret
+AEntityDoor
+AEntityMine
+AEntityPortableTurret
+AEntityPropAnimated
+AEntityRemoteTerminal
+AFlagItem
+AFollowGoal
+AGameObject
+Agent
+AICanCaptureCP
+AIGoal
+Aimer
+AIPath
+AIPathNode
+AISnipeSuitabilityDist
+AIText
+aivis
+alert
+ALERT
+ALIGN
+ALIGN_TYPE is wrong, please fix
+aligned
+alliance
+ALLOC
+AllowAISpawn
+AllowSkipDNAS
+Alpha
+ambient
+AmmoCounter
+ANavigator
+ANavigatorFollowTarget
+ANavigatorGraphFollower
+ANavigatorPathFollower
+ANavigatorSlide
+animalscale
+animatedbuilding
+animatedprop
+AOrdnanceBeacon
+AOrdnanceBeam
+AOrdnanceBullet
+AOrdnanceEmitterClass
+AOrdnanceFatRay
+AOrdnanceGrapplingHook
+AOrdnanceGrenade
+AOrdnanceLaser
+AOrdnanceMissile
+AOrdnanceShell
+AOrdnanceSticky
+AOrdnanceTowCable
+APf3
+APlayerController
+APowerupItem
+APowerupStation
+Application
+Application transferred too few scanlines
+Application transferred too many scanlines
+ApplyFilters
+APV3
+areaeffectweapon
+AreMoviePropertiesPlaying
+Arg %i
+Arg %i: %s
+Arg list too long
+armedanimatedbuilding
+armedbuilding
+armedbuildingdynamic
+arpuwmt
+array
+ArSUVW
+Artist
+asin
+assert
+Assertion failed
+Assertion failed: %s, file %s, line %d
+asteroid
+Asteroid
+AsteroidClass
+ASW3
+At marker 0x%02x, recovery action %d
+atan
+atan2
+Atbj
+ATelzy
+AttachEffectToMatrix
+AttachEffectToObject
+AttachModel
+Attack
+attack1
+ATTACK1
+attack1a
+attack1b
+attack2
+ATTACK2
+attack3
+ATTACK3
+AttackerOffScreen
+AttackerOffScreenBehind
+AttackerOnScreen
+AttackerOnScreenBehind
+attempt to %s a %s value
+attempt to compare %s with %s
+attempt to compare two %s values
+attempt to yield across metamethod/C-call boundary
+attenuation
+attenuation_volume
+AudioStreamAppendSegments
+AudioStreamComplete
+AUnitBoardAgent
+AUnitCaptureCPAgent
+AUnitCombatAgent
+AUnitCTFOffenseAgent
+AUnitDeathmatchAgent
+AUnitDefendAgent
+AUnitDestroyAgent
+AUnitFlyAgent
+AUnitFlyController
+AUnitFollowAgent
+AUnitHoldAgent
+AUnitMobileController
+AUnitRandomAgent
+AUnitStationaryController
+AUnitTrooperAgent
+AUnitUnBoardAgent
+AUnitWaitAgent
+AUnitWaitSecondaryAgent
+AuT3
+auto
+autonet
+AUTONET
+AutoNetJoin
+autoturrets
+Auuj
+awardsListbox
+AWeapon
+AWeaponAreaEffect
+AWeaponBinoculars
+AWeaponCannon
+AWeaponCatapult
+AWeaponDestruct
+AWeaponDetonator
+AWeaponDisguise
+AWeaponGrapplingHook
+AWeaponInvisibility
+AWeaponLaser
+AWeaponLauncher
+AWeaponRemote
+AWeaponRepair
+AWeaponShield
+AWeaponTowCable
+Back
+BACK
+Backdrop
+Backdrop%s
+Backing store not supported
+backward
+bacta
+bacta_tanks
+Bad address
+bad code in %s
+Bad file descriptor
+bad integer in %s
+bad nupvalues in %s
+bad nupvalues in %s: read %d; expected %d
+bad signature in %s
+bAimAssist
+ball
+bAllRegions
+bandwidth
+bandwidth not set
+bAppearOffline
+Base
+base out of range
+BaseHint
+Baseline
+BatchChangeTeams
+battlefield
+battlefront2
+Battlefront2
+Battlefront2.xbe
+Battlefront2F.exe
+Battlefront2F.pbd
+bAutoAim
+bAutoAssignTeams
+bazooka
+BDSV3
+Bdu 
+beacon
+beam
+BeginCapture
+BeginFriends
+BeginJoin
+BeginJoinIP
+BeginJoinSpecial
+BeginLeave
+BeginLobby
+BeginNeutralize
+BeginQuickmatch
+BeginScreenTransition
+BeginSessionList
+bEverSkipped
+bFavorite
+BFFAOu
+bFirstPerson
+bFlyerRolling
+bGyu
+bHeroes
+bHeroesEnabled
+binary string
+binoculars
+bIsDedicated
+bIsLocal
+bIsPrivate
+bitmap
+blasters
+block
+bLocked
+BlockPlanningGraphArcs
+blue
+bMovieSubtitles
+bObjectiveDetails
+body
+Body
+Bogus buffer control mode
+Bogus DAC index %d
+Bogus DAC value 0x%x
+Bogus DHT counts
+Bogus DHT index %d
+Bogus DQT index %d
+Bogus input colorspace
+Bogus JPEG colorspace
+Bogus marker length
+Bogus message code %d
+Bogus sampling factors
+Bogus virtual array access
+bolt
+bone
+bone_string_1
+bone_string_10
+bone_string_11
+bone_string_12
+bone_string_13
+bone_string_2
+bone_string_20
+bone_string_21
+bone_string_22
+bone_string_23
+bone_string_3
+bone_string_30
+bone_string_31
+bone_string_32
+bone_string_33
+bonus
+boolean
+boolean or proxy expected
+boost
+boot
+bottom
+Bottom
+bouncebacksoft
+bouncefrontsoft
+bRandomizePlaylist
+break
+BringToFront
+BroadcastVoiceOver
+Broken pipe
+bRumble
+BRWh
+bShowNames
+bSoldierHints
+bStickyReticule
+bToolTipAuto
+bToolTips
+bubble
+buffer error
+Buffer passed to JPEG library is too small
+BUFFER TOO SMALL
+build
+Build
+building
+buildingdeadscale
+buildingscale
+buildingunbuiltscale
+bullet
+bump
+Bump
+bump_shader.xml
+bVoiceMask
+BwltT
+bWrongVer
+bwstr
+byte
+Bziwet
+C stack overflow
+c:\Battlefront2\XBOX_Final\Battlefront2\Build\XBox Final LTCG\Battlefront2F.exe
+c:\Battlefront2\XBOX_Final\Battlefront2\Build\XBox Final LTCG\Battlefront2F.pbd
+C:\Battlefront2\XBOX_Final\Battlefront2\Platform\Xbox\xbox_match.cpp
+c:\battlefront2\xbox_final\battlefront2\platform\xbox\xbox_match.h
+CACHE-CONTROL
+call
+CALLBACK
+campaign
+camper
+CancelFriends
+CancelJoin
+CancelLeaderBoardPlayerData
+CancelLeave
+CancelLobby
+CancelLogin
+CancelProfileList
+CancelQuickmatch
+CancelSessionList
+CanCharacterInteractWithFlag
+CanClientLeaveStats
+cannon
+cannot change a protected metatable
+Cannot quantize more than %d color components
+Cannot quantize to fewer than %d colors
+Cannot quantize to more than %d colors
+cannot read %s
+cannot read %s: %s
+cannot resume dead coroutine
+cannot resume non-suspended coroutine
+Cannot transcode due to multiple use of quantization table %d
+cannot yield a C function
+CanSupportMaxPlayers
+can't boot player %d
+captures
+carrier
+catapult
+Caution
+Caution: quantization tables are too coarse for baseline JPEG
+CdPj
+Cdrom0
+CdRom0
+ceil
+Center
+chain
+char
+Character
+CharacterChangeClass
+CharacterDeath
+CharacterDispenseControllable
+CharacterDispensePowerup
+CharacterEnterVehicle
+CharacterIssueAICommand
+CharacterLandedFlyer
+CharacterSpawn
+charge
+charselect%i
+charselect%i.Info.UnitNameText
+charselect%i.Info.Window.BoxText
+charselect%i.Info.Window.titleBarElement
+CheckContent
+CheckForPatch
+CheckIfOkToExitMemoryMode
+CheckMemoryCardMark
+CheckPlayerListDone
+CheckProfilePassword
+checkweapon
+chuck
+CHUNK is wrong, please fix
+CHUV
+Circle
+cJvy
+Class
+Cleanup
+ClearAIGoals
+ClearCampaignState
+ClearError
+ClearListbox
+ClearMetagameState
+ClearMissionSetup
+ClearPrevSessionId
+ClearTempHeap
+ClearWalkers
+client
+client will drop late updates
+client will keep late updates
+ClientAimer
+ClientAmmoCounter
+ClientArmedDynamic
+ClientAsteroid
+ClientCarrier
+ClientCommandFlyer
+ClientCommandHover
+ClientCommandWalker
+ClientDroid
+ClientDroideka
+ClientEnergyBar
+ClientFlag
+ClientFlyer
+ClientGotStats
+ClientHover
+ClientMountedTurret
+ClientOrdnanceTowCable
+ClientPowerup
+ClientRemoteTerminal
+ClientSoldier
+ClientTreeGrid
+ClientWalker
+ClientWalkerBlend
+ClientWalkerBlendUnit
+ClientWalkerLegPair
+ClientWeapon
+CloseAudioStream
+Closed temporary file %s
+CloseErrorBox
+CloseMovie
+CloseNetShell
+ClosePopup
+cloth
+ClothData
+cloudcluster
+code size overflow
+coll
+coll_
+coll_ball
+coll_body
+coll_body_lower
+coll_body_medium
+coll_body_medium2
+coll_body_upper
+coll_head
+collectgarbage
+CollisionMesh
+color
+ColorB
+colorcontrol
+ColorControl
+colorcontrol_shader.xml
+ColorG
+ColorR
+ColorTransformer
+com_icon_alliance
+com_icon_CIS
+com_icon_imperial
+com_icon_republic
+combat
+combat_shielding
+Combo
+COMBO
+Combo::Attack
+Combo::Condition
+Combo::DamageSample
+Combo::Deflect
+Combo::State
+Combo::Transition
+command not found
+commandarmedanimatedbuilding
+commandarmedbuilding
+CommandBuilding
+CommandBuildingAnimatedArmed
+CommandBuildingAnimatedArmedClass
+CommandBuildingArmed
+CommandBuildingArmedClass
+CommandBuildingClass
+commandflyer
+CommandFlyer
+CommandFlyerClass
+commandhover
+CommandHover
+CommandHoverClass
+commandpost
+CommandPostKill
+CommandPostRespawn
+commandwalker
+CommandWalker
+CommandWalkerClass
+common.era.cw
+common.era.gcw
+common.loading
+common.lvl
+common.mp.errors.nocable
+common.no
+common.ok
+common.sides.all
+common.sides.all.name
+common.sides.cis
+common.sides.cis.name
+common.sides.imp
+common.sides.imp.name
+common.sides.neu
+common.sides.rep
+common.sides.rep.name
+common.waitforhost
+common.yes
+CompleteObjective
+concat
+concatenate
+Condition
+CONFIGURATION
+ConnectivityGraphFollower
+ConquestGoal
+constant table overflow
+cont
+CONTENT-LANGUAGE
+Content-Length
+CONTENT-LENGTH
+Content-Length:
+contentmeta.xbx
+ContentMeta.xbx
+contents
+contentsL
+contentsR
+contentsstr
+contentsustr
+Content-type
+CONTENT-TYPE
+Content-type: xon/%x
+control structure too long
+Controller
+controlURL
+copy
+copy_shader.xml
+CopyRects
+core.lvl
+coroutine
+coroutine expected
+CORRUPT
+Corrupt JPEG data
+Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
+Corrupt JPEG data: bad Huffman code
+Corrupt JPEG data: found marker 0x%02x instead of RST%d
+Corrupt JPEG data: premature end of data segment
+cosh
+could not load package `%s' from path `%s'
+count
+create
+CreateEffect
+CreateEntity
+CreateHotSpot
+CreateMatrix
+createopts
+createoptsds
+CreateTimer
+CreateUserEvent
+crouch
+crouch_getdown_prone
+crouchalert
+CSPf
+CSU3
+CTFGoal
+CTFGoalD
+CTPh
+CtPR
+CTPW
+cube
+cube_normalizationmap
+CurButton
+currentline
+CursorIdx
+cxhymvimz
+d:\dashupdate.xbe
+D:\data\dsstdfx.bin
+D:\default.xbe
+d:\downloader.xbe
+D:\enbljrnl.dat
+D:\journal_%c_%d.dat
+D:\journal_f_0.dat
+d:\update.xbe
+D:\values_%c_%d.dat
+D\2x
+d_qrfiq
+D3DX
+damage
+damagerate
+DamageSample
+danger
+DASHBOARD
+dashupdate.xbe
+data
+Data
+data error
+data\
+Data\_LVL_PS2
+data\dsstdfx.bin
+DATAud
+DATAuf
+DATAuj
+Date
+DATE
+Date:
+datestr
+DeactivateObject
+DeactivateRegion
+dead
+Dead
+deadEye
+deadhero
+death
+death01
+DeathmatchGoal
+deaths
+DeathsChange
+debug
+DebugGroup
+debugmenu
+debugmenu.ToggleQosDisplay
+decal
+Decal
+decal_shader.xml
+DECD
+DECLINE
+dedicated
+DedicatedTitleText
+default
+DEFAULT
+default.xbe
+default_spotlight
+defeattimer
+defeattimer.disable
+DefendGoal
+defensegridturret
+Define Arithmetic Table 0x%02x
+Define Arithmetic Table 0x%02x: 0x%02x
+Define Huffman Table 0x%02x
+Define Quantization Table %d  precision %d
+Define Restart Interval %u
+Deflect
+DeleteAIGoal
+DeleteCampaignDone
+DeleteEntity
+DeleteMetagameDone
+DeleteProfileDone
+DeleteVoicemail
+demolition
+DEntityDroid
+DEntityDroideka
+DEntityHover
+DEntityWalker
+DestroyedCollisionMesh
+DestroyGoal
+DestroyTimer
+destruct
+destructablebuilding
+detail
+Detail
+detail_shader.xml
+detail_transparent_shader.xml
+detailmap
+detectbandwidth
+detected and set bandwidth %d kbps
+detonator
+device
+Device
+deviceList
+devkit
+Didn't expect more than one scan
+direct
+direction
+directional
+Directory not empty
+DisableAIAutoBalance
+DisableBarriers
+disabled
+DisableFlyerShadows
+DisableSmallMapMiniMap
+disguise
+dispenser
+Display Next Frame Data
+Display Previous Frame Data
+diveforward
+DoConsoleCmd
+DoesCampaignExistOnCard
+DoesMetagameExistOnCard
+DoesProfileExistOnCard
+dofile
+DoFile
+DoFriendAction
+DoInitialMemcardCheck
+DOLBY
+Domain error
+DOMAIN error
+done
+DONE
+DoneCheckDNAS
+DoneCheckPatch
+door
+down
+downloader.xbe
+DownloadLeaderBoardData
+DownloadVoicemail
+DPadDown
+DPadLeft
+DPadRight
+DPadUp
+DrawBeamBetween
+DrawParticleAt
+driver
+droid
+droidekafp
+droidekafp_rifle_idle
+droidekafp_rifle_reload
+droidekafp_rifle_shoot
+droidekafp_rifle_walk
+droidscale
+droplagjumps
+dropmap
+dropshadow
+DropShadow
+dropshadow_shader.xml
+DSOUND
+dSSS
+dsstdfx.bin
+DummyRoot
+dump
+dusteffect
+DVDDemo
+dwclaljVU
+dwSize
+Dying
+dynamic
+effectprop
+EffectsEnabled
+else
+elseif
+emitterordnance
+emo_
+emote
+Empty
+empty distance tree with lengths
+Empty input file
+EmptyText
+Enable
+EnableAIAutoBalance
+EnableBarriers
+EnableBuildingLockOn
+EnableCommandPostVO
+EnableCursor
+EnableFlyerPath
+EnableHeroMusic
+EnableHeroVO
+EnableJournal
+EnablePlayback
+EnableScene
+EnableSPHeroRules
+EnableSPScriptedHeroes
+EnableVoicemail
+enbljrnl.dat
+ENCD
+End Of Image
+end1a
+EndAutoNet
+ended
+endgame
+EndIFObj
+EndIFScreen
+EndProfileList
+endurance
+EndVisibilityTest
+energy
+energy_boost
+EnergyBar
+english
+Enter
+EnterMission
+EnterRegion
+EnterVehicle
+Entity
+entity.%s
+EntityBuilding
+EntityBuildingAnimated
+EntityBuildingAnimatedArmed
+EntityBuildingAnimatedArmedClass
+EntityBuildingAnimatedClass
+EntityBuildingArmed
+EntityBuildingArmedClass
+EntityBuildingArmedDynamic
+EntityBuildingArmedDynamicClass
+EntityBuildingClass
+EntityCarrier
+EntityCarrierClass
+EntityClass
+EntityCloth
+EntityClothClass
+EntityDefenseGridTurret
+EntityDefenseGridTurretClass
+EntityDoor
+EntityDoorClass
+EntityDroid
+EntityDroidClass
+EntityDroideka
+EntityDroidekaClass
+EntityEffectClass
+EntityEx
+EntityFlyer
+EntityFlyerClass
+EntityFlyerInitAsFlying
+EntityFlyerInitAsLanded
+EntityFlyerLand
+EntityFlyerTakeOff
+EntityGeometry
+EntityGeometryClass
+EntityHologram
+EntityHologramClass
+EntityHover
+EntityHoverClass
+EntityItem
+EntityItemClass
+EntityLight
+EntityLightClass
+EntityMine
+EntityMineClass
+entitypathbranch
+EntityPortableTurret
+EntityPortableTurretClass
+EntityProp
+EntityPropAnimated
+EntityPropAnimatedClass
+EntityPropClass
+EntityRemoteTerminal
+EntityRemoteTerminalClass
+EntitySoldier
+EntitySoldierClass
+EntitySound
+EntitySoundClass
+EntitySoundStatic
+EntitySoundStaticClass
+EntitySoundStream
+EntitySoundStreamClass
+EntityTrap
+EntityTrapClass
+EntityWalker
+EntityWalkerClass
+Entry
+EnumerateLeaderBoard
+EnumerateLeaderBoardDone
+Envelope
+error
+Error
+ERROR
+error in error handling
+Error.title
+errorCode
+errorDescription
+escape sequence too large
+Event
+eVer
+ExbNm
+Exec format error
+Exf;ED
+Exit
+ExitVehicle
+Expand Current Sample
+experience
+ExPjpS
+explosion
+Expression
+Expression: 
+external hook
+ezqz
+ezqz_
+fabs
+Failed to create temporary file %s
+FAILu
+fall
+false
+fatray
+Fdu/
+FEEDBACK
+fenv
+field
+File
+file error
+File exists
+File too large
+File: 
+filename
+Filename too long
+FillAsteroidPath
+FillAsteroidRegion
+filtercopy
+FilterCopy
+filtercopy_shader.xml
+final
+Final
+find
+FindEntityClass
+FindTimer
+finish
+FinishCapture
+FinishNeutralize
+fins
+fix MP stats
+FIXME
+FIXME: Localize game.tooltips.leaving_battlefield
+flag
+FlagCapture
+FlagDrop
+FlagItem
+FlagItemClass
+FlagOffScreen
+FlagOffScreenBehind
+FlagOnScreen
+FlagOnScreenBehind
+FlagPickUp
+FlagReset
+FlagReturn
+flail
+flare
+flare_shader.xml
+flash
+FLEffectObject
+FLEffectObject::OffsetMatrix
+floor
+flyer
+FLYER
+flyer.contrailsActive
+flyingback
+flyingfront
+flyingleft
+flyingright
+fmod
+fmt 
+fnActivate
+fnFindReady
+fnJumpToMPMain
+fnPostMissingController
+fnSetTitle
+fnSetTitleStr
+fnUpdateProfileList
+fnUpdateSelected
+focusblur
+focusblur_shader.xml
+fold
+foleyfx
+FoleyFX
+FoleyFXImpact
+FoleyFXSoldier
+FoleyFXWalker
+foliage
+foliage_shader.xml
+followchr
+FollowGoal
+fols
+ForceAIOutOfVehicles
+ForceHumansOntoTeam1
+foreach
+foreachi
+format
+Format
+FormatTimeString
+forward
+Fractional sampling not implemented yet
+Frame
+Freecamera
+Freed EMS handle %u
+Freed XMS handle %u
+freeform
+french
+frenzy
+frexp
+FriendInSameTitle
+friends
+friends_listbox_contents
+fromedge
+front1
+front2
+func
+function
+function arguments expected
+Function not implemented
+function or expression too complex
+function or level expected
+function: %p
+fx_ringbump
+fx_splash
+game
+game over
+game started
+game started: %s
+game.awards.bonus.
+game.awards.medal.
+game.spawndisplay.numtospawn
+game.squadcommand.%s.%s
+game_finish
+game_interface
+game_rank
+game_start
+GameObject
+GameObjectClass
+gameopts
+Gamespy
+gamespy.errors.nick
+gamespy.errors.nick_nonumber
+gamespy.errors.nick_nospaces
+gamespy.errors.nick_validchars
+garrison
+garrison_used_by
+gaWas
+gcinfo
+gConsoleCmdList
+gCurPopup
+gDemoBuild
+gDemoHasMP
+gDemoHasSplitscreen
+gDemoHost
+gE3Demo
+GeneralDown
+GeneralLeft
+GeneralRight
+GeneralUp
+geo_inf_acklay%d
+geoa`
+german
+GET %s HTTP/1.0
+GET %s HTTP/1.1
+GetAlpha
+GetAmHost
+GetAssaultScoreLimit
+GetASSNumBots
+GetAutoAssignTeams
+GetAutoGetPlayerCount
+GetAutoNetGameName
+GetAutoNetIsDedicated
+GetAutoNetMode
+GetAutoNetScript
+GetAwardStats
+GetBandwidth
+GetBassManagement
+GetBleedRate
+GetBuildStr
+GetCareerMedalLevel
+GetCareerMedals
+GetCareerPersonalStats
+GetCareerRank
+GetCharacterClass
+GetCharacterControllable
+GetCharacterRemote
+GetCharacterTeam
+GetCharacterUnit
+GetCharacterVehicle
+GetCmdlineLogin
+GetColor
+GetCommandPostBleedValue
+GetCommandPostCaptureRegion
+GetCommandPostTeam
+GetCONMaxTimeLimit
+GetConnectType
+GetCONNumBots
+GetConsoleCmds
+GetControlMode
+GetControlScale
+GetCPointer
+GetCTFCaptureLimit
+GetCTFMaxTimeLimit
+GetCTFNumBots
+GetCurrentPCTitleVersion
+GetCurrentProfileName
+GetCurrentProfileNetName
+GetDateStr
+GetDepth
+GetDifficulty
+GetDisplayRect
+getdown
+GetEffectMatrix
+GetEntityClass
+GetEntityClassName
+GetEntityClassPtr
+GetEntityLabel
+GetEntityMatrix
+GetEntityMesh
+GetEntityName
+GetEntityPtr
+GetEntityWeaponMesh
+GetEnumerateLeaderBoardData
+GetError
+GetErrorLevel
+GetExtraSessionInfo
+getfenv
+GetFilters
+GetFlagCarrier
+GetFontHeight
+GetFriendActions
+GetFriendListIcon
+GetFriendStateStr
+GetFunctionIdForAnalogId
+GetFunctionIdForButtonId
+GetGameName
+GetGameRules
+GetGeneralOptions
+GetGSProfileInfo
+gethook
+GetHUDScale
+GetHuntMaxTimeLimit
+GetHuntScoreLimit
+GetIFaceLighting
+getinfo
+getinfo' is not a function
+GetIntercharacterSpacing
+getintovehicle
+GetInTrainingMission
+GetIPAddr
+GetLanguage
+GetLastBattleVictory
+GetLatestError
+GetLeaderBoardPlayerData
+GetLeading
+GetLobbyPlayerCount
+GetLobbyPlayerFlags
+GetLobbyPlayerlist
+getlocal
+getlocalizestr
+GetLoginList
+GetLoginName
+GetMapCameraZoom
+GetMaskTexCoords
+GetMaxControllers
+GetMaxMissionQueue
+GetMedalStats
+getmetatable
+GetMissionTime
+GetMixConfig
+GetMixConfigChanged
+getn
+GetNetGameDefaults
+GetNetHeroDefaults
+GetNumCameras
+GetNumControllers
+GetNumTeamMembersAlive
+GetObjectHealth
+GetObjectLastHitWeaponClass
+GetObjectPtr
+GetObjectShield
+GetObjectTeam
+GetOnlineOpts
+GetOnlineService
+GetOptiOpts
+getoutofvehicle
+GetOutputMode
+GetPathPoint
+GetPausingJoystick
+GetPausingViewport
+GetPersonalStats
+GetPlatform
+GetPlayerIDAtRank
+GetPos
+GetPosition
+GetPrimaryController
+GetProfileName
+GetQuitPlayer
+GetRank
+GetRect
+GetRegion
+GetRegionName
+GetReinforcementCount
+GetRotation
+GetSafeScreenInfo
+GetSavedCampaignList
+GetSavedMetagameList
+GetScale
+GetScreenInfo
+GetScreenPosition
+GetSecondaryController
+GetSessionList
+GetSessionListPercent
+GetSessionSortMode
+GetShellActive
+GetSideSelectButtonSetting
+GetSilentLoginState
+GetSkipToNTGUIProfileName
+GetSpectatorMode
+GetSPProgress
+GetTeamFactionId
+GetTeamMember
+GetTeamName
+GetTeamPoints
+GetTeamSize
+GetTeamstats
+GetTexCoords
+GetTextBox
+GetTextExtent
+GetTextScaleX
+GetTextScaleY
+GetTimerName
+GetTimerRate
+GetTimerValue
+GetTranslation
+GetUniqueLoginName
+GetUnitCount
+getup
+getupback
+getupfront
+getupvalue
+GetVis
+GetVKeyboardCharacter
+GetVoiceCaptureConnected
+GetVoiceEnable
+GetVoiceReceivePreset
+GetVoiceReceiveStatus
+GetVoiceRenderConnected
+GetVoiceSendPreset
+GetVoiceSendStatus
+GetVoiceTVGain
+GetVolumes
+GetWidthHeight
+GetWorldFilename
+GetYAxisFlip
+GetZOrder
+gfff
+gFinalBuild
+gfind
+global
+gMovieAttractMode
+gNoControllerChanges
+gNoNewProfiles
+gnSYce
+godhcehi
+godray
+gOptiOpts
+gPopup
+gPopup_Loadsave2_fnSetTitleStr
+grapplinghook
+grapplinghookweapon
+grasspatch
+green
+grenade
+Group
+grruonRShfacaa
+guardian
+GuiManager
+GuiManager::Event
+gunner
+gunslinger
+gwgtz
+gXBox
+gXBox_DVDDemo
+HandleMouse
+handsdown
+Harddisk0
+HasSeenDNASEULA
+HasServerLaunched
+haywire
+HB PDf
+hdCK
+hddI
+hdr_shader.xml
+hDSda
+hDSob
+HDSV
+H'DX
+head
+headShots
+HealthChange
+height
+Height
+hello
+hero
+hero_points
+HeroDefeated%d
+heropoints
+HeroSelectable%d
+HeroSpawned%d
+HeroUnlocked%d
+HideDownloadableContent
+Highlight Next Sample
+Highlight Previous Sample
+HintFlagOffScreen
+HintFlagOffScreenBehind
+HintFlagOnScreen
+HintFlagOnScreenBehind
+HintOffScreen
+HintOffScreenBehind
+HintOnScreen
+HintOnScreenBehind
+hintPopup
+hintPopup.disable
+hintPopup.pageNumber
+hitback
+hitfront
+hitleft
+hitright
+hologram
+Horizontal
+host
+Host
+HOST
+host will drop lag jumps
+host will not drop lag jumps
+host will not split update
+host will not wait for late moves
+host will split update
+host will use lag version %d
+host will wait for late moves
+Host: %d.%d.%d.%d
+HOST: %u.%u.%u.%u:%u
+HostAimer
+HostAmmoCounter
+HostArmedDynamic
+HostAsteroid
+HostCarrier
+HostCommandFlyer
+HostCommandHover
+HostCommandWalker
+HostDroid
+HostDroideka
+HostEnergyBar
+HostFlag
+HostFlyer
+HostHover
+HostMountedTurret
+HostOrdnanceTowCable
+HostPowerup
+HostRemoteTerminal
+HostSoldier
+HostTreeGrid
+HostWalker
+HostWalkerBlend
+HostWalkerBlendUnit
+HostWalkerLegPair
+HostWeapon
+hot1i
+hover
+HOVER
+hp K
+hp/K
+Hp;M
+hp\K
+hp_b_chain
+hp_b_chuck
+hp_bubble
+hp_chain
+hp_f_chain
+hp_f_chuck
+hp_transformed1
+hp_transformed2
+hp_transformed3
+http
+HTTP
+HTTP/1.0
+HTTP/1.1
+http://
+hud_icon_flash
+hud_map_northpointer
+Huffman code size table overflow
+Huffman table 0x%02x was not defined
+HUGE
+human
+humanfp
+humanfp_bazooka_flail
+humanfp_bazooka_idle
+humanfp_bazooka_jump
+humanfp_bazooka_jump_land
+humanfp_bazooka_reload
+humanfp_bazooka_run
+humanfp_bazooka_shoot
+humanfp_grenade_charge
+humanfp_grenade_shoot
+humanfp_grenade_shoot2
+humanfp_handsdown
+humanfp_rifle_flail
+humanfp_rifle_idle
+humanfp_rifle_jump
+humanfp_rifle_jump_land
+humanfp_rifle_reload
+humanfp_rifle_run
+humanfp_rifle_shoot
+humanfp_tool_flail
+humanfp_tool_idle
+humanfp_tool_jump
+humanfp_tool_jump_land
+humanfp_tool_reload
+humanfp_tool_repair
+humanfp_tool_run
+humanfp_tool_shoot
+humanlz
+hunt
+hwitB
+HWSupport
+HXONLINES
+i3dl2reverb
+iASSNumBots
+iASSScoreLimit
+iAutoAim
+iAutoAssignTeams
+ibl:
+IBUF
+-IBUF
+icon
+iCONMult
+iCONNumBots
+iCONTimer
+iCTFNumBots
+iCTFScore
+iCTFTimer
+Id;Jd
+IDAT
+IDCT output block size %d not supported
+iDedicated
+iDifficulty
+idle
+Idle
+IDLE
+idle idle
+idle idle_leftup idle_rightup
+idle leftfoot
+idle rightfoot
+idle_checkweapon
+idle_emote
+idle_lookaround
+idle_takeknee
+idle_to_leftfoot
+idle_to_leftfoot idle_to_leftfoot_leftup idle_to_leftfoot_rightup
+idle_to_rightfoot idle_to_rightfoot_leftup idle_to_rightfoot_rightup
+IdleToLeft
+IdleToRight
+IdleToRoll
+iDMMult
+ieihk
+iELINumBots
+IEND
+iEra
+IFaceSoldierAnimator
+IFFlashyText
+iFileNum
+IFImage
+IFMaskImage
+IFModel
+IFObj
+If-Range
+If-Range: %s
+iFriendlyFire
+ifs.briefing.%s
+ifs.gsprofile.all
+ifs.gsprofile.badchars
+ifs.loadsave
+ifs.loadsave_xbox.cancel
+ifs.loadsave_xbox.continue
+ifs.loadsave_xbox.freemoreblocks
+ifs.loadsave_xbox.freemoreslots
+ifs.loadsave_xbox.no
+ifs.loadsave_xbox.ok
+ifs.loadsave_xbox.save02
+ifs.loadsave_xbox.save03
+ifs.loadsave_xbox.save10
+ifs.loadsave_xbox.save11
+ifs.loadsave_xbox.save13
+ifs.loadsave_xbox.save22
+ifs.loadsave_xbox.save23
+ifs.loadsave_xbox.yes
+ifs.mp.friends.remotetitle
+ifs.mp.joinerrors.banned
+ifs.mp.joinerrors.booted
+ifs.mp.joinerrors.cdkey
+ifs.mp.joinerrors.connectlost
+ifs.mp.joinerrors.full
+ifs.mp.joinerrors.game
+ifs.mp.joinerrors.hostquit
+ifs.mp.joinerrors.missingdc
+ifs.mp.joinerrors.password
+ifs.mp.joinerrors.version
+ifs.mp.sessionlist.servertypes.pc
+ifs.mp.sessionlist.servertypes.pcdedicated
+ifs.mp.sessionlist.servertypes.ps2
+ifs.mp.sessionlist.servertypes.ps2dedicated
+ifs.mp.sessionlist.servertypes.xbox
+ifs.mp.sessionlist.servertypes.xboxdedicated
+ifs_campaign_main
+ifs_charselect%i
+ifs_charselect%i.Info.UnitNameText
+ifs_charselect%i.Info.Window.BoxText
+ifs_charselect%i.Info.Window.titleBarElement
+ifs_freeform_main
+ifs_legal
+ifs_lobby
+ifs_login
+ifs_main
+ifs_mapselect%i
+ifs_missionselect
+ifs_mp
+ifs_mp_autonet
+ifs_mp_createopts
+ifs_mp_createoptsds
+ifs_mp_gameopts
+ifs_mp_lobby
+ifs_mp_lobby_quick.launching
+ifs_mp_lobbyds
+ifs_mp_main
+ifs_mp_maptype
+ifs_mp_sessionlist
+ifs_mpgs_login
+ifs_mpxl_login
+ifs_mpxl_login_listbox_contents
+ifs_pausemenu
+ifs_pausemenu%d
+ifs_readyselect
+ifs_readyselect%i
+ifs_readyselect%i.Helptext_Back
+ifs_saveop_DeleteCampaignDone
+ifs_saveop_DeleteMetagameDone
+ifs_saveop_DeleteProfileDone
+ifs_saveop_InitialMemcardCheckDone
+ifs_saveop_LoadCampaignDone
+ifs_saveop_LoadMetagameDone
+ifs_saveop_LoadProfileDone
+ifs_saveop_PreOpDone
+ifs_saveop_SaveCampaignDone
+ifs_saveop_SaveMetagameDone
+ifs_saveop_SaveProfileDone
+ifs_sideselect%d
+ifs_sideselect%d.buttons.team%d.label
+ifs_sideselect%i
+ifs_start
+ifs_teamstats
+ifs_vkeyboard
+IFText
+IHDR
+iHeroesEnabled
+iHeroPlayer
+iHeroRespawn
+iHeroRespawnVal
+iHeroTeam
+iHeroUnlock
+iHeroUnlockVal
+iHUNTimer
+iHUNTScoreLimit
+Illegal byte sequence
+Image too wide for this implementation
+iMaxBots
+iMaxDedicatedBots
+iMaxDedicatedPlayers
+iMaxPlayers
+imperial
+Improper call to JPEG library in state %d
+Improper link
+Inappropriate I/O control operation
+incompatible version
+incomplete distance tree
+incomplete dynamic bit lengths tree
+incomplete literal/length tree
+Inconsistent progression sequence for component %d coefficient %d
+incorrect data check
+incorrect header check
+index
+IndexMultipageText
+indexstr
+ingame.lvl
+ingame.mvs
+ingamefr.mvs
+ingamegr.mvs
+Init
+initialize
+InitialMemcardCheckDone
+InMemoryProfileMode
+InMultiplayer
+InNetGame
+InNetSession
+iNph
+input
+Input
+Input file read error
+Input/output error
+Input_
+Input_Accept
+Input_Back
+Input_GeneralDown
+Input_GeneralRight
+Input_GeneralUp
+Input_Start
+insert
+instantaction
+Instruction
+insufficient memory
+interface
+interface_bitmap
+interface_bitmap_shader_notexture.xml
+interface_bitmap_shader_texture.xml
+interface_maskedbitmap
+interface_maskedbitmap_shader.xml
+interface_vector
+interface_vector_shader.xml
+Interrupted function call
+iNumBots
+iNumPlayers
+iNumSessions
+Invalid AI Command
+Invalid argument
+invalid bit length repeat
+invalid block type
+invalid capture index
+Invalid color quantization mode change
+Invalid component ID %d in SOS
+invalid control char
+invalid distance code
+Invalid JPEG file structure
+Invalid JPEG file structure: missing SOS marker
+Invalid JPEG file structure: SOS before SOF
+Invalid JPEG file structure: two SOF markers
+Invalid JPEG file structure: two SOI markers
+invalid key for `next'
+invalid level
+invalid literal/length code
+Invalid memory pool code %d
+invalid option
+invalid option to `format'
+invalid order function for sorting
+invalid pattern capture
+Invalid progressive parameters at scan script entry %d
+Invalid scan script at entry %d
+Invalid seek
+Invalid SOS parameters for sequential JPEG
+invalid stored block lengths
+invalid value
+invalid window size
+invisibility
+INVITE
+INVITEVOICE
+iOnlineIcon
+ipairs
+iPlayersSupported
+Is a directory
+IsAutoNet
+IsBadNetworkConnection
+IsBootInvitePending
+IsCampaign
+IsCampaignStateSaved
+IsCharacterHuman
+IsCharacterInRegion
+IsCmdlineJoinPending
+IsControllerBound
+IsControllerConnected
+IsCurProfileDirty
+isCurrent
+IsCurrentCampaign
+IsCurrentMetagame
+IsDedicated
+IsEffectActive
+IsEnabled
+IsEnableLeaderBoard
+IsErrorBoxOpen
+IsFileExist
+IsGameOver
+IsGroup
+IsGuest
+IsHeadsetPresent
+IsHorizontalSplitScreen
+iShowNames
+IsInShell
+IsJoinDone
+IsLeaveDone
+IsLegalGamespyString
+IsLoggedIn
+IsLoginDone
+IsMemoryCardInsertted
+IsMemoryCardUnformatted
+IsMetaAllMapsOn
+IsMetagameStateSaved
+IsMissionSetupSaved
+IsMoviePlaying
+IsNetCableIn
+IsNetHWPresent
+IsNetworkOn
+IsObjectAlive
+IsPAL
+IsPlayerLoggedIn
+IsPopupOpen
+IsProfileDirty
+IsProfilePassworded
+IsPropertyPlayingNow
+ispx
+IsQuickmatchDone
+IsQuickmatchPassworded
+IsScreenInStack
+IsSessionReady
+IsShellMusicPlaying
+IsSilentLoginDone
+IsSpecialJoinPending
+IsSplitscreen
+iStartCnt
+IsUniqueLoginName
+IsVoicemailDownloaded
+IsXLiveAllowed
+italian
+iTeam
+iTeamDmg
+items in a constructor
+iTurnsPerSecond
+iTVVoiceVol
+iViewport
+iVoiceMode
+iVoiceModeDedicatedMax
+iVoiceModeMax
+iVoiceModeMin
+iVoicePlayVol
+iVoiceRecordVol
+iVote
+iWarmUp
+JanFebMarAprMayJunJulAugSepOctNovDec
+japanese
+jawa
+jawalz
+jetpack
+jetpack_hover
+JFIF APP0 marker, density %dx%d  %d
+journal
+JPEG datastream contains no image
+JPEG parameter struct mismatch
+JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
+jump
+jump_backward
+jump_forward
+jump_left
+jump_right
+killingSpree
+KillObject
+kills
+KillsChange
+killsstr
+krbtgt
+krdooh
+labelustr
+lagversion
+LAJoyDown
+LAJoyLeft
+LAJoyRight
+LAJoyUp
+land
+landbacksoft
+landfrontsoft
+landhard
+landsoft
+Large
+laser
+lastGamePlayed
+Last-Modified
+Last-Modified:
+LAUNCH
+LaunchDemo
+LaunchDVDContent
+launcher
+launchflag
+LaunchJoin
+LaunchLeave
+LaunchLobby
+LaunchQuickmatch
+LaunchSessionList
+layout
+leader
+leaderboard
+leaderboard_listbox_contents
+leaderboarddetails
+leaderboarddetails_data
+LeaderBoardDownloadDone
+leafpatch
+LeaveRegion
+left
+Left
+left1
+left2
+leftfoot
+leftfoot idle
+leftfoot walk
+leftfoot_to_idle
+leftfoot_to_idle leftfoot_to_idle_leftup leftfoot_to_idle_rightup
+LeftToIdle
+LeftToRight
+leftup idle
+leftup leftfoot
+leftup rightfoot
+leftup turnl
+leftup turnr
+leftup walk
+legal
+LEKSVW
+level
+level must be non-negative
+level out of range
+level.%s.%s
+level.%s.hints
+level.%s.local
+level.%s.locals
+levelHintText
+LfuY
+lfvw
+-LgN
+Lhjr
+LhVp
+light
+lightbeam
+lightbeam_shader.xml
+LightFlash
+LightningBoltEffectObject
+line
+Line
+Line: 
+linedefined
+lines in a chunk
+listbox
+livingStreak
+lJDckyaxeN
+ljmoln
+load
+Load
+Load\load
+LoadCampaignDone
+LoadCampaignState
+LOADED
+LOADED' is not a table
+loadfile
+LoadMetagameDone
+LoadMetagameState
+LoadMissionSetup
+LoadProfileDone
+Loadsave2
+LoadSave2
+LoadSavePopupResult
+loadstring
+lobby
+lobby_listbox_layout
+LobbyAction
+lobbyds
+LobbyOpts
+local
+local variables
+LocalCache%02d.bin
+LOCALIZE
+LOCATION
+LockedOffScreen
+LockedOffScreenBehind
+LockedOnScreen
+LockedOnScreenBehind
+log10
+logb
+logged in
+login
+Logout
+lookaround
+loop in gettable
+loop in settable
+losses
+lower
+LowerCorner
+LTrigger
+LTrigger2
+LTrigger3
+Lua function expected
+Lua%d
+MACS.XBOX.COM
+main
+MAIN
+main_body
+MakeFakeProfiles
+malformed number
+management
+MANAGEMENT
+manifest
+map '%s' not added
+map added
+map dropped
+map not dropped
+map not found
+map_mask
+MapAddClassMarker
+MapAddEntityMarker
+MapAddRegionMarker
+MapHideCommandPosts
+mapname
+mapname.name.%s
+mapname.name.spa
+mapname.name.spa_%s
+MapRemoveClassMarker
+MapRemoveEntityMarker
+MapRemoveRegionMarker
+maps
+mapselect%i
+maptype
+MarkCurrentProfile
+Marker%s
+MarkMemoryCard
+marksman
+mask
+maskedbitmap
+Match
+match.cpp
+match.h
+math
+MAX_ALLOC_CHUNK is wrong, please fix
+Maximum supported image dimension is %u pixels
+mdlv
+meat
+medalbox
+medaltype
+medium
+MEDIUM
+medium2
+melee
+meleethrow
+meleethrowordnance
+MEMORY
+memory allocation error
+memory allocation error: block too big
+Memory File
+memslot
+MENU
+MENU 
+metagame
+MetagameSetBonus
+MetagameSetSide
+metatable
+method
+MhVPVj
+mine
+MinimizeWindow
+Misc
+Misc2
+missile
+Missing Huffman code table entry
+mission
+MISSION
+mission.lvl
+MISSION.lvl
+MISSION\%s.lvl
+MissionDefeat
+missionselect
+MissionVictory
+mode
+modename.name.%s
+modename.name.1flag
+modename.name.ass
+modename.name.con
+modename.name.ctf
+modename.name.elimination
+modename.name.hunt
+modename.name.obj
+modf
+MountedTurret
+MountedTurretClass
+MouseOver
+MoveCameraToEntity
+Movies
+Movies\
+mpsessionlist
+mpsessionlist_listbox_contents
+mpsessionlist_listbox_layout
+mpsessionlist_playerlist_contents
+mpsessionlist_serverinfo_contents
+Music
+MUSIC 
+nakXrlj
+name
+Name
+namefield
+namestr
+namewhat
+narrowEscapes
+Navigator
+NavigatorFollowTarget
+NavigatorGraphFollower
+NavigatorPathFollower
+NavigatorSlide
+need dictionary
+NeedToDownloadVoicemail
+net.nearobjects
+net.toggleqostext
+NetObj
+NetObjState
+NetWasClient
+NetWasDedicated
+NetWasDedicatedQuit
+NetWasHost
+NETWORK
+NEVER
+NewAllocator
+newindex
+newproxy
+next
+next map set
+nextafter
+NextHost
+nextmap
+NextMixConfig
+NextOutputMode
+NextToolTipState
+nil or table expected
+No child processes
+No error
+no function environment for tail call at level %d
+No locks available
+no loop to break
+No Reformat
+No space left on device
+No such device
+No such device or address
+No such file or directory
+No such process
+no value
+noaccounts
+noalert
+nobcggipblr
+NOINVITE
+None
+NONE
+nonumber
+normal
+Normal
+normal_shader.xml
+normal_terrain_shader.xml
+normalizationmap
+normalmapadder
+NormalMapAdder
+normalmapadder_shader.xml
+North%s
+northpointer
+nospaces
+Not a directory
+Not a JPEG file
+Not a JPEG file: starts with 0x%02x 0x%02x
+not enough memory
+Not enough space
+Not implemented yet
+not logged in
+notexture.xml
+null_detailmap
+number
+numDrawIP
+numDrawP
+numplayers
+numPrims
+numSetStream
+numVerts
+nups
+Object
+ObjectCreate
+ObjectDamage
+ObjectDelete
+ObjectHack
+ObjectHeadshot
+ObjectInit
+ObjectiveOffScreen
+ObjectiveOffScreenBehind
+ObjectiveOnScreen
+ObjectiveOnScreenBehind
+objectivePopup
+objectivePopup.disable
+objectivetimer
+objectivetimer.disable
+ObjectKill
+ObjectRepair
+ObjectRespawn
+Obstacle
+Obtained EMS handle %u
+Obtained XMS handle %u
+ocean
+Ocean
+ocean_shader.xml
+OffsetMatrix
+onexit/atexit table
+oNI3
+ONLINE
+ONuc
+onzy
+Open
+OpenAudioStream
+Opened temporary file %s
+OpenErrorBox
+OpenMovie
+OpenNetShell
+OpenPopup
+Operation not permitted
+OPQh
+OpSQ
+OPTION
+oQvcO
+Ordnance
+OrdnanceBeacon
+OrdnanceBeaconClass
+OrdnanceBeam
+OrdnanceBeamClass
+OrdnanceBullet
+OrdnanceBulletClass
+OrdnanceClass
+OrdnanceEmitterClass
+OrdnanceFatRay
+OrdnanceFatRayClass
+OrdnanceGrapplingHook
+OrdnanceGrapplingHookClass
+OrdnanceGrenade
+OrdnanceGrenadeClass
+OrdnanceHaywire
+OrdnanceHaywireClass
+OrdnanceLaser
+OrdnanceLaserClass
+OrdnanceMeleeThrow
+OrdnanceMeleeThrowClass
+OrdnanceMissile
+OrdnanceMissileClass
+OrdnanceShell
+OrdnanceShellClass
+OrdnanceSticky
+OrdnanceStickyClass
+OrdnanceTowCable
+OrdnanceTowCableClass
+OSWh
+OtQS
+output
+overall
+oversubscribed distance tree
+oversubscribed dynamic bit lengths tree
+oversubscribed literal/length tree
+pairs
+param%d
+parameters
+particle
+particle_shader.xml
+ParticleEmitter
+ParticleEmitterInfoData
+ParticleEmitterObject
+ParticleTransformer
+ParticleTransformer::ColorTransformer
+ParticleTransformer::PositionTransformer
+ParticleTransformer::RotationTransformer
+ParticleTransformer::SizeTransformer
+Partition%d
+partition0
+partition1
+Partition1
+partition2
+Partition2
+passenger
+PassengerSlot
+PasswordStr
+PathFollower
+PathNode
+PathRequest
+Pause Profile Data
+PauseAnimation
+PauseDemoTimer
+pausemenu
+pausemenu%d
+PauseSessionList
+PausingIsPrimary
+pcall
+PCBX
+pcw\z
+PDPVW
+PDt%
+perform arithmetic on
+perFrame
+Permission denied
+perpixeldiffuselighting
+perpixeldiffuselighting_shader.xml
+PersonalStatsSetTitles
+personscale
+pingstr
+pistol
+Pixels
+platform
+Platform
+PlayAnimation
+PlayAnimationFromTo
+PlayAudioStream
+PlayAudioStreamUsingProperties
+PlayAuditionEffect
+player
+Player
+Player %d
+player%d.bonusHealthFraction
+player%d.commandPost.charge
+player%d.commandPost.color
+player%d.commandPost.disable
+player%d.commandPost.disputeColor
+player%d.commandPost.disputeDisable
+player%d.commandPost.disputeEnable
+player%d.die
+player%d.energy
+player%d.energyDisable
+player%d.energyFraction
+player%d.energyOverburn
+player%d.energyRegenPulseRate
+player%d.flag.enemy.carried
+player%d.flag.enemy.carried.disable
+player%d.flag.enemy.carried.number
+player%d.flag.enemy.carried.number.disable
+player%d.flag.enemy.dropped
+player%d.flag.enemy.dropped.disable
+player%d.flag.enemy.dropped.number
+player%d.flag.enemy.dropped.number.disable
+player%d.flag.friend.carried
+player%d.flag.friend.carried.disable
+player%d.flag.friend.carried.number
+player%d.flag.friend.carried.number.disable
+player%d.flag.friend.dropped
+player%d.flag.friend.dropped.disable
+player%d.flag.friend.dropped.number
+player%d.flag.friend.dropped.number.disable
+player%d.flag.player.carried
+player%d.flag.player.disable
+player%d.flag.player.dropped
+player%d.health
+player%d.healthDisable
+player%d.healthFraction
+player%d.healthInVehicle
+player%d.healthInVehicleDisable
+player%d.healthInVehicleFraction
+player%d.healthRegenPulseRate
+player%d.hero.health
+player%d.hero.healthDisable
+player%d.hero.healthFraction
+player%d.heroSelect.disable
+player%d.heroSelect.message
+player%d.heroSelect.timer
+player%d.heroSelect.timerFraction
+player%d.hintsAvailable
+player%d.hintsAvailable.disable
+player%d.index
+player%d.jetDisable
+player%d.jetFuelFraction
+player%d.jetFuelThreshold
+player%d.jetFuelWarning
+player%d.lockOnClassName
+player%d.lockOnDirection
+player%d.lockOnDirectionDisable
+player%d.lockOnDisable
+player%d.lockOnDisableShieldName
+player%d.lockOnDistance
+player%d.lockOnFlagCarrier
+player%d.lockOnFlagCarrierDisable
+player%d.lockOnHealth
+player%d.lockOnHealthFraction
+player%d.lockOnName
+player%d.lockOnShieldName
+player%d.lockOnTeamColor
+player%d.map.disable
+player%d.map.enable
+player%d.map.hideCPs
+player%d.map.mode
+player%d.map.modeToggle
+player%d.map.refreshMarker
+player%d.map.refreshPost
+player%d.map.refreshTarget
+player%d.map.spawn
+player%d.map.spawnLarge
+player%d.map.spawnLargeDisable
+player%d.message
+player%d.message.color
+player%d.message.disable
+player%d.missileLock
+player%d.missileLockDisable
+player%d.missileLockDistance
+player%d.objectiveDetails
+player%d.objectiveDetails.disable
+player%d.objectivelist.disable
+player%d.objectivelist.enable
+player%d.objectivesUpdated
+player%d.objectivesUpdated.disable
+player%d.pressSelectToReturn
+player%d.pressSelectToReturn.disable
+player%d.spaceAssaultStatus
+player%d.spaceAssaultStatus.disable
+player%d.spawn
+player%d.spawnDisplay.disable
+player%d.spawnDisplay.enable
+player%d.spawnDisplay.message
+player%d.spawnDisplay.spawninfo
+player%d.spawnDisplay.vehicle
+player%d.statistic.%s
+player%d.statistic.%sDelta
+player%d.statistic.changed
+player%d.statistic.disable
+player%d.targetResetPlayer
+player%d.team%d.bleedRate
+player%d.team%d.points
+player%d.team%d.pointsDisable
+player%d.team%d.pointsText
+player%d.team%d.reinforcements
+player%d.team%d.reinforcementsDisable
+player%d.team%d.reinforcementsFraction
+player%d.team%d.texture
+player%d.team%d.textureDisable
+player%d.tooltips
+player%d.tooltips.disable
+player%d.vehicle.hackedTime
+player%d.vehicle.hackedTimeDisable
+player%d.vehicle.hackedTimeFraction
+player%d.vehicle.hackingTime
+player%d.vehicle.hackingTimeDisable
+player%d.vehicle.hackingTimeFraction
+player%d.vehicle.health
+player%d.vehicle.healthDisable
+player%d.vehicle.healthFraction
+player%d.vehicle.seatingMesh
+player%d.weapon%d.ammoInfinite
+player%d.weapon%d.change
+player%d.weapon%d.charge
+player%d.weapon%d.disable
+player%d.weapon%d.heat
+player%d.weapon%d.lockOnDisable
+player%d.weapon%d.lockOnPosition
+player%d.weapon%d.name
+player%d.weapon%d.refire
+player%d.weapon%d.reticule.disable
+player%d.weapon%d.reticule.position
+player%d.weapon%d.target.className
+player%d.weapon%d.target.disable
+player%d.weapon%d.target.disableShieldName
+player%d.weapon%d.target.health
+player%d.weapon%d.target.healthFraction
+player%d.weapon%d.target.hit
+player%d.weapon%d.target.hitColor
+player%d.weapon%d.target.hitCritical
+player%d.weapon%d.target.name
+player%d.weapon%d.target.shieldName
+player%d.weapon%d.target.teamColor
+player%d.weapon%d.totalAmmoBullets
+player%d.weapon%d.totalAmmoFraction
+player%d.weapon%d.totalClipBullets
+player%d.weapon%d.totalClipFraction
+player%d.weaponsDisable
+player%d.weaponsEnable
+player%d.weaponsOverheat
+player%dspaceassaultgroup
+player_shadow
+PlayerChange
+PlayerController
+PlayerDirection%s
+PlayerFOV%s
+playerlist
+players
+PlayerSuicide
+PlayerText
+PlayInGameMovie
+PlayInGameMusic
+PlayMovie
+PlayVoicemail
+Please contact the application's support team for more information.
+PLTE
+PlV3
+pmvt
+pnpm
+point
+Point
+point_gain
+pointMan
+points
+polish
+pool
+poolu
+PopScreen
+Popup
+Popup_Error
+Popup_Error.title
+Popup_LoadSave2_ResizeButtons
+Popup_LoadSave2_SelectButton
+Popup_LobbyOpts
+portableturret
+Portal
+Position
+PositionTransformer
+POSK
+POST %s HTTP/1.0
+POST %s HTTP/1.1
+Post%s
+PostLoadHack
+PostSelect%s
+PostSelected%s
+PostText%s
+powerupitem
+PowerupItem
+PowerupItemClass
+powerupstation
+PowerupStation
+PowerupStationClass
+Premature end of input file
+Premature end of JPEG file
+PreOpDone
+prereflection
+PreReflection
+prereflection_shader.xml
+PreviousHost
+PreviousMixConfig
+PreviousOutputMode
+PrevToolTipState
+PRfkaiW
+print
+Print3D
+Programmer
+prone
+prone_getup_crouch
+prone_getup_stand
+pronealert
+prop
+Properties
+publicEnemy
+PushScreen
+Quantization table 0x%02x was not defined
+Quantizing to %d colors
+QueueAnimation
+quick.launching
+QuitFromStats
+quitting
+QuitToShell
+QuitToWindows
+rain
+rainshadow
+RAJoyDown
+RAJoyLeft
+RAJoyRight
+RAJoyUp
+random
+randomseed
+Range
+rank
+rankfield
+RAQP
+RAQW
+raster
+ratingfield
+rawequal
+rawget
+rawset
+RayRequest
+Reactivate
+Read failed on temporary file
+Read from EMS failed
+Read from XMS failed
+ReadAllControllers
+ReadDataFile
+ReadDataFileInGame
+ReadLeftstick
+Read-only file system
+readyselect
+readyselect%i
+readyselect%i.Helptext
+rear1
+rear2
+Reboot
+RebootToDownloaderXBE
+RecordVoicemail
+RECOVER1
+RECOVER2
+RECOVER3
+Rectangle
+Red3DModelAnimator
+RedMoviePlayer
+RedOmniLight
+RedShadingPose
+RedShadingPose::Entry
+RedShadingState
+refio
+Reflections.Draw
+Reflections.Enable
+refraction
+Refraction
+refraction_shader.xml
+region
+regulator
+Release
+Release%s
+reload
+ReloadMarkedProfile
+remote
+remoteterminal
+remove
+REMOVE
+removed player %s
+RemoveEffect
+RemoveHotSpot
+RemoveRegion
+RemoveTexture
+Rendering.EndSceneVBFlush
+rendering.maxVertexDensity
+rendering.minScreenSize
+rendering.nsFadeStart
+rendering.showMissingLOD
+rendering.soldiers
+Rendering.SortShaderFirst
+rep_icon
+RepaintExtraInfo
+RepaintListbox
+repair
+repeat
+republic
+Requested feature was omitted at compile time
+require
+REQUIREDNAME
+requirepass
+ResetControlsToDefault
+ResetGameOptionsToDefault
+ResetLeaderBoardPlayerData
+ResetSkipToNTGUI
+ResetSkipToPlayerList
+ResetSoundToDefault
+ResetToolTips
+ResizeButtons
+Resource deadlock avoided
+Resource device
+Resource temporarily unavailable
+RespawnObject
+RestartMission
+restbacksoft
+restfrontsoft
+RestoreDefaultProfile
+RestorePrimaryController
+Result too large
+resume
+return
+RewindAnimation
+RIFF
+RIFFj
+rifle
+rifle_crouch_idle_emote
+rifle_crouch_idle_takeknee
+rifle_diveforward
+rifle_jetpack_hover
+rifle_stand_death_backward
+rifle_stand_idle_emote
+rifle_stand_runforward
+rifle_thrown_flail
+right
+Right
+right1
+right2
+rightfoot
+rightfoot idle
+rightfoot walk
+rightfoot_to_idle
+rightfoot_to_idle rightfoot_to_idle_leftup rightfoot_to_idle_rightup
+RightToIdle
+RightToLeft
+rightup
+ringbump
+RNVW
+roll
+Rolling
+RollToIdle
+root
+RotatingModel
+Rotation
+RotationTransformer
+ROTK
+rtpqmotv
+rtpqmotv_b
+RTrigger
+RTrigger2
+RTrigger3
+RTYPu/
+rumble
+rumbleeffect
+runbackward
+runforward
+runleft
+running
+runright
+Runtime
+runtime error 
+sabotage
+sample
+sample_shader.xml
+Sampling factors too large for interleaved scan
+SaveCampaignDone
+SaveCampaignState
+SaveImage.xbx
+SaveMeta.xbx
+SaveMetagameDone
+SaveMetagameState
+SaveMissionSetup
+saveop
+SaveProfileDone
+sbSWj
+s-c_
+ScaleSoundParameter
+Scan script does not transmit all data
+schemas-upnp-org
+-SCOP
+score
+ScoreChange
+Screen
+screenspace
+ScreenSpace
+screenspace_shader.xml
+ScriptCB
+ScriptCB_AddIFContainer
+ScriptCB_AddIFFlashyText
+ScriptCB_AddIFImage
+ScriptCB_AddIFMaskImage
+ScriptCB_AddIFModel
+ScriptCB_AddIFScreen
+ScriptCB_AddIFText
+ScriptCB_AddProfile
+ScriptCB_AllowSkipDNAS
+ScriptCB_ApplyFilters
+ScriptCB_AreMoviePropertiesPlaying
+ScriptCB_AutoNetJoin
+ScriptCB_BeginFriends
+ScriptCB_BeginJoin
+ScriptCB_BeginJoinIP
+ScriptCB_BeginJoinSpecial
+ScriptCB_BeginLeave
+ScriptCB_BeginLobby
+ScriptCB_BeginQuickmatch
+ScriptCB_BeginSessionList
+ScriptCB_CancelFriends
+ScriptCB_CancelJoin
+ScriptCB_CancelLeaderBoardPlayerData
+ScriptCB_CancelLeave
+ScriptCB_CancelLobby
+ScriptCB_CancelLogin
+ScriptCB_CancelQuickmatch
+ScriptCB_CancelSessionList
+ScriptCB_CanClientLeaveStats
+ScriptCB_CanSupportMaxPlayers
+ScriptCB_CheckContent
+ScriptCB_CheckForPatch
+ScriptCB_CheckIfOkToExitMemoryMode
+ScriptCB_CheckMemoryCardMark
+ScriptCB_CheckPlayerListDone
+ScriptCB_CheckProfilePassword
+ScriptCB_ClearCampaignState
+ScriptCB_ClearError
+ScriptCB_ClearMetagameState
+ScriptCB_ClearMissionSetup
+ScriptCB_ClearPrevSessionId
+ScriptCB_ClientGotStats
+ScriptCB_CloseErrorBox
+ScriptCB_CloseMovie
+ScriptCB_CloseNetShell
+ScriptCB_ClosePopup
+ScriptCB_DisableFlyerShadows
+ScriptCB_DoConsoleCmd
+ScriptCB_DoesCampaignExistOnCard
+ScriptCB_DoesMetagameExistOnCard
+ScriptCB_DoesProfileExistOnCard
+ScriptCB_DoFile
+ScriptCB_DoFriendAction
+ScriptCB_DoInitialMemcardCheck
+ScriptCB_DoneCheckDNAS
+ScriptCB_DoneCheckPatch
+ScriptCB_DownloadLeaderBoardData
+ScriptCB_EffectsEnabled
+ScriptCB_EnableCommandPostVO
+ScriptCB_EnableCursor
+ScriptCB_EnableHeroMusic
+ScriptCB_EnableHeroVO
+ScriptCB_EnableJournal
+ScriptCB_EnablePlayback
+ScriptCB_EnableScene
+ScriptCB_EndAutoNet
+ScriptCB_EndIFObj
+ScriptCB_EndIFScreen
+ScriptCB_EnterMission
+ScriptCB_EnumerateLeaderBoard
+ScriptCB_EnumerateLeaderBoardDone
+ScriptCB_FormatTimeString
+ScriptCB_Freecamera
+ScriptCB_GetAmHost
+ScriptCB_GetAssaultScoreLimit
+ScriptCB_GetASSNumBots
+ScriptCB_GetAutoAssignTeams
+ScriptCB_GetAutoGetPlayerCount
+ScriptCB_GetAutoNetGameName
+ScriptCB_GetAutoNetIsDedicated
+ScriptCB_GetAutoNetMode
+ScriptCB_GetAutoNetScript
+ScriptCB_GetAwardStats
+ScriptCB_GetBandwidth
+ScriptCB_GetBassManagement
+ScriptCB_GetBuildStr
+ScriptCB_GetCareerMedalLevel
+ScriptCB_GetCareerMedals
+ScriptCB_GetCareerPersonalStats
+ScriptCB_GetCareerRank
+ScriptCB_GetCmdlineLogin
+ScriptCB_GetCONMaxTimeLimit
+ScriptCB_GetConnectType
+ScriptCB_GetCONNumBots
+ScriptCB_GetConsoleCmds
+ScriptCB_GetControlMode
+ScriptCB_GetControlScale
+ScriptCB_GetCTFCaptureLimit
+ScriptCB_GetCTFMaxTimeLimit
+ScriptCB_GetCTFNumBots
+ScriptCB_GetCurrentPCTitleVersion
+ScriptCB_GetCurrentProfileName
+ScriptCB_GetCurrentProfileNetName
+ScriptCB_GetDateStr
+ScriptCB_GetDifficulty
+ScriptCB_GetEntityLabel
+ScriptCB_GetEntityMesh
+ScriptCB_GetEntityWeaponMesh
+ScriptCB_GetEnumerateLeaderBoardData
+ScriptCB_GetError
+ScriptCB_GetErrorLevel
+ScriptCB_GetExtraSessionInfo
+ScriptCB_GetFilters
+ScriptCB_GetFontHeight
+ScriptCB_GetFriendActions
+ScriptCB_GetFriendListIcon
+ScriptCB_GetFriendStateStr
+ScriptCB_GetFunctionIdForAnalogId
+ScriptCB_GetFunctionIdForButtonId
+ScriptCB_GetGameName
+ScriptCB_GetGameRules
+ScriptCB_GetGeneralOptions
+ScriptCB_GetGSProfileInfo
+ScriptCB_GetHUDScale
+ScriptCB_GetHuntMaxTimeLimit
+ScriptCB_GetHuntScoreLimit
+ScriptCB_GetIFaceLighting
+ScriptCB_GetInTrainingMission
+ScriptCB_GetIPAddr
+ScriptCB_GetLanguage
+ScriptCB_GetLastBattleVictory
+ScriptCB_GetLatestError
+ScriptCB_GetLeaderBoardPlayerData
+ScriptCB_GetLobbyPlayerCount
+ScriptCB_GetLobbyPlayerFlags
+ScriptCB_GetLobbyPlayerlist
+ScriptCB_getlocalizestr
+ScriptCB_GetLoginList
+ScriptCB_GetMaxControllers
+ScriptCB_GetMaxMissionQueue
+ScriptCB_GetMedalStats
+ScriptCB_GetMissionTime
+ScriptCB_GetMixConfig
+ScriptCB_GetMixConfigChanged
+ScriptCB_GetNetGameDefaults
+ScriptCB_GetNetHeroDefaults
+ScriptCB_GetNumCameras
+ScriptCB_GetNumControllers
+ScriptCB_GetOnlineOpts
+ScriptCB_GetOnlineService
+ScriptCB_GetOutputMode
+ScriptCB_GetPausingJoystick
+ScriptCB_GetPausingViewport
+ScriptCB_GetPersonalStats
+ScriptCB_GetPlatform
+ScriptCB_GetPlayerIDAtRank
+ScriptCB_GetPrimaryController
+ScriptCB_GetProfileName
+ScriptCB_GetQuitPlayer
+ScriptCB_GetRank
+ScriptCB_GetSafeScreenInfo
+ScriptCB_GetSavedCampaignList
+ScriptCB_GetSavedMetagameList
+ScriptCB_GetScreenInfo
+ScriptCB_GetSecondaryController
+ScriptCB_GetSessionList
+ScriptCB_GetSessionListPercent
+ScriptCB_GetSessionSortMode
+ScriptCB_GetShellActive
+ScriptCB_GetSideSelectButtonSetting
+ScriptCB_GetSkipToNTGUIProfileName
+ScriptCB_GetSpectatorMode
+ScriptCB_GetSPProgress
+ScriptCB_GetTeamName
+ScriptCB_GetTeamstats
+ScriptCB_GetUniqueLoginName
+ScriptCB_GetVKeyboardCharacter
+ScriptCB_GetVoiceCaptureConnected
+ScriptCB_GetVoiceEnable
+ScriptCB_GetVoiceReceivePreset
+ScriptCB_GetVoiceReceiveStatus
+ScriptCB_GetVoiceRenderConnected
+ScriptCB_GetVoiceSendPreset
+ScriptCB_GetVoiceSendStatus
+ScriptCB_GetVoiceTVGain
+ScriptCB_GetVolumes
+ScriptCB_GetYAxisFlip
+ScriptCB_HasSeenDNASEULA
+ScriptCB_HasServerLaunched
+ScriptCB_HideDownloadableContent
+ScriptCB_HWSupport
+ScriptCB_IFFlashyText_SetBackground
+ScriptCB_IFFlashyText_SetBackgroundRightJustify
+ScriptCB_IFFlashyText_SetBackgroundSize
+ScriptCB_IFFlashyText_SetTextColor
+ScriptCB_IFFlashyText_Setup
+ScriptCB_IFFlashyText_StartFlashiness
+ScriptCB_IFImage_GetRect
+ScriptCB_IFImage_GetTexCoords
+ScriptCB_IFImage_SetRect
+ScriptCB_IFImage_SetTexCoords
+ScriptCB_IFImage_SetTexture
+ScriptCB_IFMaskImage_GetMaskTexCoords
+ScriptCB_IFMaskImage_SetMaskTexCoords
+ScriptCB_IFMaskImage_SetMaskTexture
+ScriptCB_IFModel_AttachModel
+ScriptCB_IFModel_GetDepth
+ScriptCB_IFModel_GetRotation
+ScriptCB_IFModel_GetScale
+ScriptCB_IFModel_GetTranslation
+ScriptCB_IFModel_QueueAnimation
+ScriptCB_IFModel_SetAnimation
+ScriptCB_IFModel_SetAnimationBanks
+ScriptCB_IFModel_SetAnimationLooping
+ScriptCB_IFModel_SetAnimationTime
+ScriptCB_IFModel_SetDepth
+ScriptCB_IFModel_SetLighting
+ScriptCB_IFModel_SetModel
+ScriptCB_IFModel_SetOmegaY
+ScriptCB_IFModel_SetRotation
+ScriptCB_IFModel_SetScale
+ScriptCB_IFModel_SetTranslation
+ScriptCB_IFModel_UpdateAnimation
+ScriptCB_IFObj_BringToFront
+ScriptCB_IFObj_CreateHotSpot
+ScriptCB_IFObj_Enable
+ScriptCB_IFObj_GetAlpha
+ScriptCB_IFObj_GetColor
+ScriptCB_IFObj_GetCPointer
+ScriptCB_IFObj_GetPos
+ScriptCB_IFObj_GetPosition
+ScriptCB_IFObj_GetVis
+ScriptCB_IFObj_GetWidthHeight
+ScriptCB_IFObj_GetZOrder
+ScriptCB_IFObj_IsEnabled
+ScriptCB_IFObj_IsGroup
+ScriptCB_IFObj_MouseOver
+ScriptCB_IFObj_RemoveHotSpot
+ScriptCB_IFObj_SendToBack
+ScriptCB_IFObj_SetAlpha
+ScriptCB_IFObj_SetBasicRotation
+ScriptCB_IFObj_SetColor
+ScriptCB_IFObj_SetEnabled
+ScriptCB_IFObj_SetPos
+ScriptCB_IFObj_SetPosition
+ScriptCB_IFObj_SetRelativeRotation
+ScriptCB_IFObj_SetRotation
+ScriptCB_IFObj_SetScreenPosition
+ScriptCB_IFObj_SetUseSafezone
+ScriptCB_IFObj_SetVis
+ScriptCB_IFObj_SetWidthHeight
+ScriptCB_IFObj_SetZOrder
+ScriptCB_IFObj_TestHotSpot
+ScriptCB_IFText_GetDisplayRect
+ScriptCB_IFText_GetIntercharacterSpacing
+ScriptCB_IFText_GetLeading
+ScriptCB_IFText_GetTextBox
+ScriptCB_IFText_GetTextExtent
+ScriptCB_IFText_GetTextScaleX
+ScriptCB_IFText_GetTextScaleY
+ScriptCB_IFText_SetFont
+ScriptCB_IFText_SetIntercharacterSpacing
+ScriptCB_IFText_SetJustify
+ScriptCB_IFText_SetLeading
+ScriptCB_IFText_SetString
+ScriptCB_IFText_SetTextBox
+ScriptCB_IFText_SetTextBreak
+ScriptCB_IFText_SetTextPosition
+ScriptCB_IFText_SetTextScale
+ScriptCB_IFText_SetTextStyle
+ScriptCB_IFText_SetUString
+ScriptCB_IndexMultipageText
+ScriptCB_InMemoryProfileMode
+ScriptCB_InMultiplayer
+ScriptCB_InNetGame
+ScriptCB_InNetSession
+ScriptCB_IsAutoNet
+ScriptCB_IsBadNetworkConnection
+ScriptCB_IsBootInvitePending
+ScriptCB_IsCampaignStateSaved
+ScriptCB_IsCmdlineJoinPending
+ScriptCB_IsControllerBound
+ScriptCB_IsControllerConnected
+ScriptCB_IsCurProfileDirty
+ScriptCB_IsCurrentCampaign
+ScriptCB_IsCurrentMetagame
+ScriptCB_IsDedicated
+ScriptCB_IsEnableLeaderBoard
+ScriptCB_IsErrorBoxOpen
+ScriptCB_IsFileExist
+ScriptCB_IsGameOver
+ScriptCB_IsGuest
+ScriptCB_IsHorizontalSplitScreen
+ScriptCB_IsInShell
+ScriptCB_IsJoinDone
+ScriptCB_IsLeaveDone
+ScriptCB_IsLegalGamespyString
+ScriptCB_IsLoggedIn
+ScriptCB_IsLoginDone
+ScriptCB_IsMemoryCardInsertted
+ScriptCB_IsMemoryCardUnformatted
+ScriptCB_IsMetaAllMapsOn
+ScriptCB_IsMetagameStateSaved
+ScriptCB_IsMissionSetupSaved
+ScriptCB_IsMoviePlaying
+ScriptCB_IsNetCableIn
+ScriptCB_IsNetHWPresent
+ScriptCB_IsNetworkOn
+ScriptCB_IsPAL
+ScriptCB_IsPlayerLoggedIn
+ScriptCB_IsPopupOpen
+ScriptCB_IsProfileDirty
+ScriptCB_IsProfilePassworded
+ScriptCB_IsPropertyPlayingNow
+ScriptCB_IsQuickmatchDone
+ScriptCB_IsQuickmatchPassworded
+ScriptCB_IsScreenInStack
+ScriptCB_IsSessionReady
+ScriptCB_IsShellMusicPlaying
+ScriptCB_IsSpecialJoinPending
+ScriptCB_IsSplitscreen
+ScriptCB_IsUniqueLoginName
+ScriptCB_IsVoicemailDownloaded
+ScriptCB_LaunchDemo
+ScriptCB_LaunchJoin
+ScriptCB_LaunchLeave
+ScriptCB_LaunchLobby
+ScriptCB_LaunchQuickmatch
+ScriptCB_LaunchSessionList
+ScriptCB_LeaderBoardDownloadDone
+ScriptCB_LoadCampaignState
+ScriptCB_LoadMetagameState
+ScriptCB_LoadMissionSetup
+ScriptCB_LoadSavePopupResult
+ScriptCB_LobbyAction
+ScriptCB_Logout
+ScriptCB_MakeFakeProfiles
+ScriptCB_MarkCurrentProfile
+ScriptCB_MarkMemoryCard
+ScriptCB_MetagameSetBonus
+ScriptCB_MetagameSetSide
+ScriptCB_MinimizeWindow
+ScriptCB_NetWasClient
+ScriptCB_NetWasDedicated
+ScriptCB_NetWasDedicatedQuit
+ScriptCB_NetWasHost
+ScriptCB_NextHost
+ScriptCB_NextMixConfig
+ScriptCB_NextOutputMode
+ScriptCB_NextToolTipState
+ScriptCB_OpenErrorBox
+ScriptCB_OpenMovie
+ScriptCB_OpenNetShell
+ScriptCB_OpenPopup
+ScriptCB_PauseDemoTimer
+ScriptCB_PauseSessionList
+ScriptCB_PausingIsPrimary
+ScriptCB_PersonalStatsSetTitles
+ScriptCB_PlayAuditionEffect
+ScriptCB_PlayerSuicide
+ScriptCB_PlayInGameMovie
+ScriptCB_PlayInGameMusic
+ScriptCB_PlayMovie
+ScriptCB_PopScreen
+ScriptCB_PostLoadHack
+ScriptCB_PreviousHost
+ScriptCB_PreviousMixConfig
+ScriptCB_PreviousOutputMode
+ScriptCB_PrevToolTipState
+ScriptCB_PushScreen
+ScriptCB_QuitFromStats
+ScriptCB_QuitToShell
+ScriptCB_QuitToWindows
+ScriptCB_random
+ScriptCB_ReadAllControllers
+ScriptCB_ReadLeftstick
+ScriptCB_Reboot
+ScriptCB_RebootToDownloaderXBE
+ScriptCB_ReloadMarkedProfile
+ScriptCB_RemoveTexture
+ScriptCB_ResetControlsToDefault
+ScriptCB_ResetGameOptionsToDefault
+ScriptCB_ResetLeaderBoardPlayerData
+ScriptCB_ResetSkipToNTGUI
+ScriptCB_ResetSkipToPlayerList
+ScriptCB_ResetSoundToDefault
+ScriptCB_ResetToolTips
+ScriptCB_RestartMission
+ScriptCB_RestoreDefaultProfile
+ScriptCB_RestorePrimaryController
+ScriptCB_SaveCampaignState
+ScriptCB_SaveMetagameState
+ScriptCB_SaveMissionSetup
+ScriptCB_SearchStatsRank
+ScriptCB_SendFeedback
+ScriptCB_SetAIDifficulty
+ScriptCB_SetAmHost
+ScriptCB_SetAsFavorite
+ScriptCB_SetAutoAcquireControllers
+ScriptCB_SetBandwidth
+ScriptCB_SetBassManagement
+ScriptCB_SetBleedingRepeatTime
+ScriptCB_SetCanSwitchSides
+ScriptCB_SetConnectType
+ScriptCB_SetControlMode
+ScriptCB_SetControlScale
+ScriptCB_SetDCMap
+ScriptCB_SetDedicated
+ScriptCB_SetDifficulty
+ScriptCB_SetDopplerFactor
+ScriptCB_SetFilters
+ScriptCB_SetFunctionIdForAnalogId
+ScriptCB_SetFunctionIdForButtonId
+ScriptCB_SetGameName
+ScriptCB_SetGameRules
+ScriptCB_SetGeneralOptions
+ScriptCB_SetGSProfileInfo
+ScriptCB_SetHasSeenDNASEULA
+ScriptCB_SetHorizontalSplitScreen
+ScriptCB_SetHotController
+ScriptCB_SetHUDScale
+ScriptCB_SetIFaceLighting
+ScriptCB_SetIFScreen
+ScriptCB_SetIFScreenViewport
+ScriptCB_SetIgnoreControllerRemoval
+ScriptCB_SetIgnoreInputs
+ScriptCB_SetInNetGame
+ScriptCB_SetInputRepeat
+ScriptCB_SetInTrainingMission
+ScriptCB_SetLastBattleVictoryValid
+ScriptCB_SetLeaderBoardID
+ScriptCB_SetMemoryProfileMode
+ScriptCB_SetMetaAllMapsOn
+ScriptCB_SetMissionNames
+ScriptCB_SetMovieAudioBus
+ScriptCB_SetNetGameDefaults
+ScriptCB_SetNetHeroDefaults
+ScriptCB_SetNetLoginName
+ScriptCB_SetNoticeNoCable
+ScriptCB_SetNumBots
+ScriptCB_SetOnlineOpts
+ScriptCB_SetPlayerSide
+ScriptCB_SetPlayerStatsPoints
+ScriptCB_SetProfileAsDefault
+ScriptCB_SetProfileNotDirty
+ScriptCB_SetQuitPlayer
+ScriptCB_SetSessionSortMode
+ScriptCB_SetShellMusic
+ScriptCB_SetShellMusicInterval
+ScriptCB_SetSpawnDisplayGain
+ScriptCB_SetSpectatorMode
+ScriptCB_SetSplitscreen
+ScriptCB_SetSPProgress
+ScriptCB_SetSunlight
+ScriptCB_SetTeamNames
+ScriptCB_SetTeamStatsSortMode
+ScriptCB_SetupAutoNetIsLan
+ScriptCB_SetupAutoNetMissions
+ScriptCB_SetVoiceLocalEchoEnable
+ScriptCB_SetVoiceReceiveEnable
+ScriptCB_SetVoiceReceivePreset
+ScriptCB_SetVoiceSendEnable
+ScriptCB_SetVoiceSendPreset
+ScriptCB_SetVolumes
+ScriptCB_SetYAxisFlip
+ScriptCB_ShellPlayDelayedStream
+ScriptCB_ShouldCheckDNAS
+ScriptCB_ShouldCheckPatch
+ScriptCB_ShouldShowDemoPostscreen
+ScriptCB_ShouldShowLegal
+ScriptCB_ShowHuntScoreLimit
+ScriptCB_ShowLoadDisplay
+ScriptCB_ShowMultipageText
+ScriptCB_SkipToNTGUI
+ScriptCB_SkipToPlayerList
+ScriptCB_SndBusFade
+ScriptCB_SndPlaySound
+ScriptCB_SoundDisable
+ScriptCB_SoundEnable
+ScriptCB_srand
+ScriptCB_StartDeleteCampaign
+ScriptCB_StartDeleteMetagame
+ScriptCB_StartDeleteProfile
+ScriptCB_StartInitialMemcardCheck
+ScriptCB_StartLoadCampaign
+ScriptCB_StartLoadMetagame
+ScriptCB_StartLoadProfile
+ScriptCB_StartLogin
+ScriptCB_StartLoginDedicatedServer
+ScriptCB_StartNewCampaign
+ScriptCB_StartNewMetagame
+ScriptCB_StartPreOp
+ScriptCB_StartSaveCampaign
+ScriptCB_StartSaveMetagame
+ScriptCB_StartSaveProfile
+ScriptCB_StopInGameMovie
+ScriptCB_StopInGameMusic
+ScriptCB_StopMovie
+ScriptCB_SwapActiveProfileSlots
+ScriptCB_SwapPrimaryController
+ScriptCB_TeamStatsGetTeam1
+ScriptCB_TeamStatsGetTeamColor
+ScriptCB_TeamStatsSetTitles
+ScriptCB_TeamStatsValidatePos
+ScriptCB_ToggleEffects
+ScriptCB_tounicode
+ScriptCB_TrackLoginErrors
+ScriptCB_TriggerSoundRegionEnable
+ScriptCB_TrimLoginName
+ScriptCB_UnbindController
+ScriptCB_UnicodeStrCat
+ScriptCB_UnlockableState
+ScriptCB_UnlockUnlockable
+ScriptCB_Unpause
+ScriptCB_ununicode
+ScriptCB_UpdateFriends
+ScriptCB_UpdateJoin
+ScriptCB_UpdateLeave
+ScriptCB_UpdateLobby
+ScriptCB_UpdateQuickmatch
+ScriptCB_UpdateScreen
+ScriptCB_UpdateSessionList
+ScriptCB_UpdateVoicemailDownload
+ScriptCB_usprintf
+ScriptCB_ustrupper
+ScriptCB_VoiceEnable
+ScriptCB_VoteKick
+ScriptCB_VoteOrNominate
+ScriptCB_WasSplitscreen
+ScriptCB_XB_IsXLiveAllowed
+ScriptCB_XB_LaunchDVDContent
+ScriptCB_XB_Reboot
+ScriptCB_XL_CancelProfileList
+ScriptCB_XL_DeleteVoicemail
+ScriptCB_XL_DownloadVoicemail
+ScriptCB_XL_EnableVoicemail
+ScriptCB_XL_EndProfileList
+ScriptCB_XL_FriendInSameTitle
+ScriptCB_XL_GetLoginName
+ScriptCB_XL_GetOptiOpts
+ScriptCB_XL_GetSilentLoginState
+ScriptCB_XL_IsHeadsetPresent
+ScriptCB_XL_IsLoggedIn
+ScriptCB_XL_IsSilentLoginDone
+ScriptCB_XL_NeedToDownloadVoicemail
+ScriptCB_XL_PlayVoicemail
+ScriptCB_XL_RecordVoicemail
+ScriptCB_XL_SelectProfileList
+ScriptCB_XL_SetOptiOpts
+ScriptCB_XL_StartProfileList
+ScriptCB_XL_StartSilentLogin
+ScriptCB_XL_StopVoicemail
+ScriptCB_XL_UpdateProfileList
+ScriptCB_XL_UpdateVoicemail
+ScriptInit
+ScriptPostLoad
+ScriptPreInit
+SDPR
+SdRW
+SearchStatsRank
+secondary
+secondary2
+Sector
+SECTOR
+Sector1
+Sector2
+seec
+Seek failed on temporary file
+Segment
+Select
+SelectButton
+SelectCharacterClass
+SelectCharacterTeam
+Selected
+Selected %d colors for quantization
+SelectedIdx
+selectionPopup
+selectionPopup.disable
+SelectProfileList
+self
+Self
+SelfText
+SendFeedback
+SendToBack
+sensor
+sensor_array
+SERVER
+serverinfo
+servertype
+service
+serviceId
+serviceList
+serviceType
+sessionIdx
+sessionlist
+SetAIDamageThreshold
+SetAIDifficulty
+SetAIVehicleNotifyRadius
+SetAIViewMultiplier
+SetAllowBlindJetJumps
+SetAlpha
+SetAmbientMusic
+SetAmHost
+SetAnimation
+SetAnimationBanks
+SetAnimationLooping
+SetAnimationStartPoint
+SetAnimationTime
+SetAsFavorite
+SetAttackerSnipeRange
+SetAttackingTeam
+SetAutoAcquireControllers
+SetBackground
+SetBackgroundRightJustify
+SetBackgroundSize
+SetBandwidth
+SetBasicRotation
+SetBassManagement
+SetBirdFlockMinHeight
+SetBirdType
+SetBleedingRepeatTime
+SetBleedingVoiceOver
+SetBleedRate
+SetCameraPosition
+SetCameraRotation
+SetCanSwitchSides
+SetCarrierClass
+SetClassProperty
+SetColor
+SetConnectType
+SetControlMode
+SetControlScale
+SetDCMap
+SetDedicated
+SetDefeatMovie
+SetDefeatMusic
+SetDefeatTimer
+SetDefenderSnipeRange
+SetDenseEnvironment
+SetDepth
+SetDifficulty
+SetDopplerFactor
+SetEffectActive
+SetEffectMatrix
+SetEnabled
+SetEntityMatrix
+setfenv
+SetFilters
+SetFishType
+SetFlagGameplayType
+SetFlyerControllerConfig
+SetFont
+SetFunctionIdForAnalogId
+SetFunctionIdForButtonId
+SetGameName
+SetGameRules
+SetGeneralOptions
+SetGroundFlyerMap
+SetGSProfileInfo
+SetHasSeenDNASEULA
+SetHeroClass
+SetHeroPlayerRule
+SetHeroRespawnRule
+SetHeroTeamRule
+SetHeroUnlockRule
+SetHistorical
+sethook
+SetHorizontalSplitScreen
+SetHotController
+SetHUDScale
+SetIFaceLighting
+SetIFScreen
+SetIFScreenViewport
+SetIgnoreControllerRemoval
+SetIgnoreInputs
+SetInNetGame
+SetInputRepeat
+SetIntercharacterSpacing
+SetInTrainingMission
+SetJustify
+SetLastBattleVictoryValid
+SetLeaderBoardID
+SetLeading
+SetLighting
+setlocal
+SetLowReinforcementsVoiceOver
+SetMapCameraOffset
+SetMapCameraPitch
+SetMapCameraZoom
+SetMapNorthAngle
+SetMaskTexCoords
+SetMaskTexture
+SetMaxCollisionDistance
+SetMaxFlyHeight
+SetMaxPlayerFlyHeight
+SetMemoryPoolSize
+SetMemoryProfileMode
+SetMetaAllMapsOn
+setmetatable
+SetMinFlyHeight
+SetMinPlayerFlyHeight
+SetMissionEndMovie
+SetMissionNames
+SetMissionTimer
+SetModel
+SetMovieAudioBus
+setn
+SetNetGameDefaults
+SetNetHeroDefaults
+SetNetLoginName
+SetNoticeNoCable
+SetNumBirdTypes
+SetNumBots
+SetNumFishTypes
+SetObjectTeam
+SetOmegaY
+SetOnlineOpts
+SetOptiOpts
+SetOutOfBoundsVoiceOver
+SetPalette
+SetParticleLODBias
+SetPlanetaryBonusVoiceOver
+SetPlayerSide
+SetPlayerStatsPoints
+SetPos
+SetPosition
+SetProfileAsDefault
+SetProfileNotDirty
+SetProperty
+SetPS2ModelMemory
+SetQuitPlayer
+SetRect
+SetReinforcementCount
+SetRelativeRotation
+SetRenderTarget
+SetReservesVO
+SetRotation
+SetScale
+SetScreenPosition
+SetSessionSortMode
+SetShellMusic
+SetShellMusicInterval
+SetSoundEffect
+SetSpawnDelay
+SetSpawnDelayTeam
+SetSpawnDisplayGain
+SetSpectatorMode
+SetSplitscreen
+SetSPProgress
+SetState
+SetStationaryWaitTime
+SetStayInTurrets
+SetString
+SetSunlight
+SetTeamAggressiveness
+SetTeamAsEnemy
+SetTeamAsFriend
+SetTeamAsNeutral
+SetTeamIcon
+SetTeamName
+SetTeamNames
+SetTeamPoints
+SetTeamStatsSortMode
+SetTexCoords
+SetTextBox
+SetTextBreak
+SetTextColor
+SetTextPosition
+SetTextScale
+SetTextStyle
+SetTexture
+SetTimerRate
+SetTimerValue
+setting bandwidth to %d kbps
+setting window size to %d
+settings
+SETTINGS
+SetTranslation
+SetUberMode
+SetUnitCount
+Setup
+SetupAutoNetIsLan
+SetupAutoNetMissions
+SetupTempHeap
+setupvalue
+SetUrbanEnvironment
+SetUseSafezone
+SetUString
+SetVertexShaderInput
+SetVictoryMovie
+SetVictoryMusic
+SetVictoryTimer
+SetVis
+SetVoiceLocalEchoEnable
+SetVoiceReceiveEnable
+SetVoiceReceivePreset
+SetVoiceSendEnable
+SetVoiceSendPreset
+SetVolumes
+SetWidthHeight
+SetWorldExtents
+SetYAxisFlip
+SetZOrder
+SFVR
+SGWQ
+sgy_R
+shader
+shader.xml
+shadow
+Shadow
+SHDRu
+shell
+shell.lvl
+shell\eng\shell.lvl
+shell_interface
+ShellPlayDelayedStream
+shield
+Shield
+shield_shader.xml
+ShieldChange
+shielding
+shoot
+shoot_secondary
+shoot_secondary2
+shoot2
+short
+short_src
+ShouldCheckDNAS
+ShouldCheckPatch
+ShouldShowDemoPostscreen
+ShouldShowLegal
+ShowAllUnitsOnMinimap
+ShowHuntScoreLimit
+ShowLoadDisplay
+ShowMessageText
+ShowMultipageText
+ShowObjectiveTextPopup
+ShowPopup
+ShowSelectionTextPopup
+showstr
+ShowStr
+ShowTeamPoints
+ShowTimer
+ShPh2
+shutdown
+Side
+sideselect%d
+sideselect%d.buttons.team%d.label
+sideselect%i
+SIEc
+signaturekey
+SIGNUP
+SING error
+sinh
+sink
+size
+SIZE
+size_t
+SizeTransformer
+skic
+skill
+Skipping marker 0x%02x, length %u
+SkipToNTGUI
+SkipToPlayerList
+SkyFlat
+skyfog
+SkyFog
+skyfog_shader.xml
+Slab
+SLAB
+slop
+slop;_
+slopu
+slqmzw
+SLTMu
+Small
+SMALL
+Smoothing not supported with nonstandard sampling ratios
+SnapMapCamera
+snd_
+SndBusFade
+SndPlaySound
+SOAPACTION
+soc-
+soc-Pt
+soldier
+SOLDIER
+SoldierAnimation
+SoldierPolyCount
+Sorry, there are legal restrictions on arithmetic coding
+sort
+sound
+SoundAmbienceStatic
+SoundAmbienceStreaming
+SoundDisable
+SoundEnable
+soundlayered
+soundparameterized
+soundspace
+SoundSpaceRegion
+soundstatic
+soundstream
+soundtrigger
+source
+SpaceAssault
+SpaceAssault::ViewportData
+SpaceAssaultAddCriticalSystem
+SpaceAssaultEnable
+SpaceAssaultGetScoreLimit
+SpaceAssaultLinkCriticalSystems
+SpaceAssaultSetupBitmaps
+SpaceAssaultSetupTeamNumbers
+spanish
+Spawn
+SpawnCharacter
+spec
+SpecialFont
+SpecMap
+specular
+specular_shader.xml
+specularcubemap
+specularlighting
+specularlighting_shader.xml
+specularspot
+SPhDSda
+splash
+splitupdate
+spotlight
+SPPR
+SpringBody%d
+sprint
+srand
+ST:urn:schemas-upnp-org:service:WANIPConnection:1
+ST:urn:schemas-upnp-org:service:WANPPPConnection:1
+stack overflow
+stack traceback
+stack traceback:
+stand
+stand_attack1a
+stand_attack1b
+stand_block_front1
+stand_block_front2
+stand_block_left1
+stand_block_left2
+stand_block_rear1
+stand_block_rear2
+stand_block_right1
+stand_block_right2
+stand_deadhero
+stand_death_backward
+stand_death_forward
+stand_death_left
+stand_death_right
+stand_getupback
+stand_getupfront
+stand_hitback
+stand_hitfront
+stand_hitleft
+stand_hitright
+standalert
+star
+start
+Start
+Start Of Frame 0x%02x
+Start of Image
+Start Of Scan
+Start Of Scan: %d components
+StartDeleteCampaign
+StartDeleteMetagame
+StartDeleteProfile
+StartFlashiness
+StartInitialMemcardCheck
+StartLoadCampaign
+StartLoadMetagame
+StartLoadProfile
+StartLogin
+StartLoginDedicatedServer
+StartNewCampaign
+StartNewMetagame
+StartPreOp
+StartProfileList
+StartSaveCampaign
+StartSaveMetagame
+StartSaveProfile
+StartSilentLogin
+StartTimer
+State
+StateIcon
+static
+stats
+stats_listbox_contents
+stats_medalbox_left_contents
+stats_medalbox_right_contents
+status
+stderr
+stdin
+stdout
+StealArtistHeap
+stencilshadow
+stencilshadow_shader.xml
+StickInfo
+sticky
+stmm
+StopAudioStream
+stopfollowchr
+StopInGameMovie
+StopInGameMusic
+StopMovie
+StopTimer
+StopVoicemail
+stream end
+stream error
+string
+string or function expected
+string size overflow
+SubPSQR
+SunMonTueWedThuFriSat
+supplies
+survivalist
+suspended
+Suspension not allowed here
+SwapActiveProfileSlots
+SwapPrimaryController
+SWBF2
+swbf2.zip
+syntax error
+syslink
+systemfont
+table
+table contains non-strings
+table index is NaN
+table index is nil
+table overflow
+table too big to unpack
+table: %p
+tail
+tail return
+takeknee
+takeoff
+tanh
+tankBuster
+tanks
+taPSV
+Target%s
+TargetChange
+targetResetCommon
+tat2
+team
+Team
+team_bonus_
+team1
+Team1
+Team1Name
+team2
+Team2
+Team2Name
+TeamAssist
+TeamChange
+TeamPointsChange
+teamstats
+teamstats_awardsListbox_contentsL
+teamstats_awardsListbox_contentsR
+teamstats_listbox_contentsL
+teamstats_listbox_contentsR
+TeamStatsGetTeam1
+TeamStatsGetTeamColor
+TeamStatsSetTitles
+TeamStatsValidatePos
+technician
+Temp
+terrain
+Terrain
+terrain.ForceFullDetail
+terrain.Render
+terrain_shader.xml
+TerrainOld
+TestHotSpot
+text
+texture.xml
+This application has requested the Runtime to terminate it in an unusual way.
+THPV
+thread
+thread: %p
+thrown
+thrown_bouncebacksoft
+thrown_bouncefrontsoft
+thrown_flail
+thrown_flyingback
+thrown_flyingfront
+thrown_flyingleft
+thrown_flyingright
+thrown_landbacksoft
+thrown_landfrontsoft
+thrown_restbacksoft
+thrown_restfrontsoft
+thrown_tumbleback
+thrown_tumblefront
+TicketBleedChange
+TicketCountChange
+time
+TIMEOUT
+Timer
+TimerElapse
+tISV
+title
+TitleImage.xbx
+TitleMeta.xbx
+Toggle Profiler
+Toggle Summary
+ToggleBarriers
+ToggleEffects
+TogglePlanningGraphArcs
+tOItD
+tonumber
+too many arguments to resume
+too many captures
+Too many color components
+Too many color components: %d, max %d
+too many length or distance symbols
+Too many links
+too many marks in a path component
+Too many open files
+Too many open files in system
+too many results to resume
+too many syntax levels
+tool
+toolong.dat
+torso
+tostring
+tOSU
+totalTimePlayed
+tounicode
+towcable
+towcableweapon
+TPQRV
+traceback
+TRACEBACK
+TrackLoginErrors
+traitor
+TRANSFER-ENCODING
+transformed1
+transformed2
+transformed3
+Transition
+TranslateAICommand
+transparent
+transparent_shader.xml
+trap
+treaded
+TreeGridStack
+Trigger%s
+TriggerSoundRegion
+TriggerSoundRegion::Group
+TriggerSoundRegion::Properties
+TriggerSoundRegionEnable
+TrimLoginName
+tUHt1H
+tumbleback
+tumblefront
+turnl
+turnl turnl
+turnl turnl_leftup turnl_rightup
+turnleft
+TurnLeft
+turnr
+turnr turnr
+turnr turnr_leftup turnr_rightup
+turnright
+TurnRight
+tuser
+tvHtlHuz
+tvU3
+tVU3
+TVUU
+tvUV
+tvV3
+tVVW
+tybe
+type
+TYPE is wrong, please fix
+type_%s
+unable to dump given function
+unbalanced pattern
+UnbindController
+UnblockPlanningGraphArcs
+UnbuiltCollisionMesh
+unexpected end of file in %s
+Unexpected marker 0x%02x
+unexpected symbol
+unfinished capture
+unfinished long comment
+unfinished long string
+unfinished string
+unfold
+UnicodeStrCat
+UNINVITE
+UnitAgent
+UnitBoardAgent
+UnitCaptureCPAgent
+UnitCombatAgent
+UnitController
+UnitCTFOffenseAgent
+UnitDeathmatchAgent
+UnitDefendAgent
+UnitDestroyAgent
+UnitFlyAgent
+UnitFlyController
+UnitFollowAgent
+UnitHoldAgent
+UnitMobileController
+UnitRandomAgent
+UnitStationaryController
+UnitTrooperAgent
+UnitUnBoardAgent
+UnitWaitAgent
+UnitWaitSecondaryAgent
+Unknown
+Unknown Adobe color transform code %d
+unknown compression method
+Unknown error
+Unknown JFIF minor revision number %d.%02d
+unknown number format in %s
+UnlockableState
+UnlockHeroForTeam
+UnlockUnlockable
+Unnamed
+unpack
+Unpause
+Unrecognized component IDs %d %d %d, assuming YCbCr
+Unsupported color conversion request
+Unsupported JPEG data precision %d
+Unsupported JPEG process
+Unsupported JPEG process: SOF type 0x%02x
+Unsupported marker type 0x%02x
+until
+Unu\
+ununicode
+Update
+UPDATE
+update.xbe
+UpdateAnimation
+UpdateFriends
+UpdateJoin
+UpdateLeave
+UpdateLobby
+UpdateProfileList
+UpdateQuickmatch
+UpdateScreen
+UpdateSessionList
+UpdateVoicemail
+UpdateVoicemailDownload
+UPnPError
+upper
+UpperCorner
+upPSS
+upPWW
+UPQR
+upvalues
+UrC 
+urn:schemas-upnp-org:service:WANIPConnection:1
+urn:schemas-upnp-org:service:WANPPPConnection:1
+USBC
+USBS
+used
+user
+User-Agent
+userdata
+userdata: %p
+usprintf
+USSSP
+ustrupper
+val1str
+val2str
+val3str
+validchars
+value expected
+value for `lua
+value for `lua_getinfo' is not a function
+values
+VDBX
+VDBXuM
+vdKn
+vector
+vehiclepad
+vehiclescale
+vehiclesDestroyed
+vehiclespawn
+VehicleSpawn
+VehicleSpawn::VehicleTracker
+VehicleTracker
+VERSION
+Vertical
+victorytimer
+victorytimer.disable
+Viewport
+ViewportData
+Virtual array controller messed up
+virtual machine mismatch in %s
+virtual machine mismatch in %s: size of %s is %d but read %d
+vis.BackFaceCull
+vis.DebugDraw
+vis.Enable
+vis.ProximityTest
+vis.SaveCam
+vLSW
+Vnxn
+VoiceEnable
+VoiceIcon
+VoiceIconAlpha
+volume
+VoteKick
+VoteOrNominate
+VOUnitNum
+Wait for image read timed-out
+Wait for image write timed-out
+waitforpickup
+waitlate
+walk
+walk_leftfoot_rightfoot
+walk_leftfoot_rightfoot walk_leftfoot_rightfoot_leftup walk_leftfoot_rightfoot_rightup
+walk_rightfoot_leftfoot
+walk_rightfoot_leftfoot walk_rightfoot_leftfoot_leftup walk_rightfoot_leftfoot_rightup
+walkbackward
+walker
+Walker%d
+walker.ShowDamage
+WalkerBlend
+WalkerBlendUnit
+walkerdroid
+WalkerLegPair
+walkforward
+walkleft
+walkright
+WANIPConnection
+WANPPPConnection
+WAQR
+warhero
+Warning
+Warning: thumbnail image size does not match data length %u
+Warning: unknown JFIF revision number %d.%02d
+WasSplitscreen
+water
+Water
+water_shader.xml
+water_sink_region
+weapon
+Weapon
+WeaponAreaEffect
+WeaponAreaEffectClass
+WeaponBinoculars
+WeaponBinocularsClass
+WeaponCannon
+WeaponCannonClass
+WeaponCatapult
+WeaponCatapultClass
+WeaponChange
+WeaponClass
+WeaponDestruct
+WeaponDestructClass
+WeaponDetonator
+WeaponDetonatorClass
+WeaponDisguise
+WeaponDisguiseClass
+WeaponDispenser
+WeaponDispenserClass
+WeaponGrapplingHook
+WeaponGrapplingHookClass
+WeaponGrenade
+WeaponGrenadeClass
+WeaponInvisibility
+WeaponInvisibilityClass
+WeaponLaser
+WeaponLaserClass
+WeaponLauncher
+WeaponLauncherClass
+WeaponMelee
+WeaponMeleeClass
+WeaponMeleeThrow
+WeaponMeleeThrowClass
+WeaponRemote
+WeaponRemoteClass
+WeaponRepair
+WeaponRepairClass
+weapons.%s
+WeaponShield
+WeaponShieldClass
+WeaponTowCable
+WeaponTowCableClass
+window size %d
+window size not set
+windowsize
+Word
+Word Reformat
+WRhT
+Write to EMS failed
+Write to XMS failed
+Wrong JPEG library version
+Wrong JPEG library version: library is %d, caller expects %d
+wrong number of arguments
+xbmovie.dat
+xbox
+Xbox
+XBox
+XBOX
+XBOX 1.0
+XBox Final LTCG
+xbox.cancel
+XBOX.COM
+xbox.continue
+xbox.freemoreblocks
+xbox.freemoreslots
+xbox.no
+xbox.ok
+xbox.save02
+xbox.save03
+xbox.save10
+xbox.save11
+xbox.save13
+xbox.save22
+xbox.save23
+xbox.yes
+xboxdash.xbe
+xboxFoliageShader
+xboxInterfaceBitmapShader
+XBoxInviteIcon
+xboxNormalShader
+xboxRainShader
+xboxRedIndexBuffer
+xboxRedPrimitive
+xboxRedVertexBuffer
+xboxRedVertexFormat
+xboxScreenSpaceShader
+xboxShieldShader
+xboxSpecularShader
+xboxWaterShader
+XLD_LAUNCH_DASHBOARD_ACCOUNT_MANAGEMENT
+XLD_LAUNCH_DASHBOARD_ERROR
+XLD_LAUNCH_DASHBOARD_MAIN_MENU
+XLD_LAUNCH_DASHBOARD_MEMORY
+XLD_LAUNCH_DASHBOARD_MUSIC 
+XLD_LAUNCH_DASHBOARD_NETWORK_CONFIGURATION
+XLD_LAUNCH_DASHBOARD_NEW_ACCOUNT_SIGNUP
+XLD_LAUNCH_DASHBOARD_ONLINE_MENU 
+XLD_LAUNCH_DASHBOARD_SETTINGS
+xlfriends
+xlfriends_listbox_layout
+XLive
+xlive.errors.account
+xlive.errors.account_management
+xlive.errors.cannotaccess
+xlive.errors.dupsignon
+xlive.errors.hostconnectionlost
+xlive.errors.invalid
+xlive.errors.invalid_user
+xlive.errors.nocable
+xlive.errors.nocable_syslink
+xlive.errors.nocable2
+xlive.errors.notauthorized
+xlive.errors.recommendedmsg
+xlive.errors.sessionnotavailable
+xlive.errors.silent
+xlive.errors.silent_disabled
+xlive.errors.silent_noaccounts
+xlive.errors.silent_requirepass
+xlive.errors.updatereq
+xlive.errors.verybusy
+xlive.friendstate.INVITEACCEPTED
+xlive.friendstate.INVITEREJECTED
+xlive.friendstate.JOINABLE
+xlive.friendstate.offline
+xlive.friendstate.ONLINE
+xlive.friendstate.PLAYING
+xlive.friendstate.RECEIVEDINVITE
+xlive.friendstate.RECEIVEDREQUEST
+xlive.friendstate.SENTINVITE
+xlive.friendstate.SENTREQUEST
+xlive.friendstate.VOICE
+y:\xboxdash.xbe
+y:\XODash\xonlinedash.xbe
