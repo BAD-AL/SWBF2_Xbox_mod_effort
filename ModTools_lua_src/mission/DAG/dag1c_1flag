@@ -1,0 +1,219 @@
+--
+-- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
+--
+
+-- load the gametype script
+ScriptCB_DoFile("ObjectiveOneFlagCTF")
+ScriptCB_DoFile("setup_teams")
+
+--  Empire Attacking (attacker is always #1)
+     REP = 1
+     CIS = 2
+     --  These variables do not change
+     ATT = 1
+     DEF = 2
+
+ ---------------------------------------------------------------------------
+ -- FUNCTION:    ScriptInit
+ -- PURPOSE:     This function is only run once
+ -- INPUT:
+ -- OUTPUT:
+ -- NOTES:       The name, 'ScriptInit' is a chosen convention, and each
+ --              mission script must contain a version of this function, as
+ --              it is called from C to start the mission.
+ ---------------------------------------------------------------------------
+ function ScriptPostLoad()
+ 
+     --This is the actual objective setup
+    ctf = ObjectiveOneFlagCTF:New{teamATT = 1, teamDEF = 2,
+                           textATT = "game.modes.1flag", textDEF = "game.modes.1flag2",
+                           captureLimit = 8, flag = "flag", flagIcon = "flag_icon", 
+                           flagIconScale = 3.0, homeRegion = "HomeRegion",
+                           captureRegionATT = "flag1_home", captureRegionDEF = "flag2_home",
+                           capRegionMarkerATT = "hud_objective_icon_circle", capRegionMarkerDEF = "hud_objective_icon_circle",
+                           capRegionMarkerScaleATT = 3.0, capRegionMarkerScaleDEF = 3.0, multiplayerRules = true}
+    ctf:Start()
+
+     EnableSPHeroRules()
+     
+ end
+ 
+ function ScriptInit()
+     -- Designers, these two lines *MUST* be first.
+     SetPS2ModelMemory(2497152 + 65536 * 0)
+     ReadDataFile("ingame.lvl")
+    
+     
+     
+    
+     ReadDataFile("sound\\dag.lvl;dag1cw")
+
+
+     SetMaxFlyHeight(20)
+     SetMaxPlayerFlyHeight (20)
+
+    ReadDataFile("SIDE\\rep.lvl",
+                "rep_inf_ep3_rifleman",
+                "rep_inf_ep3_rocketeer",
+                "rep_inf_ep3_engineer",
+                "rep_inf_ep3_sniper", 
+                "rep_inf_ep3_officer",
+                "rep_inf_ep3_jettrooper",
+                "rep_hero_yoda")
+                
+    ReadDataFile("SIDE\\cis.lvl",
+                "cis_inf_rifleman",
+                "cis_inf_rocketeer",
+                "cis_inf_engineer",
+                "cis_inf_officer",
+                "cis_inf_sniper",
+                "cis_inf_droideka",
+                "cis_hero_grievous")
+
+
+
+     --  Level Stats
+     ClearWalkers()
+         AddWalkerType(0, 4) -- 8 droidekas (special case: 0 leg pairs)
+     --    AddWalkerType(1, 3) -- 8 droidekas (special case: 0 leg pairs)
+     --    AddWalkerType(2, 0) -- 2 spider walkers with 2 leg pairs each
+     --    AddWalkerType(3, 0) -- 2 attes with 3 leg pairs each
+     --  SetMemoryPoolSize ("MountedTurret",20)
+     --  SetMemoryPoolSize ("EntityTauntaun",0)
+     --  SetMemoryPoolSize ("EntitySoldier",0)
+     SetMemoryPoolSize ("EntityHover",0)
+     SetMemoryPoolSize ("EntityFlyer",0)
+     SetMemoryPoolSize ("EntityDroid",10)
+     SetMemoryPoolSize ("EntityCarrier",0)
+     SetMemoryPoolSize("Obstacle", 118)
+     SetMemoryPoolSize ("Weapon", 260)
+
+    SetupTeams{
+             
+        rep = {
+            team = REP,
+            units = 25,
+            reinforcements = -1,
+            soldier  = { "rep_inf_ep3_rifleman",11},
+            assault  = { "rep_inf_ep3_rocketeer",4},
+            engineer = { "rep_inf_ep3_engineer",3},
+            sniper   = { "rep_inf_ep3_sniper",2},
+            officer = {"rep_inf_ep3_officer",2},
+            special = { "rep_inf_ep3_jettrooper",3},
+            
+        },
+        cis = {
+            team = CIS,
+            units = 25,
+            reinforcements = -1,
+            soldier  = { "cis_inf_rifleman",11},
+            assault  = { "cis_inf_rocketeer",4},
+            engineer = { "cis_inf_engineer",3},
+            sniper   = { "cis_inf_sniper",2},
+            officer = {"cis_inf_officer",2},
+            special = { "cis_inf_droideka",3},
+        }
+     }
+
+     
+        SetHeroClass(REP, "rep_hero_yoda")
+        SetHeroClass(CIS, "cis_hero_grievous")
+
+     --  Local Stats
+     --SetTeamName (3, "locals")
+     --AddUnitClass (3, "ewk_inf_trooper", 4)
+     --AddUnitClass (3, "ewk_inf_repair", 6)
+     --SetUnitCount (3, 14)
+     --SetTeamAsFriend(3,ATT)
+     --SetTeamAsEnemy(3,DEF)
+
+     --  Attacker Stats
+     SetUnitCount(ATT, 25)
+     SetReinforcementCount(ATT, 200)
+     
+
+     --SetTeamAsFriend(ATT, 3)
+
+
+     --  Defender Stats
+     SetUnitCount(DEF, 25)
+     SetReinforcementCount(DEF, 200)
+     
+
+     --SetTeamAsEnemy(DEF, 3)
+
+     SetSpawnDelay(10.0, 0.25)
+     ReadDataFile("dag\\dag1.lvl", "dag1_conquest", "dag1_cw")
+     SetDenseEnvironment("false")
+     SetAIViewMultiplier(0.35)
+     --AddDeathRegion("deathregion")
+     --SetStayInTurrets(1)
+
+
+     --  Movies
+     --  SetVictoryMovie(ALL, "all_end_victory")
+     --  SetDefeatMovie(ALL, "imp_end_victory")
+     --  SetVictoryMovie(IMP, "imp_end_victory")
+     --  SetDefeatMovie(IMP, "all_end_victory")
+
+     --  Sound
+     
+    musicStream = OpenAudioStream("sound\\global.lvl", "rep_unit_vo_slow")
+    AudioStreamAppendSegments("sound\\global.lvl", "cis_unit_vo_slow", musicStream)
+    AudioStreamAppendSegments("sound\\global.lvl", "global_vo_slow", musicStream)
+    
+     OpenAudioStream("sound\\global.lvl",  "cw_music")
+    -- OpenAudioStream("sound\\global.lvl",  "global_vo_quick")
+    -- OpenAudioStream("sound\\global.lvl",  "global_vo_slow")
+     OpenAudioStream("sound\\dag.lvl",  "dag1")
+     OpenAudioStream("sound\\dag.lvl",  "dag1")
+     -- OpenAudioStream("sound\\dag.lvl",  "dag1_emt")
+
+    SetBleedingVoiceOver(REP, REP, "rep_off_com_report_us_overwhelmed", 1)
+    SetBleedingVoiceOver(REP, CIS, "rep_off_com_report_enemy_losing",   1)
+    SetBleedingVoiceOver(CIS, REP, "cis_off_com_report_enemy_losing",   1)
+    SetBleedingVoiceOver(CIS, CIS, "cis_off_com_report_us_overwhelmed", 1)
+    
+    SetLowReinforcementsVoiceOver(REP, REP, "rep_off_defeat_im", .1, 1)
+    SetLowReinforcementsVoiceOver(REP, CIS, "rep_off_victory_im", .1, 1)
+    SetLowReinforcementsVoiceOver(CIS, CIS, "cis_off_defeat_im", .1, 1)
+    SetLowReinforcementsVoiceOver(CIS, REP, "cis_off_victory_im", .1, 1)
+
+    SetOutOfBoundsVoiceOver(1, "Repleaving")
+    SetOutOfBoundsVoiceOver(2, "Cisleaving")
+
+    SetAmbientMusic(REP, 1.0, "rep_dag_amb_start",  0,1)
+    SetAmbientMusic(REP, 0.9, "rep_dag_amb_middle", 1,1)
+    SetAmbientMusic(REP, 0.1,"rep_dag_amb_end",    2,1)
+    SetAmbientMusic(CIS, 1.0, "cis_dag_amb_start",  0,1)
+    SetAmbientMusic(CIS, 0.9, "cis_dag_amb_middle", 1,1)
+    SetAmbientMusic(CIS, 0.1,"cis_dag_amb_end",    2,1)
+
+    SetVictoryMusic(REP, "rep_dag_amb_victory")
+    SetDefeatMusic (REP, "rep_dag_amb_defeat")
+    SetVictoryMusic(CIS, "cis_dag_amb_victory")
+    SetDefeatMusic (CIS, "cis_dag_amb_defeat")
+
+    SetSoundEffect("ScopeDisplayZoomIn",  "binocularzoomin")
+    SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
+    --SetSoundEffect("WeaponUnableSelect",  "com_weap_inf_weaponchange_null")
+    --SetSoundEffect("WeaponModeUnableSelect",  "com_weap_inf_modechange_null")
+    SetSoundEffect("SpawnDisplayUnitChange",       "shell_select_unit")
+    SetSoundEffect("SpawnDisplayUnitAccept",       "shell_menu_enter")
+    SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
+    SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
+    SetSoundEffect("SpawnDisplayBack",             "shell_menu_exit")
+
+
+
+    --  Camera Stats
+    --Tat 1 - Dune Sea
+    --Crawler
+    AddCameraShot(-0.404895, 0.000992, -0.914360, -0.002240, -85.539894, 20.536297, 141.699493)
+    --Homestead
+    AddCameraShot(0.040922, 0.004049, -0.994299, 0.098381, -139.729523, 17.546598, -34.360893)
+    --Sarlac Pit
+    AddCameraShot(-0.312360, 0.016223, -0.948547, -0.049263, -217.381485, 20.150953, 54.514324)
+
+ end
+

@@ -1,0 +1,263 @@
+ucft
+{
+    
+    REQN
+    {
+        "script"
+        "shell_interface"
+        "ifs_vkeyboard"
+
+        "ifelem_mappreview"
+        "ifelem_titlebar_large"
+        "ifelem_iconbutton"
+
+        "ifs_boot"
+        "ifs_legal"
+        "ifs_start"
+        "ifs_login"
+        "ifs_main"
+
+        "ifs_missionselect"
+        "missionlist"
+
+        "ifs_sp"
+        "ifs_sp_campaign"
+        "ifs_difficulty"
+        "ifs_sp_era"
+        "ifs_sp_briefing"
+        "ifs_spacetraining"
+
+        "ifs_instant_top"
+        "ifs_instant_side"
+        "ifs_instant_options_tags"
+        "ifs_instant_options"
+        "ifs_instant_options_overview"
+
+        "ifs_freeform_init_common"
+        "ifs_freeform_init_cw"
+        "ifs_freeform_init_gcw"
+        "ifs_freeform_init_custom"
+        "ifs_freeform_start_cw"
+        "ifs_freeform_start_rep"
+        "ifs_freeform_start_cis"
+        "ifs_freeform_start_gcw"
+        "ifs_freeform_start_all"
+        "ifs_freeform_start_imp"
+        "ifs_freeform_start_custom"
+        "ifs_freeform_main"
+        "ifs_freeform_sides"
+        "ifs_freeform_ai"
+        "ifs_freeform_menu"
+        "ifs_freeform_load"
+        "ifs_freeform_cheat"
+        "ifs_freeform_overview"
+        "ifs_freeform_purchase"
+        "ifs_freeform_purchase_unit"
+        "ifs_freeform_purchase_tech"
+        "ifs_freeform_fleet"
+        "ifs_freeform_focus"
+        "ifs_freeform_battle"
+        "ifs_freeform_battle_mode"
+        "ifs_freeform_battle_card"
+        "ifs_freeform_result"
+        "ifs_freeform_rise_newload"
+        "ifs_freeform_pickscenario"
+        "ifs_freeform_summary"
+        "ifs_freeform_end"
+        "ifs_freeform_customsetup"
+
+        "ifs_campaign_data"
+        "ifs_campaign_main"
+        "ifs_campaign_menu"
+        "ifs_campaign_load"
+        "ifs_campaign_turn_intro"
+        "ifs_campaign_battle"
+        "ifs_campaign_battle_card"
+        "ifs_campaign_battle_intro"
+        "ifs_campaign_summary"
+        "ifs_campaign_end"
+
+        "ifs_unlockables"
+        "ifs_tutorials"
+        "ifs_credits"
+
+        "ifs_mp"
+        "ifs_mp_main"
+        "ifs_mp_maptype"
+        "ifs_mp_sessionlist"
+        "ifs_mp_autonet"
+
+        "ifs_split_map"
+        "ifs_split_profile"
+
+        "popup_ok_large"
+        
+		"popup_tutorial"
+
+        "ifs_mp_leaderboard"
+        "ifs_mp_leaderboarddetails"
+        "ifs_pckeyboard"
+        "ifs_movietrans"
+        "ifs_attract"
+        "ifs_mp_lobby_quick"
+        "popup_loadsave"
+        "ifs_fonttest"
+    }
+
+    REQN
+    {
+        "script"
+        "platform=xbox"
+
+        "ifs_mpxl_login"
+        "ifs_mpxl_optimatch"
+        "ifs_mpxl_silentlogin"
+        "ifs_mpgs_login"
+        "ifs_dvd_or_game"
+        "ifs_split2_profile"
+    }
+
+    REQN
+    {
+        "script"
+        "platform=ps2"
+
+        "ifs_mpps2_netconfig"
+        "ifs_mpps2_dnas"
+        "ifs_mpps2_eula"
+        "ifs_mpps2_patch"
+        "ifs_mpps2_optimatch"
+        "ifs_mpgs_login"
+    }
+
+    REQN
+    {
+        "script"
+        "platform=pc"
+        "ifs_mp_gameopts"
+        "ifs_mp_heroopts"
+        "ifs_missionselect_pcMulti"
+        "ifs_mpgs_pclogin"
+    }
+
+    REQN
+    {
+        "texture"
+        "_LOCALIZE_english_bootlegal"
+        "_LOCALIZE_french_bootlegal"
+        "_LOCALIZE_german_bootlegal"
+        "_LOCALIZE_italian_bootlegal"
+        "_LOCALIZE_spanish_bootlegal"
+        "_LOCALIZE_uk_english_bootlegal"
+        "active_glow"
+        "all_fleet_normal_icon"
+        "all_fleet_normal_stroke"
+        "bootESRB"
+        "check_no"
+        "check_yes"
+        "cis_fleet_normal_icon"
+        "cis_fleet_normal_stroke"
+        "com_starport_icon"
+        "com_starport_stroke"
+        "com_weap_lightsaber"
+	"conquest_icon"
+        "gamespy_logo_128x32l"
+        "gamespy_logo_128x32r"
+        "gamespy_logo_256x64"
+        "iface_bgmeta_space"
+ 	"iface_instant_action"
+	"ifs_credits"
+        "imp_fleet_normal_icon"
+        "imp_fleet_normal_stroke"
+        "lane_selected"
+        "lane_unselected"
+        "lock_icon"
+        "logo"
+        "lucasarts_logo"
+        "mapselect_icon_launch"
+        "mapselect_icon_playinorder"
+        "mapselect_icon_random"
+        "mapselect_icon_sessionoptions"
+        "mode_icon_2ctf"
+        "mode_icon_con"
+        "mode_icon_ctf"
+        "mode_icon_ass"
+        "mode_icon_eli"
+        "mode_icon_hunt"
+        "mode_icon_XL"
+        "non"
+        "pandemic_logo"
+        "planetgraphic_cursor"
+        "planetgraphic_halo"
+        "rep_fleet_normal_icon"
+        "rep_fleet_normal_stroke"
+	"rote_icon"
+        "seal_all"
+        "seal_cis"
+        "seal_imp"
+        "seal_rep"
+        "shell_tab"
+        "small_title"
+        "star_flare"
+        "version_icon"
+    }
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+        "_LOCALIZE_english_dolby_logo"
+        "_LOCALIZE_french_dolby_logo"
+        "_LOCALIZE_german_dolby_logo"
+        "_LOCALIZE_italian_dolby_logo"
+        "_LOCALIZE_spanish_dolby_logo"
+        "_LOCALIZE_uk_english_dolby_logo"
+        "eax_logo"
+        "eaxhd_logo"
+        "window_arrow"
+        "window_arrow_solo"
+        "iface_bg_1"
+        "iface_bg_2"
+	"profile_manager"
+	"single_player_campaign"
+	"single_player_conquest"
+	"single_player_option"
+    }
+
+    REQN
+    {
+        "texture"
+        "platform=ps2"
+        "dnas_logo"
+        "dnas_logo2"
+        "dolby_logo"
+    }
+
+    REQN
+    {
+        "texture"
+        "platform=xbox"
+        "dolby_logo"
+				"iface_instant_action_wide"
+    }
+
+
+    REQN
+    {
+        "bin"
+        "platform=ps2"
+        "clonehead_ico"
+        "icon_sys"
+        "dnasdata"
+        "dnasdata_mpbeta"
+        "dnasdata_uk"
+        "dnasdata_fre"
+    }
+    
+    REQN
+    {
+        "config"
+        "shell_movies"
+        "shell_subtitles"
+    }
+}

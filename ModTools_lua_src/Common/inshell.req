@@ -1,0 +1,35 @@
+ucft
+{
+	REQN
+	{
+		"config"
+		"ingame_movies"
+	}
+
+	REQN
+	{
+		"animbank"
+		"human"
+	}
+
+	REQN
+	{
+		"model"
+		"com_weap_inf_torpedo"
+		"shell_cube"
+	}
+
+	REQN
+	{
+		"texture"
+		"blank_icon"
+		"com_sfx_flashring1"
+		"explode3"
+		"com_sfx_smoke3"
+		"thicksmoke3"
+		"com_sfx_explosion4"
+		"com_sfx_flashball2"
+		"com_sfx_dirt1"
+		"com_sfx_laser_orange"
+	}
+}

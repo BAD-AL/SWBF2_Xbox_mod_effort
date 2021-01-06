@@ -1,0 +1,286 @@
+--
+-- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
+--
+
+-- load the gametype script
+ScriptCB_DoFile("ObjectiveConquest")
+
+ ---------------------------------------------------------------------------
+ -- FUNCTION:    ScriptInit
+ -- PURPOSE:     This function is only run once
+ -- INPUT:
+ -- OUTPUT:
+ -- NOTES:       The name, 'ScriptInit' is a chosen convention, and each
+ --              mission script must contain a version of this function, as
+ --              it is called from C to start the mission.
+ ---------------------------------------------------------------------------
+ function ScriptPostLoad()
+    
+    cp1 = CommandPost:New{name = "CP1"}
+    cp2 = CommandPost:New{name = "CP2"}
+    cp4 = CommandPost:New{name = "CP4"}
+    cp5 = CommandPost:New{name = "CP5"}
+    cp6 = CommandPost:New{name = "CP6"}
+    cp10 = CommandPost:New{name = "CP10"}
+    
+    --This sets up the actual objective.  This needs to happen after cp's are defined
+    conquest = ObjectiveConquest:New{teamATT = ATT, teamDEF = DEF, text = "Capture all the CPs!"}
+    
+    --This adds the CPs to the objective.  This needs to happen after the objective is set up
+    conquest:AddCommandPost(cp1)
+    conquest:AddCommandPost(cp2)
+    conquest:AddCommandPost(cp4)
+    conquest:AddCommandPost(cp5)
+    conquest:AddCommandPost(cp6)
+    conquest:AddCommandPost(cp10)
+    
+    conquest:Start()
+
+    EnableSPHeroRules()
+     
+ end
+ 
+ function ScriptInit()
+     -- Designers, these two lines *MUST* be first.
+     SetPS2ModelMemory(2860000)
+     ReadDataFile("ingame.lvl")
+    
+     --  Empire Attacking(attacker is always #1)
+     local ALL = 1
+     local IMP = 2
+     --  These variables do not change
+     local ATT = 1
+     local DEF = 2
+     
+     ReadDataFile("sound\\end.lvl;end1gcw")
+
+     SetTeamAggressiveness(ALL, 1.0)
+     SetTeamAggressiveness(IMP, 0.7)
+
+     SetMaxFlyHeight(43)
+     SetMaxPlayerFlyHeight(43)
+
+
+
+
+     ReadDataFile("SIDE\\all.lvl",
+                    "all_inf_rifleman_jungle",
+                    "all_inf_rocketeer_jungle",
+                    "all_inf_engineer_jungle",
+                    "all_inf_sniper_jungle",
+                    "all_inf_officer_jungle",
+                    "all_hero_hansolo_tat",
+                    "all_inf_wookiee")
+    
+    ReadDataFile("SIDE\\imp.lvl",
+                    "imp_inf_rifleman",
+                    "imp_inf_rocketeer",
+                    "imp_inf_pilot_atst",
+                    "imp_inf_sniper",
+                    "imp_inf_officer",
+                    "imp_inf_dark_trooper",                   
+                    "imp_hero_darthvader",
+                    "imp_hover_speederbike",
+                    "imp_walk_atst_jungle")
+                    
+     ReadDataFile("SIDE\\ewk.lvl",
+                                --"all_end_music",
+                                "ewk_inf_basic")
+
+  --  Alliance Stats
+     SetTeamName(ALL, "Alliance")
+     SetTeamIcon(ALL, "all_icon")
+     if( gPlatformStr == "PS2") then
+		AddUnitClass(ALL, "all_inf_rifleman_jungle",9)
+	    AddUnitClass(ALL, "all_inf_sniper_jungle",3)
+	 else
+		AddUnitClass(ALL, "all_inf_rifleman_jungle",11)
+	    AddUnitClass(ALL, "all_inf_sniper_jungle",4)
+	 end
+    AddUnitClass(ALL, "all_inf_rocketeer_jungle",3)
+    AddUnitClass(ALL, "all_inf_engineer_jungle",3)
+    AddUnitClass(ALL, "all_inf_officer_jungle",1)
+    AddUnitClass(ALL, "all_inf_wookiee",3)
+    SetHeroClass(ALL, "all_hero_hansolo_tat")   
+
+    --  Imperial Stats
+    SetTeamName(IMP, "Empire")
+    SetTeamIcon(IMP, "imp_icon")
+	if ( gPlatformStr == "PS2") then
+		AddUnitClass(IMP, "imp_inf_rifleman",9)
+	    AddUnitClass(IMP, "imp_inf_sniper",3)
+	else
+		AddUnitClass(IMP, "imp_inf_rifleman",11)
+	    AddUnitClass(IMP, "imp_inf_sniper",4)
+	end
+    AddUnitClass(IMP, "imp_inf_rocketeer",3)
+    AddUnitClass(IMP, "imp_inf_pilot_atst",3)
+    AddUnitClass(IMP, "imp_inf_officer",1)
+    AddUnitClass(IMP, "imp_inf_dark_trooper",3)
+    SetHeroClass(IMP, "imp_hero_darthvader")
+
+     --  Local Stats
+     SetTeamName(3, "locals")
+     if( gPlatformStr == "PS2") then
+		AddUnitClass(3, "ewk_inf_trooper", 3)
+		AddUnitClass(3, "ewk_inf_repair", 4)
+	     SetUnitCount(3, 7)
+	 else
+		AddUnitClass(3, "ewk_inf_trooper", 4)
+		AddUnitClass(3, "ewk_inf_repair", 6)
+	     SetUnitCount(3, 10)
+	 end
+     SetTeamAsFriend(3,ATT)
+     SetTeamAsEnemy(3,DEF)
+
+--temp until you rescript this mission
+AddAIGoal(1,"Conquest",100);
+AddAIGoal(2,"Conquest",100);
+AddAIGoal(3,"Conquest",100);
+--temp until you rescript this mission
+
+
+     --  Level Stats
+     ClearWalkers()
+     AddWalkerType(0, 0) -- 8 droidekas(special case: 0 leg pairs)
+     AddWalkerType(1, 3) -- 8 droidekas(special case: 0 leg pairs)
+     AddWalkerType(2, 0) -- 2 spider walkers with 2 leg pairs each
+     AddWalkerType(3, 0) -- 2 attes with 3 leg pairs each
+     --  SetMemoryPoolSize("MountedTurret",20)
+     --  SetMemoryPoolSize("EntityTauntaun",0)
+     --  SetMemoryPoolSize("EntitySoldier",0)
+     SetMemoryPoolSize("Aimer", 24)
+     SetMemoryPoolSize("BaseHint", 225)
+     SetMemoryPoolSize("EntityCarrier", 0)
+     SetMemoryPoolSize("EntityDroid", 2)
+     SetMemoryPoolSize("EntityFlyer", 0)
+     SetMemoryPoolSize("EntityHover", 9)
+     SetMemoryPoolSize("EntityLight", 50)
+     SetMemoryPoolSize("EntityMine", 20)
+     SetMemoryPoolSize("MountedTurret", 3)
+     SetMemoryPoolSize("Obstacle", 745)
+     SetMemoryPoolSize("Ordnance", 60)
+     SetMemoryPoolSize("ParticleEmitterInfoData", 512)
+     SetMemoryPoolSize("PassengerSlot", 0)
+     SetMemoryPoolSize("PathNode", 256)
+     SetMemoryPoolSize("PowerupItem", 24)
+     SetMemoryPoolSize("TreeGridStack", 505)
+     SetMemoryPoolSize("Weapon", 211)
+     
+     if( gPlatformStr == "PS2") then
+		SetMemoryPoolSize("ActiveRegion", 4)
+		SetMemoryPoolSize("AmmoCounter", 211)
+		SetMemoryPoolSize("Combo::DamageSample", 64)
+		SetMemoryPoolSize("EnergyBar", 211)
+		SetMemoryPoolSize("EntityDefenseGridTurret", 4)
+		SetMemoryPoolSize("EntityLight", 20)
+		SetMemoryPoolSize("EntityMine", 8)
+		SetMemoryPoolSize("EntityPortableTurret", 4)
+		SetMemoryPoolSize("EntitySoundStream", 4)
+		SetMemoryPoolSize("EntitySoundStatic", 95)
+		SetMemoryPoolSize("LightFlash", 6)
+		SetMemoryPoolSize("LightningBoltEffectObject", 3)
+		SetMemoryPoolSize("Navigator", 59)
+		SetMemoryPoolSize("Ordnance", 40)
+		SetMemoryPoolSize("ParticleEmitter", 600)
+		SetMemoryPoolSize("ParticleEmitterInfoData", 312)
+		SetMemoryPoolSize("ParticleEmitterObject", 144)
+		SetMemoryPoolSize("PathFollower", 59)
+		SetMemoryPoolSize("PathNode", 100)
+		SetMemoryPoolSize("PowerupItem", 16)
+		SetMemoryPoolSize("RayRequest", 96)
+		SetMemoryPoolSize("SoundSpaceRegion", 6)
+		SetMemoryPoolSize("StickInfo", 20)
+		SetMemoryPoolSize("UnitAgent", 59)
+		SetMemoryPoolSize("UnitController", 59)
+     end
+
+
+     --  Attacker Stats
+     if( gPlatformStr == "PS2") then
+		SetUnitCount(ATT, 22)
+	 else
+		SetUnitCount(ATT, 25)
+	 end
+     SetReinforcementCount(ATT, 200)
+     
+     SetTeamAsFriend(ATT, 3)
+
+
+     --  Defender Stats
+     if( gPlatformStr == "PS2") then
+		SetUnitCount(DEF, 22)
+     else
+		SetUnitCount(DEF, 25)
+     end
+     SetReinforcementCount(DEF, 200)
+     
+     SetTeamAsEnemy(DEF, 3)
+
+     SetSpawnDelay(10.0, 0.25)
+     ReadDataFile("end\\end1.lvl")
+     SetDenseEnvironment("true")
+     AddDeathRegion("deathregion")
+     SetStayInTurrets(1)
+
+
+     --  Movies
+     --  SetVictoryMovie(ALL, "all_end_victory")
+     --  SetDefeatMovie(ALL, "imp_end_victory")
+     --  SetVictoryMovie(IMP, "imp_end_victory")
+     --  SetDefeatMovie(IMP, "all_end_victory")
+
+     --  Sound
+     OpenAudioStream("sound\\end.lvl",  "endgcw_music")
+    OpenAudioStream("sound\\global.lvl",  "global_vo_quick")
+    OpenAudioStream("sound\\global.lvl",  "global_vo_slow")
+     OpenAudioStream("sound\\end.lvl",  "end1gcw")
+     OpenAudioStream("sound\\end.lvl",  "end1gcw")
+     OpenAudioStream("sound\\end.lvl",  "end1gcw_emt")
+
+     SetBleedingVoiceOver(ALL, ALL, "all_off_com_report_us_overwhelmed", 1)
+     SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing",   1)
+     SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing",   1)
+     SetBleedingVoiceOver(IMP, IMP, "imp_off_com_report_us_overwhelmed", 1)
+
+     SetLowReinforcementsVoiceOver(ALL, ALL, "all_off_defeat_im", .1, 1)
+     SetLowReinforcementsVoiceOver(ALL, IMP, "all_off_victory_im", .1, 1)
+     SetLowReinforcementsVoiceOver(IMP, IMP, "imp_off_defeat_im", .1, 1)
+     SetLowReinforcementsVoiceOver(IMP, ALL, "imp_off_victory_im", .1, 1)
+
+     SetOutOfBoundsVoiceOver(1, "allleaving")
+     SetOutOfBoundsVoiceOver(2, "impleaving")
+
+     SetAmbientMusic(ALL, 1.0, "all_end_amb_start",  0,1)
+     SetAmbientMusic(ALL, 0.99, "all_end_amb_middle", 1,1)
+     SetAmbientMusic(ALL, 0.1,"all_end_amb_end",    2,1)
+     SetAmbientMusic(IMP, 1.0, "imp_end_amb_start",  0,1)
+     SetAmbientMusic(IMP, 0.99, "imp_end_amb_middle", 1,1)
+     SetAmbientMusic(IMP, 0.1,"imp_end_amb_end",    2,1)
+
+     SetVictoryMusic(ALL, "all_end_amb_victory")
+     SetDefeatMusic(ALL, "all_end_amb_defeat")
+     SetVictoryMusic(IMP, "imp_end_amb_victory")
+     SetDefeatMusic(IMP, "imp_end_amb_defeat")
+
+     SetSoundEffect("ScopeDisplayZoomIn",  "binocularzoomin")
+     SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
+     --  SetSoundEffect("BirdScatter",         "birdsFlySeq1")
+     SetSoundEffect("SpawnDisplayUnitChange",       "shell_select_unit")
+     SetSoundEffect("SpawnDisplayUnitAccept",       "shell_menu_enter")
+     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
+     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
+     SetSoundEffect("SpawnDisplayBack",             "shell_menu_exit")
+
+
+     SetAttackingTeam(ATT)
+
+     --Endor
+     --Shield Bunker
+     AddCameraShot(0.997654, 0.066982, 0.014139, -0.000949, 155.137131, 0.911505, -138.077072)
+     --Village
+     AddCameraShot(0.729761, 0.019262, 0.683194, -0.018033, -98.584869, 0.295284, 263.239288)
+     --Village
+     AddCameraShot(0.694277, 0.005100, 0.719671, -0.005287, -11.105947, -2.753207, 67.982201)
+ end
+

@@ -1,0 +1,197 @@
+--
+-- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
+--
+
+-- load the gametype script
+ScriptCB_DoFile("setup_teams")
+ScriptCB_DoFile("ObjectiveCTF")
+
+     --  Empire Attacking (attacker is always #1)
+     ALL = 1
+     IMP = 2
+     --  These variables do not change
+     ATT = 1
+     DEF = 2
+
+ ---------------------------------------------------------------------------
+ -- FUNCTION:    ScriptInit
+ -- PURPOSE:     This function is only run once
+ -- INPUT:
+ -- OUTPUT:
+ -- NOTES:       The name, 'ScriptInit' is a chosen convention, and each
+ --              mission script must contain a version of this function, as
+ --              it is called from C to start the mission.
+ ---------------------------------------------------------------------------
+ 
+ --PostLoad, this is all done after all loading, etc.
+
+    function ScriptPostLoad()
+--This is all the flag capture objective stuff
+        SetProperty("flag1", "GeometryName", "com_icon_alliance_flag")
+        SetProperty("flag1", "CarriedGeometryName", "com_icon_alliance_flag")
+        SetProperty("flag2", "GeometryName", "com_icon_imperial_flag")
+        SetProperty("flag2", "CarriedGeometryName", "com_icon_imperial_flag")
+
+        SetClassProperty("com_item_flag", "DroppedColorize", 1)
+
+    
+   ctf = ObjectiveCTF:New{teamATT = ATT, teamDEF = DEF, captureLimit = 8, textATT = "game.modes.CTF", textDEF = "game.modes.CTF2", hideCPs = true, multiplayerRules = true}
+    ctf:AddFlag{name = "flag1", homeRegion = "flag1_home", captureRegion = "flag2_home",
+                capRegionMarker = "all_icon", capRegionMarkerScale = 3.0, 
+                icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
+    ctf:AddFlag{name = "flag2", homeRegion = "flag2_home", captureRegion = "flag1_home",
+                capRegionMarker = "hud_objective_icon", capRegionMarkerScale = 3.0, 
+                icon = "", mapIcon = "flag_icon", mapIconScale = 3.0}
+    ctf:Start()
+    
+    --EnableSPHeroRules()
+        
+end
+
+ function ScriptInit()
+     -- Designers, these two lines *MUST* be first!
+     SetPS2ModelMemory(4500000)
+     ReadDataFile("ingame.lvl")
+
+     ReadDataFile("sound\\tan.lvl;tan1gcw")
+
+     --SetMaxFlyHeight(43)
+     --SetMaxPlayerFlyHeight (43)
+
+     ReadDataFile("SIDE\\all.lvl",
+                    "all_inf_rifleman_fleet",
+                    "all_inf_rocketeer_fleet",
+                    "all_inf_sniper_fleet",
+                    "all_inf_engineer_fleet",
+                    "all_inf_officer",
+                    "all_hero_leia",
+                    "all_inf_wookiee")
+                    
+     ReadDataFile("SIDE\\imp.lvl",
+                    "imp_inf_rifleman",
+                    "imp_inf_rocketeer",
+                    "imp_inf_officer",
+                    "imp_inf_sniper",
+                    "imp_inf_engineer",
+                    "imp_inf_dark_trooper",
+                    "imp_hero_darthvader")
+                    
+    SetupTeams{
+
+        all={
+            team = ALL,
+            units = 18,
+            reinforcements = -1,
+            soldier = {"all_inf_rifleman_fleet"},
+            assault = {"all_inf_rocketeer_fleet"},
+            engineer = {"all_inf_engineer_fleet"},
+            sniper  = {"all_inf_sniper_fleet"},
+            officer = {"all_inf_officer"},
+            special = {"all_inf_wookiee"},
+            
+            
+        },
+        
+        imp={
+            team = IMP,
+            units = 18,
+            reinforcements = -1,
+            soldier = {"imp_inf_rifleman"},
+            assault = {"imp_inf_rocketeer"},
+            engineer = {"imp_inf_engineer"},
+            sniper  = {"imp_inf_sniper"},
+            officer = {"imp_inf_officer"},
+            special = {"imp_inf_dark_trooper",1,4},
+        }
+    }
+
+
+-- Hero Setup -- 
+
+         SetHeroClass(IMP, "imp_hero_darthvader")
+         SetHeroClass(ALL, "all_hero_leia")
+
+     --  Level Stats
+     ClearWalkers()
+     --    AddWalkerType(0, 0) -- 8 droidekas (special case: 0 leg pairs)
+     --    AddWalkerType(1, 3) -- 8 droidekas (special case: 0 leg pairs)
+     --    AddWalkerType(2, 0) -- 2 spider walkers with 2 leg pairs each
+     --    AddWalkerType(3, 0) -- 2 attes with 3 leg pairs each
+     --  SetMemoryPoolSize ("MountedTurret",20)
+     --  SetMemoryPoolSize ("EntityTauntaun",0)
+     --  SetMemoryPoolSize ("EntitySoldier",0)
+     SetMemoryPoolSize ("EntityHover",0)
+     SetMemoryPoolSize ("EntityFlyer",0)
+     SetMemoryPoolSize ("EntityDroid",10)
+     SetMemoryPoolSize ("EntityCarrier",0)
+     SetMemoryPoolSize("Obstacle", 200)
+     SetMemoryPoolSize ("Weapon", 260)
+     SetMemoryPoolSize ("FlagItem", 2)
+     SetMemoryPoolSize("SoundSpaceRegion", 15)
+
+
+         SetSpawnDelay(10.0, 0.25)
+     ReadDataFile("tan\\tan1.lvl", "tan1_ctf")
+     SetDenseEnvironment("false")
+    
+
+     --  Sound
+     
+    voiceSlow = OpenAudioStream("sound\\global.lvl", "all_unit_vo_slow")
+    AudioStreamAppendSegments("sound\\global.lvl", "imp_unit_vo_slow", voiceSlow)
+    AudioStreamAppendSegments("sound\\global.lvl", "global_vo_slow", voiceSlow)
+    
+    voiceQuick = OpenAudioStream("sound\\global.lvl",  "all_unit_vo_quick")
+    AudioStreamAppendSegments("sound\\global.lvl",  "imp_unit_vo_quick", voiceQuick)       
+     
+     OpenAudioStream("sound\\global.lvl",  "gcw_music")
+     -- OpenAudioStream("sound\\global.lvl",  "global_vo_quick")
+     -- OpenAudioStream("sound\\global.lvl",  "global_vo_slow")
+     OpenAudioStream("sound\\tan.lvl",  "tan1")
+     OpenAudioStream("sound\\tan.lvl",  "tan1")
+     -- OpenAudioStream("sound\\tan.lvl",  "tan1_emt")
+
+     -- SetBleedingVoiceOver(ALL, ALL, "all_off_com_report_us_overwhelmed", 1)
+     -- SetBleedingVoiceOver(ALL, IMP, "all_off_com_report_enemy_losing",   1)
+     -- SetBleedingVoiceOver(IMP, ALL, "imp_off_com_report_enemy_losing",   1)
+     -- SetBleedingVoiceOver(IMP, IMP, "imp_off_com_report_us_overwhelmed", 1)
+
+     -- SetLowReinforcementsVoiceOver(ALL, ALL, "all_off_defeat_im", .1, 1)
+     -- SetLowReinforcementsVoiceOver(ALL, IMP, "all_off_victory_im", .1, 1)
+     -- SetLowReinforcementsVoiceOver(IMP, IMP, "imp_off_defeat_im", .1, 1)
+     -- SetLowReinforcementsVoiceOver(IMP, ALL, "imp_off_victory_im", .1, 1)
+
+     SetOutOfBoundsVoiceOver(1, "allleaving")
+     SetOutOfBoundsVoiceOver(2, "impleaving")
+
+     SetAmbientMusic(ALL, 1.0, "all_tan_amb_start",  0,1)
+     SetAmbientMusic(ALL, 0.9, "all_tan_amb_middle", 1,1)
+     SetAmbientMusic(ALL, 0.1, "all_tan_amb_end",    2,1)
+     SetAmbientMusic(IMP, 1.0, "imp_tan_amb_start",  0,1)
+     SetAmbientMusic(IMP, 0.9, "imp_tan_amb_middle", 1,1)
+     SetAmbientMusic(IMP, 0.1, "imp_tan_amb_end",    2,1)
+
+     SetVictoryMusic(ALL, "all_tan_amb_victory")
+     SetDefeatMusic (ALL, "all_tan_amb_defeat")
+     SetVictoryMusic(IMP, "imp_tan_amb_victory")
+     SetDefeatMusic (IMP, "imp_tan_amb_defeat")
+
+     SetSoundEffect("ScopeDisplayZoomIn",  "binocularzoomin")
+     SetSoundEffect("ScopeDisplayZoomOut", "binocularzoomout")
+     --  SetSoundEffect("BirdScatter",         "birdsFlySeq1")
+     SetSoundEffect("SpawnDisplayUnitChange",       "shell_select_unit")
+     SetSoundEffect("SpawnDisplayUnitAccept",       "shell_menu_enter")
+     SetSoundEffect("SpawnDisplaySpawnPointChange", "shell_select_change")
+     SetSoundEffect("SpawnDisplaySpawnPointAccept", "shell_menu_enter")
+     SetSoundEffect("SpawnDisplayBack",             "shell_menu_exit")
+
+
+
+
+
+    AddCameraShot(0.233199, -0.019441, -0.968874, -0.080771, -240.755920, 11.457644, 105.944176);
+    AddCameraShot(-0.395561, 0.079428, -0.897092, -0.180135, -264.022278, 6.745873, 122.715752);
+    AddCameraShot(0.546703, -0.041547, -0.833891, -0.063371, -309.709900, 5.168304, 145.334381);
+    
+ end
+
