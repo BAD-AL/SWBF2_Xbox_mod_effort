@@ -43,6 +43,19 @@ if( modStringTable == nil ) then
 	end 
 end
 
+-- Force 'IFText_fnSetString' to use strings from our 'modStringTable' too 
+if ( oldIFText_fnSetString == nil )then 
+    oldIFText_fnSetString = IFText_fnSetString
+    IFText_fnSetString = function(...)
+        if( table.getn(arg) > 1 and modStringTable[arg[2]] ~= nil ) then 
+            arg[2] = modStringTable[arg[2]]
+            IFText_fnSetUString(unpack(arg))
+            return 
+        end 
+        oldIFText_fnSetString(unpack(arg))
+    end 
+end 
+
 --addModString("mapname.name.cor1", "Fancy Coruscant")
 addModString("mapname.name.XMS", "Christmas Town")
 addModString("mapname.description.XMS", "Dann Boeing's Christmas in Jinglin' town(XBOX port) " .. 
