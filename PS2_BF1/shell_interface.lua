@@ -148,6 +148,4 @@ gMovieTutorialPostFix = ""
 ScriptCB_OpenMovie(gMovieStream,"")
 ScriptCB_SetMovieAudioBus("shellmovies")
 
---[[
-'missionlist' is called & executed in 'ifs_missionselect.lua' 
-]]
+--'missionlist' is called & executed in 'ifs_missionselect.lua' 
