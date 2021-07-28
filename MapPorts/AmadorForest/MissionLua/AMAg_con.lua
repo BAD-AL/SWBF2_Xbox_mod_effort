@@ -2,6 +2,19 @@
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --
 
+--[[ -------- Modder's Note -----------------
+    Pandemic's Battlefront II Mission Scripting Guide:
+        https://sites.google.com/site/swbf2modtoolsdocumentation/battlefront-ii-mission-lua-guide 
+]]
+
+
+--[[ -------- Modder's Note -----------------
+    Alternate Addon assetLocation logic.
+    See YouTube Video chapter: 
+        https://www.youtube.com/watch?v=LVhKMDW22AY&t=3758s 
+
+    https://github.com/Gametoast/AltAddonSystem
+]]
 assetLocation = "DC:"
 if( ScriptCB_IsFileExist("addon\\013\\mission.lvl") == 1 ) then
     assetLocation = "addon\\013\\"
@@ -75,6 +88,12 @@ function ScriptInit()
 	SetMaxPlayerFlyHeight(40)
 
 
+    --[[  ------------------ Modder's note ------------------------
+        This block of SetMemoryPoolSize set the memory pool sizes for various things for Jedi, 
+        and other heroes in the map.  The ClothData sets how many cloth objects can be in the 
+        level at one time.  The Combo:: pools set up various attack, and combo values for the 
+        jedi.  You’ll notice these values are set much higher in the Hero Assault scripts.
+    ]]
 	--SetMemoryPoolSize ("ClothData",20)
     SetMemoryPoolSize ("Combo",50)              -- should be ~ 2x number of jedi classes
     SetMemoryPoolSize ("Combo::State",650)      -- should be ~12x #Combo
@@ -143,6 +162,12 @@ function ScriptInit()
     AddWalkerType(2, 0) -- 2x2 (2 pairs of legs)
     AddWalkerType(3, 0) -- 3x2 (3 pairs of legs)
     
+    --[[ ------------------ Modder's note ------------------------
+        Memory pool settings for this map & game mode.
+
+        See the following YouTube Video chapter for method of setting Memory Pools:
+            https://www.youtube.com/watch?v=LVhKMDW22AY&t=1882s
+    ]]
     local weaponCnt = 220
     SetMemoryPoolSize("Aimer", 75)
     SetMemoryPoolSize("AmmoCounter", weaponCnt) 
@@ -199,6 +224,18 @@ function ScriptInit()
     SetOutOfBoundsVoiceOver(2, "Allleaving")
     SetOutOfBoundsVoiceOver(1, "Impleaving")
 
+    -- from: 
+    --  https://github.com/Gametoast/SWBF2-Lua-API/blob/master/API/LuaDevelopmentTools/Battlefront2API.doclua
+    --------------------------------------------------------------
+    -- Sets the ambient music to play for players on the specified team.
+    -- 
+    -- @param #int playerTeam			Player's team number
+    -- @param #int reinforcementCount	Reinforcement count of the player's team which triggers the specified music
+    -- @param #string musicName			Name of the music configuration (from 'xxx_music.mus' file)
+    -- @param #int gameStage			Value from 0 to 2, where 0 = beginning, 1 = middle, and 2 = end
+    -- @param #int isPercentage			Optional argument which when set to 1 treats reinforcementCount as a fraction (`0.0..1.0`) of maximum reinforcements
+    -- function SetAmbientMusic(playerTeam, reinforcementCount, musicName, gameStage, isPercentage) end
+    --------------------------------------------------------------
     SetAmbientMusic(ALL, 1.0, "all_dag_amb_start",  0,1)
     SetAmbientMusic(ALL, 0.8, "all_dag_amb_middle", 1,1)
     SetAmbientMusic(ALL, 0.2,"all_dag_amb_end",    2,1)
@@ -206,6 +243,7 @@ function ScriptInit()
     SetAmbientMusic(IMP, 0.8, "imp_dag_amb_middle", 1,1)
     SetAmbientMusic(IMP, 0.2,"imp_dag_amb_end",    2,1)
 
+    -- SetVictoryMusic(playerTeam, musicName)
     SetVictoryMusic(ALL, "all_dag_amb_victory")
     SetDefeatMusic (ALL, "all_dag_amb_defeat")
     SetVictoryMusic(IMP, "imp_dag_amb_victory")
