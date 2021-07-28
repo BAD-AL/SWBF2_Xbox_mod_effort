@@ -1,0 +1,156 @@
+// Sound Readme: 
+// http://www.secretsociety.com/forum/downloads/soundreadme.txt
+
+// Music path is like this:
+// 1. _music.stm files
+// 	References .wavs and define aliases for 'snd' files 
+// 
+// 2. _music_config.snd
+// 	Creates 'SoundStreams' and defines names to be used in _music.mus files 
+// 
+// 3. _music.mus 
+// 	references 'SoundStreams' and defines names to be used in Lua files. 
+// 
+// _music.stm => _music_config.snd => _music.mus => <mission>.lua
+
+
+// Use this 'music' from lua like this:
+//   SetAmbientMusic(ALL, 1.0, "trippy_soundtrack",  0,1)
+//   SetAmbientMusic(IMP, 1.0, "trippy_soundtrack",  0,1)
+Music()
+{
+    Name("trippy_soundtrack");   // the name exposed to Lua
+    Priority(1.0);
+    FadeInTime(0.0);
+    FadeOutTime(1.5);
+    MinPlaybackTime(60.0);
+    MaxPlaybackTime(180.0);
+    MinInactiveTime(2.0);
+    SoundStream("trippy_soundtrack"); // the name defined in the '_music_config.snd' file
+}
+
+
+
+// ----- Alliance Music -----
+Music()
+{
+    Name("all_kam_amb_start");
+    Priority(1.0);
+    FadeInTime(0.0);
+    FadeOutTime(3.0);
+    MinPlaybackTime(50.0);
+    MaxPlaybackTime(180.0);
+    MinInactiveTime(2.0);
+    SoundStream("all_kam_amb_start");  
+}
+
+Music()
+{
+    Name("all_kam_amb_middle");
+    Priority(1.0);
+    FadeInTime(0.0);
+    FadeOutTime(3.0);
+    MinPlaybackTime(20.0);
+    MaxPlaybackTime(180.0);
+    MinInactiveTime(5.0);
+    SoundStream("all_kam_amb_middle");
+}
+
+Music()
+{
+    Name("all_kam_amb_end");
+    Priority(1.0);
+    FadeInTime(0.0);
+    FadeOutTime(3.0);
+    MinPlaybackTime(20.0);
+    MaxPlaybackTime(180.0);
+    MinInactiveTime(5.0);
+    SoundStream("all_kam_amb_end");
+}
+
+//Music()
+//{
+//    Name("all_kam_amb_victory");
+//    Priority(1.0);
+//    FadeInTime(0.0);
+//    FadeOutTime(3.0);
+//    MinPlaybackTime(20.0);
+//    MaxPlaybackTime(180.0);
+//    MinInactiveTime(5.0);
+//    SoundStream("all_kam_amb_victory");
+//}
+
+//Music()
+//{
+//    Name("all_kam_amb_defeat");
+//    Priority(1.0);
+//    FadeInTime(0.0);
+//    FadeOutTime(3.0);
+//    MinPlaybackTime(20.0);
+//    MaxPlaybackTime(180.0);
+//    MinInactiveTime(5.0);
+//    SoundStream("all_kam_amb_defeat");
+//}
+
+
+
+// ----- IMP Music -----
+
+Music()
+{
+    Name("imp_kam_amb_start");
+    Priority(1.0);
+    FadeInTime(0.0);
+    FadeOutTime(3.0);
+    MinPlaybackTime(20.0);
+    MaxPlaybackTime(180.0);
+    MinInactiveTime(5.0);
+    SoundStream("imp_kam_amb_start");
+}
+
+Music()
+{
+    Name("imp_kam_amb_middle");
+    Priority(1.0);
+    FadeInTime(0.0);
+    FadeOutTime(3.0);
+    MinPlaybackTime(20.0);
+    MaxPlaybackTime(180.0);
+    MinInactiveTime(5.0);
+    SoundStream("imp_kam_amb_middle");
+}
+
+Music()
+{
+    Name("imp_kam_amb_end");
+    Priority(1.0);
+    FadeInTime(0.0);
+    FadeOutTime(3.0);
+    MinPlaybackTime(20.0);
+    MaxPlaybackTime(180.0);
+    MinInactiveTime(5.0);
+    SoundStream("imp_kam_amb_end");
+}
+
+//Music()
+//{
+//    Name("imp_kam_amb_victory");
+//    Priority(1.0);
+//    FadeInTime(0.0);
+//    FadeOutTime(3.0);
+//    MinPlaybackTime(20.0);
+//    MinInactiveTime(5.0);
+//    SoundStream("imp_kam_amb_victory");
+//}
+
+//Music()
+//{
+//    Name("imp_kam_amb_defeat");
+//    Priority(1.0);
+//    FadeInTime(0.0);
+//    FadeOutTime(3.0);
+//    MinPlaybackTime(20.0);
+//    MinInactiveTime(5.0);
+//    SoundStream("imp_kam_amb_defeat");
+//}
+

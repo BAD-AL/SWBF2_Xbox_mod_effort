@@ -1,0 +1,14 @@
+ucft
+{
+    REQN
+    {
+        "str"
+        "align=2048"
+        "amagcw_music"
+    }
+    REQN
+    {
+        "lvl"
+        "amagcw"
+    }
+ }

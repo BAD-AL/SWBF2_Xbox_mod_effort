@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XboxLiveSubmissionProject Version="1.0">
+	<ContentProject clsid="{B85BDAB7-DFE6-4123-88F6-FDF10AB93820}" Name="SWBFII Amador" TitleID="4c41001a" ActivationDate="07/23/2021" PubOfferingID="0000030" PubBitFlags="FFFFFFFF" HasCost="false" DashIconPath="Z:\BF2_ModTools\data_AMA\_XLAST\Dash_icon_64x64.bmp">
+		<LanguageSettings clsid="{007BB28D-926C-4C02-9199-19E8C3066965}">
+			<Language clsid="{19FB1DF8-BC4A-470D-A533-07CA924CBDF4}" DisplayName="SWBFII Amador Forest" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="SWBFII Amador Forest" Description="YodaKid's beautiful Amador Forest. Ported to Xbox by BAD_AL "/>
+			<Language clsid="{19FB1DF9-BC4A-470D-A533-07CA924CBDF4}" DisplayName="SWBFII Amador Forest" PicturePath=".\Dash_icon_168x128.bmp" DashDisplayName="SWBFII Amador Forest" Description="YodaKid's Beautiful Amador Forest. Ported to Xbox by BAD_AL."/>
+		</LanguageSettings>
+		<Contents clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}">
+			<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="_LVL_XBOX">
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="AMA">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\..\_LVL_XBOX\AMA\AMA.lvl" TargetName="AMA.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\..\_LVL_XBOX\AMA\AMA_purp_haze.lvl" TargetName="AMA_purp_haze.lvl"/>
+				</Folder>
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="SOUND">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\..\_LVL_XBOX\sound\ama.lvl" TargetName="ama.lvl"/>
+				</Folder>
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="SIDE">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\..\_LVL_XBOX\SIDE\all.lvl" TargetName="all.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\..\_LVL_XBOX\SIDE\imp.lvl" TargetName="imp.lvl"/>
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\..\_LVL_XBOX\SIDE\lsd.lvl" TargetName="lsd.lvl"/>
+				</Folder>
+				<Folder clsid="{50341D27-C28E-4DA0-9969-E717B8A505EC}" TargetName="LOAD">
+					<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\..\_LVL_XBOX\Load\ama.lvl" TargetName="ama.lvl"/>
+				</Folder>
+				<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\_LVL_XBOX\addme.script" TargetName="addme.script"/>
+				<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\_LVL_XBOX\core.lvl" TargetName="core.lvl"/>
+				<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName="..\..\_LVL_XBOX\mission.lvl" TargetName="mission.lvl"/>
+			</Folder>
+			<File clsid="{0D01BC49-BCF6-4009-AF7C-EF71C5FAEE67}" SourceName=".\manifest" TargetName="manifest"/>
+		</Contents>
+	</ContentProject>
+</XboxLiveSubmissionProject>

@@ -1,0 +1,13 @@
+ucft
+{
+  REQN
+  {
+    "script"
+    "addon013"
+  }
+  REQN
+  {
+    "texture"
+    "flower_icon"
+  }
+}

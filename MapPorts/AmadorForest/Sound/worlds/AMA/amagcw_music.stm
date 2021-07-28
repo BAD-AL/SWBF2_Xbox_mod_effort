@@ -1,0 +1,23 @@
+// Sound Readme: 
+// http://www.secretsociety.com/forum/downloads/soundreadme.txt
+
+// Music path is like this:
+// 1. _music.stm files
+// 	References .wavs and define aliases for 'snd' files 
+// 
+// 2. _music_config.snd
+// 	Creates 'SoundStreams' and defines names to be used in _music.mus files 
+// 
+// 3. _music.mus 
+// 	references 'SoundStreams' and defines names to be used in Lua files. 
+// 
+// _music.stm => _music_config.snd => _music.mus => <mission>.lua
+
+
+// ----- Ambient Bleed Music ----------
+// path to file                                                alias referenced in the '_music.mus' file
+streams\count_five_psychotic_reaction_mono.wav                 psychotic_reaction
+streams\StrawberryAlarmClock_RainyDayMushroomPillow_mono.wav   rainy_day_mush_pillow
+streams\t-rex-get-it-on-1971-hd-mono.wav                       get_it_on
+streams\the_savage_resurrection_thing_in_e_mono.wav            thing_in_e
+

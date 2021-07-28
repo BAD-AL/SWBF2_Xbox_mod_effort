@@ -1,0 +1,255 @@
+
+// Sound Readme: 
+// http://www.secretsociety.com/forum/downloads/soundreadme.txt
+
+// Sound research (GT thread):
+// https://www.gametoast.com/viewtopic.php?p=478223#p478223
+
+// Music path is like this:
+// 1. _music.stm files
+// 	References .wavs and define aliases for 'snd' files 
+// 
+// 2. _music_config.snd
+// 	Creates 'SoundStreams' and defines names to be used in _music.mus files 
+// 
+// 3. _music.mus 
+// 	references 'SoundStreams' and defines names to be used in Lua files. 
+// 
+// _music.stm => _music_config.snd => _music.mus => <mission>.lua
+
+// custom soundtrack, to be used like the Deathmatch soundtrack
+SoundStream()
+{
+    Name("trippy_soundtrack");  // the Name exposed to the '_music.mus' files
+    Pitch(1.0);
+    PitchDev(0.0);
+    Gain(6.0);   // tell the game to increase volume/gain of Segments
+    GainDev(0.0);
+    ReverbGain(0.0);
+    Bus("ingamemusic");
+    Looping(0);
+    Pan(0.0);
+    Mode3D(0);
+    Stream("amagcw_music");    // reference to the 'amagcw_music.mus' file
+    SegmentList()
+    {
+        // arguments are (alias_from_stm_file, percent_chance_of_playing)
+        Segment("psychotic_reaction", 0.25);
+        Segment("rainy_day_mush_pillow", 0.25);
+        Segment("get_it_on", 0.25);
+        Segment("thing_in_e", 0.25);
+    }
+}
+
+
+
+
+// ----- Alliance Music -----
+SoundStream()
+{
+    Name("all_kam_amb_start");
+    Pitch(1.0);
+    PitchDev(0.0);
+    Gain(3.0);
+    GainDev(0.0);
+    ReverbGain(0.0);
+    Bus("ingamemusic");
+    Looping(0);
+    Pan(0.0);
+    Mode3D(0);
+    Stream("efxgcw_music");
+    SegmentList()
+    {
+        Segment("psychotic_reaction", 1);
+    }
+}
+
+SoundStream()
+{
+    Name("all_kam_amb_middle");
+    Pitch(1.0);
+    PitchDev(0.0);
+    Gain(4);
+    GainDev(0.0);
+    ReverbGain(0.0);
+    Bus("ingamemusic");
+    Looping(0);
+    Pan(0.0);
+    Mode3D(0);
+    CyclePlayback(1);
+    Stream("efxgcw_music");
+    SegmentList()
+    {
+        //Segment("all_kam_amb_start", 0.25);
+        //Segment("all_kam_amb_middle", 0.25);
+        //Segment("all_kam_amb_middle02", 0.25);
+        //Segment("all_kam_amb_end", 0.25);
+
+        Segment("rainy_day_mush_pillow", 0.5);
+        Segment("get_it_on", 0.5);
+    }
+}
+
+SoundStream()
+{
+    Name("all_kam_amb_end");
+    Pitch(1.0);
+    PitchDev(0.0);
+    Gain(3.5);
+    GainDev(0.0);
+    ReverbGain(0.0);
+    Bus("ingamemusic");
+    Looping(0);
+    Pan(0.0);
+    Mode3D(0);
+    Stream("efxgcw_music");
+    SegmentList()
+    {
+        //Segment("all_kam_amb_start", 0.25);
+        //Segment("all_kam_amb_middle", 0.25);
+        //Segment("all_kam_amb_middle02", 0.25);
+        //Segment("all_kam_amb_end", 0.25);
+
+        Segment("thing_in_e", 1);
+    }
+}
+
+//SoundStream()
+//{
+//    Name("all_kam_amb_victory");
+//    Pitch(1.0);
+//    PitchDev(0.0);
+//    Gain(3.0);
+//    GainDev(0.0);
+//    ReverbGain(0.0);
+//    Bus("ingamemusic");
+//    Looping(0);
+//    Pan(0.0);
+//    Mode3D(0);
+//    Stream("efxgcw_music");
+//    SegmentList()
+//    {
+//        Segment("all_kam_amb_victory", 1.0);
+//    }
+//}
+
+//SoundStream()
+//{
+//    Name("all_kam_amb_defeat");
+//    Pitch(1.0);
+//    PitchDev(0.0);
+//    Gain(3.0);
+//    GainDev(0.0);
+//    ReverbGain(0.0);
+//    Bus("ingamemusic");
+//    Looping(0);
+//    Pan(0.0);
+//    Mode3D(0);
+//    Stream("efxgcw_music");
+//    SegmentList()
+//    {
+//        Segment("all_kam_amb_defeat", 1.0);
+//    }
+//}
+
+
+
+//----- IMP Music -----
+
+SoundStream()
+{
+    Name("imp_kam_amb_start");
+    Pitch(1.0);
+    PitchDev(0.0);
+    Gain(3.0);
+    GainDev(0.0);
+    ReverbGain(0.0);
+    Bus("ingamemusic");
+    Looping(0);
+    Pan(0.0);
+    Mode3D(0);
+    Stream("efxgcw_music");
+    SegmentList()
+    {
+        Segment("psychotic_reaction", 1);
+    }
+}
+
+SoundStream()
+{
+    Name("imp_kam_amb_middle");
+    Pitch(1.0);
+    PitchDev(0.0);
+    Gain(3.0);
+    GainDev(0.0);
+    ReverbGain(0.0);
+    Bus("ingamemusic");
+    Looping(0);
+    Pan(0.0);
+    Mode3D(0);
+    CyclePlayback(1);
+    Stream("efxgcw_music");
+    SegmentList()
+    {
+        Segment("rainy_day_mush_pillow", 0.25);
+        Segment("get_it_on", 0.25);
+    }
+}
+
+SoundStream()
+{
+    Name("imp_kam_amb_end");
+    Pitch(1.0);
+    PitchDev(0.0);
+    Gain(3.0);
+    GainDev(0.0);
+    ReverbGain(0.0);
+    Bus("ingamemusic");
+    Looping(0);
+    Pan(0.0);
+    Mode3D(0);
+    Stream("efxgcw_music");
+    SegmentList()
+    {
+        Segment("thing_in_e", 1);
+    }
+}
+
+//SoundStream()
+//{
+//    Name("imp_kam_amb_victory");
+//    Pitch(1.0);
+//    PitchDev(0.0);
+//    Gain(3.0);
+//    GainDev(0.0);
+//    ReverbGain(0.0);
+//    Bus("ingamemusic");
+//    Looping(0);
+//    Pan(0.0);
+//    Mode3D(0);
+//    Stream("efxgcw_music");
+//    SegmentList()
+//    {
+//        Segment("imp_kam_amb_victory", 1.0);
+//    }
+//}
+
+//SoundStream()
+//{
+//    Name("imp_kam_amb_defeat");
+//    Pitch(1.0);
+//    PitchDev(0.0);
+//    Gain(3.0);
+//    GainDev(0.0);
+//    ReverbGain(0.0);
+//    Bus("ingamemusic");
+//    Looping(0);
+//    Pan(0.0);
+//    Mode3D(0);
+//    Stream("efxgcw_music");
+//    SegmentList()
+//    {
+//        Segment("imp_kam_amb_defeat", 1.0);
+//    }
+//}
+
