@@ -1,0 +1,1008 @@
+-- PSP missionlist
+-- Verified
+sp_missionselect_listbox_contents = {
+    {mapluafile = "dag1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, mode_ctf_c = 1, mode_ctf_g = 1},
+    {mapluafile = "end1%s_%s", era_g = 1, mode_con_g = 1, mode_hunt_g = 1, mode_1flag_g = 1},
+    {mapluafile = "hot1%s_%s", era_g = 1, mode_con_g = 1, mode_1flag_g = 1, mode_hunt_g = 1},
+    {
+        mapluafile = "kas2%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_hunt_c = 1,
+        mode_ctf_c = 1,
+        mode_ctf_g = 1
+    },
+    {mapluafile = "mus1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, mode_ctf_c = 1, mode_ctf_g = 1},
+    {mapluafile = "myg1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, mode_ctf_c = 1, mode_ctf_g = 1},
+    {
+        mapluafile = "nab2%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_ctf_c = 1,
+        mode_ctf_g = 1,
+        mode_hunt_c = 1
+    },
+    {mapluafile = "pol1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, mode_ctf_c = 1, mode_ctf_g = 1},
+    {mapluafile = "spa1%s_%s", era_g = 1, mode_assault_g = 1, mode_1flag_g = 1},
+    {mapluafile = "spa3%s_%s", era_c = 1, mode_assault_c = 1, mode_1flag_c = 1},
+    {mapluafile = "tan1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, mode_1flag_c = 1, mode_1flag_g = 1},
+    {
+        mapluafile = "tat2%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_ctf_c = 1,
+        mode_ctf_g = 1,
+        mode_hunt_g = 1,
+        mode_eli_g = 1
+    },
+    {mapluafile = "yav1%s_%s", era_g = 1, era_c = 1, mode_con_c = 1, mode_con_g = 1, mode_1flag_c = 1, mode_1flag_g = 1}
+}
+
+mp_missionselect_listbox_contents = {
+    {
+        mapluafile = "dag1%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_ctf_c = 1,
+        mode_ctf_g = 1,
+        mode_mct_g = 1,
+        mode_mcp_g = 1
+    },
+    {
+        mapluafile = "end1%s_%s",
+        era_g = 1,
+        mode_con_g = 1,
+        mode_hunt_g = 1,
+        mode_1flag_g = 1,
+        mode_dcm_g = 1,
+        mode_dcp_g = 1
+    },
+    {
+        mapluafile = "hot1%s_%s",
+        era_g = 1,
+        mode_con_g = 1,
+        mode_1flag_g = 1,
+        mode_hunt_g = 1,
+        mode_scm_g = 1,
+        mode_scp_g = 1
+    },
+    {
+        mapluafile = "kas2%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_hunt_c = 1,
+        mode_ctf_c = 1,
+        mode_ctf_g = 1,
+        mode_dcm_g = 1,
+        mode_dcp_g = 1
+    },
+    {mapluafile = "myg1%s_%s", era_c = 1, mode_scm_c = 1, mode_scp_c = 1, mode_mct_c = 1, mode_mcp_c = 1},
+    {
+        mapluafile = "nab2%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_ctf_c = 1,
+        mode_ctf_g = 1,
+        mode_hunt_c = 1,
+        mode_scm_c = 1,
+        mode_scp_c = 1,
+        mode_dcm_g = 1,
+        mode_dcp_g = 1
+    },
+    {mapluafile = "pol1%s_%s", era_c = 1, mode_mct_c = 1, mode_mcp_c = 1},
+    {mapluafile = "spa1%s_%s", era_g = 1, mode_1flag_g = 1, mode_scm_g = 1, mode_scp_g = 1},
+    {mapluafile = "spa3%s_%s", era_c = 1, mode_assault_c = 1},
+    {
+        mapluafile = "tat2%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_ctf_c = 1,
+        mode_ctf_g = 1,
+        mode_hunt_g = 1,
+        mode_eli_g = 1,
+        mode_dcm_g = 1,
+        mode_dcp_g = 1
+    },
+    {
+        mapluafile = "yav1%s_%s",
+        era_g = 1,
+        era_c = 1,
+        mode_con_c = 1,
+        mode_con_g = 1,
+        mode_1flag_c = 1,
+        mode_1flag_g = 1,
+        mode_mct_g = 1,
+        mode_mcp_g = 1
+    }
+}
+
+SPCampaign1 = {
+    {
+        mapluafile = "spa2c_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission2name",
+        description = "ifs.sp.campaign1.mission1descr"
+    },
+    {
+        mapluafile = "myg1c_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission6name",
+        description = "ifs.sp.campaign1.mission3descr"
+    },
+    {
+        mapluafile = "spa3c_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission5name",
+        description = "ifs.sp.campaign1.mission1descr"
+    },
+    {
+        mapluafile = "kas2c_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission7name",
+        description = "ifs.sp.campaign1.mission4descr"
+    },
+    {
+        mapluafile = "nab2g_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission9name",
+        description = "ifs.sp.campaign1.mission6descr"
+    },
+    {
+        mapluafile = "spa4g_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission10name",
+        description = "ifs.sp.campaign1.mission1descr"
+    },
+    {
+        mapluafile = "mus1c_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission11name",
+        description = "ifs.sp.campaign1.mission7descr"
+    },
+    {
+        mapluafile = "pol1g_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission15name",
+        description = "ifs.sp.campaign1.mission9descr",
+        bDimmed = 1
+    },
+    {
+        mapluafile = "tan1g_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission16name",
+        description = "ifs.sp.campaign1.mission10descr"
+    },
+    {
+        mapluafile = "spa1g_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission17name",
+        description = "ifs.sp.campaign1.mission1descr"
+    },
+    {
+        mapluafile = "yav1g_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission18name",
+        description = "ifs.sp.campaign1.mission10descr"
+    },
+    {
+        mapluafile = "hot1g_c",
+        side = 1,
+        showstr = "ifs.sp.campaign1.mission19name",
+        description = "ifs.sp.campaign1.mission10descr"
+    }
+}
+
+attract_mode_maps = {
+    "dag1g_con",
+    "end1g_con",
+    "end1g_hunt",
+    "hot1g_con",
+    "kas2c_con",
+    "kas2g_con",
+    "mus1c_con",
+    "mus1g_con",
+    "myg1c_con",
+    "myg1g_con",
+    "nab2c_con",
+    "nab2g_con",
+    "pol1c_con",
+    "pol1g_con",
+    "spa3c_ass",
+    "tan1c_con",
+    "tan1c_1flag",
+    "tan1g_con",
+    "tan1g_1flag",
+    "tat2c_con",
+    "tat2c_ctf",
+    "tat2g_con",
+    "tat2g_ctf",
+    "yav1c_con",
+    "yav1c_1flag",
+    "yav1g_con",
+    "yav1g_1flag"
+}
+
+ifs_era_vbutton_layout = {
+    xWidth = 350,
+    width = 350,
+    xSpacing = 10,
+    ySpacing = 5,
+    font = "gamefont_medium",
+    buttonlist = {
+        {tag = "c", string = "common.era.cw"},
+        {tag = "g", string = "common.era.gcw"}
+    },
+    title = "ifs.sp.pick_era"
+}
+
+gMapEras = {
+    {
+        key = "era_c",
+        showstr = "common.era.cw",
+        subst = "c",
+        Team1Name = "common.sides.rep.name",
+        Team2Name = "common.sides.cis.name",
+        icon1 = "cis_icon",
+        icon2 = "rep_icon"
+    },
+    {
+        key = "era_g",
+        showstr = "common.era.gcw",
+        subst = "g",
+        Team1Name = "common.sides.all.name",
+        Team2Name = "common.sides.imp.name",
+        icon1 = "imp_icon",
+        icon2 = "all_icon"
+    }
+}
+
+gMapModes = {
+    {
+        key = "mode_con",
+        showstr = "modename.name.con",
+        descstr = "modename.description.con",
+        subst = "con",
+        icon = "mode_icon_con"
+    },
+    {
+        key = "mode_ctf",
+        showstr = "modename.name.ctf",
+        descstr = "modename.description.ctf",
+        subst = "ctf",
+        icon = "mode_icon_2ctf"
+    },
+    {
+        key = "mode_1flag",
+        showstr = "modename.name.1flag",
+        descstr = "modename.description.1flag",
+        subst = "1flag",
+        icon = "mode_icon_ctf"
+    },
+    {
+        key = "mode_tdm",
+        showstr = "modename.name.tdm",
+        descstr = "modename.description.tdm",
+        subst = "tdm",
+        icon = "mode_icon_tdm"
+    },
+    {
+        key = "mode_hunt",
+        showstr = "modename.name.hunt",
+        descstr = "modename.description.hunt",
+        subst = "hunt",
+        icon = "mode_icon_hunt"
+    },
+    {
+        key = "mode_assault",
+        showstr = "modename.name.assault",
+        descstr = "modename.description.assault",
+        subst = "ass",
+        icon = "mode_icon_ass"
+    },
+    {
+        key = "mode_eli",
+        showstr = "modename.name.elimination",
+        descstr = "modename.description.elimination",
+        subst = "eli",
+        icon = "mode_icon_eli"
+    },
+    {
+        key = "mode_scm",
+        showstr = "modename.name.scm",
+        descstr = "modename.description.scm",
+        subst = "scm",
+        icon = "mode_icon_sc"
+    },
+    {
+        key = "mode_scp",
+        showstr = "modename.name.scp",
+        descstr = "modename.description.scp",
+        subst = "scp",
+        icon = "mode_icon_sc"
+    },
+    {
+        key = "mode_dcm",
+        showstr = "modename.name.dcm",
+        descstr = "modename.description.dcm",
+        subst = "dcm",
+        icon = "mode_icon_dc"
+    },
+    {
+        key = "mode_dcp",
+        showstr = "modename.name.dcp",
+        descstr = "modename.description.dcp",
+        subst = "dcp",
+        icon = "mode_icon_dc"
+    },
+    {
+        key = "mode_mcm",
+        showstr = "modename.name.mcm",
+        descstr = "modename.description.mcm",
+        subst = "mcm",
+        icon = "mode_icon_mc"
+    },
+    {
+        key = "mode_mcp",
+        showstr = "modename.name.mcp",
+        descstr = "modename.description.mcp",
+        subst = "mcp",
+        icon = "mode_icon_mc"
+    },
+    {
+        key = "mode_mct",
+        showstr = "modename.name.mcm",
+        descstr = "modename.description.mcm",
+        subst = "mct",
+        icon = "mode_icon_mc"
+    }
+}
+
+gAllMapsStr = "_all_maps_"
+gDelAllMapsStr = "_remove_all_"
+gAllModesStr = "_all_modes_"
+gAllErasStr = "_all_eras_"
+
+--[[
+function missionlist_mapsorthelper(a, b)
+	local Name1, Name2
+	Name1 = missionlist_GetLocalizedMapName(a.mapluafile)
+	Name1 = ScriptCB_ununicode(Name1)
+	Name2 = missionlist_GetLocalizedMapName(b.mapluafile)
+	Name2 = ScriptCB_ununicode(Name2)
+
+	return Name1 < Name2
+end
+--]]
+-- Expands the maplist from a bunch of modes to a flatter list.
+-- If bForMP is true, it expands the MP list. If false, it expands
+-- the SP list.
+function missionlist_ExpandMaplist(bForMP)
+    --[[	if(not gSortedMaplist) then
+		table.sort(sp_missionselect_listbox_contents, missionlist_mapsorthelper) 
+		table.sort(mp_missionselect_listbox_contents, missionlist_mapsorthelper) 
+		gSortedMaplist = 1
+	end --]]
+    local i, j, k, v, Num
+    local SourceList
+    if (bForMP) then
+        SourceList = mp_missionselect_listbox_contents
+    else
+        SourceList = sp_missionselect_listbox_contents
+    end
+
+    -- Blank dest list for starters
+    missionselect_listbox_contents = {}
+
+    local expand_maps_for_pc = false
+    if (expand_maps_for_pc) then
+        if (gPlatformStr == "PC") then
+            local FilterList = gMapModes
+            Num = 1 -- where next entry in missionselect_listbox_contents will go
+            for i = 1, table.getn(SourceList) do
+                for j = 1, table.getn(FilterList) do
+                    local Tag = FilterList[j].key
+                    if (SourceList[i][Tag]) then
+                        -- Start with blank row
+                        missionselect_listbox_contents[Num] = {}
+                        -- Copy all items in this table row
+                        for k, v in SourceList[i] do
+                            missionselect_listbox_contents[Num][k] = v
+                            --                  print(" Copying ", k, missionselect_listbox_contents[Num][k])
+                        end
+                        -- But, we want to rename it in the process, adding in the mapname
+                        missionselect_listbox_contents[Num].mapluafile =
+                            string.format(SourceList[i].mapluafile, "%s", FilterList[j].subst)
+                        --              print("Added luafile ", missionselect_listbox_contents[Num].mapluafile)
+
+                        Num = Num + 1 -- move on in output list
+                    end -- SourceList[i].Tag exists
+                end -- k loop over filters
+            end -- i loop over input maps
+            return
+        end
+    end
+
+    for i = 1, table.getn(SourceList) do
+        if (SourceList[i].mapluafile ~= gAllMapsStr) then
+            -- Copy row
+            missionselect_listbox_contents[i] = SourceList[i]
+            missionselect_listbox_contents[i].bIsWildcard = nil
+        end -- Mapluafile is not our magic constant
+        -- for multiple selection
+        --missionselect_listbox_contents[i].bSelected = nil
+    end -- i loop over input maps
+    --print("++++bSelected clear")
+    --remove "all maps" because we have "select all" button
+    missionselect_listbox_contents[table.getn(SourceList) + 1] = {mapluafile = gAllMapsStr, bIsWildcard = 1}
+
+    -- TODO: alphabetize the list now?
+end
+
+-- From a maplist abbreviation (the mapluafile entry from one row of
+-- the missionselect_listbox_contents array), returns a table as to
+-- which modes are available. Table format is like this:
+-- {
+--   { showstr = "modename.name.con"},
+-- }
+function missionlist_ExpandModelist(abbrev)
+    local i, j, k, Num
+    local ret = {}
+    Num = 1
+
+    -- Path 1 - if "all maps" is selected, then expand it to be a list
+    -- of all modes on all maps
+    if (abbrev == gAllMapsStr) then
+        local Added = {}
+        for i = 1, table.getn(missionselect_listbox_contents) do
+            for j = 1, table.getn(gMapModes) do
+                local Tag = gMapModes[j].key
+                for k = 1, table.getn(gMapEras) do
+                    local Tag2 = Tag .. "_" .. gMapEras[k].subst
+
+                    if ((missionselect_listbox_contents[i][Tag2]) and (not Added[Tag])) then
+                        ret[Num] = gMapModes[j]
+                        ret[Num].bIsWildcard = nil
+                        Num = Num + 1
+                        Added[Tag] = 1 -- note we added this modetype
+                    end -- mode exists on this map, not added yet.
+                end -- k loop over all possible eras
+            end -- j loop over modes
+        end -- i loop over maps
+
+        -- Assume that there will be > 1 mode when all the maps are expanded
+        ret[Num] = {
+            showstr = "modename.name._all_modes_",
+            bIsWildcard = 1,
+            descstr = "modename.description._all_modes_"
+        }
+        Num = Num + 1
+    else
+        -- Path 2 - need to count modes for a particular map
+        for i = 1, table.getn(missionselect_listbox_contents) do
+            if (missionselect_listbox_contents[i].mapluafile == abbrev) then
+                local Count = 0
+                -- Path 2a - count # of modes available
+                local Added = {}
+                for j = 1, table.getn(gMapModes) do
+                    local Tag = gMapModes[j].key
+                    for k = 1, table.getn(gMapEras) do
+                        local Tag2 = Tag .. "_" .. gMapEras[k].subst
+                        if ((missionselect_listbox_contents[i][Tag2]) and (not Added[Tag])) then
+                            Count = Count + 1
+                            Added[Tag] = 1
+                        end
+                    end -- k loop over possible eras
+                end -- j loop counting # of modes
+
+                -- Now, add the modes for real
+                Added = {}
+                for j = 1, table.getn(gMapModes) do
+                    local Tag = gMapModes[j].key
+                    for k = 1, table.getn(gMapEras) do
+                        local Tag2 = Tag .. "_" .. gMapEras[k].subst
+                        if ((missionselect_listbox_contents[i][Tag2]) and (not Added[Tag])) then
+                            ret[Num] = gMapModes[j]
+                            ret[Num].bIsWildcard = nil
+                            Num = Num + 1
+                            Added[Tag] = 1
+                        end -- mode exists on this map
+                    end -- k loop over eras
+                end -- j loop on modes
+
+                -- Put "All modes" at bottom of list if multiple modes.
+                if (Count > 1) then
+                    ret[Num] = {
+                        showstr = "modename.name._all_modes_",
+                        bIsWildcard = 1,
+                        descstr = "modename.description._all_modes_"
+                    }
+                    Num = Num + 1
+                end
+            end -- abbrev matched
+        end -- i loop over all maps
+    end
+
+    return ret
+end
+
+-- From a maplist abbreviation (the mapluafile entry from one row of
+-- the missionselect_listbox_contents array), returns a table as to
+-- which modes are available. Table format is like this:
+-- {
+--   { showstr = "modename.name.con"},
+-- }
+--
+-- If ModeEntry is nil, it does no filtering. However, if ModeEntry
+-- is non-nil, it myst be a row from gMapModes, and the list of eras
+-- is filtered by the li
+function missionlist_ExpandEralist(abbrev, ModeEntry)
+    local i, j, Num
+    local ret = {}
+    Num = 1
+
+    -- Path 1 - if "all maps" is selected, then expand it to be a list
+    -- of all modes on all maps
+    if (abbrev == gAllMapsStr) then
+        local Added = {}
+        for i = 1, table.getn(missionselect_listbox_contents) do
+            for j = 1, table.getn(gMapEras) do
+                local Key = gMapEras[j].key
+                if ((missionselect_listbox_contents[i][Key]) and (not Added[Key])) then
+                    ret[Num] = gMapEras[j]
+                    ret[Num].bIsWildcard = nil
+                    Num = Num + 1
+                    Added[Key] = 1 -- note we added this modetype
+                end -- mode exists on this map, not added yet.
+            end -- j loop over modes
+        end -- i loop over maps
+
+        -- Assume that multiple modes will be on all maps
+        ret[Num] = {showstr = "common.era._all_eras_", bIsWildcard = 1}
+        Num = Num + 1
+    else
+        -- Path 2 - need to count modes for a particular map
+        for i = 1, table.getn(missionselect_listbox_contents) do
+            if (missionselect_listbox_contents[i].mapluafile == abbrev) then
+                local Count = 0
+                -- Path 2a - count # of eras available
+
+                -- If no mode restriction, then use old path
+                if ((not ModeEntry) or (ModeEntry.bIsWildcard)) then
+                    for j = 1, table.getn(gMapEras) do
+                        local Key = gMapEras[j].key
+                        if (missionselect_listbox_contents[i][Key]) then
+                            Count = Count + 1
+                        end
+                    end -- j loop counting # of modes
+                else
+                    -- Mode restriction is in place. Filter list to only include
+                    -- maps with this mode in place.
+                    for j = 1, table.getn(gMapEras) do
+                        local Key = ModeEntry.key .. "_" .. gMapEras[j].subst
+                        if (missionselect_listbox_contents[i][Key]) then
+                            Count = Count + 1
+                        end
+                    end -- j loop counting # of modes
+                end
+
+                -- Now, add the eras for real
+                -- If no mode restriction, then use old path
+                if ((not ModeEntry) or (ModeEntry.bIsWildcard)) then
+                    for j = 1, table.getn(gMapEras) do
+                        local Key = gMapEras[j].key
+                        if (missionselect_listbox_contents[i][Key]) then
+                            ret[Num] = gMapEras[j]
+                            ret[Num].bIsWildcard = nil
+                            Num = Num + 1
+                        end -- mode exists on this map
+                    end -- j loop on modes
+
+                    -- Put "All eras" at bottom of list if multiple eras.
+                    if (Count > 1) then
+                        ret[Num] = {showstr = "common.era._all_eras_", bIsWildcard = 1}
+                        Num = Num + 1
+                    end
+                else
+                    -- Mode restriction is in place. Filter list to only include
+                    -- maps with this mode in place.
+                    for j = 1, table.getn(gMapEras) do
+                        local Key = ModeEntry.key .. "_" .. gMapEras[j].subst
+                        if (missionselect_listbox_contents[i][Key]) then
+                            ret[Num] = gMapEras[j]
+                            ret[Num].bIsWildcard = nil
+                            Num = Num + 1
+                        end -- mode exists on this map
+                    end -- j loop on modes
+                end
+            end -- abbrev matched
+        end -- i loop over all maps
+    end
+
+    return ret
+end
+
+-- Tables for cached mapname lookups. The key for each entry will
+-- be the 'abbrev' passed into missionlist_GetLocalizedMapName(abbrev)
+-- if present.
+gMapName0Table = {}
+gMapName1Table = {}
+gMapName2Table = {}
+
+-- API
+-- ShowUStr, iSource = missionlist_GetLocalizedName("tat3a")
+--
+-- Given an abbreviation (e.g. "tat3a"), returns a localized unicode
+-- string that should be shown. Also returns an index of where that
+-- string came from:
+-- 0: localize database
+-- 1: addon map w/ English-only string
+-- 2: fallback (abbrev upconverted to Unicode)
+function missionlist_GetLocalizedMapName(abbrev)
+    -- Look in cached lookups first
+    local CacheUStr
+
+    CacheUStr = gMapName0Table[abbrev]
+    if (CacheUStr) then
+        --      print("gMapName0Table["..abbrev.."] found")
+        return CacheUStr, 0
+    end
+
+    CacheUStr = gMapName1Table[abbrev]
+    if (CacheUStr) then
+        --      print("gMapName1Table["..abbrev.."] found")
+        return CacheUStr, 1
+    end
+
+    CacheUStr = gMapName2Table[abbrev]
+    if (CacheUStr) then
+        --      print("gMapName2Table["..abbrev.."] found")
+        return CacheUStr, 2
+    end
+
+    if (abbrev == gAllMapsStr) then
+        return ScriptCB_getlocalizestr("mapname.name._all_maps_"), -1
+    end
+
+    if (abbrev == gDelAllMapsStr) then
+        return ScriptCB_getlocalizestr("mapname.name._remove_all_"), -1
+    end
+
+    ------- Not cached. Do lookup, stick it in cache
+
+    local i, j, l, l2
+    l = string.len(abbrev)
+    l2 = l
+
+    -- Split string at the '_', if present
+    for i = 1, (l - 1) do
+        if (string.sub(abbrev, i, i) == "_") then
+            l2 = i
+        end
+    end
+
+    -- Pass #1: try and find it in localize DB
+    for i = 0, (l2 - 1) do
+        local TrimmedStr = string.sub(abbrev, 1, l2 - i)
+        local DisplayUStr = ScriptCB_getlocalizestr("mapname.name." .. TrimmedStr, 1) -- 2nd param: return nil if not found
+        if (DisplayUStr) then
+            --          print("Got left name!",string.sub(abbrev,l2+1))
+            local ModeUStr = ScriptCB_getlocalizestr("modename." .. string.sub(abbrev, l2 + 1), 1)
+            if (ModeUStr) then
+                local SpaceUStr = ScriptCB_tounicode(" ")
+                local ShowUStr = ScriptCB_usprintf("common.pctspcts", DisplayUStr, SpaceUStr)
+                ShowUStr = ScriptCB_usprintf("common.pctspcts", ShowUStr, ModeUStr)
+
+                gMapName0Table[abbrev] = ShowUStr
+                return ShowUStr, 0
+            else
+                gMapName0Table[abbrev] = DisplayUStr
+                return DisplayUStr, 0
+            end
+        end
+    end -- i loop over shortened strings
+
+    -- Pass #2, try and find it in current missionlist
+    if (missionselect_listbox_contents) then
+        for i = 0, 1 do
+            local TrimmedStr = string.upper(string.sub(abbrev, 1, l - i))
+            for j = 1, table.getn(missionselect_listbox_contents) do
+                if (TrimmedStr == string.upper(missionselect_listbox_contents[j].mapluafile)) then
+                    local DisplayUStr
+                    local Entry = missionselect_listbox_contents[j]
+                    local CurLang = ScriptCB_GetLanguage()
+                    if (CurLang == "uk_english") then
+                        CurLang = "english"
+                    end
+                    local Tag = "showstr_" .. CurLang
+                    --                      print("Checking tag ", Tag , Entry.Tag, Entry[Tag], Entry.showstr)
+                    if (Entry[Tag]) then
+                        DisplayUStr = ScriptCB_tounicode(Entry[Tag])
+                    elseif (Entry.showstr) then
+                        DisplayUStr = ScriptCB_tounicode(Entry.showstr)
+                    else
+                        DisplayUStr = ScriptCB_tounicode(Entry.mapluafile)
+                    end
+
+                    gMapName1Table[abbrev] = DisplayUStr
+                    return DisplayUStr, 1
+                end
+            end -- j loop over missionselect_listbox_contents
+        end -- i loop over trimming suffixes
+    end
+
+    -- Final fallback: show what was received
+    local DisplayUStr = ScriptCB_tounicode(abbrev)
+    gMapName2Table[abbrev] = DisplayUStr
+    return DisplayUStr, 2
+end
+
+-- Given an row from the missionlist table, returns a string which is
+-- the basename for the movie
+function missionlist_fnGetMovieName(Selection)
+    local movieName = nil
+    local movieFile = nil
+
+    if (not Selection) then
+        return movieName, movieFile -- emergency bailout
+    end
+
+    movieName = Selection.mapluafile
+    if (Selection.dnldable) then
+        movieFile = movieName
+    end
+
+    -- HACK - only use first 4 chars of moviename. This may need to
+    -- change eventually. (Trim off everything after first %s, I
+    -- suspect)
+    movieName = string.sub(movieName, 1, 4)
+    if (movieName == "TEST") then
+        movieName = nil
+    end
+
+    return movieName, movieFile
+end
+
+-- Tables for cached map description lookups. The key for each entry
+-- will be the 'abbrev' passed into
+-- missionlist_GetLocalizedMapName(abbrev) if present.
+
+gMapDescr0Table = {}
+gMapDescr1Table = {}
+gMapDescr2Table = {}
+
+-- API
+-- ShowUStr, iSource = missionlist_GetLocalizedName("tat3a")
+--
+-- Given an abbreviation (e.g. "tat3a"), returns a localized unicode
+-- string that should be shown. Also returns an index of where that
+-- string came from:
+-- 0: localize database
+-- 1: addon map w/ English-only string
+-- 2: fallback (abbrev upconverted to Unicode)
+function missionlist_GetLocalizedMapDescr(abbrev)
+    -- Look in cached lookups first
+    local CacheUStr
+
+    CacheUStr = gMapDescr0Table[abbrev]
+    if (CacheUStr) then
+        --      print("gMapDescr0Table["..abbrev.."] found")
+        return CacheUStr, 0
+    end
+
+    CacheUStr = gMapDescr1Table[abbrev]
+    if (CacheUStr) then
+        --      print("gMapDescr1Table["..abbrev.."] found")
+        return CacheUStr, 1
+    end
+
+    CacheUStr = gMapDescr2Table[abbrev]
+    if (CacheUStr) then
+        --      print("gMapDescr2Table["..abbrev.."] found")
+        return CacheUStr, 2
+    end
+
+    if (abbrev == gAllMapsStr) then
+        return ScriptCB_getlocalizestr("mapname.description._all_maps_"), -1
+    end
+
+    if (abbrev == gDelAllMapsStr) then
+        return ScriptCB_getlocalizestr("mapname.description._remove_all_"), -1
+    end
+
+    ------- Not cached. Do lookup, stick it in cache
+
+    local i, j, l, l2
+    l = string.len(abbrev)
+    l2 = l
+
+    -- Split string at the '_', if present
+    for i = 1, (l - 1) do
+        if (string.sub(abbrev, i, i) == "_") then
+            l2 = i
+        end
+    end
+
+    -- Pass #1: try and find it in localize DB
+    for i = 0, (l2 - 1) do
+        local TrimmedStr = string.sub(abbrev, 1, l2 - i)
+        local DisplayUStr = ScriptCB_getlocalizestr("mapname.description." .. TrimmedStr, 1) -- 2nd param: return nil if not found
+        if (DisplayUStr) then
+            --          print("Got left name!",string.sub(abbrev,l2+1))
+            local ModeUStr = ScriptCB_getlocalizestr("modename." .. string.sub(abbrev, l2 + 1), 1)
+            if (ModeUStr) then
+                local SpaceUStr = ScriptCB_tounicode(" ")
+                local ShowUStr = ScriptCB_usprintf("common.pctspcts", DisplayUStr, SpaceUStr)
+                ShowUStr = ScriptCB_usprintf("common.pctspcts", ShowUStr, ModeUStr)
+
+                gMapDescr0Table[abbrev] = ShowUStr
+                return ShowUStr, 0
+            else
+                gMapDescr0Table[abbrev] = DisplayUStr
+                return DisplayUStr, 0
+            end
+        end
+    end -- i loop over shortened strings
+
+    -- Pass #2, try and find it in current missionlist
+    if (missionselect_listbox_contents) then
+        for i = 0, 1 do
+            local TrimmedStr = string.upper(string.sub(abbrev, 1, l - i))
+            for j = 1, table.getn(missionselect_listbox_contents) do
+                if (TrimmedStr == string.upper(missionselect_listbox_contents[j].mapluafile)) then
+                    local DisplayUStr
+                    local Entry = missionselect_listbox_contents[j]
+                    local CurLang = ScriptCB_GetLanguage()
+                    if (CurLang == "uk_english") then
+                        CurLang = "english"
+                    end
+                    local Tag = "showstr_" .. CurLang
+                    --                      print("Checking tag ", Tag , Entry.Tag, Entry[Tag], Entry.showstr)
+                    if (Entry[Tag]) then
+                        DisplayUStr = ScriptCB_tounicode(Entry[Tag])
+                    elseif (Entry.showstr) then
+                        DisplayUStr = ScriptCB_tounicode(Entry.showstr)
+                    else
+                        DisplayUStr = ScriptCB_tounicode(Entry.mapluafile)
+                    end
+
+                    gMapDescr1Table[abbrev] = DisplayUStr
+                    return DisplayUStr, 1
+                end
+            end -- j loop over missionselect_listbox_contents
+        end -- i loop over trimming suffixes
+    end
+
+    -- Final fallback: show what was received
+    local DisplayUStr = ScriptCB_tounicode(abbrev)
+    gMapDescr2Table[abbrev] = DisplayUStr
+    return DisplayUStr, 2
+end
+
+-- Given an row from the missionlist table, returns a string which is
+-- the basename for the movie
+function missionlist_fnGetMovieName(Selection)
+    local movieName = nil
+    local movieFile = nil
+
+    if (not Selection) then
+        return movieName, movieFile -- emergency bailout
+    end
+
+    movieName = Selection.mapluafile
+    if (Selection.dnldable) then
+        movieFile = movieName
+    end
+
+    -- HACK - only use first 4 chars of moviename. This may need to
+    -- change eventually. (Trim off everything after first %s, I
+    -- suspect)
+    movieName = string.sub(movieName, 1, 4)
+    if (movieName == "TEST") then
+        movieName = nil
+    end
+
+    return movieName, movieFile
+end
+
+-- Takes a map luafile (e.g. "end1g_con") and returns the row from gMapModes
+-- that's appropriate for that map. Returns nil if the mode isn't found
+function missionlist_GetMapMode(abbrev)
+    local i, j, l, l2
+    l = string.len(abbrev)
+    l2 = 0
+
+    -- Split string at the '_', if present
+    for i = 1, (l - 1) do
+        if (string.sub(abbrev, i, i) == "_") then
+            l2 = i
+        end
+    end
+
+    local CheckMode = string.sub(abbrev, l2 + 1)
+    for i = 1, table.getn(gMapModes) do
+        if (gMapModes[i].subst == CheckMode) then
+            return gMapModes[i]
+        end
+    end
+
+    return nil -- not found
+end
+
+-- Takes a map luafile (e.g. "end1g_con") and returns the row from gMapEras
+-- that's appropriate for that map. Returns nil if the mode isn't found
+function missionlist_GetMapEra(abbrev)
+    local i, j, l, l2
+    l = string.len(abbrev)
+    l2 = l
+
+    -- Split string at the '_', if present
+    for i = 1, (l - 1) do
+        if (string.sub(abbrev, i, i) == "_") then
+            l2 = i
+        end
+    end
+
+    local CheckChar = string.sub(abbrev, l2 - 1, l2 - 1)
+    for i = 1, table.getn(gMapEras) do
+        if (gMapEras[i].subst == CheckChar) then
+            return gMapEras[i]
+        end
+    end
+
+    return nil -- not found
+end
+
+-- Fill in some items that differ per-platform
+if (gPlatformStr == "PS2" or gPlatformStr == "PSP") then
+    --     SPCampaign2[1].outtromovie = "tutorial01gcw"
+    --     SPCampaign2[1].outtromovie_left = 50
+    --     SPCampaign2[1].outtromovie_top = 60
+    --     SPCampaign2[1].outtromovie_width = 400
+    --     SPCampaign2[1].outtromovie_height = 336
+    --     SPCampaign2[1].outtromovielocalized = 1
+    SPCampaign1[1].outtromovie = "tutorial01cw"
+    SPCampaign1[1].outtromovie_left = 50
+    SPCampaign1[1].outtromovie_top = 60
+    SPCampaign1[1].outtromovie_width = 400
+    SPCampaign1[1].outtromovie_height = 336
+    SPCampaign1[1].outtromovielocalized = 1
+elseif (gPlatformStr == "XBox") then
+    --     SPCampaign2[1].outtromovie = "tutorial01gcw"
+    --     SPCampaign2[1].outtromovie_left = 90
+    --     SPCampaign2[1].outtromovie_top = 60
+    --     SPCampaign2[1].outtromovie_width = 460
+    --     SPCampaign2[1].outtromovie_height = 350
+    --     SPCampaign2[1].outtromovielocalized = 1
+    SPCampaign1[1].outtromovie = "tutorial01cw"
+    SPCampaign1[1].outtromovie_left = 90
+    SPCampaign1[1].outtromovie_top = 60
+    SPCampaign1[1].outtromovie_width = 460
+    SPCampaign1[1].outtromovie_height = 350
+    SPCampaign1[1].outtromovielocalized = 1
+elseif (gPlatformStr == "PC") then
+    -- Zap out all 'unlockable' flags
+    local i
+    for i = 1, table.getn(SPCampaign1) do
+        SPCampaign1[i].unlockable = nil
+    end
+
+--     for i=1,table.getn(SPCampaign2) do
+--         SPCampaign2[i].unlockable = nil
+--     end
+end
+
+-- INFO 0x1 0x0 0x0 0x0 0x1 0x0 0x0 0x0

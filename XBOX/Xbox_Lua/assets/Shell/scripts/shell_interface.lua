@@ -1,4 +1,4 @@
--- shell_interface.lua   PSP 
+--
 -- Copyright (c) 2005 Pandemic Studios, LLC. All rights reserved.
 --
 
@@ -12,16 +12,11 @@ gOnlineServiceStr = ScriptCB_GetOnlineService()
 gLangStr,gLangEnum = ScriptCB_GetLanguage()
 
 -- set model memory
-if(gPlatformStr == "PS2")  then
-	SetPS2ModelMemory(1920 * 1024)
-end
-if(gPlatformStr == "PSP")  then
-	SetPSPModelMemory(2176597)
-end
+SetPS2ModelMemory(2000 * 1024)
+
 -- Josh's utility stuff
 ScriptCB_DoFile("globals")
 
---[[
 -- shell movie stream to use
 if(gPlatformStr == "PS2") then
     if (ScriptCB_IsPAL() == 1) then
@@ -29,7 +24,7 @@ if(gPlatformStr == "PS2") then
     else
     gMovieStream = "movies\\shell.mvs"
     end
-elseif (gPlatformStr == "PC") then
+--[[elseif (gPlatformStr == "PC") then
    local shellMovie = {
       english    = "movies\\shell.mvs",
       spanish    = "movies\\shellsp.mvs",
@@ -37,11 +32,10 @@ elseif (gPlatformStr == "PC") then
       french     = "movies\\shellfr.mvs",
       german     = "movies\\shellgr.mvs",
    }
-   gMovieStream = shellMovie[gLangStr] or shellMovie["english"]
+   gMovieStream = shellMovie[gLangStr] or shellMovie["english"]--]]
 else
     gMovieStream = "movies\\shell.mvs"
 end
---]]
 
 --
 --
@@ -112,9 +106,7 @@ ScriptCB_DoFile("ifs_vkeyboard")
 ScriptCB_DoFile("ifs_boot")
 ScriptCB_DoFile("ifs_legal")
 ScriptCB_DoFile("ifs_start")
-if( gPlatformStr ~= "PSP" ) then
-	ScriptCB_DoFile("ifs_login")
-end
+ScriptCB_DoFile("ifs_login")
 ScriptCB_DoFile("ifs_main")
 ScriptCB_DoFile("ifs_saveop")
 
@@ -137,15 +129,8 @@ if(gPlatformStr == "PC") then
 	ScriptCB_DoFile("ifs_mp_heroopts")
     ScriptCB_DoFile("ifs_mpgs_pclogin")
     ScriptCB_DoFile("ifs_missionselect_pcMulti")
-elseif(gPlatformStr ~= "PSP") then
+else
     ScriptCB_DoFile("ifs_mpgs_login")   
-end
-
-if(gPlatformStr == "PSP") then
-	ScriptCB_DoFile("ifs_mp_lobbypsp")  
-	ScriptCB_DoFile("ifs_login_psp")  
-	ScriptCB_DoFile("ifs_controller_preset")  
-	ScriptCB_DoFile("ifs_psptutorial")  
 end
 
 ScriptCB_DoFile("ifs_mp_autonet")
@@ -165,11 +150,7 @@ ScriptCB_DoFile("ifs_sp_campaign")
 ScriptCB_DoFile("ifs_difficulty")
 ScriptCB_DoFile("ifs_sp_era")
 ScriptCB_DoFile("ifs_sp_briefing")
---ScriptCB_DoFile("ifs_spacetraining")
------------------------------------------------------------------------------------------------
--- the "ifs_trailer" line is in the DVD version of the Shell, was not in the mod_tools version; 
---ScriptCB_DoFile("ifs_trailer") 
----------------------------- added by cbadal --------------------------------------------------
+ScriptCB_DoFile("ifs_spacetraining")
 
 ScriptCB_DoFile("ifs_instant_top")
 ScriptCB_DoFile("ifs_instant_side")
@@ -180,14 +161,6 @@ ScriptCB_DoFile("ifs_instant_options_overview")
 ScriptCB_DoFile("ifs_missionselect")
 
 -- Freeform screens
-ScriptCB_DoFile("ifs_instruction")
-
-if( gPlatformStr == "PSP") then 
-	ScriptCB_DoFile("ifs_pspmodeselect")
-	ScriptCB_DoFile("ifs_psperaselect")
-	ScriptCB_DoFile("ifs_pspplaylist")
-end
-
 ScriptCB_DoFile("ifs_freeform_init_common")
 ScriptCB_DoFile("ifs_freeform_init_cw")
 ScriptCB_DoFile("ifs_freeform_init_gcw")
@@ -208,8 +181,10 @@ ScriptCB_DoFile("ifs_freeform_cheat")
 ScriptCB_DoFile("ifs_freeform_purchase")
 ScriptCB_DoFile("ifs_freeform_purchase_unit")
 
---ScriptCB_DoFile("ifs_freeform_purchase_tech")
+-------------- different from PC version ---------
 ScriptCB_DoFile("ifs_freeform_purchase_fleet")
+--------------------------------------------------
+
 ScriptCB_DoFile("ifs_freeform_purchase_tech")
 ScriptCB_DoFile("ifs_freeform_fleet")
 ScriptCB_DoFile("ifs_freeform_focus")
@@ -229,18 +204,12 @@ ScriptCB_DoFile("ifs_campaign_main")
 ScriptCB_DoFile("ifs_campaign_menu")
 ScriptCB_DoFile("ifs_campaign_load")
 ScriptCB_DoFile("ifs_campaign_turn_intro")
-
-ScriptCB_DoFile("ifs_campaign_overview")
 ScriptCB_DoFile("ifs_campaign_battle")
 ScriptCB_DoFile("ifs_campaign_battle_card")
 ScriptCB_DoFile("ifs_campaign_battle_intro")
-ScriptCB_DoFile("ifs_campaign_result")
 ScriptCB_DoFile("ifs_campaign_summary")
 ScriptCB_DoFile("ifs_campaign_end")
 
-if(gPlatformStr == "PSP") then
-	ScriptCB_DoFile("ifs_minicamp_campselect")
-end
 -- Options screens
 ScriptCB_DoFile("ifs_opt_top")
 ScriptCB_DoFile("ifs_opt_general")
@@ -264,7 +233,7 @@ ScriptCB_DoFile("ifs_tutorials")
 ScriptCB_DoFile("ifs_credits")
 
 -- career stats page
---ScriptCB_DoFile("ifs_careerstats")
+ScriptCB_DoFile("ifs_careerstats")
 
 -- Pull in XBox-only pages (with mpxl in the name)
 if(gOnlineServiceStr == "XLive") then
@@ -293,38 +262,31 @@ if(gXBox_DVDDemo) then
 elseif (ScriptCB_ShouldShowDemoPostscreen() and (not gE3Demo)) then
     -- Demo is over. Show the "please buy our game" screen
     ifs_movietrans_PushScreen(ifs_postdemo)
-else
-	-- AnthonyBF2; This code block needs work; you'll need to figure out when to show 'boot' or 'freeform_main'
-    ifs_movietrans_PushScreen( ifs_boot) 
-    ifs_movietrans_PushScreen( ifs_freeform_main)
-end
+
 -- already in a campaign game?
-if ScriptCB_IsCampaignStateSaved() then
-	
+elseif ScriptCB_IsCampaignStateSaved() then
+
 	-- remove legal textures to make room for loading
-	--ifs_legal:ClearTextures()
-	ifs_legal:Enter(true)
-	ifs_legal:Exit(true)
+	ifs_legal:ClearTextures()
 	-- preload campaign
 	ifs_campaign_main:OneTimeInit(false)
 	-- go directly to campaign
-	--ifs_movietrans_PushScreen(ifs_campaign_main)
+	ifs_movietrans_PushScreen(ifs_campaign_main)
 	
 -- already in a galactic conquest game?
 elseif ScriptCB_IsMetagameStateSaved() then
 
 	-- remove legal textures to make room for loading
-	--ifs_legal:ClearTextures()
-	ifs_legal:Enter(true)
-	ifs_legal:Exit(true)
+	ifs_legal:ClearTextures()
 	-- preload galactic conquest
 	ifs_freeform_main:OneTimeInit(false)
 	-- go directly to galactic conquest
-	--ifs_movietrans_PushScreen(ifs_freeform_main)
+	ifs_movietrans_PushScreen(ifs_freeform_main)
 	
---else
+else
+
 	-- standard sequence
-    --ifs_movietrans_PushScreen(ifs_boot)
+    ifs_movietrans_PushScreen(ifs_boot)
 end
 
 
@@ -332,20 +294,13 @@ end
 ReadDataFile("sound\\shell.lvl")
 
 -- open voice over stream
---gVoiceOverStream = OpenAudioStream("sound\\shell.lvl", "shell_vo")
+gVoiceOverStream = OpenAudioStream("sound\\shell.lvl", "shell_vo")
 -- open music stream
 gMusicStream     = OpenAudioStream("sound\\shell.lvl", "shell_music")
 -- open movie stream
-if( gPlatformStr == "PS2"  ) then
-	if( ScriptCB_IsPAL() == 1) then
-		gMovieStream = "movies\\shellpal.mvs"
-	else 
-		gMovieStream = "movies\\shell.mvs"
-	end
-else 
-	gMovieStream = "movies\\shell.mvs"
-end
+
 gMovieTutorialPostFix = ""
 ScriptCB_OpenMovie(gMovieStream, "")
 ScriptCB_SetMovieAudioBus("shellmovies")
+
 
