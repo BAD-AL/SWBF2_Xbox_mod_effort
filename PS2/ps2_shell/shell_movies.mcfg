@@ -90,12 +90,12 @@ MovieProperties()
 
 MovieProperties()
 {
-	Name("0x5ad89f27");
+	Name("geo1tran1");
 	Inherit("transition_template");
 	movie("shell");
 	SegmentList()
 	{
-		Segment("0x5ad89f27", 1, 0);
+		Segment("geo1tran1", 1, 0);
 	}
 
 }
