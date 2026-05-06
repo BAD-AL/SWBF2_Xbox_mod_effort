@@ -1,0 +1,58 @@
+ingame streammovies\crawl.mvs
+ProcessAddons: START 
+processing: addon\001\addon001.lvl
+Calling ScriptCB_EnableJournal(1)
+Called ScriptCB_EnableJournal(1)
+processing: addon\010\addon010.lvl
+processing: addon\031\addon031.lvl
+redefine: ScriptCB_getlocalizestr() 
+processing: addon\995\addon995.lvl
+uop_AddEra(): added Era: 
+uop_AddEra(): added Era: 
+uop_AddEra(): added Era: 
+uop_AddEra(): added Era: 
+uop_AddGameMode(): added Era: 
+uop_AddGameMode(): added Era: 
+uop_AddGameMode(): Mode with key 'mode_eli' is already present.
+uop_AddGameMode(): added Era: 
+uop_AddGameMode(): added Era: 
+uop_AddGameMode(): added Era: 
+Removing hot1%s_%s
+Removing hot1%s_%s
+Removing spa1%s_%s
+Removing spa1%s_%s
+Removing spa8%s_%s
+Removing spa8%s_%s
+Removing spa9%s_%s
+Removing spa9%s_%s
+ProcessAddons: DONE 
+prev = none iLastPage = 
+prev = texture iLastPage = 1
+ifs_legal.Exit
+ifs_saveop_DoOps InitialMemcardCheck
+ifs_saveop_DoOps LoadFileList
+ifs_saveop_DoOps LoadFileList
+ifs_saveop_DoOps LoadProfile
+ifs_saveop_DoOps LoadProfile
+Adding map dea1cw1_con
+utility_functions2: Listening on AddUnitClass() calls
+utility_functions2: Listening on SetHeroClass() calls
+utility_functions2: Listening on ReadDataFile() calls
+uf_updateClassIndex(): Added class:rep_inf_501st_trooper_phase1
+uf_updateClassIndex(): Added class:rep_inf_501st_rocketeer_phase1
+uf_updateClassIndex(): Added class:rep_inf_501st_arf_trooper_phase1
+uf_updateClassIndex(): Added class:rep_inf_501st_engineer_phase1
+uf_updateClassIndex(): Added class:rep_inf_501st_gunner_phase1
+uf_updateClassIndex(): Added class:rep_inf_captain_rex_phase1
+uf_updateClassIndex(): Added class:cis_inf_b1_battle_droid
+uf_updateClassIndex(): Added class:cis_inf_b1_marine_droid
+uf_updateClassIndex(): Added class:cis_inf_b1_battle_droid_sniper
+uf_updateClassIndex(): Added class:cis_inf_b2_super_battle_droid
+uf_updateClassIndex(): Added class:cis_inf_b1_battle_droid_engineer
+uf_updateClassIndex(): Added class:cis_inf_bx-series_commando_droid
+uf_updateClassIndex(): Added class:cis_inf_droideka
+utility_functions2: ReadDataFile(): This map's code, mode: deadea1_conquest
+death region added
+death region removed
+death region added
+death region removed
