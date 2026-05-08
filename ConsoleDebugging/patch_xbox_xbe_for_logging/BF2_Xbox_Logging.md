@@ -81,9 +81,6 @@ it is just never used for logging in the stock build.
 
 ## Enabling logging — Implemented Strategy
 
-The successful implementation uses **Option C**, redirected to the game's
-working directory on the HDD.
-
 | Mechanism | Status | Retail usable? |
 |---|---|---|
 | PblLog / BFront2.log | Absent | No |
