@@ -7,31 +7,11 @@ The log is printed to
  *  `<Game folder>\BFront1.log` (BF1)
  *  `<Game folder>\BFront2.log` (BF2)
 
-Example log from my xbox is in this folder `BFront2.log`.
+Example log from my Xbox: [BFront2.log](BFront2.log).
 
 Claude and Gemini were utalized to study the xbe, write the documentation and the `Python 3` patch programs.
 
-To patch your .xbe: 
-1. Be sure that you have python 3 installed.
-2. Place your `default.xbe` in the same folder
-3. Execute the script : `$ python3 patch_xbe_print_log.py`
-
-A `bf2.debug.xbe` or `bf1.debug.xbe` file should be generated, place this file next to your game's `default.xbe` and execute it via the file system browser.
-You could also rename it to `default.xbe` to make it your primary .xbe for BF2.
-
-
-### Notes
- * If you have the Title Update installed, you may need to remove the title update .xbe in order to get the debug log to work.
-
- * Strangely, the log file is referenced as 'D:\BFront2.log' by the game xbe. 'D' usually means the 'DVD' drive, but it looks like 'D' ends up meaning `where the game root lives`.
- * The functions `ScriptCB_CancelSessionList() (bf2); ScriptCB_DoFriendAction() (bf1)` were hijacked to enable the print logging. 
-
- * Not tested with XEMU, but you may need to install the game on XEMU's HDD to get the logging to work.
-
- * Does not seem to work on running on Modded XBOX 360 from a thumb drive.
-
-
- ### Python Script Usage
+ ### Python Patch Script Usage
  #### Star Wars Battlefront  1
 ```Sh
 # when SWBF1's 'default.xbe' is in the same folder
@@ -50,3 +30,13 @@ $ python3 patch_xbe_print_log_bf2.py
 $ python3 patch_xbe_print_log_bf1.py bf2default.xbe
 
 ```
+
+### Notes
+ * If you have the Title Update installed, you may need to remove the title update .xbe in order to get the debug log to work.
+
+ * Strangely, the log file is referenced as 'D:\BFront2.log' by the game xbe. 'D' usually means the 'DVD' drive, but it looks like 'D' ends up meaning `where the game root lives`.
+ * The functions `ScriptCB_CancelSessionList() (bf2); ScriptCB_DoFriendAction() (bf1)` were hijacked to enable the print logging. 
+
+ * Not tested with XEMU, but you may need to install the game on XEMU's HDD to get the logging to work.
+
+ * Does not seem to work on running on Modded XBOX 360 from a thumb drive.
