@@ -100,7 +100,5 @@ The `luaL_Reg` table for the base library is located in the data section. The
 
 | File | Description |
 |---|---|
-| `default.xbe` | Original retail disc XBE |
-| `bf2.debug.xbe` | Patched XBE with redirected print |
-| `patch_xbe_print_log.py` | Implementation script |
+| `patch_xbe_print_log_bf2.py` | Implementation script |
 | `BF2_Xbox_Logging.md` | Full logging internals analysis |
